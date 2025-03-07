@@ -12,6 +12,9 @@ on:
       - 'package.json'
       - 'yarn.lock'
 
+permissions:
+  contents: write
+      
 jobs:
   deploy:
     name: Deploy to GitHub Pages
