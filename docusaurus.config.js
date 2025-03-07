@@ -17,7 +17,7 @@ const config = {
   // Set the production url of your site here
   url: 'https://kimboj23.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  baseUrl: '/MassEdu/',
 
   // GitHub pages deployment config.
   organizationName: 'kimboj23', // Usually your GitHub org/user name.
