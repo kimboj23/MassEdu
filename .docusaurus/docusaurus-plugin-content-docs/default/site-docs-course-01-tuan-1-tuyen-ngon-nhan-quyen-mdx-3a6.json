@@ -1,0 +1,27 @@
+{
+  "id": "tuan1/tuyen-ngon-nhan-quyen",
+  "title": "Tuyên ngôn nhân quyền",
+  "description": "Tài liệu gốc của Tuyên ngôn nhân quyền",
+  "source": "@site/docs/course01/tuan1/tuyen-ngon-nhan-quyen.mdx",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/tuyen-ngon-nhan-quyen",
+  "permalink": "/MassEdu/human-rights/tuan1/tuyen-ngon-nhan-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/tuyen-ngon-nhan-quyen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tuyên ngôn nhân quyền",
+    "sidebar_label": "Tuyên ngôn nhân quyền"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "**Bài đọc thêm: Những câu hỏi và trả lời đơn giản nhất về nhân quyền**",
+    "permalink": "/MassEdu/human-rights/tuan1/1.8-hoi-dap-don-gian-nhan-quyen"
+  },
+  "next": {
+    "title": "2.0-gioi-thieu",
+    "permalink": "/MassEdu/human-rights/tuan2/2.0-gioi-thieu"
+  }
+}

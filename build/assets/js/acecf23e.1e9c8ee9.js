@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmass_edu=self.webpackChunkmass_edu||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/MassEdu/blog","blogTitle":"Blog","authorsListPath":"/MassEdu/blog/authors"}')}}]);

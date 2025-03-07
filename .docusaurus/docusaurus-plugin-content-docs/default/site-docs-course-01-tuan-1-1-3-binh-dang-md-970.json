@@ -1,0 +1,24 @@
+{
+  "id": "tuan1/1.3-binh-dang",
+  "title": "1.3-binh-dang",
+  "description": "---",
+  "source": "@site/docs/course01/tuan1/1.3-binh-dang.md",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/1.3-binh-dang",
+  "permalink": "/MassEdu/human-rights/tuan1/1.3-binh-dang",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/1.3-binh-dang.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "1.2. Lược sử nhân quyền",
+    "permalink": "/MassEdu/human-rights/tuan1/luoc-su"
+  },
+  "next": {
+    "title": "1.4b-doc-them-dien-giai-ve-tuyen-ngon",
+    "permalink": "/MassEdu/human-rights/tuan1/1.4b-doc-them-dien-giai-ve-tuyen-ngon"
+  }
+}

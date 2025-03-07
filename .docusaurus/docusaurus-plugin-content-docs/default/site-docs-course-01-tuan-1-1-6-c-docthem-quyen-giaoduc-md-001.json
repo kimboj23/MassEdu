@@ -1,0 +1,24 @@
+{
+  "id": "tuan1/1.6c-docthem-quyen-giaoduc",
+  "title": "1.6c-docthem-quyen-giaoduc",
+  "description": "Bài đọc thêm: Quyền giáo dục",
+  "source": "@site/docs/course01/tuan1/1.6c-docthem-quyen-giaoduc.md",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/1.6c-docthem-quyen-giaoduc",
+  "permalink": "/MassEdu/human-rights/tuan1/1.6c-docthem-quyen-giaoduc",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/1.6c-docthem-quyen-giaoduc.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+    "permalink": "/MassEdu/human-rights/tuan1/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh"
+  },
+  "next": {
+    "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+    "permalink": "/MassEdu/human-rights/tuan1/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
+  }
+}

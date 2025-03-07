@@ -1,0 +1,27 @@
+{
+  "id": "tuan1/1.2-luoc-su-nhan-quyen",
+  "title": "1.2. Lược sử nhân quyền",
+  "description": "Bài đọc có 2340 từ",
+  "source": "@site/docs/course01/tuan1/1.2-luoc-su-nhan-quyen.md",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/luoc-su",
+  "permalink": "/MassEdu/human-rights/tuan1/luoc-su",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/1.2-luoc-su-nhan-quyen.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.2. Lược sử nhân quyền",
+    "slug": "/tuan1/luoc-su"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "1.1. Nhân quyền là gì?",
+    "permalink": "/MassEdu/human-rights/tuan1/dinh-nghia"
+  },
+  "next": {
+    "title": "1.3-binh-dang",
+    "permalink": "/MassEdu/human-rights/tuan1/1.3-binh-dang"
+  }
+}

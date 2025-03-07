@@ -1,0 +1,22 @@
+{
+  "id": "chuong1/intro",
+  "title": "Introduction",
+  "description": "This is a test page for Course 02.",
+  "source": "@site/docs/course02/chuong1/intro.md",
+  "sourceDirName": "chuong1",
+  "slug": "/chuong1/intro",
+  "permalink": "/MassEdu/politics/chuong1/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction",
+    "sidebar_label": "Introduction"
+  },
+  "sidebar": "course2",
+  "next": {
+    "title": "Introduction",
+    "permalink": "/MassEdu/politics/chuong2/intro"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "tuan1/1.1-nhan-quyen-la-gi",
+  "title": "1.1. Nhân quyền là gì?",
+  "description": "Trong suốt lịch sử loài người, các xã hội đã hình thành và phát triển các hệ thống để đảm bảo sự gắn kết xã hội bằng cách hệ thống hóa các quyền và trách nhiệm của người dân. Nhưng phải đến năm 1948 thì cộng đồng quốc tế mới thống nhất với nhau về một thỏa ước về quyền sẽ ràng buộc tất cả các quốc gia, đây chính là Tuyên Ngôn Phổ Quát Nhân Quyền (The Universal Declaration of Human Rights \\- UDHR). Bản tuyên ngôn này liệt kê các quyền cơ bản mà mọi cá nhân được hưởng để sống như một con người mà không phân biệt chủng tộc, quốc tịch, giới tính, màu da, tôn giáo.",
+  "source": "@site/docs/course01/tuan1/1.1-nhan-quyen-la-gi.md",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/dinh-nghia",
+  "permalink": "/MassEdu/human-rights/tuan1/dinh-nghia",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/1.1-nhan-quyen-la-gi.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "1.1. Nhân quyền là gì?",
+    "slug": "/tuan1/dinh-nghia"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "1.0 Giới thiệu về nhân quyền",
+    "permalink": "/MassEdu/human-rights/tuan1/gioi-thieu"
+  },
+  "next": {
+    "title": "1.2. Lược sử nhân quyền",
+    "permalink": "/MassEdu/human-rights/tuan1/luoc-su"
+  }
+}

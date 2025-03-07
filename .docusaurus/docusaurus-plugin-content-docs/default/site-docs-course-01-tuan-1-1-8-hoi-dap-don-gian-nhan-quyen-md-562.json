@@ -1,0 +1,24 @@
+{
+  "id": "tuan1/1.8-hoi-dap-don-gian-nhan-quyen",
+  "title": "**Bài đọc thêm: Những câu hỏi và trả lời đơn giản nhất về nhân quyền**",
+  "description": "Nhân quyền là gì?",
+  "source": "@site/docs/course01/tuan1/1.8-hoi-dap-don-gian-nhan-quyen.md",
+  "sourceDirName": "tuan1",
+  "slug": "/tuan1/1.8-hoi-dap-don-gian-nhan-quyen",
+  "permalink": "/MassEdu/human-rights/tuan1/1.8-hoi-dap-don-gian-nhan-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/course01/tuan1/1.8-hoi-dap-don-gian-nhan-quyen.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+    "permalink": "/MassEdu/human-rights/tuan1/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
+  },
+  "next": {
+    "title": "Tuyên ngôn nhân quyền",
+    "permalink": "/MassEdu/human-rights/tuan1/tuyen-ngon-nhan-quyen"
+  }
+}
