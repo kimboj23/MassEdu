@@ -17,11 +17,11 @@ const config = {
   // Set the production url of your site here
   url: 'https://kimboj23.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/MassEdu/',
+  baseUrl: '/MassEdu-01/',
 
   // GitHub pages deployment config.
   organizationName: 'kimboj23', // Usually your GitHub org/user name.
-  projectName: 'MassEdu', // Usually your repo name.
+  projectName: 'MassEdu-01', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 
@@ -42,7 +42,7 @@ const config = {
           path: 'docs/course01',
           routeBasePath: 'human-rights',
           sidebarPath: './sidebars-course01.js',
-          editUrl: 'https://github.com/kimboj23/MassEdu/tree/main/',
+          editUrl: 'https://github.com/kimboj23/MassEdu-01/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -50,7 +50,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/kimboj23/MassEdu/tree/main/',
+          editUrl: 'https://github.com/kimboj23/MassEdu-01/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -89,7 +89,7 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-      image: 'img/social-card.png',
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Mass Education',
         logo: {
@@ -117,7 +117,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/kimboj23/MassEdu',
+            href: 'https://github.com/kimboj23/MassEdu-01',
             label: 'GitHub',
             position: 'right',
           },
@@ -165,7 +165,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/kimboj23/MassEdu',
+                href: 'https://github.com/kimboj23/MassEdu-01',
               },
             ],
           },
