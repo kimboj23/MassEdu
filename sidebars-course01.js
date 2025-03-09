@@ -6,6 +6,7 @@ const sidebars = {
       label: 'Tuần 1',
       items: [
         'tuan1/1.0-gioi-thieu',
+        'tuan1/Test',
         'tuan1/1.1-nhan-quyen-la-gi',
         'tuan1/1.2-luoc-su-nhan-quyen',
         'tuan1/1.3-binh-dang',
