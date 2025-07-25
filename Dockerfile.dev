@@ -1,0 +1,18 @@
+# Use an official Node.js runtime as a parent image
+FROM node:18
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and yarn.lock to leverage Docker cache
+# This step is separate to avoid re-installing dependencies on every code change
+COPY package.json yarn.lock ./
+
+# Install dependencies
+RUN yarn install --frozen-lockfile
+
+# Docusaurus runs on port 3000 by default
+EXPOSE 3000
+
+# The command to start the Docusaurus development server
+CMD ["yarn", "start", "--host", "0.0.0.0"]

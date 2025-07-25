@@ -1,16 +1,16 @@
 ---
 id: page-template
-title: [Test] Page Template
-draft: false
+title: "[Test] Page Template"
+draft: true
 unlisted: false
 hide_title: false
 hide_table_of_contents: false
 
-sidebar_label: [Test] Page Template
+sidebar_label: "[Test] Page Template"
 sidebar_position: 1
 sidebar_class_name: green
 
-pagination_label: [Test] Page Template
+pagination_label: "[Test] Page Template"
 custom_edit_url: editUrl
 description: How do I find you when I cannot solve this problem
 keywords:
