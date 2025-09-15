@@ -1,0 +1,227 @@
+.slides-container {
+  max-width: var(--ifm-container-width-xl);
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Progress indicators */
+.slides-progress {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem 0;
+  background: var(--ifm-background-color);
+}
+
+.progress-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-dot.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.progress-dot.completed {
+  background: var(--ifm-color-emphasis-600);
+  color: white;
+  border-color: var(--ifm-color-emphasis-600);
+}
+
+/* Slide content area */
+.slides-content {
+  overflow: hidden;
+  position: relative;
+  min-height: auto;
+  width: 100%;
+}
+
+.slides-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: fit-content;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 400px;
+  position: relative;
+}
+
+.slide > *,
+.slide div,
+.slide p,
+.slide h1,
+.slide h2,
+.slide h3,
+.slide h4 {
+  max-width: calc(100% - 0.5rem) !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+.slide-content {
+  width: 100%;
+  display: block;
+}
+
+.slide-title {
+  margin: 0 0 1rem 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.slide-body {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slide-body p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Navigation */
+.slides-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-600);
+}
+
+.slide-counter {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .slide {
+    padding: 1rem;
+  }
+
+  .slides-navigation {
+    padding: 1rem;
+  }
+
+  .nav-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .progress-dot {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .slide-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Animation effects */
+.slide-content {
+  opacity: 1;
+}
+
+/* Special styling for quiz content */
+.slide .quiz-container,
+.slide [class*="quiz"] {
+  max-width: calc(100% - 4rem) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  width: auto !important;
+}
+
+.slide .quiz-container *,
+.slide [class*="quiz"] *,
+.slide [class*="Quiz"] *,
+.slide [class*="multiple"] * {
+  max-width: calc(100% - 2rem) !important;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.slide .quiz-container .quiz-question,
+.slide [class*="quiz"] h3,
+.slide [class*="quiz"] .question {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+/* Special styling for conclusion slide */
+.slide .conclusion {
+  text-align: center;
+  padding: 1rem;
+}
+
+.slide .conclusion h3 {
+  color: var(--ifm-color-success);
+  margin-bottom: 1rem;
+}

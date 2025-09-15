@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
+import Tooltip from '../../components/Tooltip';
 import styles from './context.module.css';
 
 // Content chunking component
@@ -25,19 +26,6 @@ function ContentChunk({ title, children, isVisible, onToggle }) {
   );
 }
 
-// Custom Tooltip component for context pages
-function ContextTooltip({ children, term, definition, link }) {
-  return (
-    <span className={styles.tooltip}>
-      {children}
-      <span className={styles.tooltipContent}>
-        <strong>{term}</strong>
-        <p>{definition}</p>
-        {link && <Link to={link}>Tìm hiểu thêm →</Link>}
-      </span>
-    </span>
-  );
-}
 
 export default function GovernmentRevenue() {
   return (
@@ -59,19 +47,20 @@ export default function GovernmentRevenue() {
           <section className={styles.chunk}>
             <Heading as="h2">1. Thu thuế - Nguồn thu chính</Heading>
             <p>
-              <ContextTooltip
-                term="Thuế"
-                definition="Khoản tiền bắt buộc mà cá nhân và tổ chức phải nộp cho nhà nước theo quy định pháp luật"
-                link="/docs/knowledge-base/tax/definition">
+              <Tooltip conceptId="thue">
                 Thuế
-              </ContextTooltip> là nguồn thu lớn nhất của chính quyền, chiếm khoảng 80-85% tổng thu ngân sách nhà nước.
+              </Tooltip> là nguồn thu lớn nhất của <Tooltip conceptId="chinh-quyen">
+                chính quyền
+              </Tooltip>, chiếm khoảng 80-85% tổng thu <Tooltip conceptId="ngan-sach">
+                ngân sách nhà nước
+              </Tooltip>.
             </p>
 
             <div className={styles.taxTypes}>
               <h3>Các loại thuế chính:</h3>
               <div className={styles.taxGrid}>
                 <div className={styles.taxCard}>
-                  <h4>Thuế thu nhập</h4>
+                  <h4><Tooltip conceptId="thue-thu-nhap">Thuế thu nhập</Tooltip></h4>
                   <p>Thuế từ lương, thưởng và hoạt động kinh doanh</p>
                 </div>
                 <div className={styles.taxCard}>
@@ -102,12 +91,9 @@ export default function GovernmentRevenue() {
 
             <h3>Kinh doanh của nhà nước</h3>
             <p>
-              Nhà nước cũng có thu nhập từ các <ContextTooltip
-                term="Doanh nghiệp nhà nước"
-                definition="Các công ty do nhà nước sở hữu và điều hành"
-                link="/docs/knowledge-base/economics/state-enterprises">
+              Nhà nước cũng có thu nhập từ các <Tooltip conceptId="doanh-nghiep-nha-nuoc">
                 doanh nghiệp nhà nước
-              </ContextTooltip> như Petrolimex, VNPT, các ngân hàng nhà nước.
+              </Tooltip> như Petrolimex, VNPT, các ngân hàng nhà nước.
             </p>
 
             <h3>Phí và lệ phí</h3>
@@ -120,12 +106,7 @@ export default function GovernmentRevenue() {
 
             <h3>Thu từ đất đai</h3>
             <p>
-              Thu từ <ContextTooltip
-                term="Tiền sử dụng đất"
-                definition="Số tiền mà người sử dụng đất phải nộp cho nhà nước"
-                link="/docs/knowledge-base/land/land-use-fees">
-                tiền sử dụng đất
-              </ContextTooltip>, thuê đất, chuyển nhượng quyền sử dụng đất.
+              Thu từ tiền sử dụng đất, thuê đất, chuyển nhượng quyền sử dụng đất.
             </p>
 
             <div className={styles.chunkNavigation}>
@@ -140,12 +121,9 @@ export default function GovernmentRevenue() {
             <Heading as="h2">3. Vậy chính quyền là gì? Vai trò ra sao?</Heading>
 
             <p>
-              <ContextTooltip
-                term="Chính quyền"
-                definition="Hệ thống các cơ quan có thẩm quyền điều hành nhà nước"
-                link="/docs/knowledge-base/politics/government-definition">
+              <Tooltip conceptId="chinh-quyen">
                 Chính quyền
-              </ContextTooltip> bao gồm các cấp từ trung ương đến địa phương, mỗi cấp có vai trò thu thuế và chi tiêu khác nhau.
+              </Tooltip> bao gồm các cấp từ trung ương đến địa phương, mỗi cấp có vai trò thu thuế và chi tiêu khác nhau.
             </p>
 
             <div className={styles.governmentLevels}>
