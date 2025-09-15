@@ -1,58 +1,100 @@
+// c/Users/NinaTran/Downloads/MassEdu/MassEdu/src/components/HomepageFeatures/index.js
+import React from 'react';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
-const FeatureList = [
+const StorylineList = [
   {
-    title: 'Hạt mầm Nhân quyền',
+    title: 'Thuế và Ngân sách Công',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Khám phá các khái niệm cơ bản về nhân quyền và ý nghĩa của chúng trong đời sống.
+        Tiền thuế bạn đóng đi đâu? Khám phá qua góc nhìn của những người trong cuộc.
+        Tìm hiểu cách chính quyền thu thuế và chi tiêu ngân sách.
       </>
     ),
+    link: '/storylines/tax',
+    status: 'active'
   },
   {
-    title: 'Chính trị Chính tôi',
+    title: 'Y tế Công',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Tìm hiểu về hệ thống chính trị và vai trò của công dân trong xã hội dân chủ.
+        Hệ thống y tế vận hành ra sao? Cùng tìm hiểu qua những câu chuyện
+        về bệnh nhân, bác sĩ và các nhà quản lý.
       </>
     ),
+    link: '#',
+    status: 'coming-soon'
   },
   {
-    title: 'Bình dân học Luật',
+    title: 'Tham nhũng',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Chỉ cần tâm trong sáng là có thể học được.
+        Tham nhũng ảnh hưởng đến cuộc sống của chúng ta như thế nào?
+        Hãy cùng điều tra qua các tình huống thực tế.
       </>
     ),
+    link: '#',
+    status: 'coming-soon'
   },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
+function StorylineCard({Svg, title, description, link, status}) {
+  const isActive = status === 'active';
+  const isComingSoon = status === 'coming-soon';
+
+  const CardContent = () => (
+    <>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <h3>{title}</h3>
         <p>{description}</p>
+        {isComingSoon && (
+          <div className={styles.comingSoonBadge}>
+            Sắp ra mắt
+          </div>
+        )}
+        {isActive && (
+          <div className={styles.activeButton}>
+            Bắt đầu khám phá →
+          </div>
+        )}
       </div>
+    </>
+  );
+
+  return (
+    <div className={clsx('col col--4')}>
+      {isActive ? (
+        <Link to={link} className={clsx(styles.featureLink, styles.activeStoryline)}>
+          <CardContent />
+        </Link>
+      ) : (
+        <div className={clsx(styles.featureLink, styles.comingSoonStoryline)}>
+          <CardContent />
+        </div>
+      )}
     </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="storylines">
       <div className="container">
+        <div className="text--center margin-bottom--xl">
+          <h2>Chọn câu chuyện để khám phá</h2>
+          <p>Mỗi câu chuyện sẽ đưa bạn vào vai những người khác nhau trong xã hội, giúp bạn hiểu sâu hơn về các vấn đề quan trọng.</p>
+        </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {StorylineList.map((props, idx) => (
+            <StorylineCard key={idx} {...props} />
           ))}
         </div>
       </div>

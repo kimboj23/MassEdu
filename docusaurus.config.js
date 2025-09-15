@@ -10,18 +10,19 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Mass Education',
-  tagline: 'Human rights are cool',
+  title: 'MassEdu',
+  tagline: 'Human rights are cool 😎',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://kimboj23.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/MassEdu/',
 
   // GitHub pages deployment config.
-  organizationName: 'kimboj23', // Usually your GitHub org/user name.
-  projectName: 'MassEdu', // Usually your repo name.
+  organizationName: 'kimboj23', // Your GitHub username.
+  projectName: 'MassEdu', // Your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 
@@ -29,8 +30,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'vi',
+    locales: ['vi'],
   },
 
   presets: [
@@ -39,23 +40,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/course01',
+          path: 'docs/knowledge-base/human-rights',
           routeBasePath: 'human-rights',
-          sidebarPath: './sidebars-course01.js',
+          sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/kimboj23/MassEdu/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/kimboj23/MassEdu/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Turn off the blog plugin
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -68,9 +58,18 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'course2',
-        path: 'docs/course02',
+        path: 'docs/knowledge-base/politics',
         routeBasePath: 'politics',
         sidebarPath: require.resolve('./sidebars-course02.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'course-tax',
+        path: 'docs/course-tax',
+        routeBasePath: 'course-tax',
+        sidebarPath: './sidebars-course-tax.js',
       },
     ],
   ],
@@ -91,31 +90,45 @@ const config = {
       },
       image: 'img/social-card.png',
       navbar: {
-        title: 'Mass Education',
+        title: 'MassEdu',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'MassEdu Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
+            to: '/storylines/tax',
+            label: 'Khám phá',
+            position: 'left',
+          },
+          {
             type: 'dropdown',
-            label: 'Lớp Học',
+            label: 'Tri thức',
             position: 'left',
             items: [
               {
                 type: 'docSidebar',
-                sidebarId: 'docs',
-                label: 'Hạt mầm Nhân quyền',
+                sidebarId: 'tutorialSidebar',
+                label: 'Nhân quyền',
               },
               {
                 type: 'docSidebar',
                 sidebarId: 'course2',
-                label: 'Chính trị Chính tôi',
+                label: 'Chính trị',
                 docsPluginId: 'course2',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'courseTax',
+                label: 'Thuế và Ngân sách',
+                docsPluginId: 'course-tax',
+              },
+              {
+                label: 'Pháp luật (Sắp ra mắt)',
+                to: '#',
               },
             ],
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/kimboj23/MassEdu',
             label: 'GitHub',
@@ -160,17 +173,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/kimboj23/MassEdu',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mass Education. Dựng với khát vọng tự do và lòng yêu tri thức.`,
+        copyright: `Copyright © ${new Date().getFullYear()} MassEdu. Dựng với khát vọng tự do và lòng yêu tri thức.`,
       },
       prism: {
         theme: prismThemes.github,

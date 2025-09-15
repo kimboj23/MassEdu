@@ -19,8 +19,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/human-rights/tuan1/gioi-thieu">
-            Cùng khám phá nào 🤓
+            to="#storylines">
+            Chọn câu chuyện để bắt đầu
           </Link>
         </div>
       </div>

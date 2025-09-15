@@ -1,0 +1,20 @@
+# Set default behavior, in case users don't have core.autocrlf set.
+# This will handle all text files by default, converting CRLF to LF on commit.
+* text=auto
+
+#
+# The following are defined explicitly to make it clear what is being normalized.
+#
+
+# Text files
+*.js text
+*.css text
+*.md text
+*.mdx text
+*.json text
+*.yml text
+*.conf text
+
+# Binary files - tell Git to not touch them
+*.png binary
+*.ico binary

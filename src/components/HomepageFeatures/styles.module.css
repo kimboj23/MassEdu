@@ -9,3 +9,88 @@
   height: 200px;
   width: 200px;
 }
+
+.featureLink {
+  display: block;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+  height: 100%;
+  color: var(--ifm-font-color-base);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.featureLink:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: var(--ifm-font-color-base);
+}
+
+.featureLinkDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.featureLinkDisabled:hover {
+  transform: none;
+  border-color: var(--ifm-color-emphasis-300);
+  box-shadow: none;
+  color: var(--ifm-font-color-base);
+}
+
+.activeStoryline {
+  border-color: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-lighter));
+  position: relative;
+  overflow: hidden;
+}
+
+.activeStoryline:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(46, 133, 85, 0.15);
+  color: var(--ifm-font-color-base);
+  background: linear-gradient(135deg, var(--ifm-color-primary-lighter), var(--ifm-color-primary-light));
+}
+
+.comingSoonStoryline {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.comingSoonStoryline:hover {
+  transform: none;
+  border-color: var(--ifm-color-emphasis-300);
+  box-shadow: none;
+  color: var(--ifm-font-color-base);
+}
+
+.activeButton {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: var(--ifm-font-weight-semibold);
+  margin-top: 1rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.activeStoryline:hover .activeButton {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.comingSoonBadge {
+  background: var(--ifm-color-warning-light);
+  color: var(--ifm-color-warning-dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--ifm-badge-border-radius);
+  font-size: 0.875rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  margin-top: 1rem;
+  display: inline-block;
+}

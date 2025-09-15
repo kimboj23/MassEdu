@@ -1,0 +1,341 @@
+.contextHero {
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-lighter));
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.contextHero h1 {
+  color: var(--ifm-color-primary-darkest);
+  margin-bottom: 1rem;
+}
+
+.contextHero p {
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary-dark);
+  max-width: 700px;
+}
+
+.contextMain {
+  padding-bottom: 3rem;
+}
+
+.chunk {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  background: var(--ifm-background-color);
+}
+
+.chunk h2 {
+  color: var(--ifm-color-primary-darkest);
+  border-bottom: 2px solid var(--ifm-color-primary-light);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chunk h3 {
+  color: var(--ifm-color-primary-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 2px dotted var(--ifm-color-primary);
+  cursor: pointer;
+  color: var(--ifm-color-primary-dark);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.tooltipContent {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1rem;
+  min-width: 250px;
+  max-width: 350px;
+  box-shadow: var(--ifm-global-shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+.tooltip:hover .tooltipContent {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltipContent strong {
+  color: var(--ifm-color-primary-darkest);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tooltipContent p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tooltipContent a {
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+}
+
+.taxTypes, .governmentLevels {
+  margin: 2rem 0;
+}
+
+.taxGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.taxCard, .levelCard {
+  background: var(--ifm-color-emphasis-100);
+  padding: 1.5rem;
+  border-radius: var(--ifm-card-border-radius);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.taxCard h4, .levelCard h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.taxCard p, .levelCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.chunkNavigation {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  text-align: center;
+}
+
+.nextChunk {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: var(--ifm-font-weight-semibold);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nextChunk:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.finalNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.backToStory, .nextContext {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ifm-button-border-radius);
+  text-decoration: none;
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.3s ease;
+}
+
+.backToStory {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+}
+
+.backToStory:hover {
+  background: var(--ifm-color-emphasis-300);
+  text-decoration: none;
+}
+
+.nextContext {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.nextContext:hover {
+  background: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+/* Content Chunking System */
+.contentChunk {
+  margin-bottom: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+}
+
+.chunkToggle {
+  width: 100%;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-font-color-base);
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.chunkToggle:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.chunkIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+.chunkContent {
+  padding: 1.5rem;
+  background: var(--ifm-background-color);
+}
+
+/* Enhanced styling for new content pages */
+.contextSection {
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
+}
+
+.contextSection h2 {
+  color: var(--ifm-color-emphasis-800);
+  border-bottom: 2px solid var(--ifm-color-primary-lightest);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exampleBox {
+  background: var(--ifm-color-primary-lightest);
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--ifm-card-border-radius) var(--ifm-card-border-radius) 0;
+}
+
+.calloutBox {
+  background: var(--ifm-color-warning-contrast-background);
+  border: 1px solid var(--ifm-color-warning-dark);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.roleGrid,
+.taxTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.roleCard,
+.taxTypeCard {
+  background: var(--ifm-color-emphasis-50);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+}
+
+.reasonsList {
+  margin: 1.5rem 0;
+}
+
+.reasonItem,
+.expenseItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.reasonItem:last-child,
+.expenseItem:last-child {
+  border-bottom: none;
+}
+
+.reasonIcon,
+.expenseIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.expenseList {
+  margin: 1.5rem 0;
+}
+
+.nextSteps {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.contextLink {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  background: var(--ifm-color-primary-lightest);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-card-border-radius);
+  text-decoration: none;
+  color: var(--ifm-color-primary-dark);
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.2s ease;
+}
+
+.contextLink:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .chunk {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .taxGrid,
+  .roleGrid,
+  .taxTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .finalNavigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .backToStory, .nextContext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nextSteps {
+    flex-direction: column;
+  }
+}

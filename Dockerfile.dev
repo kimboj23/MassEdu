@@ -1,6 +1,9 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18
 
+# Install curl for health checks
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -11,8 +14,9 @@ COPY package.json yarn.lock ./
 # Install dependencies
 RUN yarn install --frozen-lockfile
 
-# Docusaurus runs on port 3000 by default
-EXPOSE 3000
+# Docusaurus runs on port 3001 by default
+EXPOSE 3001
 
 # The command to start the Docusaurus development server
-CMD ["yarn", "start", "--host", "0.0.0.0"]
+# Using direct command with proper host binding for Docker
+CMD ["yarn", "start", "--host", "0.0.0.0", "--port", "3001"]

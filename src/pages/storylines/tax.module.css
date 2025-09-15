@@ -1,0 +1,220 @@
+.heroSection {
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-lighter));
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+.heroTitle {
+  color: var(--ifm-color-primary-darkest);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary-darkest);
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.main {
+  padding-bottom: 4rem;
+}
+
+.characterSection {
+  margin-bottom: 4rem;
+}
+
+.characterCol {
+  margin-bottom: 2rem;
+}
+
+.characterCard {
+  display: block;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  height: 100%;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition: all var(--ifm-transition-fast) ease;
+  background: var(--ifm-background-color);
+}
+
+.characterCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+}
+
+.characterHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.characterAvatar {
+  font-size: 3rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 50%;
+}
+
+.characterInfo h3 {
+  margin: 0;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.characterRole {
+  margin: 0.25rem 0 0.5rem 0;
+  color: var(--ifm-color-primary-dark);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.profileLink {
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+.profileLink:hover {
+  text-decoration: underline;
+  color: var(--ifm-color-primary-dark);
+}
+
+.characterDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.characterChallenges {
+  margin-bottom: 2rem;
+}
+
+.characterChallenges h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.characterChallenges ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.characterChallenges li {
+  margin-bottom: 0.25rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.actionButtons {
+  margin-top: auto;
+}
+
+.startButton {
+  display: inline-block;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: var(--ifm-font-weight-semibold);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.startButton:hover {
+  background: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.characterCard:hover .startButton {
+  background: var(--ifm-color-primary-dark);
+}
+
+.contextSection {
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  padding-top: 3rem;
+}
+
+.contextLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contextLink {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-button-border-radius);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all var(--ifm-transition-fast) ease;
+}
+
+.contextLink:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.contextLinkDisabled {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-600);
+  cursor: not-allowed;
+}
+
+.contextLinkDisabled:hover {
+  background: transparent;
+  color: var(--ifm-color-emphasis-600);
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .characterHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .characterAvatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .contextLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contextLink {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}

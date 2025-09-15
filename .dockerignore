@@ -1,11 +1,20 @@
+# Local dependencies
 node_modules
+
+# Logs and environment files
+npm-debug.log*
+.env
+
+# Git and Docker artifacts
 .git
 .github
 .vscode
 .idea
 .dockerignore
+.gitignore
 Dockerfile
 docker-compose.yml
 .DS_Store
 npm-debug.log
 build
+.docusaurus

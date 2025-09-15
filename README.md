@@ -32,8 +32,62 @@ We now support Docker for both development and production environments.
 # Start the development server
 docker-compose up dev
 
-# Access the site at http://localhost:3000
+# Access the site at http://localhost:3001/MassEdu/
+# Alternative URL: http://127.0.0.1:3001/MassEdu/
 ```
+
+#### Making Changes During Development
+
+**Most changes auto-reload (no command needed):**
+- React components (.js, .jsx)
+- CSS/SCSS files
+- MDX content files
+- Character data (src/data/characters.js)
+- Most configuration changes
+
+*Just save the file and refresh your browser!*
+
+**Configuration changes (restart required):**
+```bash
+# For docusaurus.config.js changes or environment variables
+docker-compose restart dev
+```
+
+**Dependency/Docker changes (rebuild required):**
+```bash
+# For new npm packages or Dockerfile changes
+docker-compose down
+docker-compose build --no-cache dev
+docker-compose up dev
+```
+
+#### Troubleshooting Docker Issues
+
+If the site loads slowly or doesn't work:
+
+1. **Check container status:**
+   ```bash
+   docker ps
+   # Should show massedu-dev-1 as healthy
+   ```
+
+2. **View logs:**
+   ```bash
+   docker-compose logs dev -f
+   ```
+
+3. **Try alternative URLs:**
+   - http://localhost:3001/MassEdu/
+   - http://127.0.0.1:3001/MassEdu/
+
+4. **Complete reset:**
+   ```bash
+   docker-compose down
+   docker-compose build --no-cache dev
+   docker-compose up dev
+   ```
+
+For more troubleshooting, see [DOCKER-TROUBLESHOOTING.md](DOCKER-TROUBLESHOOTING.md).
 
 #### Production Build
 ```bash
@@ -142,3 +196,60 @@ If you prefer to work on your local computer:
 This approach still requires no coding knowledge but gives you the ability to work offline.
 
 Both methods ensure your changes go through the proper review process before being published to the site!
+
+## Development Notes
+
+### Project Architecture
+
+This project uses a **three-layer educational architecture**:
+- **Layer 1 (Storytelling)**: Character-driven narratives with decision points
+- **Layer 2 (Issues)**: Topic exploration in Vietnamese context with hyperlinked terms to Layer 3
+- **Layer 3 (Foundation)**: Concept pages with tagging and network visualization
+
+### Key Components
+
+**Character Data Management**:
+- Central character registry at `src/data/characters.js`
+- Cross-storyline tracking system
+- Gender-neutral language using Vietnamese pronouns ("bạn ấy", "họ", "nhân vật này")
+
+**Interactive Components**:
+- `src/components/Quiz/` - Gamified quiz system with audio/haptic feedback
+- `src/components/Tooltip/` - Enhanced tooltips for contextual information
+- `src/components/CharacterProfile/` - Character information display
+
+**Content Structure**:
+- `docs/course-tax/` - Tax education storylines
+- `docs/knowledge-base/` - Foundation knowledge pages
+- `src/pages/tax-context/` - Contextual information pages
+
+### Code Style Guidelines
+
+- **No comments in code** unless explicitly requested
+- **Gender-neutral language** throughout all content
+- **Vietnamese localization** with appropriate cultural context
+- **No decorative elements** in educational content
+- **Interactive elements allowed** in quiz/game components for engagement
+
+### Common Development Tasks
+
+**Adding new characters**:
+1. Update `src/data/characters.js` with character data
+2. Create storyline episodes in appropriate `docs/` folder
+3. Update sidebar configuration in `sidebars-course-tax.js`
+
+**Adding tooltips**:
+1. Import Tooltip component: `import Tooltip from '@site/src/components/Tooltip';`
+2. Wrap text with tooltip and provide Layer 3 link
+
+**Testing changes**:
+- Use `yarn start` or `docker-compose up dev` for development
+- Always test tooltip positioning and character navigation
+- Verify sidebar navigation works correctly
+
+### Troubleshooting Common Issues
+
+**Character cards not working**: Check URL paths in character data match actual file locations
+**Tooltips appearing off-screen**: Verify z-index and positioning strategy in tooltip CSS
+**Docker not loading**: Try `http://127.0.0.1:3001/MassEdu/` instead of `localhost`
+**Hot reloading not working**: Restart Docker service or check file watch polling settings
