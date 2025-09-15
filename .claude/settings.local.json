@@ -14,7 +14,9 @@
       "Bash(npx docusaurus start:*)",
       "Bash(docker-compose:*)",
       "Bash(npm start)",
-      "Bash(npm run serve:*)"
+      "Bash(npm run serve:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

@@ -25,11 +25,7 @@ export default function WhatIsGovernment() {
             <section className={styles.contextSection}>
               <Heading as="h2">Chính quyền là gì?</Heading>
               <p>
-                <Tooltip
-                  id="chinh-quyen-dinh-nghia"
-                  content="Chính quyền là tổ chức có quyền lực để quản lý và điều hành một quốc gia hoặc vùng lãnh thổ."
-                  link="/human-rights/chuong1/chinh-quyen-dinh-nghia"
-                >
+                <Tooltip conceptId="chinh-quyen">
                   Chính quyền
                 </Tooltip> là tổ chức được thành lập để quản lý và phục vụ người dân trong một quốc gia.
                 Giống như một gia đình cần có người quản lý việc nhà, một quốc gia cũng cần có tổ chức để duy trì trật tự và cung cấp dịch vụ cho tất cả mọi người.

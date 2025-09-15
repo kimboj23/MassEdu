@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18
+FROM node:20
 
 # Install curl for health checks
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
@@ -13,6 +13,9 @@ COPY package.json yarn.lock ./
 
 # Install dependencies
 RUN yarn install --frozen-lockfile
+
+# Copy all source code and assets
+COPY . .
 
 # Docusaurus runs on port 3001 by default
 EXPOSE 3001

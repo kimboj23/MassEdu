@@ -14,7 +14,7 @@ Khánh đã mở cửa hàng tạp hóa được 3 năm nay. Cửa hàng nằm �
 
 Doanh thu tháng này của Khánh là 50 triệu đồng, nhưng lợi nhuận chỉ có 8 triệu đồng sau khi trừ chi phí nhập hàng, tiền thuê mặt bằng và các chi phí khác.
 
-Khánh nhận được thông báo từ cơ quan thuế rằng Khánh phải nộp <Tooltip id="thue-thu-nhap-ca-nhan" content="Thuế thu nhập cá nhân (TNCN) là loại thuế mà cá nhân phải nộp dựa trên thu nhập của họ trong một năm." link="/docs/knowledge-base/tax/personal-income-tax">thuế thu nhập cá nhân</Tooltip> cho hoạt động kinh doanh.
+Khánh nhận được thông báo từ cơ quan thuế rằng Khánh phải nộp <Tooltip conceptId="thue-thu-nhap-ca-nhan" link="/knowledge-base/tax/personal-income-tax">thuế thu nhập cá nhân</Tooltip> cho hoạt động kinh doanh.
 
 <MultipleChoice
   question="Theo bạn, Khánh nên tính thuế thu nhập cá nhân dựa trên số tiền nào?"
@@ -31,9 +31,9 @@ Khánh nhận được thông báo từ cơ quan thuế rằng Khánh phải n�
 
 ## Khánh tìm hiểu thêm về nghĩa vụ thuế
 
-Ngoài thuế thu nhập cá nhân, Khánh còn phải đóng <Tooltip id="bao-hiem-xa-hoi" content="Bảo hiểm xã hội là chế độ bảo hiểm do Nhà nước tổ chức nhằm bảo đảm an sinh xã hội cho người lao động." link="/docs/knowledge-base/social-security">bảo hiểm xã hội</Tooltip> cho bản thân với tư cách là chủ doanh nghiệp.
+Ngoài thuế thu nhập cá nhân, Khánh còn phải đóng <Tooltip conceptId="bao-hiem-xa-hoi" link="/knowledge-base/social-security">bảo hiểm xã hội</Tooltip> cho bản thân với tư cách là chủ doanh nghiệp.
 
-Anh cũng phải nộp các loại phí khác như:
+Khánh cũng phải nộp các loại phí khác như:
 - Phí môn bài
 - Phí vệ sinh môi trường
 - Phí sử dụng đất (nếu cửa hàng nằm trên đất thuê của nhà nước)

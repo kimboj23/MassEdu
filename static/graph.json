@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "id": "/human-rights/chapter2/2.2b-gioi-han-quyen",
+      "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
+      "path": "/human-rights/chapter2/2.2b-gioi-han-quyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter2/2.2a-hieu-ve-vi-pham-nhanquyen",
+      "title": "Hiểu về vi phạm nhân quyền",
+      "path": "/human-rights/chapter2/2.2a-hieu-ve-vi-pham-nhanquyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter2/2.1b-nghia-vu-nhanuoc-nhan-quyen",
+      "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
+      "path": "/human-rights/chapter2/2.1b-nghia-vu-nhanuoc-nhan-quyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter2/2.1a-luat-nhanquyen-quocte",
+      "title": "2.1a-luat-nhanquyen-quocte.md",
+      "path": "/human-rights/chapter2/2.1a-luat-nhanquyen-quocte",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter2/2.0-gioi-thieu",
+      "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
+      "path": "/human-rights/chapter2/2.0-gioi-thieu",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/_PageTemplate",
+      "title": "[Test] Page Template",
+      "path": "/human-rights/chapter1/_PageTemplate",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/tuyen-ngon-nhan-quyen",
+      "title": "Tuyên ngôn nhân quyền",
+      "path": "/human-rights/chapter1/tuyen-ngon-nhan-quyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/QuizPOL",
+      "title": "Quiz Chính trị và Hiến pháp",
+      "path": "/human-rights/chapter1/QuizPOL",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/QuizHR",
+      "title": "Quiz Nhân quyền cơ bản",
+      "path": "/human-rights/chapter1/QuizHR",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.8-hoi-dap-don-gian-nhan-quyen",
+      "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
+      "path": "/human-rights/chapter1/1.8-hoi-dap-don-gian-nhan-quyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+      "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung.md",
+      "path": "/human-rights/chapter1/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.6c-docthem-quyen-giaoduc",
+      "title": "Quyền giáo dục",
+      "path": "/human-rights/chapter1/1.6c-docthem-quyen-giaoduc",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+      "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
+      "path": "/human-rights/chapter1/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.6a-quyen-kinhte-xahoi-vanhoa",
+      "title": "Các quyền kinh tế, xã hội, văn hóa",
+      "path": "/human-rights/chapter1/1.6a-quyen-kinhte-xahoi-vanhoa",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
+      "title": "Công ước quốc tế về các quyền dân sự và chính trị",
+      "path": "/human-rights/chapter1/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.5a-quyen-dan-su-chinh-tri",
+      "title": "1.5a. Các quyền dân sự, chính trị",
+      "path": "/human-rights/chapter1/1.5a-quyen-dan-su-chinh-tri",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
+      "title": "1.4b. Một số diễn giải về Tuyên ngôn nhân quyền phổ quát",
+      "path": "/human-rights/chapter1/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.3-binh-dang",
+      "title": "1.3. Bình đẳng và không phân biệt đối xử",
+      "path": "/human-rights/chapter1/1.3-binh-dang",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.2-luoc-su-nhan-quyen",
+      "title": "1.2. Lược sử nhân quyền",
+      "path": "/human-rights/chapter1/1.2-luoc-su-nhan-quyen",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.1-nhan-quyen-la-gi",
+      "title": "1.1. Nhân quyền là gì?",
+      "path": "/human-rights/chapter1/1.1-nhan-quyen-la-gi",
+      "group": "human-rights"
+    },
+    {
+      "id": "/human-rights/chapter1/1.0-gioi-thieu",
+      "title": "1.0 Giới thiệu về nhân quyền",
+      "path": "/human-rights/chapter1/1.0-gioi-thieu",
+      "group": "human-rights"
+    },
+    {
+      "id": "/politics/chuong2/intro",
+      "title": "Introduction",
+      "path": "/politics/chuong2/intro",
+      "group": "politics"
+    },
+    {
+      "id": "/politics/chuong1/intro",
+      "title": "Introduction",
+      "path": "/politics/chuong1/intro",
+      "group": "politics"
+    },
+    {
+      "id": "/course-tax/02-cac-loai-thue",
+      "title": "02-cac-loai-thue.mdx",
+      "path": "/course-tax/02-cac-loai-thue",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/01-chinh-quyen-lay-tien-tu-dau",
+      "title": "01-chinh-quyen-lay-tien-tu-dau.mdx",
+      "path": "/course-tax/01-chinh-quyen-lay-tien-tu-dau",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/khanh-chu-cua-hang/khanh-chu-cua-hang",
+      "title": "Khánh - Chủ cửa hàng tạp hóa",
+      "path": "/course-tax/characters/khanh-chu-cua-hang/khanh-chu-cua-hang",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/khanh-chu-cua-hang/03-quyet-dinh-mo-rong",
+      "title": "Quyết định mở rộng",
+      "path": "/course-tax/characters/khanh-chu-cua-hang/03-quyet-dinh-mo-rong",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/khanh-chu-cua-hang/02-nghia-vu-khac",
+      "title": "Các nghĩa vụ khác",
+      "path": "/course-tax/characters/khanh-chu-cua-hang/02-nghia-vu-khac",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/khanh-chu-cua-hang/01-thang-dau-kho-khan",
+      "title": "Tháng đầu khó khăn",
+      "path": "/course-tax/characters/khanh-chu-cua-hang/01-thang-dau-kho-khan",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/giang-ban-hang-rong/giang-ban-hang-rong",
+      "title": "giang-ban-hang-rong.md",
+      "path": "/course-tax/characters/giang-ban-hang-rong/giang-ban-hang-rong",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/giang-ban-hang-rong/03-tinh-huong-kho-khan",
+      "title": "Tình huống khó khăn",
+      "path": "/course-tax/characters/giang-ban-hang-rong/03-tinh-huong-kho-khan",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/giang-ban-hang-rong/02-di-nop-thu-tuc",
+      "title": "Đi nộp thủ tục",
+      "path": "/course-tax/characters/giang-ban-hang-rong/02-di-nop-thu-tuc",
+      "group": "course-tax"
+    },
+    {
+      "id": "/course-tax/characters/giang-ban-hang-rong/01-buoi-sang-ban-banh-mi",
+      "title": "Buổi sáng bán bánh mì",
+      "path": "/course-tax/characters/giang-ban-hang-rong/01-buoi-sang-ban-banh-mi",
+      "group": "course-tax"
+    }
+  ],
+  "links": []
+}

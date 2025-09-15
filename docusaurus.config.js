@@ -40,8 +40,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/knowledge-base/human-rights',
-          routeBasePath: 'human-rights',
+          path: 'docs/knowledge-base',
+          routeBasePath: 'knowledge-base',
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/kimboj23/MassEdu/tree/main/',
         },
@@ -54,15 +54,6 @@ const config = {
   ],
 
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'course2',
-        path: 'docs/knowledge-base/politics',
-        routeBasePath: 'politics',
-        sidebarPath: require.resolve('./sidebars-course02.js'),
-      },
-    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -97,9 +88,23 @@ const config = {
         },
         items: [
           {
-            to: '/storylines/tax',
+            type: 'dropdown',
             label: 'Khám phá',
             position: 'left',
+            items: [
+              {
+                label: 'Thuế',
+                to: '/storylines/tax',
+              },
+              {
+                label: 'Y tế công (Sắp ra mắt)',
+                to: '#',
+              },
+              {
+                label: 'Tham nhũng (Sắp ra mắt)',
+                to: '#',
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -107,25 +112,16 @@ const config = {
             position: 'left',
             items: [
               {
-                type: 'docSidebar',
-                sidebarId: 'tutorialSidebar',
                 label: 'Nhân quyền',
+                to: '/tri-thuc/nhan-quyen',
               },
               {
-                type: 'docSidebar',
-                sidebarId: 'course2',
                 label: 'Chính trị',
-                docsPluginId: 'course2',
+                to: '/tri-thuc/chinh-tri',
               },
               {
-                type: 'docSidebar',
-                sidebarId: 'courseTax',
-                label: 'Thuế và Ngân sách',
-                docsPluginId: 'course-tax',
-              },
-              {
-                label: 'Pháp luật (Sắp ra mắt)',
-                to: '#',
+                label: 'Luật pháp',
+                to: '/tri-thuc/luat-phap',
               },
             ],
           },
@@ -144,11 +140,11 @@ const config = {
             items: [
               {
                 label: 'Hạt mầm Nhân quyền',
-                to: '/human-rights/tuan1/gioi-thieu',
+                to: '/knowledge-base/gioi-thieu',
               },
               {
                 label: 'Chính trị Chính tôi',
-                to: '/politics/chuong1/intro',
+                to: '/knowledge-base/intro',
               },
             ],
           },
