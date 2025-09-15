@@ -1,142 +1,166 @@
 {
   "nodes": [
     {
-      "id": "/human-rights/chapter2/2.2b-gioi-han-quyen",
-      "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
-      "path": "/human-rights/chapter2/2.2b-gioi-han-quyen",
-      "group": "human-rights"
-    },
-    {
-      "id": "/human-rights/chapter2/2.2a-hieu-ve-vi-pham-nhanquyen",
-      "title": "Hiểu về vi phạm nhân quyền",
-      "path": "/human-rights/chapter2/2.2a-hieu-ve-vi-pham-nhanquyen",
-      "group": "human-rights"
-    },
-    {
-      "id": "/human-rights/chapter2/2.1b-nghia-vu-nhanuoc-nhan-quyen",
-      "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
-      "path": "/human-rights/chapter2/2.1b-nghia-vu-nhanuoc-nhan-quyen",
-      "group": "human-rights"
-    },
-    {
-      "id": "/human-rights/chapter2/2.1a-luat-nhanquyen-quocte",
-      "title": "2.1a-luat-nhanquyen-quocte.md",
-      "path": "/human-rights/chapter2/2.1a-luat-nhanquyen-quocte",
-      "group": "human-rights"
-    },
-    {
-      "id": "/human-rights/chapter2/2.0-gioi-thieu",
-      "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
-      "path": "/human-rights/chapter2/2.0-gioi-thieu",
-      "group": "human-rights"
-    },
-    {
-      "id": "/human-rights/chapter1/_PageTemplate",
+      "id": "/knowledge-base/_PageTemplate",
       "title": "[Test] Page Template",
-      "path": "/human-rights/chapter1/_PageTemplate",
-      "group": "human-rights"
+      "path": "/knowledge-base/_PageTemplate",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/tuyen-ngon-nhan-quyen",
+      "id": "/knowledge-base/tuyen-ngon-nhan-quyen",
       "title": "Tuyên ngôn nhân quyền",
-      "path": "/human-rights/chapter1/tuyen-ngon-nhan-quyen",
-      "group": "human-rights"
+      "path": "/knowledge-base/tuyen-ngon-nhan-quyen",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/QuizPOL",
+      "id": "/knowledge-base/thue-dinh-nghia",
+      "title": "Thuế là gì?",
+      "path": "/knowledge-base/thue-dinh-nghia",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/QuizPOL",
       "title": "Quiz Chính trị và Hiến pháp",
-      "path": "/human-rights/chapter1/QuizPOL",
-      "group": "human-rights"
+      "path": "/knowledge-base/QuizPOL",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/QuizHR",
+      "id": "/knowledge-base/QuizHR",
       "title": "Quiz Nhân quyền cơ bản",
-      "path": "/human-rights/chapter1/QuizHR",
-      "group": "human-rights"
+      "path": "/knowledge-base/QuizHR",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.8-hoi-dap-don-gian-nhan-quyen",
+      "id": "/knowledge-base/nhan-quyen-dinh-nghia",
+      "title": "Nhân quyền là gì?",
+      "path": "/knowledge-base/nhan-quyen-dinh-nghia",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/hien-phap",
+      "title": "Hiến pháp",
+      "path": "/knowledge-base/hien-phap",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/giay-phep-kinh-doanh",
+      "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
+      "path": "/knowledge-base/giay-phep-kinh-doanh",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/giay-phep-kinh-doanh-vn",
+      "title": "Giấy phép kinh doanh tại Việt Nam",
+      "path": "/knowledge-base/giay-phep-kinh-doanh-vn",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/chinh-quyen-dinh-nghia",
+      "title": "Chính quyền là gì?",
+      "path": "/knowledge-base/chinh-quyen-dinh-nghia",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/2.2b-gioi-han-quyen",
+      "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
+      "path": "/knowledge-base/2.2b-gioi-han-quyen",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/2.2a-hieu-ve-vi-pham-nhanquyen",
+      "title": "Hiểu về vi phạm nhân quyền",
+      "path": "/knowledge-base/2.2a-hieu-ve-vi-pham-nhanquyen",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen",
+      "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
+      "path": "/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/2.1a-luat-nhanquyen-quocte",
+      "title": "2.1a-luat-nhanquyen-quocte.md",
+      "path": "/knowledge-base/2.1a-luat-nhanquyen-quocte",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/2.0-gioi-thieu",
+      "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
+      "path": "/knowledge-base/2.0-gioi-thieu",
+      "group": "knowledge-base"
+    },
+    {
+      "id": "/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen",
       "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
-      "path": "/human-rights/chapter1/1.8-hoi-dap-don-gian-nhan-quyen",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+      "id": "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
       "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung.md",
-      "path": "/human-rights/chapter1/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.6c-docthem-quyen-giaoduc",
+      "id": "/knowledge-base/1.6c-docthem-quyen-giaoduc",
       "title": "Quyền giáo dục",
-      "path": "/human-rights/chapter1/1.6c-docthem-quyen-giaoduc",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.6c-docthem-quyen-giaoduc",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+      "id": "/knowledge-base/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
       "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
-      "path": "/human-rights/chapter1/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.6a-quyen-kinhte-xahoi-vanhoa",
+      "id": "/knowledge-base/1.6a-quyen-kinhte-xahoi-vanhoa",
       "title": "Các quyền kinh tế, xã hội, văn hóa",
-      "path": "/human-rights/chapter1/1.6a-quyen-kinhte-xahoi-vanhoa",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.6a-quyen-kinhte-xahoi-vanhoa",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
+      "id": "/knowledge-base/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
       "title": "Công ước quốc tế về các quyền dân sự và chính trị",
-      "path": "/human-rights/chapter1/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.5a-quyen-dan-su-chinh-tri",
+      "id": "/knowledge-base/1.5a-quyen-dan-su-chinh-tri",
       "title": "1.5a. Các quyền dân sự, chính trị",
-      "path": "/human-rights/chapter1/1.5a-quyen-dan-su-chinh-tri",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.5a-quyen-dan-su-chinh-tri",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
+      "id": "/knowledge-base/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
       "title": "1.4b. Một số diễn giải về Tuyên ngôn nhân quyền phổ quát",
-      "path": "/human-rights/chapter1/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.4b-doc-them-dien-giai-ve-tuyen-ngon",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.3-binh-dang",
+      "id": "/knowledge-base/1.3-binh-dang",
       "title": "1.3. Bình đẳng và không phân biệt đối xử",
-      "path": "/human-rights/chapter1/1.3-binh-dang",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.3-binh-dang",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.2-luoc-su-nhan-quyen",
+      "id": "/knowledge-base/1.2-luoc-su-nhan-quyen",
       "title": "1.2. Lược sử nhân quyền",
-      "path": "/human-rights/chapter1/1.2-luoc-su-nhan-quyen",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.2-luoc-su-nhan-quyen",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.1-nhan-quyen-la-gi",
+      "id": "/knowledge-base/1.1-nhan-quyen-la-gi",
       "title": "1.1. Nhân quyền là gì?",
-      "path": "/human-rights/chapter1/1.1-nhan-quyen-la-gi",
-      "group": "human-rights"
+      "path": "/knowledge-base/1.1-nhan-quyen-la-gi",
+      "group": "knowledge-base"
     },
     {
-      "id": "/human-rights/chapter1/1.0-gioi-thieu",
+      "id": "/knowledge-base/1.0-gioi-thieu",
       "title": "1.0 Giới thiệu về nhân quyền",
-      "path": "/human-rights/chapter1/1.0-gioi-thieu",
-      "group": "human-rights"
-    },
-    {
-      "id": "/politics/chuong2/intro",
-      "title": "Introduction",
-      "path": "/politics/chuong2/intro",
-      "group": "politics"
-    },
-    {
-      "id": "/politics/chuong1/intro",
-      "title": "Introduction",
-      "path": "/politics/chuong1/intro",
-      "group": "politics"
+      "path": "/knowledge-base/1.0-gioi-thieu",
+      "group": "knowledge-base"
     },
     {
       "id": "/course-tax/02-cac-loai-thue",
@@ -199,5 +223,14 @@
       "group": "course-tax"
     }
   ],
-  "links": []
+  "links": [
+    {
+      "source": "/course-tax/characters/khanh-chu-cua-hang/khanh-chu-cua-hang",
+      "target": "/knowledge-base/tax/personal-income-tax"
+    },
+    {
+      "source": "/course-tax/characters/khanh-chu-cua-hang/khanh-chu-cua-hang",
+      "target": "/knowledge-base/social-security"
+    }
+  ]
 }
