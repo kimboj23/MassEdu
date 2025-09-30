@@ -4,29 +4,109 @@
  * work well for content-centric websites.
  */
 
+/* Import SF Pro Display & SF Pro Text fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Color Palette - Pastel Professional & Friendly */
+  /* Xám xanh đậm (#546A7B) - Primary color */
+  --ifm-color-primary: #546A7B;
+  --ifm-color-primary-dark: #4a5f6f;
+  --ifm-color-primary-darker: #455969;
+  --ifm-color-primary-darkest: #394957;
+  --ifm-color-primary-light: #5e7487;
+  --ifm-color-primary-lighter: #687d8f;
+  --ifm-color-primary-lightest: #7c8fa1;
+
+  /* Trắng kem (#FAFAFA) - Background */
+  --ifm-background-color: #FAFAFA;
+  --ifm-background-surface-color: #FFFFFF;
+
+  /* Xanh dương pastel (#B4D4E1) - Secondary */
+  --ifm-color-secondary: #B4D4E1;
+  --ifm-color-secondary-dark: #9dc7d8;
+  --ifm-color-secondary-darker: #8fbfd1;
+  --ifm-color-secondary-darkest: #6ba8c0;
+  --ifm-color-secondary-light: #cbe1ea;
+  --ifm-color-secondary-lighter: #d9e9f0;
+  --ifm-color-secondary-lightest: #e7f1f5;
+
+  /* Cam san hô pastel (#FFB8A0) - Accent/CTA */
+  --ifm-color-accent: #FFB8A0;
+  --ifm-color-accent-dark: #ffa586;
+  --ifm-color-accent-darker: #ff9a73;
+  --ifm-color-accent-darkest: #ff7d46;
+  --ifm-color-accent-light: #ffcbba;
+  --ifm-color-accent-lighter: #ffd6cd;
+  --ifm-color-accent-lightest: #ffe9e4;
+
+  /* Tím lavender (#C5B8E8) - Decorative */
+  --ifm-color-lavender: #C5B8E8;
+  --ifm-color-lavender-dark: #b3a4df;
+  --ifm-color-lavender-darker: #a799db;
+  --ifm-color-lavender-darkest: #8473ce;
+  --ifm-color-lavender-light: #d7ccf1;
+  --ifm-color-lavender-lighter: #e3daf5;
+  --ifm-color-lavender-lightest: #efe8f9;
+
+  /* Typography - SF Pro inspired (using Inter as fallback) */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-normal: 400;
+  --ifm-heading-font-weight: 600;
+
+  /* Heading colors - differentiate from body text */
+  --ifm-heading-color: var(--ifm-color-primary);
+  --ifm-font-color-base: #000000;
+
+  /* Spacing & Layout */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+  --ifm-global-spacing: 1.5rem;
+
+  /* Button Styles */
+  --ifm-button-border-radius: 6px;
+  --ifm-button-padding-horizontal: 1.5rem;
+  --ifm-button-padding-vertical: 0.75rem;
+
+  /* Card & Container Styles */
+  --ifm-card-border-radius: 8px;
+  --ifm-global-radius: 6px;
+
+  /* Code */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(84, 106, 123, 0.1);
+
+  /* Shadows - Subtle depth */
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(84, 106, 123, 0.1);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(84, 106, 123, 0.1), 0 2px 4px -1px rgba(84, 106, 123, 0.06);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(84, 106, 123, 0.1), 0 4px 6px -2px rgba(84, 106, 123, 0.05);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #7c8fa1;
+  --ifm-color-primary-dark: #687d8f;
+  --ifm-color-primary-darker: #5e7487;
+  --ifm-color-primary-darkest: #4a5f6f;
+  --ifm-color-primary-light: #90a1b3;
+  --ifm-color-primary-lighter: #9aabc5;
+  --ifm-color-primary-lightest: #b4c5d7;
+
+  --ifm-background-color: #1a1f26;
+  --ifm-background-surface-color: #242932;
+  --ifm-font-color-base: #ffffff;
+
+  --ifm-color-secondary: #8fbfd1;
+  --ifm-color-accent: #ff9a73;
+  --ifm-color-lavender: #a799db;
+
+  --docusaurus-highlighted-code-line-bg: rgba(124, 143, 161, 0.3);
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
 /*
@@ -37,4 +117,389 @@
 .markdown > div {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+/* ========================================
+   BUTTON STYLES - Subtle shadows & rounded corners
+   ======================================== */
+
+/* Primary Button - Using coral accent for vibrancy */
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+  border-color: var(--ifm-color-accent);
+  color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
+  border-color: var(--ifm-color-accent-dark);
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-1px);
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Secondary Button - Using blue pastel */
+.button--secondary {
+  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
+  border-color: var(--ifm-color-secondary);
+  color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.button--secondary:hover {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-dark), var(--ifm-color-secondary));
+  border-color: var(--ifm-color-secondary-dark);
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-1px);
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Accent/CTA Button - Using coral pastel for highlights */
+.button--accent,
+.button--cta {
+  background-color: var(--ifm-color-accent);
+  border-color: var(--ifm-color-accent);
+  color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.button--accent:hover,
+.button--cta:hover {
+  background-color: var(--ifm-color-accent-dark);
+  border-color: var(--ifm-color-accent-dark);
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-1px);
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Outline Button */
+.button--outline {
+  border: 2px solid var(--ifm-color-lavender);
+  color: var(--ifm-color-lavender-dark);
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.button--outline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-lavender-light), var(--ifm-color-lavender));
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-lavender-dark);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transform: translateY(-1px);
+}
+
+/* All buttons - make them more vibrant */
+.button {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.button--lg {
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-accent);
+}
+
+.button--lg:hover {
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
+  color: var(--ifm-color-primary-darker);
+}
+
+/* ========================================
+   CARD STYLES - Subtle shadows & spacing
+   ======================================== */
+
+.card {
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: var(--ifm-card-border-radius);
+  transition: all 0.3s ease-in-out;
+  background-color: var(--ifm-background-surface-color);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-secondary);
+}
+
+/* Add colorful decorative borders to cards */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
+  border-radius: var(--ifm-card-border-radius) 0 0 var(--ifm-card-border-radius);
+}
+
+/* Alternate card colors */
+.card:nth-child(3n+1)::before {
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+}
+
+.card:nth-child(3n+2)::before {
+  background: linear-gradient(to bottom, var(--ifm-color-secondary), var(--ifm-color-secondary-dark));
+}
+
+.card:nth-child(3n+3)::before {
+  background: linear-gradient(to bottom, var(--ifm-color-lavender), var(--ifm-color-lavender-dark));
+}
+
+/* ========================================
+   NAVBAR STYLES
+   ======================================== */
+
+.navbar {
+  box-shadow: var(--ifm-global-shadow-lw);
+  background: linear-gradient(to bottom, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
+  border-bottom: 2px solid var(--ifm-color-secondary-light);
+}
+
+.navbar__link {
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-accent);
+  background-color: var(--ifm-color-accent-lightest);
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-accent-dark);
+  background-color: var(--ifm-color-accent-lightest);
+}
+
+/* Dropdown menu items */
+.dropdown__link:hover {
+  background-color: var(--ifm-color-lavender-lightest);
+  color: var(--ifm-color-primary);
+}
+
+/* ========================================
+   TAGS & BADGES - Using lavender accent
+   ======================================== */
+
+.badge {
+  background-color: var(--ifm-color-lavender);
+  color: var(--ifm-color-primary);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.badge--secondary {
+  background-color: var(--ifm-color-secondary-light);
+  color: var(--ifm-color-primary);
+}
+
+.badge--accent {
+  background-color: var(--ifm-color-accent-light);
+  color: var(--ifm-color-primary-dark);
+}
+
+/* ========================================
+   PROGRESS BAR - For courses & learning
+   ======================================== */
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--ifm-color-secondary-lightest);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* ========================================
+   SPACING & WHITE SPACE ENHANCEMENTS
+   ======================================== */
+
+.container {
+  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal);
+}
+
+.margin-top--lg {
+  margin-top: 3rem !important;
+}
+
+.margin-bottom--lg {
+  margin-bottom: 3rem !important;
+}
+
+.padding--lg {
+  padding: 3rem !important;
+}
+
+/* Section spacing with alternating backgrounds */
+section {
+  padding: 4rem 0;
+}
+
+section:nth-child(even) {
+  background: linear-gradient(to bottom, transparent, var(--ifm-color-secondary-lightest), transparent);
+}
+
+section:nth-child(3n) {
+  background: linear-gradient(to bottom, transparent, var(--ifm-color-lavender-lightest), transparent);
+}
+
+/* ========================================
+   HEADING STYLES - Differentiated colors
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-heading-color);
+}
+
+h1 {
+  color: #000000;
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+h2 {
+  color: var(--ifm-color-primary-darker);
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+h3 {
+  color: var(--ifm-color-primary-dark);
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+h4 {
+  color: var(--ifm-color-accent-darkest);
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+/* Article/Content headings with decorative accents */
+.markdown h1 {
+  color: #000000;
+}
+
+.markdown h2 {
+  color: var(--ifm-color-primary-darker);
+}
+
+.markdown h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.markdown h3 {
+  color: var(--ifm-color-primary-dark);
+  border-left: 3px solid var(--ifm-color-secondary);
+  padding-left: 0.75rem;
+}
+
+/* Hero section titles - vivid and readable */
+.hero__title {
+  color: #000000 !important;
+  font-weight: var(--ifm-heading-font-weight);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.hero__subtitle {
+  color: #000000 !important;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Make hero banners more vibrant */
+.hero--primary {
+  background: linear-gradient(135deg, var(--ifm-color-accent-lighter), var(--ifm-color-secondary-lighter), var(--ifm-color-lavender-lighter)) !important;
+}
+
+/* ========================================
+   MICRO-INTERACTIONS
+   ======================================== */
+
+/* Link hover effects */
+a {
+  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Content links with colorful underlines */
+.markdown a {
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--ifm-color-accent), var(--ifm-color-lavender));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: left bottom;
+  transition: background-size 0.3s ease-in-out;
+  padding-bottom: 2px;
+}
+
+.markdown a:hover {
+  background-size: 100% 2px;
+  opacity: 1;
+}
+
+/* Icon hover effects */
+.icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar link hover effects */
+.menu__link {
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-secondary-lightest);
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+  background: linear-gradient(90deg, var(--ifm-color-accent-lightest), var(--ifm-color-lavender-lightest));
+  border-left: 3px solid var(--ifm-color-accent);
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media screen and (max-width: 996px) {
+  section {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: var(--ifm-spacing-vertical) 1rem;
+  }
 }

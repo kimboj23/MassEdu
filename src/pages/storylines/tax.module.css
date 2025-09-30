@@ -1,23 +1,42 @@
 .heroSection {
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-secondary), var(--ifm-color-lavender));
   padding: 4rem 0;
   margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 184, 160, 0.9), rgba(180, 212, 225, 0.8), rgba(197, 184, 232, 0.9));
+  z-index: 0;
+}
+
+.heroSection > div {
+  position: relative;
+  z-index: 1;
 }
 
 .heroTitle {
-  color: white;
+  color: var(--ifm-color-primary-darker);
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: var(--ifm-heading-font-weight);
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: white;
+  color: var(--ifm-color-primary-darker);
   font-weight: 500;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  opacity: 0.95;
 }
 
 .main {
@@ -34,22 +53,55 @@
 
 .characterCard {
   display: block;
-  border: 2px solid var(--ifm-color-emphasis-300);
+  border: 2px solid var(--ifm-color-secondary-light);
   border-radius: var(--ifm-card-border-radius);
   padding: 2rem;
   height: 100%;
   color: var(--ifm-font-color-base);
   text-decoration: none;
-  transition: all var(--ifm-transition-fast) ease;
-  background: var(--ifm-background-color);
+  transition: all 0.3s ease;
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
+  box-shadow: var(--ifm-global-shadow-lw);
+  position: relative;
+}
+
+.characterCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
+  border-radius: var(--ifm-card-border-radius) 0 0 var(--ifm-card-border-radius);
 }
 
 .characterCard:hover {
   transform: translateY(-4px);
-  border-color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-md);
+  border-color: var(--ifm-color-accent);
+  box-shadow: var(--ifm-global-shadow-tl);
   text-decoration: none;
   color: var(--ifm-font-color-base);
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-accent-lightest));
+}
+
+/* Alternate card colors for different characters */
+.characterCol:nth-child(odd) .characterCard {
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-accent-lightest));
+  border-color: var(--ifm-color-accent-light);
+}
+
+.characterCol:nth-child(odd) .characterCard::before {
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+}
+
+.characterCol:nth-child(even) .characterCard {
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-lavender-lightest));
+  border-color: var(--ifm-color-lavender-light);
+}
+
+.characterCol:nth-child(even) .characterCard::before {
+  background: linear-gradient(to bottom, var(--ifm-color-lavender), var(--ifm-color-secondary));
 }
 
 .characterHeader {
@@ -66,31 +118,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ifm-color-primary-lightest);
+  background: linear-gradient(135deg, var(--ifm-color-accent-light), var(--ifm-color-secondary-light));
   border-radius: 50%;
+  box-shadow: var(--ifm-global-shadow-md);
+  border: 3px solid var(--ifm-color-accent-lightest);
+}
+
+.characterCol:nth-child(even) .characterAvatar {
+  background: linear-gradient(135deg, var(--ifm-color-lavender-light), var(--ifm-color-secondary-light));
+  border-color: var(--ifm-color-lavender-lightest);
 }
 
 .characterInfo h3 {
   margin: 0;
-  color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-darker);
+  font-weight: var(--ifm-heading-font-weight);
 }
 
 .characterRole {
   margin: 0.25rem 0 0.5rem 0;
-  color: var(--ifm-color-primary-dark);
+  background: linear-gradient(90deg, var(--ifm-color-accent-dark), var(--ifm-color-lavender-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: var(--ifm-font-weight-semibold);
 }
 
 .profileLink {
   font-size: 0.85rem;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-accent-dark);
   text-decoration: none;
-  font-weight: var(--ifm-font-weight-normal);
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.2s ease;
 }
 
 .profileLink:hover {
-  text-decoration: underline;
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-lavender-dark);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--ifm-color-accent), var(--ifm-color-lavender));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: left bottom;
+  padding-bottom: 2px;
 }
 
 .characterDescription {
@@ -105,7 +174,10 @@
 .characterChallenges h4 {
   margin: 0 0 0.75rem 0;
   font-size: 1rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-accent-darkest);
+  font-weight: var(--ifm-font-weight-semibold);
+  border-left: 3px solid var(--ifm-color-accent);
+  padding-left: 0.5rem;
 }
 
 .characterChallenges ul {
@@ -115,7 +187,7 @@
 
 .characterChallenges li {
   margin-bottom: 0.25rem;
-  color: var(--ifm-color-emphasis-700);
+  color: #000000;
 }
 
 .actionButtons {
@@ -124,25 +196,37 @@
 
 .startButton {
   display: inline-block;
-  background: var(--ifm-color-primary);
-  color: white;
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
+  color: var(--ifm-color-primary);
   padding: 0.75rem 1.5rem;
   border-radius: var(--ifm-button-border-radius);
   font-weight: var(--ifm-font-weight-semibold);
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .startButton:hover {
-  background: var(--ifm-color-primary-dark);
-  color: white;
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
+  color: var(--ifm-color-primary-darker);
   text-decoration: none;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
 }
 
 .characterCard:hover .startButton {
-  background: var(--ifm-color-primary-dark);
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
+}
+
+/* Alternate button color for even cards */
+.characterCol:nth-child(even) .startButton {
+  background: linear-gradient(135deg, var(--ifm-color-lavender), var(--ifm-color-lavender-dark));
+}
+
+.characterCol:nth-child(even) .startButton:hover,
+.characterCol:nth-child(even) .characterCard:hover .startButton {
+  background: linear-gradient(135deg, var(--ifm-color-lavender-dark), var(--ifm-color-lavender-darker));
 }
 
 .contextSection {
@@ -161,31 +245,36 @@
 .contextLink {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--ifm-color-primary);
+  border: 2px solid var(--ifm-color-secondary);
   border-radius: var(--ifm-button-border-radius);
   color: var(--ifm-color-primary);
   text-decoration: none;
   font-weight: var(--ifm-font-weight-semibold);
-  transition: all var(--ifm-transition-fast) ease;
+  transition: all 0.2s ease;
+  background: var(--ifm-color-secondary-lightest);
 }
 
 .contextLink:hover {
-  background: var(--ifm-color-primary);
-  color: white;
+  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
+  color: var(--ifm-color-primary-darker);
+  border-color: var(--ifm-color-secondary-dark);
   text-decoration: none;
   transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .contextLinkDisabled {
-  border-color: var(--ifm-color-emphasis-400);
-  color: var(--ifm-color-emphasis-600);
+  border-color: var(--ifm-color-lavender-light);
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-lavender-lightest);
   cursor: not-allowed;
 }
 
 .contextLinkDisabled:hover {
-  background: transparent;
-  color: var(--ifm-color-emphasis-600);
+  background: var(--ifm-color-lavender-lightest);
+  color: var(--ifm-color-primary);
   transform: none;
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {

@@ -43,7 +43,7 @@ const StorylineList = [
   },
 ];
 
-function StorylineCard({Svg, title, description, link, status}) {
+function StorylineCard({Svg, title, description, link, status, cardIndex}) {
   const isActive = status === 'active';
   const isComingSoon = status === 'coming-soon';
 
@@ -69,14 +69,16 @@ function StorylineCard({Svg, title, description, link, status}) {
     </>
   );
 
+  const colorClass = `colorVariant${(cardIndex % 3) + 1}`;
+
   return (
     <div className={clsx('col col--4')}>
       {isActive ? (
-        <Link to={link} className={clsx(styles.featureLink, styles.activeStoryline)}>
+        <Link to={link} className={clsx(styles.featureLink, styles.activeStoryline, styles[colorClass])}>
           <CardContent />
         </Link>
       ) : (
-        <div className={clsx(styles.featureLink, styles.comingSoonStoryline)}>
+        <div className={clsx(styles.featureLink, styles.comingSoonStoryline, styles[colorClass])}>
           <CardContent />
         </div>
       )}
@@ -89,12 +91,12 @@ export default function HomepageFeatures() {
     <section className={styles.features} id="storylines">
       <div className="container">
         <div className="text--center margin-bottom--xl">
-          <h2>Chọn câu chuyện để khám phá</h2>
-          <p>Mỗi câu chuyện sẽ đưa bạn vào vai những người khác nhau trong xã hội, giúp bạn hiểu sâu hơn về các vấn đề quan trọng.</p>
+          <h2 className={styles.sectionTitle}>Chọn câu chuyện để khám phá</h2>
+          <p className={styles.sectionSubtitle}>Mỗi câu chuyện sẽ đưa bạn vào vai những người khác nhau trong xã hội, giúp bạn hiểu sâu hơn về các vấn đề quan trọng.</p>
         </div>
         <div className="row">
           {StorylineList.map((props, idx) => (
-            <StorylineCard key={idx} {...props} />
+            <StorylineCard key={idx} {...props} cardIndex={idx} />
           ))}
         </div>
       </div>

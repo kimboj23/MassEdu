@@ -42,17 +42,19 @@
 }
 
 .activeStoryline {
-  border-color: var(--ifm-color-primary);
-  background: linear-gradient(135deg, var(--ifm-color-primary-lightest), var(--ifm-color-primary-lighter));
+  border-color: var(--ifm-color-accent);
+  background: linear-gradient(135deg, var(--ifm-color-accent-lightest), var(--ifm-color-secondary-lightest));
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 184, 160, 0.15);
 }
 
 .activeStoryline:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(46, 133, 85, 0.15);
+  box-shadow: 0 8px 25px rgba(255, 184, 160, 0.25);
   color: var(--ifm-font-color-base);
-  background: linear-gradient(135deg, var(--ifm-color-primary-lighter), var(--ifm-color-primary-light));
+  background: linear-gradient(135deg, var(--ifm-color-accent-lighter), var(--ifm-color-secondary-lighter));
+  border-color: var(--ifm-color-accent-dark);
 }
 
 .comingSoonStoryline {
@@ -69,28 +71,96 @@
 }
 
 .activeButton {
-  background: var(--ifm-color-primary);
-  color: white;
+  background: var(--ifm-color-accent);
+  color: var(--ifm-color-primary);
   padding: 0.5rem 1rem;
   border-radius: var(--ifm-button-border-radius);
   font-weight: var(--ifm-font-weight-semibold);
   margin-top: 1rem;
   display: inline-block;
   transition: all 0.2s ease;
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .activeStoryline:hover .activeButton {
-  background: var(--ifm-color-primary-dark);
+  background: var(--ifm-color-accent-dark);
   transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
 }
 
 .comingSoonBadge {
-  background: var(--ifm-color-warning-light);
-  color: var(--ifm-color-warning-dark);
+  background: var(--ifm-color-lavender-light);
+  color: var(--ifm-color-primary);
   padding: 0.25rem 0.75rem;
-  border-radius: var(--ifm-badge-border-radius);
+  border-radius: 4px;
   font-size: 0.875rem;
   font-weight: var(--ifm-font-weight-semibold);
   margin-top: 1rem;
   display: inline-block;
+}
+
+/* ========================================
+   COLOR VARIANTS - Different pastel colors for each card
+   ======================================== */
+
+/* Card 1 - Accent (Coral) */
+.colorVariant1 {
+  border-left: 4px solid var(--ifm-color-accent);
+}
+
+.colorVariant1.activeStoryline {
+  background: linear-gradient(135deg, var(--ifm-color-accent-lightest), var(--ifm-color-secondary-lightest));
+  border-color: var(--ifm-color-accent);
+}
+
+.colorVariant1.activeStoryline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-accent-lighter), var(--ifm-color-secondary-lighter));
+  border-color: var(--ifm-color-accent-dark);
+}
+
+/* Card 2 - Secondary (Blue Pastel) */
+.colorVariant2 {
+  border-left: 4px solid var(--ifm-color-secondary);
+}
+
+.colorVariant2.activeStoryline {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), var(--ifm-color-lavender-lightest));
+  border-color: var(--ifm-color-secondary);
+}
+
+.colorVariant2.activeStoryline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lighter), var(--ifm-color-lavender-lighter));
+  border-color: var(--ifm-color-secondary-dark);
+}
+
+/* Card 3 - Lavender (Purple Pastel) */
+.colorVariant3 {
+  border-left: 4px solid var(--ifm-color-lavender);
+}
+
+.colorVariant3.activeStoryline {
+  background: linear-gradient(135deg, var(--ifm-color-lavender-lightest), var(--ifm-color-accent-lightest));
+  border-color: var(--ifm-color-lavender);
+}
+
+.colorVariant3.activeStoryline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-lavender-lighter), var(--ifm-color-accent-lighter));
+  border-color: var(--ifm-color-lavender-dark);
+}
+
+/* Section Title with gradient */
+.sectionTitle {
+  background: linear-gradient(90deg, var(--ifm-color-accent), var(--ifm-color-lavender));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary-light);
+  max-width: 700px;
+  margin: 0 auto;
 }

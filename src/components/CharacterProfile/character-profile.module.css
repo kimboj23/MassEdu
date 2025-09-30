@@ -1,9 +1,22 @@
 .characterProfile {
-  background: var(--ifm-background-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
+  border: 2px solid var(--ifm-color-secondary-light);
   border-radius: var(--ifm-card-border-radius);
   padding: 1.5rem;
   margin-bottom: 2rem;
+  box-shadow: var(--ifm-global-shadow-md);
+  position: relative;
+}
+
+.characterProfile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
+  border-radius: var(--ifm-card-border-radius) 0 0 var(--ifm-card-border-radius);
 }
 
 .characterCard {
@@ -27,10 +40,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ifm-color-primary-lightest);
+  background: linear-gradient(135deg, var(--ifm-color-accent-light), var(--ifm-color-secondary-light));
   border-radius: 50%;
   margin-right: 1rem;
   flex-shrink: 0;
+  box-shadow: var(--ifm-global-shadow-lw);
+  border: 3px solid var(--ifm-color-accent-lightest);
 }
 
 .compact .characterAvatar {
@@ -45,8 +60,9 @@
 
 .characterName {
   margin: 0 0 0.25rem 0;
-  color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-darker);
   font-size: 1.5rem;
+  font-weight: var(--ifm-heading-font-weight);
 }
 
 .compact .characterName {
@@ -55,7 +71,10 @@
 
 .characterOccupation {
   margin: 0 0 0.5rem 0;
-  color: var(--ifm-color-primary-dark);
+  background: linear-gradient(90deg, var(--ifm-color-accent-dark), var(--ifm-color-lavender-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: var(--ifm-font-weight-semibold);
   font-size: 1rem;
 }
@@ -68,7 +87,7 @@
 .characterLocation {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
+  color: #000000;
 }
 
 .characterDescription {
@@ -90,8 +109,11 @@
 .characterBackground h4,
 .personalityTraits h4 {
   margin: 0 0 0.75rem 0;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-accent-darkest);
   font-size: 1rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  border-left: 3px solid var(--ifm-color-accent);
+  padding-left: 0.5rem;
 }
 
 .characterBackground ul {
@@ -102,7 +124,7 @@
 .characterBackground li {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
+  color: #000000;
 }
 
 .traitTags {
@@ -112,12 +134,35 @@
 }
 
 .traitTag {
-  background: var(--ifm-color-primary-lightest);
-  color: var(--ifm-color-primary-dark);
   padding: 0.25rem 0.75rem;
-  border-radius: var(--ifm-badge-border-radius);
+  border-radius: 4px;
   font-size: 0.85rem;
   font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Rotate through pastel colors for traits */
+.traitTag:nth-child(3n+1) {
+  background: var(--ifm-color-accent-light);
+  color: var(--ifm-color-primary-darker);
+  border: 1px solid var(--ifm-color-accent);
+}
+
+.traitTag:nth-child(3n+2) {
+  background: var(--ifm-color-secondary-light);
+  color: var(--ifm-color-primary-darker);
+  border: 1px solid var(--ifm-color-secondary);
+}
+
+.traitTag:nth-child(3n+3) {
+  background: var(--ifm-color-lavender-light);
+  color: var(--ifm-color-primary-darker);
+  border: 1px solid var(--ifm-color-lavender);
+}
+
+.traitTag:hover {
+  transform: scale(1.05);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 /* Storyline Progress */
@@ -128,7 +173,8 @@
 
 .storylineProgress h4 {
   margin: 0 0 1rem 0;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-primary-dark);
+  font-weight: var(--ifm-heading-font-weight);
 }
 
 .storylineSection {
@@ -144,17 +190,21 @@
 
 .storylineTitle {
   font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary-dark);
+  background: linear-gradient(90deg, var(--ifm-color-accent-dark), var(--ifm-color-secondary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1rem;
 }
 
 .comingSoon {
-  background: var(--ifm-color-warning-light);
-  color: var(--ifm-color-warning-dark);
+  background: var(--ifm-color-lavender-light);
+  color: var(--ifm-color-primary);
   padding: 0.2rem 0.5rem;
-  border-radius: var(--ifm-badge-border-radius);
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: var(--ifm-font-weight-semibold);
+  border: 1px solid var(--ifm-color-lavender);
 }
 
 .episodeList {
@@ -176,15 +226,16 @@
 }
 
 .episodeLink:hover {
-  border-color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-secondary);
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), var(--ifm-color-lavender-lightest));
   text-decoration: none;
   color: var(--ifm-font-color-base);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .episodeNumber {
-  background: var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-emphasis-800);
+  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
+  color: white;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -195,6 +246,7 @@
   font-weight: var(--ifm-font-weight-bold);
   margin-right: 0.75rem;
   flex-shrink: 0;
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .episodeTitle {
@@ -203,12 +255,13 @@
 }
 
 .currentEpisode {
-  border-color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-accent);
+  background: linear-gradient(135deg, var(--ifm-color-accent-lightest), var(--ifm-color-secondary-lightest));
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .currentEpisode .episodeNumber {
-  background: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
   color: white;
 }
 
@@ -217,17 +270,18 @@
 }
 
 .completedEpisode .episodeNumber {
-  background: var(--ifm-color-success);
+  background: linear-gradient(135deg, var(--ifm-color-lavender), var(--ifm-color-lavender-dark));
   color: white;
 }
 
 .currentBadge {
-  background: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
   color: white;
   padding: 0.2rem 0.5rem;
-  border-radius: var(--ifm-badge-border-radius);
+  border-radius: 4px;
   font-size: 0.75rem;
   font-weight: var(--ifm-font-weight-semibold);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .completedBadge {

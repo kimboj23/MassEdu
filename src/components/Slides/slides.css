@@ -143,12 +143,12 @@
   opacity: 0.5;
   cursor: not-allowed;
   border-color: var(--ifm-color-emphasis-300);
-  color: var(--ifm-color-emphasis-600);
+  color: #000000;
 }
 
 .slide-counter {
   font-weight: 600;
-  color: var(--ifm-color-emphasis-700);
+  color: #000000;
   font-size: 0.9rem;
 }
 
