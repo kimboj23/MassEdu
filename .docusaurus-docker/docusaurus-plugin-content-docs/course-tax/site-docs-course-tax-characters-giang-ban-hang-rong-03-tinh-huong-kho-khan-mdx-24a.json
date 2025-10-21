@@ -1,0 +1,19 @@
+{
+  "id": "characters/giang-ban-hang-rong/tinh-huong-kho-khan",
+  "title": "Tình huống khó khăn",
+  "description": "Giang đối mặt với thách thức tài chính",
+  "source": "@site/docs/course-tax/characters/giang-ban-hang-rong/03-tinh-huong-kho-khan.mdx",
+  "sourceDirName": "characters/giang-ban-hang-rong",
+  "slug": "/characters/giang-ban-hang-rong/tinh-huong-kho-khan",
+  "permalink": "/MassEdu/course-tax/characters/giang-ban-hang-rong/tinh-huong-kho-khan",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Tình huống khó khăn",
+    "description": "Giang đối mặt với thách thức tài chính",
+    "sidebar_position": 3
+  }
+}

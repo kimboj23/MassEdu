@@ -1,0 +1,28 @@
+{
+  "id": "lessons/tai-sao-dong-thue",
+  "title": "2. Tại sao bạn đóng thuế?",
+  "description": "Tìm hiểu về khế ước xã hội và lý do tồn tại của thuế.",
+  "source": "@site/docs/course-tax/lessons/02-tai-sao-dong-thue.mdx",
+  "sourceDirName": "lessons",
+  "slug": "/lessons/tai-sao-dong-thue",
+  "permalink": "/MassEdu/course-tax/lessons/tai-sao-dong-thue",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "2. Tại sao bạn đóng thuế?",
+    "description": "Tìm hiểu về khế ước xã hội và lý do tồn tại của thuế.",
+    "sidebar_position": 2
+  },
+  "sidebar": "courseTax",
+  "previous": {
+    "title": "Hãy suy nghĩ về thuế",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue"
+  },
+  "next": {
+    "title": "4. Nguyên tắc thu thuế",
+    "permalink": "/MassEdu/course-tax/lessons/nguyen-tac-thu-thue"
+  }
+}

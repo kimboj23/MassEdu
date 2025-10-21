@@ -1,0 +1,634 @@
+---
+title: "Phần 2: Gặp-khó"
+description: "Mã số thuế và nghĩa vụ thuế của bạn"
+sidebar_position: 3
+---
+
+import { LearnMore } from '@site/src/components/Learning';
+import { Scene, NumberSlider, ThoughtBubble, ThoughtBubbleSequence, RevealBubble, ChoiceButtons, Choice, ProgressIndicator, StoryProgressProvider } from '@site/src/components/Interactive';
+import Link from '@docusaurus/Link';
+
+<StoryProgressProvider>
+
+# Phần 2: Gặp-khó
+
+<ProgressIndicator totalScenes={6} />
+
+---
+
+<Scene id="canh-4" start={true}>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem',
+  color: 'white'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    ☕ <strong>Giờ ra chơi.</strong> Bạn ngồi ở căng-tin trường, vừa ăn bánh mì que vừa check điện thoại.
+  </p>
+</div>
+
+Một tin nhắn Zalo từ chị chủ shop quần áo - người nhờ bạn thiết kế poster.
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-primary-light)',
+  borderRadius: '12px',
+  marginTop: '1.5rem',
+  boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+}}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+    <div style={{
+      width: '48px',
+      height: '48px',
+      borderRadius: '50%',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: '1.5rem'
+    }}>
+      👩‍💼
+    </div>
+    <div>
+      <strong>Chị chủ shop quần áo</strong><br/>
+      <small style={{ color: 'var(--ifm-color-emphasis-600)' }}>Vừa xong</small>
+    </div>
+  </div>
+  <p style={{ marginBottom: '0.5rem' }}>
+    "Em ơi, poster em làm đẹp lắm! Chị chuyển tiền cho em luôn nhé. 💕"
+  </p>
+  <p style={{ marginBottom: 0, background: '#fffbea', padding: '0.75rem', borderRadius: '8px', borderLeft: '3px solid #f59e0b' }}>
+    "Nhưng mà em có <strong>mã số thuế cá nhân</strong> chưa? Shop chị cần để kê khai chi phí đấy."
+  </p>
+</div>
+
+Bạn đọc xong, nhíu mày.
+
+<ThoughtBubble sequence={1} icon="😕" variant="question" delay={500}>
+  **Mã số thuế cá nhân?**
+
+  Bạn từng nghe bạn bè nhắc đến chuyện này, nhưng cứ nghĩ đó là chuyện của người đi làm chính thức thôi chứ nhỉ?
+
+  Mình chỉ là sinh viên làm thêm mà...
+</ThoughtBubble>
+
+<ChoiceButtons sceneId="canh-4">
+  <Choice value="worry" nextScene="#canh-4-1" emoji="😰" variant="primary">
+    "Ơ trời, mình không có. Giờ làm sao đây?" (Lo lắng)
+  </Choice>
+  <Choice value="delay" nextScene="#canh-4-2" emoji="🤷" variant="skip">
+    "Thôi để sau, hồi nào rảnh search Google" (Trì hoãn)
+  </Choice>
+  <Choice value="ask" nextScene="#canh-4-3" emoji="💬">
+    Nhắn lại: "Chị ơi, em chưa có ạ. Em có cần không chị?"
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-4-1">
+<h3>Cảnh 4-1: Phản Ứng Lo Lắng</h3>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p>
+    📱 Bạn lập tức mở Google gõ: <code>"mã số thuế cá nhân là gì"</code>
+  </p>
+</div>
+
+Kết quả tràn ra:
+
+<div style={{
+  padding: '1rem',
+  background: 'white',
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  fontFamily: 'monospace',
+  fontSize: '0.9rem',
+  margin: '1rem 0'
+}}>
+  🔍 "Cá nhân cư trú"<br/>
+  🔍 "Thu nhập chịu thuế"<br/>
+  🔍 "Kê khai quyết toán thuế TNCN"<br/>
+  🔍 "Đăng ký thuế online qua eTax"<br/>
+  🔍 "Số định danh cá nhân thay mã số thuế từ 1/7/2025"<br/>
+</div>
+
+Bạn nhấn vào một bài viết.
+
+<div style={{
+  padding: '1.5rem',
+  background: '#fee',
+  border: '2px dashed #e74c3c',
+  borderRadius: '8px',
+  margin: '1.5rem 0'
+}}>
+  <p style={{ fontStyle: 'italic', fontSize: '0.95rem', lineHeight: 1.8 }}>
+    *"Trong thời hạn 10 ngày làm việc kể từ ngày phát sinh nghĩa vụ thuế thu nhập cá nhân...
+    cá nhân cư trú... thu nhập tính thuế... giảm trừ gia cảnh..."*
+  </p>
+</div>
+
+<ThoughtBubbleSequence baseDelay={300}>
+  <ThoughtBubble icon="😵" variant="warning">
+    **Đầu. Váng. Mắt. Hoa.**
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🤯" variant="question">
+    Bạn đọc được 2 dòng thì đã muốn tắt trình duyệt.
+
+    Toàn thuật ngữ khó hiểu, văn bản dài như sớ.
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<RevealBubble buttonText="💡 Đừng lo! Mình sẽ giải thích cho bạn ngay sau đây.">
+  Văn bản pháp luật thường khó hiểu, nhưng ý nghĩa thực tế lại đơn giản hơn nhiều!
+
+  Hãy đọc **Module B** bên dưới để hiểu rõ.
+</RevealBubble>
+
+<ChoiceButtons sceneId="canh-4-1-choice">
+  <Choice value="learn" nextScene="#module-b" emoji="✅" variant="learn" module="module-b-tax-id">
+    "Ừ, giải thích đơn giản đi"
+  </Choice>
+  <Choice value="skip" nextScene="#canh-5" emoji="⏭️" variant="skip">
+    "Thôi kệ, để chiều về hỏi ai đó"
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-4-2">
+<h3>Cảnh 4-2: Trì Hoãn</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px'
+}}>
+  <p>
+    📱 Bạn khóa điện thoại lại, cắn một miếng bánh mì que.
+  </p>
+  <p style={{ fontStyle: 'italic', marginBottom: 0 }}>
+    "Thôi để chiều về nghĩ sau. Giờ đói quá rồi."
+  </p>
+</div>
+
+Chuyện mã số thuế cứ lơ lửng trong đầu, nhưng bạn quyết định... xử lý sau vậy.
+
+:::warning Trì hoãn có thể tốn kém
+Nhiều freelancer bỏ qua chuyện thuế cho đến khi... quá muộn. Khi doanh thu vượt ngưỡng mà không kê khai, bạn có thể bị phạt nếu bị thanh tra.
+Tốt hơn là tìm hiểu ngay từ bây giờ! 😊
+:::
+
+<ChoiceButtons sceneId="canh-4-2-choice">
+  <Choice value="continue" nextScene="#canh-5" variant="continue">Nhảy tới Cảnh 5 →</Choice>
+  <Choice value="learn" nextScene="#module-b" variant="learn" module="module-b-tax-id">Đọc Module B (Khuyến nghị) →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-4-3">
+<h3>Cảnh 4-3: Hỏi Lại Khách Hàng</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p>📱 Bạn gõ tin nhắn Zalo:</p>
+</div>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-primary-light)',
+  borderRadius: '12px',
+  marginTop: '1.5rem',
+  boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+}}>
+  <p style={{ color: '#0084ff', marginBottom: '1rem' }}>
+    <strong>Bạn:</strong> "Chị ơi, em chưa có mã số thuế ạ. Em có cần không chị? Em làm freelance thôi mà..."
+  </p>
+  <div style={{ borderTop: '1px solid #eee', paddingTop: '1rem' }}>
+    <p><strong>Chị chủ shop:</strong></p>
+    <p>"Ồ, nếu em nhận tiền từ công ty thì nên có nhé. Không thì công ty chị khó kê khai chi phí lắm.</p>
+    <p>Nhưng mà nếu em kiếm dưới X triệu/năm thì cũng không bắt buộc phải nộp thuế đâu.</p>
+    <p style={{ marginBottom: 0 }}>Em search 'đăng ký mã số thuế online' là ra liền. Dễ lắm! 😊"</p>
+  </div>
+</div>
+
+<ThoughtBubble sequence={1} icon="😌" variant="success" delay={500}>
+  Bạn đọc xong, thở phào.
+
+  "À, thì ra không phức tạp như mình nghĩ?"
+</ThoughtBubble>
+
+<ChoiceButtons sceneId="canh-4-3-choice">
+  <Choice value="learn" nextScene="#module-b" emoji="✅" variant="learn" module="module-b-tax-id">
+    "Ừ, giải thích đi. Mình cần biết mình có phải lo không."
+  </Choice>
+  <Choice value="skip" nextScene="#canh-5" emoji="⏭️" variant="skip">
+    "Để chiều về research sau"
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="module-b">
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>📘 Module chuyên sâu</h3>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    Tất cả những gì bạn cần biết về mã số thuế và nghĩa vụ thuế thu nhập cá nhân
+  </p>
+</div>
+
+### 🆔 Số Định Danh Cá Nhân = Mã Số Thuế (Từ 1/7/2025)
+
+<ThoughtBubbleSequence baseDelay={300}>
+  <ThoughtBubble icon="✅" variant="success">
+    **Tin tốt:** Từ ngày 1/7/2025, bạn không cần "đăng ký mã số thuế" riêng nữa!
+
+    **Số CCCD 12 số của bạn = Mã số thuế của bạn.**
+
+    Đơn giản vậy thôi.
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="📄" variant="insight">
+    **Nguồn:** Thông tư 86/2024/TT-BTC - Bộ Tài chính
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+---
+
+### 🤔 Vậy Khi Nào Thì Phải "Đăng Ký Thuế"?
+
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-warning-lightest)',
+  borderLeft: '4px solid var(--ifm-color-warning)',
+  borderRadius: '8px',
+  marginBottom: '1.5rem'
+}}>
+  <p><strong>Theo luật:</strong> Bạn phải đăng ký với cơ quan thuế trong vòng <strong>10 ngày</strong> kể từ khi "phát sinh nghĩa vụ thuế".</p>
+  <p style={{ marginBottom: 0 }}><strong>"Phát sinh nghĩa vụ thuế"</strong> nghĩa là gì? = Khi bạn phải nộp thuế.</p>
+</div>
+
+**Vậy khi nào thì phải nộp?** 👇
+
+---
+
+### 💰 Khi Nào Thì Phải Nộp Thuế Thu Nhập Cá Nhân?
+
+#### 1️⃣ Nếu bạn làm thuê, có hợp đồng lao động:
+
+<div style={{
+  padding: '1.5rem',
+  background: '#e8f5e9',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p style={{ fontSize: '1.125rem' }}>
+    Chỉ phải nộp thuế khi thu nhập sau khi trừ bảo hiểm và giảm trừ gia cảnh <strong>&gt; 11 triệu đồng/tháng</strong> (tức 132 triệu/năm).
+  </p>
+</div>
+
+**Giảm trừ gia cảnh là gì?**
+
+<table style={{ width: '100%', marginTop: '1rem' }}>
+  <thead>
+    <tr>
+      <th>Đối tượng</th>
+      <th>Mức giảm trừ/tháng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bản thân bạn</td>
+      <td><strong>11 triệu</strong> (miễn thuế)</td>
+    </tr>
+    <tr>
+      <td>Mỗi người phụ thuộc</td>
+      <td><strong>4.4 triệu</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+**Ví dụ tính toán:**
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '12px',
+  fontFamily: 'monospace',
+  margin: '1.5rem 0'
+}}>
+  Lương gộp: 10 triệu/tháng<br/>
+  - Trừ bảo hiểm (~1.05 triệu): còn ~8.95 triệu<br/>
+  - Trừ giảm trừ gia cảnh (11 triệu): còn... <strong style={{ color: '#e74c3c' }}>âm</strong><br/>
+  <br/>
+  <strong>→ KHÔNG phải nộp thuế!</strong>
+</div>
+
+:::info Nguồn
+Nghị quyết 954/2020/UBTVQH14 về mức giảm trừ gia cảnh
+:::
+
+---
+
+#### 2️⃣ Nếu bạn làm freelance, kinh doanh nhỏ:
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', margin: '2rem 0' }}>
+  <div style={{
+    padding: '1.5rem',
+    background: '#fff3cd',
+    border: '2px solid #ffc107',
+    borderRadius: '12px'
+  }}>
+    <h4>⏰ Hiện tại (đến 31/12/2025)</h4>
+    <ul>
+      <li>Doanh thu <strong>&lt; 100 triệu/năm</strong>: ✅ Không phải nộp thuế</li>
+      <li>Doanh thu <strong>≥ 100 triệu/năm</strong>: ❌ Phải nộp thuế</li>
+    </ul>
+  </div>
+
+  <div style={{
+    padding: '1.5rem',
+    background: '#d1ecf1',
+    border: '2px solid #0dcaf0',
+    borderRadius: '12px'
+  }}>
+    <h4>🆕 Từ 1/1/2026</h4>
+    <ul>
+      <li>Doanh thu <strong>&lt; 200 triệu/năm</strong>: ✅ Không phải nộp thuế</li>
+      <li>Doanh thu <strong>≥ 200 triệu/năm</strong>: ❌ Phải nộp thuế</li>
+    </ul>
+  </div>
+</div>
+
+:::info Nguồn
+[Luật Thuế Thu nhập cá nhân mới nhất 2025](https://thuvienphapluat.vn/phap-luat/luat-thue-thu-nhap-ca-nhan-moi-nhat-2025)
+:::
+
+---
+
+### 📊 Tính Nhanh Thu Nhập Của Bạn
+
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '1.5rem'
+}}>
+  <h4 style={{ color: 'white', marginTop: 0 }}>💼 Thu nhập của bạn (ví dụ):</h4>
+  <ul style={{ fontSize: '1.125rem' }}>
+    <li>Dạy gia sư: ~2 triệu/tháng = <strong>24 triệu/năm</strong></li>
+    <li>Bán hàng online: ~1-2 triệu/tháng = <strong>12-24 triệu/năm</strong></li>
+    <li>Freelance thiết kế: ~1 triệu/tháng = <strong>12 triệu/năm</strong></li>
+  </ul>
+  <div style={{
+    padding: '1rem',
+    background: 'rgba(255,255,255,0.2)',
+    borderRadius: '8px',
+    marginTop: '1rem'
+  }}>
+    <p style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: 0 }}>
+      <strong>Tổng: ~48-60 triệu/năm</strong>
+    </p>
+  </div>
+</div>
+
+<ThoughtBubble icon="✅" variant="success">
+  <strong>👉 Kết luận:</strong> Bạn dưới ngưỡng 100 triệu → <strong>không phải nộp thuế thu nhập cá nhân!</strong>
+</ThoughtBubble>
+
+---
+
+### ✅ Vậy Bạn Có Cần Làm Gì Không?
+
+<div style={{
+  padding: '1.5rem',
+  background: '#e8f5e9',
+  borderLeft: '4px solid #4caf50',
+  borderRadius: '8px',
+  marginBottom: '1rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>📋 Về mặt pháp lý:</h4>
+  <p>Nếu không phải nộp thuế → <strong>không bắt buộc</strong> phải đăng ký với cơ quan thuế</p>
+</div>
+
+<div style={{
+  padding: '1.5rem',
+  background: '#fff3cd',
+  borderLeft: '4px solid #ffc107',
+  borderRadius: '8px',
+  marginBottom: '2rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>💼 Nhưng trong thực tế:</h4>
+  <p>Nếu công ty yêu cầu mã số thuế để chuyển khoản/kê khai → bạn cung cấp <strong>số CCCD 12 số</strong> là được (từ 1/7/2025)</p>
+  <p style={{ marginBottom: 0 }}>Không cần làm thủ tục gì thêm!</p>
+</div>
+
+---
+
+### 🔮 Nếu Sau Này Bạn Kiếm Nhiều Hơn Thì Sao?
+
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-info-lightest)',
+  borderRadius: '12px'
+}}>
+  <p><strong>Nếu doanh thu vượt 100 triệu/năm (hoặc 200 triệu từ 2026):</strong></p>
+  <ul>
+    <li>Bạn phải đăng ký với Chi cục Thuế nơi cư trú</li>
+    <li>Có thể làm online qua [thuedientu.gdt.gov.vn](https://thuedientu.gdt.gov.vn)</li>
+    <li>Kê khai và nộp thuế theo quy định</li>
+  </ul>
+  <p style={{ marginBottom: 0 }}>
+    Nhưng hiện tại với ~48-60 triệu/năm → <strong>bạn an toàn!</strong> 😊
+  </p>
+</div>
+
+<LearnMore
+  lesson="01-ban-dang-dong-thue-gi"
+  context="Đọc thêm về mã số thuế và các loại thuế"
+/>
+
+<ChoiceButtons sceneId="module-b-continue">
+  <Choice value="continue" nextScene="#canh-5" variant="continue">Tiếp tục câu chuyện →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-5">
+<div style={{
+  padding: '1.5rem',
+  background: 'linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    🚌 <strong>3 giờ chiều.</strong> Bạn lên xe buýt về nhà sau giờ học cuối cùng.
+  </p>
+</div>
+
+Chiếc xe leng keng chạy trên đường Điện Biên Phủ, nắng chiều Sài Gòn gay gắt chiếu qua cửa kính.
+
+Bạn cắm tai nghe, mở Spotify. Nhưng tâm trí cứ lang thang về tin nhắn sáng nay.
+
+<ThoughtBubbleSequence baseDelay={500} staggerDelay={500}>
+  <ThoughtBubble icon="😌" variant="success">
+    "À ra mình kiếm 54 triệu/năm, dưới 100 triệu rồi. Vậy là không phải lo về thuế thu nhập."
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="📱" variant="insight">
+    "Và từ tháng 7 này, số CCCD của mình chính là mã số thuế luôn. Tiện thật!"
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="📝" variant="question">
+    Bạn mở Notes trên điện thoại, ghi chú nhanh:
+
+    - ✅ Thuế VAT: đang đóng mỗi ngày (10% khi mua đồ)
+    - ✅ Thuế TNCN: chưa cần lo (dưới 100tr/năm)
+    - ✅ Mã số thuế: dùng số CCCD là được
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<div style={{ marginTop: '2rem' }}>
+  <p><strong>Nhưng giờ bạn tò mò:</strong></p>
+</div>
+
+<ChoiceButtons sceneId="canh-5">
+  <Choice value="progressive" nextScene="#module-c-preview" emoji="🤔" variant="learn" module="module-c-progressive-tax">
+    "Vậy nếu mình kiếm nhiều hơn thì thuế tính như nào?"
+  </Choice>
+  <Choice value="freelance" nextScene="#module-d-preview" emoji="💭" variant="learn" module="module-d-freelance-vs-employee">
+    "Freelance với làm công ty khác nhau chỗ nào về thuế?"
+  </Choice>
+  <Choice value="continue" nextScene="#canh-6-preview" emoji="😌" variant="skip">
+    "Okay, mình hiểu rồi. Về nhà nghỉ thôi"
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="module-c-preview">
+<h3>Module C Preview: Thuế Lũy Tiến</h3>
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-info-lightest)',
+  border: '2px solid var(--ifm-color-info)',
+  borderRadius: '12px'
+}}>
+  <h4>📊 Thuế Lũy Tiến là gì?</h4>
+  <p>Giả sử sau này bạn có công việc ổn định, lương cao hơn. Bạn sẽ gặp bảng thuế lũy tiến...</p>
+  <p style={{ marginBottom: 0 }}>
+    <Link to="/course-tax/modules/module-c-progressive-tax" className="button button--primary">
+      Đọc Module C: Thuế Lũy Tiến →
+    </Link>
+  </p>
+</div>
+
+<ChoiceButtons sceneId="module-c-preview-choice">
+  <Choice value="continue" nextScene="#canh-6-preview" variant="continue">Hoặc tiếp tục câu chuyện →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="module-d-preview">
+<h3>Module D Preview: Freelance vs Nhân Viên</h3>
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-warning-lightest)',
+  border: '2px solid var(--ifm-color-warning)',
+  borderRadius: '12px'
+}}>
+  <h4>💼 Freelance vs Nhân Viên - Khác nhau thế nào về thuế?</h4>
+  <p>Hai trường hợp có cách tính thuế rất khác nhau...</p>
+  <p style={{ marginBottom: 0 }}>
+    <Link to="/course-tax/modules/module-d-freelance-vs-employee" className="button button--warning">
+      Đọc Module D: Freelance vs Nhân Viên →
+    </Link>
+  </p>
+</div>
+
+<ChoiceButtons sceneId="module-d-preview-choice">
+  <Choice value="continue" nextScene="#canh-6-preview" variant="continue">Hoặc tiếp tục câu chuyện →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-6-preview">
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    🌙 <strong>7 giờ tối.</strong> Bạn đến nhà học sinh ở quận 7 - một căn nhà 2 tầng khá đẹp, khu dân cư yên tĩnh.
+  </p>
+</div>
+
+"Chào cô ạ! Em đến rồi ạ!"
+
+Hai em nhỏ chạy ra chào bạn: "Chào cô ơi!"
+
+Hai tiếng sau, buổi học Suy-nghiệm. Mẹ hai em đưa cho bạn vài tờ tiền giấy:
+
+**"Em nhận tiền tháng này nhé. 2 triệu đồng. Cảm ơn em nhiều!"**
+
+Bạn nhận phong bì, cảm ơn và chào về...
+
+<div style={{
+  textAlign: 'center',
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginTop: '2rem'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>🎯 Suy-nghiệm Phần 2</h3>
+  <p style={{ fontSize: '1.125rem' }}>
+    Bạn đã học được:
+  </p>
+  <ul style={{ textAlign: 'left', maxWidth: '500px', margin: '1rem auto' }}>
+    <li>✅ Mã số thuế = Số CCCD (từ 1/7/2025)</li>
+    <li>✅ Ngưỡng phải nộp thuế TNCN</li>
+    <li>✅ Giảm trừ gia cảnh là gì</li>
+    <li>✅ Freelancer dưới 100tr/năm không phải nộp</li>
+  </ul>
+  <div style={{ marginTop: '2rem' }}>
+    <Link
+      to="./03-ket-thuc"
+      className="button button--lg"
+      style={{
+        background: 'white',
+        color: '#f5576c',
+        border: 'none',
+        fontSize: '1.25rem'
+      }}
+    >
+      Phần 3: Suy-nghiệm →
+    </Link>
+  </div>
+</div>
+
+</Scene>
+</StoryProgressProvider>

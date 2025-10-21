@@ -1,0 +1,19 @@
+{
+  "id": "characters/khanh-chu-cua-hang/thang-dau-kho-khan",
+  "title": "Tháng đầu khó khăn",
+  "description": "Khánh gặp khó khăn với nghĩa vụ thuế đầu tiên",
+  "source": "@site/docs/course-tax/characters/khanh-chu-cua-hang/01-thang-dau-kho-khan.mdx",
+  "sourceDirName": "characters/khanh-chu-cua-hang",
+  "slug": "/characters/khanh-chu-cua-hang/thang-dau-kho-khan",
+  "permalink": "/MassEdu/course-tax/characters/khanh-chu-cua-hang/thang-dau-kho-khan",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Tháng đầu khó khăn",
+    "description": "Khánh gặp khó khăn với nghĩa vụ thuế đầu tiên",
+    "sidebar_position": 1
+  }
+}

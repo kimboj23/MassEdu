@@ -1,0 +1,24 @@
+{
+  "id": "lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
+  "title": "b-ai-thuc-su-dong-thue",
+  "description": "Ai đang thực sự đóng thuế?",
+  "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-b-ai-thuc-su-dong-thue.md",
+  "sourceDirName": "lessons/01-ban-dang-dong-thue",
+  "slug": "/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
+  "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "courseTax",
+  "previous": {
+    "title": "Bạn đang đóng thuế gì?",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi"
+  },
+  "next": {
+    "title": "Ai thực sự gánh chịu thuế?",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1.0-gioi-thieu",
+  "title": "1.0 Giới thiệu về nhân quyền",
+  "description": "Tuần học đầu tiên giới thiệu về khái niệm nhân quyền, lịch sử và các giá trị phổ quát",
+  "source": "@site/docs/knowledge-base/1.0-gioi-thieu.md",
+  "sourceDirName": ".",
+  "slug": "/tuan1/gioi-thieu",
+  "permalink": "/MassEdu/knowledge-base/tuan1/gioi-thieu",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.0-gioi-thieu.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "giới thiệu",
+      "permalink": "/MassEdu/knowledge-base/tags/giới-thiệu"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "1.0 Giới thiệu về nhân quyền",
+    "slug": "/tuan1/gioi-thieu",
+    "sidebar_position": 0,
+    "description": "Tuần học đầu tiên giới thiệu về khái niệm nhân quyền, lịch sử và các giá trị phổ quát",
+    "keywords": [
+      "nhân quyền",
+      "giới thiệu",
+      "tuyên ngôn"
+    ],
+    "tags": [
+      "nhân quyền",
+      "giới thiệu"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/gioi-thieu-chuong-2"
+  }
+}

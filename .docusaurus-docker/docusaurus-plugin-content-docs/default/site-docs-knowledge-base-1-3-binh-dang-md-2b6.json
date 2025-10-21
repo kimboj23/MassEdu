@@ -1,0 +1,51 @@
+{
+  "id": "1.3-binh-dang",
+  "title": "1.3. Bình đẳng và không phân biệt đối xử",
+  "description": "Tìm hiểu về nguyên tắc bình đẳng và không phân biệt đối xử trong nhân quyền",
+  "source": "@site/docs/knowledge-base/1.3-binh-dang.md",
+  "sourceDirName": ".",
+  "slug": "/tuan1/binh-dang",
+  "permalink": "/MassEdu/knowledge-base/tuan1/binh-dang",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.3-binh-dang.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "bình đẳng",
+      "permalink": "/MassEdu/knowledge-base/tags/binh-dẳng"
+    },
+    {
+      "inline": true,
+      "label": "không phân biệt đối xử",
+      "permalink": "/MassEdu/knowledge-base/tags/khong-phan-biệt-dối-xử"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "1.3. Bình đẳng và không phân biệt đối xử",
+    "slug": "/tuan1/binh-dang",
+    "sidebar_position": 7,
+    "description": "Tìm hiểu về nguyên tắc bình đẳng và không phân biệt đối xử trong nhân quyền",
+    "keywords": [
+      "bình đẳng",
+      "không phân biệt đối xử",
+      "CEDAW",
+      "phụ nữ"
+    ],
+    "tags": [
+      "bình đẳng",
+      "không phân biệt đối xử"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.2. Lược sử nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/tuan1/luoc-su"
+  },
+  "next": {
+    "title": "1.4b. Một số diễn giải về Tuyên ngôn nhân quyền phổ quát",
+    "permalink": "/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon"
+  }
+}

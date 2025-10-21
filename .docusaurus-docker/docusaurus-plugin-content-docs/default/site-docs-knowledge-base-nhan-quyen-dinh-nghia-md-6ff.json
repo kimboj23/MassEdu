@@ -1,0 +1,43 @@
+{
+  "id": "nhan-quyen-dinh-nghia",
+  "title": "Nhân quyền là gì?",
+  "description": "Khái niệm và ý nghĩa của nhân quyền",
+  "source": "@site/docs/knowledge-base/nhan-quyen-dinh-nghia.md",
+  "sourceDirName": ".",
+  "slug": "/nhan-quyen-dinh-nghia",
+  "permalink": "/MassEdu/knowledge-base/nhan-quyen-dinh-nghia",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/nhan-quyen-dinh-nghia.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "luật pháp",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Nhân quyền là gì?",
+    "description": "Khái niệm và ý nghĩa của nhân quyền",
+    "tags": [
+      "nhân quyền",
+      "luật pháp"
+    ],
+    "conceptId": "nhan-quyen"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hiến pháp",
+    "permalink": "/MassEdu/knowledge-base/hien-phap"
+  },
+  "next": {
+    "title": "Thuế là gì?",
+    "permalink": "/MassEdu/knowledge-base/thue-dinh-nghia"
+  }
+}

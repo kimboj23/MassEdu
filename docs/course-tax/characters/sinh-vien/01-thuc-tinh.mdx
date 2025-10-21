@@ -1,0 +1,402 @@
+---
+title: "Phần 1: Thức tỉnh"
+description: "Bạn đang đóng thuế mỗi ngày"
+sidebar_position: 2
+---
+
+import { LearnMore } from '@site/src/components/Learning';
+import { Scene, NumberSlider, ComparisonSlider, ThoughtBubble, ThoughtBubbleSequence, RevealBubble, ChoiceButtons, Choice, ProgressIndicator, StoryProgressProvider, ConditionalContent } from '@site/src/components/Interactive';
+import Link from '@docusaurus/Link';
+import styles from '@site/src/components/Interactive/interactive.module.css';
+
+<StoryProgressProvider>
+
+# Phần 1: Thức tỉnh - "Bạn Đóng Thuế Mỗi Ngày"
+
+<ProgressIndicator totalScenes={8} />
+
+---
+
+<Scene id="canh-1" start={true}>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    ⏰ <strong>6h30 sáng.</strong> Chuông điện thoại reo inh ỏi.
+  </p>
+</div>
+
+Bạn lờ mờ với tay tắt báo thức. Hôm nay là thứ Sáu - ngày cuối tuần trước khi nghỉ, nhưng cũng là ngày bạn phải hoàn thành thiết kế poster cho một shop quần áo nhỏ. Tối nay còn phải dạy gia sư cho 2 em nhỏ ở quận 7.
+
+Căn phòng trọ 20m² quen thuộc: bàn học chất đầy sách vở và laptop, góc bếp nhỏ với bếp gas mini, chiếc tủ quần áo cũ kỹ. Ánh nắng sáng len lỏi qua cửa sổ, chiếu vào tấm ảnh check-in ở Đà Lạt trên tường - quê nhà bạn.
+
+**Bụng sôi ùng ục. Bạn cần ăn sáng ngay.**
+
+<ChoiceButtons sceneId="canh-1">
+  <Choice value="banh-mi" nextScene="#canh-2a" emoji="🥖">
+    Xuống quán bánh mì ngõ như mọi khi (rẻ mà ngon)
+  </Choice>
+  <Choice value="cafe" nextScene="#canh-2b" emoji="☕">
+    Vào quán café gần trường (hôm nay muốn balance cuộc đời tí)
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-2a">
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem',
+  borderLeft: '4px solid #e17055'
+}}>
+  <p>
+    🏪 Bạn khoác áo khoác mỏng, nhét ví vào túi và đi xuống quán bánh mì ở ngõ.
+    Mùi bánh nướng thơm nồng, cô chủ quán đang lật trứng ốp la xèo xèo trên chảo.
+  </p>
+</div>
+
+"Cô ơi, cho một bánh mì trứng!"
+
+Cô chủ mỉm cười: "**25.000 đồng** nhe con."
+
+<div className={styles.numberSliderContainer}>
+  <NumberSlider
+    value={25000}
+    min={15000}
+    max={50000}
+    step={5000}
+    unit="đồng"
+  />
+  <div className={styles.calculationDisplay}>
+    <div className={styles.calculationLabel}>Thuế VAT (10%):</div>
+    <div className={styles.calculationValue}>
+      {new Intl.NumberFormat('vi-VN').format(Math.round(25000 / 11))} đồng
+    </div>
+  </div>
+   <div className={styles.sliderHint}>
+    💡 Di chuột vào số để kéo thay đổi giá trị.
+  </div>
+  <RevealBubble buttonText="Xem công thức tính thuế VAT từ giá bán">
+      <p>Thuế VAT được tính từ giá đã bao gồm thuế (giá bạn trả):</p>
+      <code className={styles.formulaCode}>
+        Thuế VAT = Giá bán / (1 + 100 / Tỷ lệ VAT)
+      </code>
+      <p>Ví dụ: <strong>2.273đ</strong> = 25.000đ / (1 + 100 / 10)</p>
+  </RevealBubble>
+</div>
+
+Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nóng, vỏ giòn rụm, trứng chảy vàng ươm. Hoàn hảo.
+
+<RevealBubble buttonText="💡 Khoan đã...">
+  <strong>"Bạn vừa đóng thuế đấy."</strong>
+
+  HẢ? Cái bánh mì 25.000 đồng này?
+
+  Khoảng **2.273 đồng là thuế VAT** (10% thuế đã ẩn trong giá).
+
+  Bạn không thấy nó. Không cảm nhận được. Nhưng bạn đã trả rồi đấy.
+</RevealBubble>
+
+<ChoiceButtons sceneId="canh-2a-choice">
+  <Choice value="learn" nextScene="#canh-2a-1" emoji="🤔" variant="learn" lesson="01-ban-dang-dong-thue-gi">
+    "Hả? Thuế VAT là cái gì? Giải thích đi"
+  </Choice>
+  <Choice value="skip" nextScene="#canh-3" emoji="🤷" variant="skip">
+    "Thôi kệ, đói bụng quá. Next."
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-2a-1">
+<ThoughtBubbleSequence title="Thuế VAT là gì?" baseDelay={300}>
+  <ThoughtBubble icon="💡" variant="insight">
+    <strong>Thuế VAT = Thuế Giá Trị Gia Tăng</strong>
+
+    Đây là loại thuế "ẩn" trong hầu hết mọi thứ bạn mua.
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🛒" variant="question">
+    <strong>Những gì có thuế VAT:</strong>
+    <ul>
+      <li>✓ Đồ ăn (bánh mì, cơm, phở...)</li>
+      <li>✓ Quần áo, giày dép</li>
+      <li>✓ Thẻ cào điện thoại</li>
+      <li>✓ Trà sữa (RIP ví tiền 💸)</li>
+      <li>✓ Mỹ phẩm</li>
+    </ul>
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🏛️" variant="success">
+    <strong>Tiền thuế này đi đâu?</strong>
+    <ul>
+      <li>👉 Con đường bạn đi xe mỗi ngày</li>
+      <li>👉 Bệnh viện công</li>
+      <li>👉 Ngân sách trường đại học của bạn</li>
+      <li>👉 Đèn đường, xe rác, công viên...</li>
+    </ul>
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="⚖️" variant="warning">
+    <strong>Điểm cần nhớ:</strong> Mọi người đều đóng 10% như nhau - dù bạn là sinh viên hay CEO.
+
+    (Tại sao lại thế? Ta sẽ quay lại chuyện này sau nhé.)
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<LearnMore
+  lesson="01-ban-dang-dong-thue-gi"
+  context="Tìm hiểu chi tiết về thuế VAT và các loại thuế khác"
+/>
+
+<ChoiceButtons sceneId="canh-2a-1-continue">
+  <Choice value="continue" nextScene="#canh-3" variant="continue">Tiếp tục →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-2b">
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem',
+  borderLeft: '4px solid #6c5ce7'
+}}>
+  <p>
+    ☕ Bạn bước vào quán café gần trường - kiểu quán có đèn dây vintage, tường gạch mộc, góc nào cũng "sống ảo" được.
+  </p>
+</div>
+
+"Cho mình một ly cà phê sữa đá ạ!"
+
+Bạn chuyển khoản **45.000 đồng**. Ơi trời, hơi đắt. Nhưng thôi, thứ Sáu mà, tự thưởng cho mình tí.
+
+Bạn nhấp một ngụm cà phê, lướt TikTok. Mắt vô tình liếc sang tờ hóa đơn trên bàn:
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px dashed var(--ifm-color-emphasis-400)',
+  borderRadius: '8px',
+  fontFamily: 'monospace',
+  margin: '1.5rem 0'
+}}>
+  Cà phê sữa đá:&nbsp;&nbsp;&nbsp;&nbsp;40.909 đ<br/>
+  Thuế VAT (10%):&nbsp;&nbsp;&nbsp;&nbsp;4.091 đ<br/>
+  ------------------------<br/>
+  <strong>Tổng cộng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45.000 đ</strong>
+</div>
+
+<ThoughtBubble sequence={1} icon="😮" variant="question">
+  Ơ, khoan... Sao lại bị tính thêm tiền?
+</ThoughtBubble>
+
+<ChoiceButtons sceneId="canh-2b-choice">
+  <Choice value="learn" nextScene="#canh-2b-1" emoji="🤔" variant="learn" lesson="01-ban-dang-dong-thue-gi">
+    "Thuế VAT là cái gì thế? Sao lại bị tính thêm tiền?"
+  </Choice>
+  <Choice value="skip" nextScene="#canh-3" emoji="🤷" variant="skip">
+    "Mặc kệ" (nhét hóa đơn vào túi, lướt TikTok tiếp)
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-2b-1">
+<ThoughtBubbleSequence title="Hóa đơn cho thấy gì?" baseDelay={300}>
+  <ThoughtBubble icon="💡" variant="insight">
+    <strong>Thuế VAT = Thuế Giá Trị Gia Tăng</strong>
+
+    10% trên hầu hết mọi thứ bạn mua. Có nghĩa là 4.091 đồng từ ly cà phê của bạn bay vào:
+    <ul>
+      <li>🛣️ Đường xá, bệnh viện, trường học</li>
+      <li>🏛️ Các dịch vụ công</li>
+      <li>👮 Hoạt động của chính quyền</li>
+    </ul>
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🤔" variant="question">
+    <strong>Plot twist:</strong> Quán café không "tính thêm" bạn đâu.
+
+    Họ chỉ thu hộ tiền thuế cho nhà nước. Người thực sự trả thuế là... **bạn đấy**.
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="💸" variant="warning">
+    <strong>Fun fact:</strong> Nếu chiều nay bạn mua ly trà sữa 50k, bạn lại đóng thêm ~4.500 đồng thuế VAT nữa.
+
+    Cộng dồn lại thì... 😅
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<LearnMore
+  lesson="01-ban-dang-dong-thue-gi"
+  context="Đọc thêm về cách thuế VAT hoạt động"
+/>
+
+<ChoiceButtons sceneId="canh-2b-1-continue">
+  <Choice value="continue" nextScene="#canh-3" variant="continue">Tiếp tục →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-3">
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem',
+  borderLeft: '4px solid #00b894'
+}}>
+  <p>
+    🏍️ Bạn nhảy lên chiếc Honda Wave cũ kỹ và chạy về phía trường.
+    Giao thông Sài Gòn buổi sáng - ừm, như mọi khi thôi: đông, ồn, và hơi nguy hiểm nếu không tập trung.
+  </p>
+</div>
+
+Xe bạn len lỏi qua đám đông xe máy, xe ô tô. Con đường nhựa khá phẳng - không ổ gà hay sụt lún. Đèn giao thông hoạt động bình thường.
+
+Bạn chợt nghĩ: *"May mà đường này sửa rồi, năm ngoái đi kinh khủng lắm."*
+
+<ConditionalContent dependsOn={["canh-2a-choice:learn", "canh-2b-choice:learn"]}>
+  <ThoughtBubble sequence={1} icon="💭" variant="insight" delay={500}>
+    Nhớ không, 2-3 nghìn đồng thuế VAT từ bánh mì/cà phê sáng nay?
+
+    Một phần nhỏ trong đó đã góp vào việc sửa con đường này đấy.
+    Cùng với hàng triệu người khác cũng đóng thuế VAT mỗi ngày
+    → góp lại thành ngân sách công
+    → xây đường, đèn, bệnh viện...
+  </ThoughtBubble>
+</ConditionalContent>
+
+<div style={{ marginTop: '2rem' }}>
+  <p><strong>Nhưng đợi đã...</strong></p>
+</div>
+
+<ChoiceButtons sceneId="canh-3-choice">
+  <Choice value="fairness" nextScene="#canh-3-1" emoji="🤔" variant="learn">
+    "Vậy tất cả mọi người đều đóng thuế như nhau à? Công bằng không ta?"
+  </Choice>
+  <Choice value="continue" nextScene="#canh-4-preview" emoji="➡️" variant="skip">
+    "Okay, hiểu rồi. Đi học thôi." (Tiếp tục đến trường)
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-3-1">
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem'
+}}>
+  <h3>Câu Hỏi Về Công Bằng</h3>
+  <h3 style={{ color: 'white', marginTop: 0 }}>💡 Câu hỏi hay đấy!</h3>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    Hãy tưởng tượng hai người cùng mua bánh mì...
+  </p>
+</div>
+
+<ComparisonSlider
+  label1="Bạn (Thu nhập 5 triệu/tháng)"
+  income1={5000000}
+  label2="Người khác (Thu nhập 50 triệu/tháng)"
+  income2={50000000}
+/>
+
+<LearnMore
+  lesson="lessons/ban-dang-dong-thue-gi"
+  context="Tìm hiểu về công bằng thuế và thuế lũy tiến"
+/>
+
+<ChoiceButtons sceneId="canh-3-1-continue">
+  <Choice value="continue" nextScene="#canh-4-preview" variant="continue">Tiếp tục đến trường →</Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+
+<Scene id="canh-4-preview">
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-warning-lightest)',
+  border: '2px solid var(--ifm-color-warning)',
+  borderRadius: '12px',
+  marginBottom: '2rem'
+}}>
+  <h3>📱 Giờ ra chơi - Tin nhắn từ khách hàng</h3>
+  <p>
+    Bạn ngồi ở căng-tin trường, vừa ăn bánh mì que vừa check điện thoại.
+    Một tin nhắn Zalo từ chị chủ shop quần áo - người nhờ bạn thiết kế poster.
+  </p>
+  <div style={{
+    padding: '1rem',
+    background: 'white',
+    borderRadius: '8px',
+    marginTop: '1rem'
+  }}>
+    <p style={{ fontStyle: 'italic', marginBottom: '0.5rem' }}>
+      <strong>Chị chủ shop:</strong>
+    </p>
+    <p style={{ marginBottom: 0 }}>
+      "Em ơi, poster em làm đẹp lắm! Chị chuyển tiền cho em luôn nhé.
+      Nhưng mà <strong>em có mã số thuế cá nhân chưa?</strong> Shop chị cần để kê khai chi phí đấy."
+    </p>
+  </div>
+  <p style={{ marginTop: '1rem', marginBottom: 0 }}>
+    <strong>Mã số thuế cá nhân?</strong> 🤔
+  </p>
+</div>
+
+<div style={{
+  textAlign: 'center',
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+  borderRadius: '12px',
+  color: 'white'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>🎯 Suy-nghiệm Phần 1</h3>
+  <p style={{ fontSize: '1.125rem' }}>
+    Bạn đã học được:
+  </p>
+  <ul style={{ textAlign: 'left', maxWidth: '500px', margin: '1rem auto' }}>
+    <li>✅ Thuế VAT ẩn trong mọi thứ bạn mua</li>
+    <li>✅ Phân biệt thuế trực tiếp và gián thu</li>
+    <li>✅ Vấn đề công bằng trong thuế</li>
+    <li>✅ Tiền thuế đi vào dịch vụ công</li>
+  </ul>
+  <div style={{ marginTop: '2rem' }}>
+    <Link
+      to="./02-gap-kho"
+      className="button button--secondary button--lg"
+      style={{
+        background: 'white',
+        color: '#f5576c',
+        border: 'none',
+        fontSize: '1.25rem'
+      }}
+    >
+      Phần 2: Gặp khó →
+    </Link>
+  </div>
+  <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.9 }}>
+    Hoặc <Link to="/course-tax/lessons/01-ban-dang-dong-thue-gi" style={{ color: 'white', textDecoration: 'underline' }}>đọc bài học chi tiết</Link>
+  </p>
+</div>
+</Scene>
+
+</StoryProgressProvider>

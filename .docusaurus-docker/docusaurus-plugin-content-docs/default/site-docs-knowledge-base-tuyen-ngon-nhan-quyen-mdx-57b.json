@@ -1,0 +1,23 @@
+{
+  "id": "tuyen-ngon-nhan-quyen",
+  "title": "Tuyên ngôn nhân quyền",
+  "description": "Tài liệu gốc của Tuyên ngôn nhân quyền",
+  "source": "@site/docs/knowledge-base/tuyen-ngon-nhan-quyen.mdx",
+  "sourceDirName": ".",
+  "slug": "/tuyen-ngon-nhan-quyen",
+  "permalink": "/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/tuyen-ngon-nhan-quyen.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tuyên ngôn nhân quyền",
+    "sidebar_label": "Tuyên ngôn nhân quyền"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thuế là gì?",
+    "permalink": "/MassEdu/knowledge-base/thue-dinh-nghia"
+  }
+}

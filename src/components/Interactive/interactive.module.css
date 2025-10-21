@@ -1,0 +1,410 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scene {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ========================================
+   ChoiceButtons Component
+   ======================================== */
+
+.choiceButtons {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.choicePrompt {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.promptIcon {
+  font-size: 1.5rem;
+}
+
+.promptText {
+  font-size: 1.125rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary-darker);
+}
+
+.choicesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Layouts */
+.layout-horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ========================================
+   Choice Component
+   ======================================== */
+
+.choice {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  background-color: var(--ifm-background-surface-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+}
+
+.choice:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+  border-color: var(--ifm-color-primary);
+}
+
+.choice.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.choice.disabled:hover {
+  transform: none;
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-color: transparent;
+}
+
+.choice.selected {
+  border-color: var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darkest);
+}
+
+.choiceEmoji {
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+
+.choiceText {
+  flex-grow: 1;
+}
+
+.choiceArrow, .choiceCheck {
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--ifm-color-primary);
+  transition: transform 0.2s ease;
+}
+
+.choice:hover .choiceArrow {
+  transform: translateX(4px);
+}
+
+.choice.selected .choiceCheck {
+  color: var(--ifm-color-success);
+}
+
+/* Variants */
+.choice-primary {
+  border-color: var(--ifm-color-primary);
+}
+.choice-primary:hover {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.choice-learn {
+  border-color: var(--ifm-color-info);
+}
+.choice-learn:hover {
+  background-color: var(--ifm-color-info-lightest);
+}
+
+.choice-skip {
+  border-color: var(--ifm-color-emphasis-400);
+}
+.choice-skip:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+/* ========================================
+   ProgressIndicator Component
+   ======================================== */
+
+.progressIndicator {
+  margin: 1.5rem 0;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressText {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  text-align: right;
+}
+
+/* ========================================
+   ChoiceReview Component
+   ======================================== */
+
+.choiceReview {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.reviewList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reviewItem {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.reviewScene {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+/* ========================================
+   NumberSlider Component
+   ======================================== */
+
+.numberSliderContainer {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-card-border-radius);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.numberSlider {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: ew-resize;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--ifm-background-surface-color);
+  user-select: none;
+}
+
+.numberSlider:focus {
+  outline: 2px solid var(--ifm-color-primary-light);
+  outline-offset: 2px;
+}
+
+.numberSlider.active,
+.numberSlider:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.sliderValue {
+  font-size: 1.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary-darker);
+}
+
+.sliderUnit {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.sliderHandle {
+  display: inline-block;
+  margin-left: 0.75rem;
+  color: var(--ifm-color-primary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.numberSlider.active .sliderHandle,
+.numberSlider:hover .sliderHandle {
+  opacity: 1;
+}
+
+.calculationDisplay {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--ifm-color-emphasis-300);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculationLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.calculationValue {
+  font-size: 1.1rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary);
+}
+
+.sliderHint {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.5rem;
+}
+
+.conceptTag {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--ifm-color-secondary-lightest);
+  border-radius: 1rem;
+  font-size: 0.85rem;
+}
+
+.conceptIcon {
+  margin-right: 0.3rem;
+}
+
+/* ========================================
+   NumberSliderGroup & ComparisonSlider
+   ======================================== */
+
+.numberSliderGroup {
+  margin: 2rem 0;
+}
+
+.groupTitle {
+  margin-bottom: 0.5rem;
+}
+
+.groupDescription {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.groupSliders {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.comparisonSlider {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .groupSliders {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .comparisonSlider {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+
+.comparisonColumn {
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.comparisonColumn h5 {
+  margin-top: 0;
+  color: var(--ifm-color-primary-darker);
+}
+
+.comparisonDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.comparisonStats {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.comparisonInsight {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--ifm-color-info-lightest);
+  border-radius: var(--ifm-card-border-radius);
+  border-left: 4px solid var(--ifm-color-info);
+}
+
+.vatRateSliderContainer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--ifm-card-border-radius);
+}
+
+.vatRateSliderContainer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.vatRateSlider {
+  width: 100%;
+}
+
+.formulaCode {
+  display: block;
+  padding: 0.75rem;
+  background-color: var(--ifm-code-background);
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}

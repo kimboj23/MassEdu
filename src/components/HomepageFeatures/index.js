@@ -62,7 +62,7 @@ function StorylineCard({Svg, title, description, link, status, cardIndex}) {
         )}
         {isActive && (
           <div className={styles.activeButton}>
-            Bắt đầu khám phá →
+             Bắt đầu khám phá →
           </div>
         )}
       </div>

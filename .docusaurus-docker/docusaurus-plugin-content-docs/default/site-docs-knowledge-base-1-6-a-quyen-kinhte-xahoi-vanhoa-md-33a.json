@@ -1,0 +1,64 @@
+{
+  "id": "1.6a-quyen-kinhte-xahoi-vanhoa",
+  "title": "Các quyền kinh tế, xã hội, văn hóa",
+  "description": "Tìm hiểu về các quyền kinh tế, xã hội, văn hóa (ESC rights) thông qua Công ước ICESCR và cách tiếp cận phụ thuộc lẫn nhau giữa các quyền con người.",
+  "source": "@site/docs/knowledge-base/1.6a-quyen-kinhte-xahoi-vanhoa.md",
+  "sourceDirName": ".",
+  "slug": "/quyen-kinhte-xahoi-vanhoa",
+  "permalink": "/MassEdu/knowledge-base/quyen-kinhte-xahoi-vanhoa",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.6a-quyen-kinhte-xahoi-vanhoa.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "quyền ESC",
+      "permalink": "/MassEdu/knowledge-base/tags/quyền-esc"
+    },
+    {
+      "inline": true,
+      "label": "luật quốc tế",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-quốc-tế"
+    },
+    {
+      "inline": true,
+      "label": "công ước",
+      "permalink": "/MassEdu/knowledge-base/tags/cong-ước"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Các quyền kinh tế, xã hội, văn hóa",
+    "slug": "quyen-kinhte-xahoi-vanhoa",
+    "sidebar_position": 11,
+    "description": "Tìm hiểu về các quyền kinh tế, xã hội, văn hóa (ESC rights) thông qua Công ước ICESCR và cách tiếp cận phụ thuộc lẫn nhau giữa các quyền con người.",
+    "keywords": [
+      "quyền kinh tế",
+      "quyền xã hội",
+      "quyền văn hóa",
+      "ICESCR",
+      "công ước nhân quyền"
+    ],
+    "tags": [
+      "nhân quyền",
+      "quyền ESC",
+      "luật quốc tế",
+      "công ước"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Công ước quốc tế về các quyền dân sự và chính trị",
+    "permalink": "/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri"
+  },
+  "next": {
+    "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
+    "permalink": "/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh"
+  }
+}

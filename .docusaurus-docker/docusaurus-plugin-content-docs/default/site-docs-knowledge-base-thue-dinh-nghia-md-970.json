@@ -1,0 +1,37 @@
+{
+  "id": "thue-dinh-nghia",
+  "title": "Thuế là gì?",
+  "description": "Định nghĩa và khái niệm cơ bản về thuế",
+  "source": "@site/docs/knowledge-base/thue-dinh-nghia.md",
+  "sourceDirName": ".",
+  "slug": "/thue-dinh-nghia",
+  "permalink": "/MassEdu/knowledge-base/thue-dinh-nghia",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/thue-dinh-nghia.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "luật pháp",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Thuế là gì?",
+    "description": "Định nghĩa và khái niệm cơ bản về thuế",
+    "tags": [
+      "luật pháp"
+    ],
+    "conceptId": "thue"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Nhân quyền là gì?",
+    "permalink": "/MassEdu/knowledge-base/nhan-quyen-dinh-nghia"
+  },
+  "next": {
+    "title": "Tuyên ngôn nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen"
+  }
+}

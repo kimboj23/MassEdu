@@ -1,0 +1,52 @@
+{
+  "id": "modules/module-a-recognizing-daily-taxes",
+  "title": "Module A: Nhận diện thuế trong cuộc sống",
+  "description": "Khám phá và trải nghiệm tương tác với các loại thuế bạn đang đóng mỗi ngày",
+  "source": "@site/docs/course-tax/modules/module-a-recognizing-daily-taxes.mdx",
+  "sourceDirName": "modules",
+  "slug": "/modules/module-a-recognizing-daily-taxes",
+  "permalink": "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "thuế",
+      "permalink": "/MassEdu/course-tax/tags/thuế"
+    },
+    {
+      "inline": true,
+      "label": "VAT",
+      "permalink": "/MassEdu/course-tax/tags/vat"
+    },
+    {
+      "inline": true,
+      "label": "interactive",
+      "permalink": "/MassEdu/course-tax/tags/interactive"
+    },
+    {
+      "inline": true,
+      "label": "thực hành",
+      "permalink": "/MassEdu/course-tax/tags/thực-hanh"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Module A: Nhận diện thuế trong cuộc sống",
+    "description": "Khám phá và trải nghiệm tương tác với các loại thuế bạn đang đóng mỗi ngày",
+    "sidebar_label": "A. Nhận diện thuế hàng ngày",
+    "sidebar_position": 1,
+    "tags": [
+      "thuế",
+      "VAT",
+      "interactive",
+      "thực hành"
+    ]
+  },
+  "sidebar": "courseTax",
+  "previous": {
+    "title": "6. Thuế và Chính trị",
+    "permalink": "/MassEdu/course-tax/lessons/thue-va-chinh-tri"
+  }
+}

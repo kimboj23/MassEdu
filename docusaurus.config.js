@@ -47,7 +47,7 @@ const config = {
         },
         blog: false, // Turn off the blog plugin
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],

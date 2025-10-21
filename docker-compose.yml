@@ -20,6 +20,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
       - FAST_REFRESH=false
+      # Fix for Windows pathing issues in Docker
+      - DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-docker
       - HOST=0.0.0.0
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3001"]

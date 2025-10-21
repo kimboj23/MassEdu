@@ -503,3 +503,149 @@ a:hover {
     padding: var(--ifm-spacing-vertical) 1rem;
   }
 }
+
+/* ========================================
+   LESSON CONTENT STYLES
+   Specific styles for lesson pages
+   ======================================== */
+
+/* Hero banner - Introduction section with pastel background */
+.hero-banner {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), var(--ifm-color-lavender-lightest));
+  padding: 2rem;
+  border-radius: var(--ifm-card-border-radius);
+  margin: 2rem 0;
+  border-left: 4px solid var(--ifm-color-accent);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.hero-highlight {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Rule box - Important concepts highlighted */
+.rule-box {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), rgba(180, 212, 225, 0.3));
+  padding: 1.5rem;
+  border-left: 4px solid var(--ifm-color-secondary-dark);
+  margin: 2rem 0;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.rule-box h2 {
+  color: var(--ifm-color-primary-darkest);
+  margin-top: 0;
+}
+
+/* CTA box - Call to action section */
+.cta-box {
+  background: linear-gradient(135deg, var(--ifm-color-accent-lightest), rgba(255, 184, 160, 0.2));
+  padding: 1.5rem;
+  border-left: 4px solid var(--ifm-color-accent-dark);
+  margin: 2rem 0;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.cta-box p:first-child {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary-darkest);
+}
+
+/* Details/Summary (Accordion replacement) */
+details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 2px solid var(--ifm-color-secondary-light);
+  border-radius: var(--ifm-card-border-radius);
+  background-color: var(--ifm-background-surface-color);
+  transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+  border-color: var(--ifm-color-secondary);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+details[open] {
+  border-color: var(--ifm-color-accent);
+  background: linear-gradient(135deg, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+summary {
+  font-weight: var(--ifm-font-weight-semibold);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  color: var(--ifm-color-primary-darker);
+  list-style: none; /* Remove default triangle */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Remove default triangle in webkit browsers */
+}
+
+summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+  color: var(--ifm-color-accent-dark);
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+summary:hover {
+  background-color: var(--ifm-color-secondary-lightest);
+  color: var(--ifm-color-primary-darkest);
+}
+
+details > div {
+  padding-top: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .hero-banner {
+  background: linear-gradient(135deg, rgba(143, 191, 209, 0.15), rgba(167, 153, 219, 0.15));
+  border-left-color: var(--ifm-color-accent);
+}
+
+[data-theme='dark'] .rule-box {
+  background: linear-gradient(135deg, rgba(143, 191, 209, 0.1), rgba(143, 191, 209, 0.05));
+  border-left-color: var(--ifm-color-secondary);
+}
+
+[data-theme='dark'] .cta-box {
+  background: linear-gradient(135deg, rgba(255, 154, 115, 0.15), rgba(255, 154, 115, 0.05));
+  border-left-color: var(--ifm-color-accent);
+}
+
+[data-theme='dark'] details {
+  border-color: rgba(143, 191, 209, 0.3);
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] details[open] {
+  border-color: var(--ifm-color-accent);
+  background: linear-gradient(135deg, var(--ifm-background-surface-color), rgba(143, 191, 209, 0.1));
+}

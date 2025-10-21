@@ -1,0 +1,961 @@
+---
+title: "Phần 3: Suy-nghiệm"
+description: "Khế ước xã hội và hành trình hoàn thành"
+sidebar_position: 4
+---
+
+import { LearnMore } from '@site/src/components/Learning';
+import { Scene, ThoughtBubble, ThoughtBubbleSequence, ChoiceButtons, Choice, ProgressIndicator, ChoiceReview, StoryProgressProvider, ConditionalContent } from '@site/src/components/Interactive';
+import Link from '@docusaurus/Link';
+
+<StoryProgressProvider>
+
+# Phần 3: Suy-nghiệm - "Và Bây Giờ, Bạn Đã Hiểu"
+
+<ProgressIndicator totalScenes={5} />
+
+---
+
+<Scene id="canh-6" start={true}>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem',
+  color: 'white'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    🌙 <strong>7 giờ tối.</strong> Bạn đến nhà học sinh ở quận 7 - một căn nhà 2 tầng khá đẹp, khu dân cư yên tĩnh.
+  </p>
+</div>
+
+"Chào cô ạ! Em đến rồi ạ!"
+
+Hai em nhỏ chạy ra chào bạn: "Chào cô ơi!"
+
+Bạn ngồi xuống bàn, mở sách giáo khoa Tiếng Anh lớp 5. Hai tiếng sau, buổi học kết thúc.
+
+Mẹ hai em đưa cho bạn vài tờ tiền giấy:
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-success)',
+  borderRadius: '12px',
+  textAlign: 'center',
+  margin: '1.5rem 0',
+  boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+}}>
+  <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>💵</div>
+  <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--ifm-color-success-dark)', marginBottom: '0.5rem' }}>
+    2.000.000 đồng
+  </p>
+  <p style={{ marginBottom: 0 }}>
+    "Em nhận tiền tháng này nhé. Cảm ơn em nhiều!"
+  </p>
+</div>
+
+Bạn nhận phong bì, cảm ơn và chào về.
+
+---
+
+Trên đường về nhà, bạn nghĩ:
+
+<ThoughtBubble sequence={1} icon="💭" variant="question" delay={300}>
+  "2 triệu tiền mặt... không có hóa đơn, không có gì hết."
+  <ConditionalContent dependsOn="canh-5:freelance">
+    <br/>
+    <em>"À đúng rồi, mình kiếm 54 triệu/năm, dưới ngưỡng 100 triệu nên không bắt buộc phải kê khai."</em>
+  </ConditionalContent>
+  "Nhưng mà... nếu mình muốn làm đúng luật thì nên làm gì nhỉ?"
+</ThoughtBubble>
+
+<ChoiceButtons sceneId="canh-6">
+  <Choice value="think" nextScene="#canh-6-1" emoji="💭">
+    "Mình nên xin xác nhận từ phụ huynh không nhỉ?" (Suy ngẫm)
+  </Choice>
+  <Choice value="ignore" nextScene="#canh-6-2" emoji="🤷" variant="skip">
+    "Thôi kệ, mọi người cũng vậy mà" (Bỏ qua)
+  </Choice>
+  <Choice value="manage" nextScene="#canh-6-3" emoji="📝" variant="primary">
+    "Để mình ghi chép lại thu nhập cho rõ" (Tự quản lý)
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-6-1">
+<h3>Cảnh 6-1: Suy Ngẫm Về Việc Làm Đúng Luật</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p>
+    🏍️ Bạn lái xe máy về nhà, tiền trong túi khiến lòng hân hoan.
+  </p>
+  <p style={{ fontStyle: 'italic' }}>
+    "Mình có nên xin xác nhận từ phụ huynh không nhỉ?"
+  </p>
+</div>
+
+Bạn tưởng tượng:
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', margin: '2rem 0' }}>
+  <div style={{
+    padding: '1.5rem',
+    background: '#ffe8e8',
+    border: '2px solid #ff6b6b',
+    borderRadius: '12px'
+  }}>
+    <h4>🅰️ Tình huống A</h4>
+    <p style={{ fontStyle: 'italic' }}>
+      "Dạ cô ơi, cô có thể ký xác nhận cho em là em dạy gia sư ở đây không ạ?"
+    </p>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+      Có vẻ hơi... kỳ? Nhưng mà nếu sau này mình cần chứng minh thu nhập thì...
+    </p>
+  </div>
+
+  <div style={{
+    padding: '1.5rem',
+    background: '#e8f5ff',
+    border: '2px solid #4dabf7',
+    borderRadius: '12px'
+  }}>
+    <h4>🅱️ Tình huống B</h4>
+    <p style={{ fontStyle: 'italic' }}>
+      Mình tự ghi chép lại: ngày nào dạy, nhận bao nhiêu, ở đâu
+    </p>
+    <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+      Đơn giản hơn, không làm phiền ai
+    </p>
+  </div>
+</div>
+
+<ThoughtBubble sequence={1} icon="💡" variant="success">
+  Bạn quyết định:
+
+  "Okay, mình sẽ tự lập một file Excel ghi chép thu nhập. Giữ lại tin nhắn Zalo với phụ huynh. Nếu cần thì còn có bằng chứng."
+</ThoughtBubble>
+
+<div style={{
+  padding: '1.5rem',
+  background: '#d3f9d8',
+  borderLeft: '4px solid #51cf66',
+  borderRadius: '8px',
+  marginTop: '1.5rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>💡 Bài học:</h4>
+  <p>Dù luật không bắt buộc (vì dưới ngưỡng), nhưng tự quản lý thu nhập tốt sẽ:</p>
+  <ul style={{ marginBottom: 0 }}>
+    <li>✅ Giúp bạn theo dõi tài chính cá nhân</li>
+    <li>✅ Tạo thói quen tốt cho sau này</li>
+    <li>✅ Có hồ sơ nếu cần chứng minh thu nhập (vay vốn, xin visa...)</li>
+  </ul>
+</div>
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-7" className="button button--primary button--lg">
+    Tiếp tục →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-6-2">
+<h3>Cảnh 6-2: "Mọi Người Cũng Vậy Mà"</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px'
+}}>
+  <p style={{ fontStyle: 'italic' }}>
+    "Haizz... mọi người làm gia sư đều nhận tiền mặt cả. Không ai kê khai gì đâu."
+  </p>
+  <p style={{ fontStyle: 'italic' }}>
+    "Mình cũng vậy thôi, không sao đâu."
+  </p>
+</div>
+
+Bạn về đến nhà, thả người lên giường. Mở điện thoại, lướt TikTok.
+
+Nhưng trong đầu vẫn cứ nghĩ mãi:
+
+<ThoughtBubbleSequence baseDelay={500}>
+  <ThoughtBubble icon="🤔" variant="question">
+    "Sáng nay mình mới học về thuế... về trách nhiệm... về 'mình đóng thuế nên mình có quyền đòi hỏi'."
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="⚖️" variant="warning">
+    "Nếu mình không làm đúng... thì mình có quyền đòi hỏi gì không?"
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+:::warning Suy nghĩ thêm
+Nhiều người nghĩ "mọi người cũng vậy" là lý do để không tuân thủ. Nhưng nếu ai cũng nghĩ vậy, ai sẽ đóng thuế để xây đường, trường học, bệnh viện?
+
+Thay đổi bắt đầu từ mỗi người chúng ta. 🌱
+:::
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-7" className="button button--primary button--lg">
+    Tiếp tục →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-6-3">
+<h3>Cảnh 6-3: Tự Quản Lý Thu Nhập</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p>
+    💻 Về đến nhà, bạn mở laptop, tạo một file Excel mới:
+  </p>
+</div>
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-success)',
+  borderRadius: '12px',
+  fontFamily: 'monospace',
+  fontSize: '0.9rem',
+  margin: '1.5rem 0'
+}}>
+  <strong style={{ fontSize: '1.1rem' }}>THEO DÕI THU NHẬP 2025</strong>
+  <br/><br/>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr style={{ borderBottom: '2px solid #ddd' }}>
+        <th style={{ textAlign: 'left', padding: '0.5rem' }}>Ngày</th>
+        <th style={{ textAlign: 'left', padding: '0.5rem' }}>Công việc</th>
+        <th style={{ textAlign: 'right', padding: '0.5rem' }}>Thu nhập</th>
+        <th style={{ textAlign: 'left', padding: '0.5rem' }}>Ghi chú</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.5rem' }}>01/10/2025</td>
+        <td style={{ padding: '0.5rem' }}>Dạy gia sư</td>
+        <td style={{ textAlign: 'right', padding: '0.5rem' }}>2.000.000</td>
+        <td style={{ padding: '0.5rem' }}>Phụ huynh A - Quận 7</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.5rem' }}>01/10/2025</td>
+        <td style={{ padding: '0.5rem' }}>Thiết kế poster</td>
+        <td style={{ textAlign: 'right', padding: '0.5rem' }}>1.500.000</td>
+        <td style={{ padding: '0.5rem' }}>Shop B - Chuyển khoản</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ThoughtBubble sequence={1} icon="😊" variant="success">
+  "Ừm... từ giờ mình sẽ ghi chép đều đặn. Cuối năm cộng lại xem có vượt 100 triệu không."
+
+  Bạn cảm thấy yên tâm hơn.
+</ThoughtBubble>
+
+<div style={{
+  padding: '1.5rem',
+  background: '#d3f9d8',
+  borderLeft: '4px solid #51cf66',
+  borderRadius: '8px',
+  marginTop: '1.5rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>✅ Lợi ích của việc tự ghi chép:</h4>
+  <ul style={{ marginBottom: 0 }}>
+    <li>Theo dõi được tài chính cá nhân</li>
+    <li>Biết chính xác mình kiếm được bao nhiêu/năm</li>
+    <li>Có bằng chứng nếu cần (vay ngân hàng, xin visa...)</li>
+    <li>Tạo thói quen quản lý tốt cho tương lai</li>
+  </ul>
+</div>
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-7" className="button button--primary button--lg">
+    Tiếp tục →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-7">
+<div style={{
+  padding: '1.5rem',
+  background: 'linear-gradient(135deg, #2c3e50 0%, #3498db 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem',
+  color: 'white'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    🌙 <strong>11 giờ đêm.</strong> Bạn nằm dài trên giường, mở điện thoại. Lướt Facebook, vài bài viết về "sinh viên nghèo", "đi làm thêm"...
+  </p>
+</div>
+
+Bạn thở dài. *"Một ngày dài quá..."*
+
+Rồi bạn nghĩ lại:
+
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  margin: '2rem 0'
+}}>
+  <h4 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>📅 Nhìn lại hành trình hôm nay:</h4>
+  <div style={{ display: 'grid', gap: '1rem' }}>
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+      <span style={{ fontSize: '2rem' }}>🌅</span>
+      <div>
+        <strong>Sáng:</strong> Mua bánh mì, đóng thuế VAT mà không biết
+      </div>
+    </div>
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+      <span style={{ fontSize: '2rem' }}>☀️</span>
+      <div>
+        <strong>Trưa:</strong> Nhận tin nhắn về mã số thuế, lần đầu hiểu mình cần gì
+      </div>
+    </div>
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+      <span style={{ fontSize: '2rem' }}>🌤️</span>
+      <div>
+        <strong>Chiều:</strong> Tìm hiểu về ngưỡng thu nhập, thuế lũy tiến
+      </div>
+    </div>
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+      <span style={{ fontSize: '2rem' }}>🌙</span>
+      <div>
+        <strong>Tối:</strong> Nhận tiền mặt, suy ngẫm về trách nhiệm
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 'bold' }}>
+  Bạn học được gì hôm nay?
+</p>
+
+<ChoiceButtons sceneId="canh-7">
+  <Choice value="review" nextScene="#canh-7-1" emoji="📚">
+    Xem lại tất cả những gì đã học (Tóm tắt kiến thức)
+  </Choice>
+  <Choice value="reflect" nextScene="#canh-7-2" emoji="💭">
+    Suy ngẫm: "Thuế có ý nghĩa gì với mình?"
+  </Choice>
+  <Choice value="game" nextScene="#canh-7-3" emoji="🎮">
+    Chơi minigame: "Phân bổ ngân sách"
+  </Choice>
+</ChoiceButtons>
+</Scene>
+
+---
+<Scene id="canh-7-1">
+<h3>Cảnh 7-1: Tóm Tắt Kiến Thức</h3>
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>📖 BẠN ĐÃ HỌC ĐƯỢC GÌ HÔM NAY?</h3>
+</div>
+
+<ThoughtBubbleSequence baseDelay={200} staggerDelay={400}>
+  <ThoughtBubble icon="1️⃣" variant="insight">
+    **BẠN ĐANG ĐÓNG THUẾ MỖI NGÀY**
+
+    Thuế VAT (10%) ẩn trong giá mọi thứ: bánh mì, cà phê, quần áo...
+    Dù không thấy, bạn vẫn đóng góp vào ngân sách nhà nước
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="2️⃣" variant="question">
+    **CÓ 2 LOẠI THUẾ CHÍNH**
+
+    - **Thuế gián thu (VAT):** Mọi người đóng như nhau → gánh nặng nặng hơn với người nghèo
+    - **Thuế trực tiếp (TNCN):** Ai kiếm nhiều đóng nhiều → công bằng hơn
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="3️⃣" variant="success">
+    **SỐ CCCD = MÃ SỐ THUẾ (TỪ 1/7/2025)**
+
+    Không cần đăng ký riêng. Dùng số CCCD 12 số khi cần.
+
+    *Nguồn: Thông tư 86/2024/TT-BTC*
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="4️⃣" variant="warning">
+    **KHI NÀO PHẢI NỘP THUẾ TNCN?**
+
+    **Từ lương:**
+    - Thu nhập (sau trừ bảo hiểm & giảm trừ) > 132 triệu/năm → phải nộp
+
+    **Từ kinh doanh/freelance:**
+    - Doanh thu < 100 triệu/năm → không phải nộp
+    - Doanh thu ≥ 100 triệu/năm → phải tự kê khai
+
+    *Nguồn: Nghị quyết 954/2020, Luật thuế GTGT 2024*
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="5️⃣" variant="insight">
+    **THUẾ LŨY TIẾN**
+
+    Không đánh toàn bộ thu nhập ở mức cao nhất.
+    Tính từng bậc một (5%-35%).
+    Công bằng hơn vì điều chỉnh theo khả năng.
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="6️⃣" variant="success">
+    **TIỀN THUẾ ĐI ĐÂU?**
+
+    - 🛣️ Đường xá, trường học, bệnh viện
+    - 👮 Công an, quân đội, tòa án
+    - 🌳 Các chương trình phúc lợi xã hội
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="7️⃣" variant="warning">
+    **TRƯỜNG HỢP CỦA BẠN**
+
+    Thu nhập: ~54 triệu/năm
+    → Không phải nộp thuế TNCN (dưới ngưỡng)
+    → Nhưng vẫn đang đóng thuế VAT mỗi ngày!
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<LearnMore
+  lesson="01-ban-dang-dong-thue-gi"
+  context="Xem lại bài học chi tiết với đầy đủ ví dụ và tính toán"
+/>
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-7-2" className="button button--primary">
+    Tiếp tục: Suy ngẫm →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-7-2">
+<h3>Cảnh 7-2: Suy Ngẫm Cá Nhân</h3>
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '1.5rem'
+}}>
+  <p>
+    🪟 Bạn đặt điện thoại xuống, nhìn ra ngoài cửa sổ.
+  </p>
+</div>
+
+Đèn đường sáng rực. Con đường phẳng phiu. Ở góc phố có trạm y tế, sáng đèn xanh lè.
+
+<ThoughtBubbleSequence baseDelay={500} staggerDelay={600}>
+  <ThoughtBubble icon="🏛️" variant="question">
+    "Tất cả những thứ này... đều từ tiền thuế à?"
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="💭" variant="insight">
+    Bạn nghĩ về sáng nay - bánh mì 25k, 2.3k là thuế. Con số nhỏ xíu.
+
+    Nhưng cộng dồn từ hàng triệu người mỗi ngày...
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="💡" variant="success">
+    Rồi bạn nghĩ về mình:
+
+    "Mình kiếm 54 triệu/năm. Không phải đóng thuế thu nhập.
+    Nhưng mình vẫn đang đóng góp qua thuế VAT mỗi ngày."
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🤝" variant="warning">
+    "Nếu sau này mình kiếm nhiều hơn... mình sẽ đóng thuế TNCN.
+
+    Và tiền đó sẽ giúp những người khác - như cách mà mình đang được hưởng lợi từ đường xá, trường học này."
+
+    **Đó là... khế ước xã hội.**
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="⚖️" variant="question">
+    "Mình đóng thuế → Nhà nước cung cấp dịch vụ → Mình được hưởng lợi → Mình có quyền đòi hỏi minh bạch, trách nhiệm."
+
+    "Nhưng... nếu mình không làm đúng, thì mình có quyền đòi hỏi gì không?"
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginTop: '2rem',
+  textAlign: 'center'
+}}>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    Câu hỏi không có đáp án dễ dàng.<br/>
+    Nhưng bạn bắt đầu hiểu.
+  </p>
+</div>
+
+<LearnMore
+  lesson="02-tai-sao-dong-thue"
+  context="Tìm hiểu sâu hơn về khế ước xã hội và ý nghĩa của thuế"
+/>
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-7-3" className="button button--primary">
+    Tiếp tục: Chơi minigame →
+  </Link>
+  <span style={{ margin: '0 1rem' }}>hoặc</span>
+  <Link to="#canh-8" className="button button--secondary">
+    Nhảy tới Suy-nghiệm →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-7-3">
+<h3>Cảnh 7-3: Minigame - "Phân Bổ Ngân Sách"</h3>
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem',
+  textAlign: 'center'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>🎮 Minigame</h3>
+  <p style={{ fontSize: '1.25rem', marginBottom: 0 }}>
+    "Okay, giờ bạn là Bộ trưởng Tài chính một ngày!"
+  </p>
+</div>
+
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  marginBottom: '2rem'
+}}>
+  <h4>📋 NHIỆM VỤ:</h4>
+  <p>Phân bổ <strong style={{ color: 'var(--ifm-color-primary)', fontSize: '1.5rem' }}>100 tỷ đồng</strong> ngân sách từ tiền thuế vào các lĩnh vực sau:</p>
+
+  <div style={{ display: 'grid', gap: '1rem', marginTop: '1.5rem' }}>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>🏥 Y tế (bệnh viện, thuốc men, vaccine...)</span>
+      <strong>? tỷ</strong>
+    </div>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>🏫 Giáo dục (trường học, lương giáo viên...)</span>
+      <strong>? tỷ</strong>
+    </div>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>🛣️ Hạ tầng (đường xá, cầu, đèn đường...)</span>
+      <strong>? tỷ</strong>
+    </div>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>👮 An ninh (công an, quân đội, cứu hỏa...)</span>
+      <strong>? tỷ</strong>
+    </div>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>🌳 Môi trường (công viên, xử lý rác...)</span>
+      <strong>? tỷ</strong>
+    </div>
+    <div style={{ padding: '1rem', background: 'white', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <span>🤝 Phúc lợi xã hội (trợ cấp người nghèo...)</span>
+      <strong>? tỷ</strong>
+    </div>
+  </div>
+</div>
+
+:::info Quy tắc game
+- Mỗi lĩnh vực phải có ít nhất **5 tỷ**
+- Tổng phải đúng **100 tỷ**
+- Không có đáp án đúng/sai - chỉ có **trade-off** (đánh đổi)
+
+*(Game tương tác đầy đủ sẽ được implement riêng)*
+:::
+
+<div style={{
+  padding: '1.5rem',
+  background: '#fff3cd',
+  borderLeft: '4px solid #ffc107',
+  borderRadius: '8px',
+  marginTop: '2rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>💡 BÀI HỌC:</h4>
+  <p>Không có ngân sách "hoàn hảo". Mọi quyết định đều có đánh đổi.</p>
+  <p><strong>Đó là lý do tại sao:</strong></p>
+  <ul style={{ marginBottom: 0 }}>
+    <li>✅ **Minh bạch** quan trọng - người dân cần biết tiền đi đâu</li>
+    <li>✅ **Tham gia** quan trọng - người dân cần có tiếng nói trong quyết định ngân sách</li>
+    <li>✅ **Trách nhiệm** quan trọng - chính phủ phải giải trình về cách chi tiêu</li>
+  </ul>
+</div>
+
+<LearnMore
+  lesson="03-tien-thue-di-dau"
+  context="Tìm hiểu chi tiết về cách phân bổ ngân sách nhà nước"
+/>
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <Link to="#canh-8" className="button button--primary button--lg">
+    Tiếp tục tới Suy-nghiệm →
+  </Link>
+</div>
+</Scene>
+
+---
+<Scene id="canh-8">
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)',
+  borderRadius: '12px',
+  marginBottom: '2rem'
+}}>
+  <p style={{ fontSize: '1.25rem', marginBottom: 0 }}>
+    ☀️ <strong>Sáng thứ Bảy.</strong> Bạn thức dậy sớm, pha cà phê sữa tự làm (tiết kiệm mà), ngồi trên ban công nhỏ xíu của phòng trọ.
+  </p>
+</div>
+
+Điện thoại rung. Tin nhắn từ chị chủ shop:
+
+<div style={{
+  padding: '1.5rem',
+  background: 'white',
+  border: '2px solid var(--ifm-color-primary-light)',
+  borderRadius: '12px',
+  marginTop: '1.5rem',
+  boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+}}>
+  <p>"Em ơi, chị vừa chuyển tiền thiết kế cho em rồi nhé. <strong>1.500.000 đ.</strong> Cảm ơn em! 💕</p>
+  <p style={{ marginBottom: 0 }}>Chị cần <strong>số CCCD</strong> của em để kê khai chi phí. Em gửi cho chị nhé!"</p>
+</div>
+
+Bạn mở app ngân hàng. Đúng là có 1.5 triệu.
+
+<ThoughtBubbleSequence baseDelay={300}>
+  <ThoughtBubble icon="💡" variant="success">
+    "À đúng rồi, từ tháng 7 rồi mà, số CCCD chính là mã số thuế luôn. Đơn giản thật!"
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="📱" variant="insight">
+    Bạn chụp ảnh CCCD, gửi cho chị qua Zalo.
+
+    "Dạ, đây ạ chị! Em cảm ơn chị ạ 😊"
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+---
+
+Xong việc, bạn ngồi nhìn ra xa.
+
+Ánh nắng sớm chiếu qua những tòa nhà cao tầng. Dưới đường, người đi xe máy tấp nập. Góc phố, cô bán bánh mì đã mở quán.
+
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-emphasis-100)',
+  borderRadius: '12px',
+  margin: '2rem 0'
+}}>
+  <p style={{ fontSize: '1.125rem' }}>
+    Bạn mở Notes trên điện thoại, xem lại những ghi chú hôm qua:
+  </p>
+  <ul style={{ fontSize: '1.05rem', lineHeight: 1.8 }}>
+    <li>✅ Thuế VAT: đang đóng mỗi ngày (10%)</li>
+    <li>✅ Thuế TNCN: chưa cần lo (dưới 100tr/năm)</li>
+    <li>✅ Mã số thuế: dùng số CCCD</li>
+    <li>✅ Tự theo dõi thu nhập từ giờ</li>
+  </ul>
+</div>
+
+Rồi bạn suy nghĩ:
+
+<ThoughtBubbleSequence baseDelay={500} staggerDelay={500}>
+  <ThoughtBubble icon="💭" variant="insight">
+    "Từ giờ, mỗi khi mua gì đó, mình sẽ biết mình đang đóng góp vào xã hội."
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="🛣️" variant="success">
+    "Mỗi khi đi trên con đường này, mình sẽ nhớ một phần tiền thuế của mình đã giúp sửa nó."
+  </ThoughtBubble>
+
+  <ThoughtBubble icon="💪" variant="warning">
+    "Và nếu sau này mình kiếm được nhiều hơn... mình sẽ đóng thuế thu nhập.
+
+    Điều đó không tệ - vì nó có nghĩa là mình đang làm tốt hơn."
+  </ThoughtBubble>
+</ThoughtBubbleSequence>
+
+---
+<div id="action-plan">
+<h3>BẠN SẼ LÀM GÌ TỪ BÂY GIỜ?</h3>
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem',
+  textAlign: 'center'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>🎯 LỰA CHỌN CUỐI CÙNG:</h3>
+</div>
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', margin: '2rem 0' }}>
+  <div style={{
+    padding: '1.5rem',
+    background: '#e7f5ff',
+    border: '2px solid #339af0',
+    borderRadius: '12px'
+  }}>
+    <h4>1️⃣ Tự quản lý thu nhập tốt hơn</h4>
+    <ul>
+      <li>Tạo file Excel theo dõi thu nhập</li>
+      <li>Giữ lại tin nhắn/xác nhận từ khách hàng</li>
+      <li>Cuối năm cộng lại xem có vượt ngưỡng không</li>
+    </ul>
+  </div>
+
+  <div style={{
+    padding: '1.5rem',
+    background: '#fff3bf',
+    border: '2px solid #fab005',
+    borderRadius: '12px'
+  }}>
+    <h4>2️⃣ Tìm hiểu thêm về thuế và ngân sách</h4>
+    <ul>
+      <li>Follow các trang về tài chính cá nhân</li>
+      <li>Đọc báo cáo ngân sách công (nếu muốn)</li>
+      <li>Hiểu rõ hơn về quyền và trách nhiệm công dân</li>
+    </ul>
+  </div>
+
+  <div style={{
+    padding: '1.5rem',
+    background: '#d0f4de',
+    border: '2px solid #40c057',
+    borderRadius: '12px'
+  }}>
+    <h4>3️⃣ Chia sẻ kiến thức với bạn bè</h4>
+    <ul>
+      <li>"Ê, mày biết không, mỗi lần mua trà sữa là mày đóng thuế đấy!"</li>
+      <li>Giúp bạn bè hiểu về thuế, tránh bị HR lừa</li>
+      <li>Lan tỏa ý thức công dân</li>
+    </ul>
+  </div>
+
+  <div style={{
+    padding: '1.5rem',
+    background: '#ffe3e3',
+    border: '2px solid #ff6b6b',
+    borderRadius: '12px'
+  }}>
+    <h4>4️⃣ Tiếp tục như bình thường</h4>
+    <ul>
+      <li>Không thay đổi gì nhiều</li>
+      <li>Nhưng mỗi khi nghĩ về thuế...</li>
+      <li>Bạn sẽ nhớ: "À, mình biết rồi."</li>
+    </ul>
+  </div>
+</div>
+
+<div style={{
+  padding: '2rem',
+  background: 'var(--ifm-color-success-lightest)',
+  borderLeft: '4px solid var(--ifm-color-success)',
+  borderRadius: '8px',
+  marginTop: '2rem'
+}}>
+  <h4 style={{ marginTop: 0 }}>✨ KHÔNG CÓ LỰA CHỌN NÀO LÀ "ĐÚNG" TUYỆT ĐỐI.</h4>
+  <p>Mỗi người có hoàn cảnh, ưu tiên khác nhau.</p>
+  <p><strong>Điều quan trọng là:</strong></p>
+  <ul style={{ marginBottom: 0 }}>
+    <li>✅ Bạn đã hiểu thuế là gì</li>
+    <li>✅ Bạn đã biết mình có trách nhiệm gì</li>
+    <li>✅ Bạn đã nhận ra mình có quyền đòi hỏi gì</li>
+    <li>✅ Và kiến thức đó sẽ đi cùng bạn suốt đời.</li>
+  </ul>
+</div>
+</div>
+</Scene>
+
+---
+<Scene id="ending">
+<div style={{
+  padding: '3rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '16px',
+  color: 'white',
+  textAlign: 'center',
+  marginTop: '3rem'
+}}>
+  <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎓</div>
+  <h2 style={{ color: 'white', marginTop: 0 }}>Hành trình hoàn thành!</h2>
+  <p style={{ fontSize: '1.25rem', lineHeight: 1.8 }}>
+    Bạn uống hết ly cà phê, đứng dậy.<br/>
+    Hôm nay là thứ Bảy - ngày nghỉ. Nhưng chiều nay bạn có lịch bán hàng online, tối mai lại dạy gia sư.
+  </p>
+  <p style={{ fontSize: '1.125rem', opacity: 0.95 }}>
+    Cuộc sống vẫn tiếp tục.<br/>
+    Nhưng giờ, bạn nhìn nó bằng một cặp mắt khác.
+  </p>
+  <div style={{
+    padding: '2rem',
+    background: 'rgba(255,255,255,0.2)',
+    borderRadius: '12px',
+    marginTop: '2rem'
+  }}>
+    <p style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+      Bạn không chỉ là "sinh viên nghèo làm thêm".
+    </p>
+    <p style={{ fontSize: '1.25rem', marginBottom: 0 }}>
+      Bạn là người nộp thuế.<br/>
+      Bạn là công dân.<br/>
+      Bạn có quyền và trách nhiệm.
+    </p>
+  </div>
+</div>
+</Scene>
+
+---
+<Scene id="useful-links">
+<h3>🎯 NHỮNG NGUỒN HỮU ÍCH NẾU BẠN MUỐN TÌM HIỂU THÊM:</h3>
+<div style={{ display: 'grid', gap: '1rem', margin: '2rem 0' }}>
+  <div style={{ padding: '1rem', background: 'var(--ifm-color-emphasis-100)', borderRadius: '8px' }}>
+    <strong>1️⃣ Về thuế thu nhập cá nhân:</strong>
+    <ul style={{ marginBottom: 0, marginTop: '0.5rem' }}>
+      <li><a href="https://dichvucong.gov.vn" target="_blank">Cổng Dịch vụ công Quốc gia</a></li>
+      <li><a href="https://thuedientu.gdt.gov.vn" target="_blank">Trang thuế điện tử - Tổng cục Thuế</a></li>
+    </ul>
+  </div>
+
+  <div style={{ padding: '1rem', background: 'var(--ifm-color-emphasis-100)', borderRadius: '8px' }}>
+    <strong>2️⃣ Về ngân sách nhà nước:</strong>
+    <ul style={{ marginBottom: 0, marginTop: '0.5rem' }}>
+      <li>Báo cáo ngân sách nhà nước - Bộ Tài chính</li>
+      <li>Xây dựng chính sách - Chính phủ</li>
+    </ul>
+  </div>
+
+  <div style={{ padding: '1rem', background: 'var(--ifm-color-emphasis-100)', borderRadius: '8px' }}>
+    <strong>3️⃣ Về quyền công dân:</strong>
+    <ul style={{ marginBottom: 0, marginTop: '0.5rem' }}>
+      <li>Hiến pháp Việt Nam 2013 - Chương II: Quyền con người</li>
+    </ul>
+  </div>
+</div>
+</Scene>
+
+---
+<Scene id="next-steps">
+<h3>📚 TIẾP TỤC HỌC TẬP:</h3>
+<div className="row" style={{ marginTop: '2rem' }}>
+  <div className="col col--4">
+    <div className="card">
+      <div className="card__header">
+        <h4>📖 Bài học đầy đủ</h4>
+      </div>
+      <div className="card__body">
+        <p>Xem lại lý thuyết chi tiết với đầy đủ tính toán</p>
+      </div>
+      <div className="card__footer">
+        <Link to="/course-tax/lessons/01-ban-dang-dong-thue-gi" className="button button--primary button--block">
+          Bài 1: Bạn đang đóng thuế gì?
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card">
+      <div className="card__header">
+        <h4>🔍 Module chuyên sâu</h4>
+      </div>
+      <div className="card__body">
+        <p>Khám phá các chủ đề phức tạp hơn</p>
+      </div>
+      <div className="card__footer">
+        <Link to="/course-tax/modules/module-c-progressive-tax" className="button button--secondary button--block">
+          Thuế lũy tiến
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card">
+      <div className="card__header">
+        <h4>🎭 Câu chuyện khác</h4>
+      </div>
+      <div className="card__body">
+        <p>Khám phá góc nhìn từ nhân vật khác</p>
+      </div>
+      <div className="card__footer">
+        <Link to="/course-tax/characters" className="button button--secondary button--block">
+          Xem tất cả câu chuyện
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+</Scene>
+
+---
+<Scene id="legal-references">
+<h3>📝 CÁC QUY ĐỊNH PHÁP LUẬT THAM KHẢO:</h3>
+<div style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)', marginTop: '2rem' }}>
+  <ul>
+    <li>Luật Thuế GTGT 2008 (sửa đổi 2013, 2016, 2024)</li>
+    <li>Luật Thuế TNCN 2007 (sửa đổi 2012, 2014)</li>
+    <li>Luật Quản lý thuế 2019</li>
+    <li>Thông tư 111/2013/TT-BTC (Hướng dẫn Luật Thuế TNCN)</li>
+    <li>Thông tư 86/2024/TT-BTC (Đăng ký thuế)</li>
+    <li>Nghị quyết 954/2020/UBTVQH14 (Giảm trừ gia cảnh)</li>
+  </ul>
+</div>
+
+---
+
+<ChoiceReview />
+
+<div style={{
+  textAlign: 'center',
+  padding: '3rem 2rem',
+  background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+  borderRadius: '16px',
+  color: 'white',
+  marginTop: '3rem'
+}}>
+  <h2 style={{ color: 'white', marginTop: 0 }}>🌟 Cảm ơn bạn đã hoàn thành hành trình!</h2>
+  <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
+    Hãy chia sẻ kiến thức này với bạn bè!<br/>
+    Mỗi người hiểu về thuế = Một bước tiến cho xã hội minh bạch hơn.
+  </p>
+  <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+    <Link
+      to="/"
+      className="button button--lg"
+      style={{ background: 'white', color: '#0066cc', border: 'none' }}
+    >
+      Về trang chủ
+    </Link>
+    <Link
+      to="/course-tax/characters/sinh-vien/thuc-tinh"
+      className="button button--lg button--outline"
+      style={{ color: 'white', borderColor: 'white' }}
+    >
+      🔄 Chơi lại
+    </Link>
+  </div>
+</div>
+</Scene>
+
+</StoryProgressProvider>

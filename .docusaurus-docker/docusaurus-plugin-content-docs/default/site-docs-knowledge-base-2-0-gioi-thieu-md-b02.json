@@ -1,0 +1,63 @@
+{
+  "id": "2.0-gioi-thieu",
+  "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
+  "description": "Giới thiệu về luật nhân quyền quốc tế, nghĩa vụ của nhà nước, vi phạm nhân quyền và người bảo vệ nhân quyền trong chương 2 của khóa học.",
+  "source": "@site/docs/knowledge-base/2.0-gioi-thieu.md",
+  "sourceDirName": ".",
+  "slug": "/gioi-thieu-chuong-2",
+  "permalink": "/MassEdu/knowledge-base/gioi-thieu-chuong-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.0-gioi-thieu.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "giới thiệu",
+      "permalink": "/MassEdu/knowledge-base/tags/giới-thiệu"
+    },
+    {
+      "inline": true,
+      "label": "chương 2",
+      "permalink": "/MassEdu/knowledge-base/tags/chương-2"
+    },
+    {
+      "inline": true,
+      "label": "luật nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "vi phạm",
+      "permalink": "/MassEdu/knowledge-base/tags/vi-phạm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
+    "slug": "gioi-thieu-chuong-2",
+    "sidebar_position": 1,
+    "description": "Giới thiệu về luật nhân quyền quốc tế, nghĩa vụ của nhà nước, vi phạm nhân quyền và người bảo vệ nhân quyền trong chương 2 của khóa học.",
+    "keywords": [
+      "luật nhân quyền",
+      "vi phạm nhân quyền",
+      "nghĩa vụ nhà nước",
+      "người bảo vệ nhân quyền"
+    ],
+    "tags": [
+      "giới thiệu",
+      "chương 2",
+      "luật nhân quyền",
+      "vi phạm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.0 Giới thiệu về nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/tuan1/gioi-thieu"
+  },
+  "next": {
+    "title": "Quiz Chính trị và Hiến pháp",
+    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol"
+  }
+}
