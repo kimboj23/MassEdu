@@ -140,11 +140,11 @@ const config = {
             items: [
               {
                 label: 'Hạt mầm Nhân quyền',
-                to: '/knowledge-base/gioi-thieu',
+                to: '/knowledge-base/1.0-gioi-thieu',
               },
               {
                 label: 'Chính trị Chính tôi',
-                to: '/knowledge-base/intro',
+                to: '/knowledge-base/2.0-gioi-thieu',
               },
             ],
           },
