@@ -54,6 +54,13 @@
   height: 40px;
 }
 
+/* Dark mode fix for avatar */
+[data-theme='dark'] .characterAvatar {
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-secondary-dark));
+  border-color: var(--ifm-color-accent);
+  color: var(--ifm-color-white);
+}
+
 .characterBasicInfo {
   flex-grow: 1;
 }
@@ -67,6 +74,11 @@
 
 .compact .characterName {
   font-size: 1.25rem;
+}
+
+/* Dark mode fix for character name */
+[data-theme='dark'] .characterName {
+  color: var(--ifm-color-white);
 }
 
 .characterOccupation {
@@ -83,11 +95,25 @@
   font-size: 0.9rem;
 }
 
+/* Dark mode fix for occupation */
+[data-theme='dark'] .characterOccupation {
+  background: linear-gradient(90deg, var(--ifm-color-accent-light), var(--ifm-color-lavender-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .characterAge,
 .characterLocation {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: #000000;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark mode fix for age and location */
+[data-theme='dark'] .characterAge,
+[data-theme='dark'] .characterLocation {
+  color: var(--ifm-color-emphasis-600);
 }
 
 .characterDescription {
@@ -116,6 +142,13 @@
   padding-left: 0.5rem;
 }
 
+/* Dark mode fix for section headings */
+[data-theme='dark'] .characterBackground h4,
+[data-theme='dark'] .personalityTraits h4 {
+  color: var(--ifm-color-white);
+  border-left-color: var(--ifm-color-accent-light);
+}
+
 .characterBackground ul {
   margin: 0;
   padding-left: 1.25rem;
@@ -124,7 +157,12 @@
 .characterBackground li {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
-  color: #000000;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark mode fix for background list items */
+[data-theme='dark'] .characterBackground li {
+  color: var(--ifm-color-emphasis-600);
 }
 
 .traitTags {
@@ -177,6 +215,11 @@
   font-weight: var(--ifm-heading-font-weight);
 }
 
+/* Dark mode fix for storyline progress heading */
+[data-theme='dark'] .storylineProgress h4 {
+  color: var(--ifm-color-white);
+}
+
 .storylineSection {
   margin-bottom: 1.5rem;
 }
@@ -195,6 +238,14 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 1rem;
+}
+
+/* Dark mode fix for storyline title */
+[data-theme='dark'] .storylineTitle {
+  background: linear-gradient(90deg, var(--ifm-color-accent-light), var(--ifm-color-secondary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .comingSoon {
@@ -233,6 +284,12 @@
   box-shadow: var(--ifm-global-shadow-lw);
 }
 
+/* Dark mode fix for episode link hover */
+[data-theme='dark'] .episodeLink:hover {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-200), var(--ifm-color-emphasis-300));
+  border-color: var(--ifm-color-accent-light);
+}
+
 .episodeNumber {
   background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
   color: white;
@@ -263,6 +320,12 @@
 .currentEpisode .episodeNumber {
   background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
   color: white;
+}
+
+/* Dark mode fix for current episode */
+[data-theme='dark'] .currentEpisode {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-300), var(--ifm-color-emphasis-400));
+  border-color: var(--ifm-color-accent-light);
 }
 
 .completedEpisode {

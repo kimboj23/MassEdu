@@ -1,3 +1,9 @@
+---
+title: "Ai thực sự gánh chịu thuế?"
+description: ""
+hide_title: true
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

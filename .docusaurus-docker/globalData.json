@@ -162,62 +162,15 @@
           "label": "Next",
           "isLast": true,
           "path": "/MassEdu/course-tax",
-          "mainDocId": "characters/sinh-vien/index",
+          "mainDocId": "characters/sinh-vien/story",
           "docs": [
             {
               "id": "cac-loai-thue",
               "path": "/MassEdu/course-tax/cac-loai-thue"
             },
             {
-              "id": "characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi",
-              "path": "/MassEdu/course-tax/characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi"
-            },
-            {
-              "id": "characters/giang-ban-hang-rong/di-nop-thu-tuc",
-              "path": "/MassEdu/course-tax/characters/giang-ban-hang-rong/di-nop-thu-tuc"
-            },
-            {
-              "id": "characters/giang-ban-hang-rong/giang-ban-hang-rong",
-              "path": "/MassEdu/course-tax/characters/giang-ban-hang-rong/"
-            },
-            {
-              "id": "characters/giang-ban-hang-rong/tinh-huong-kho-khan",
-              "path": "/MassEdu/course-tax/characters/giang-ban-hang-rong/tinh-huong-kho-khan"
-            },
-            {
-              "id": "characters/khanh-chu-cua-hang/khanh-chu-cua-hang",
-              "path": "/MassEdu/course-tax/characters/khanh-chu-cua-hang/"
-            },
-            {
-              "id": "characters/khanh-chu-cua-hang/nghia-vu-khac",
-              "path": "/MassEdu/course-tax/characters/khanh-chu-cua-hang/nghia-vu-khac"
-            },
-            {
-              "id": "characters/khanh-chu-cua-hang/quyet-dinh-mo-rong",
-              "path": "/MassEdu/course-tax/characters/khanh-chu-cua-hang/quyet-dinh-mo-rong"
-            },
-            {
-              "id": "characters/khanh-chu-cua-hang/thang-dau-kho-khan",
-              "path": "/MassEdu/course-tax/characters/khanh-chu-cua-hang/thang-dau-kho-khan"
-            },
-            {
-              "id": "characters/sinh-vien/gap-kho",
-              "path": "/MassEdu/course-tax/characters/sinh-vien/gap-kho",
-              "sidebar": "courseTax"
-            },
-            {
-              "id": "characters/sinh-vien/index",
-              "path": "/MassEdu/course-tax/characters/sinh-vien/",
-              "sidebar": "courseTax"
-            },
-            {
-              "id": "characters/sinh-vien/suy-nghiem",
-              "path": "/MassEdu/course-tax/characters/sinh-vien/suy-nghiem",
-              "sidebar": "courseTax"
-            },
-            {
-              "id": "characters/sinh-vien/thuc-tinh",
-              "path": "/MassEdu/course-tax/characters/sinh-vien/thuc-tinh",
+              "id": "characters/sinh-vien/story",
+              "path": "/MassEdu/course-tax/characters/sinh-vien/story",
               "sidebar": "courseTax"
             },
             {
@@ -293,7 +246,7 @@
           "sidebars": {
             "courseTax": {
               "link": {
-                "path": "/MassEdu/course-tax/characters/sinh-vien/",
+                "path": "/MassEdu/course-tax/characters/sinh-vien/story",
                 "label": "Sinh viên"
               }
             }

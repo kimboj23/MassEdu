@@ -1,7 +1,7 @@
 {
   "id": "lessons/ban-dang-dong-thue/e-thue-la-gi",
-  "title": "e-thue-la-gi",
-  "description": "Vậy Thuế là gì mà bạn không thể nào tránh được ảnh hưởng của nó?",
+  "title": "Thuế là gì?",
+  "description": "",
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-e-thue-la-gi.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/e-thue-la-gi",
@@ -11,7 +11,11 @@
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "Thuế là gì?",
+    "description": "",
+    "hide_title": true
+  },
   "sidebar": "courseTax",
   "previous": {
     "title": "Ai thực sự gánh chịu thuế?",

@@ -51,18 +51,20 @@
   margin-bottom: 2rem;
 }
 
+.hero {
+  margin-bottom: 3rem;
+}
+
 .characterCard {
-  display: block;
   border: 2px solid var(--ifm-color-secondary-light);
   border-radius: var(--ifm-card-border-radius);
-  padding: 2rem;
   height: 100%;
   color: var(--ifm-font-color-base);
-  text-decoration: none;
   transition: all 0.3s ease;
   background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: var(--ifm-global-shadow-md);
   position: relative;
+  overflow: hidden;
 }
 
 .characterCard::before {
@@ -73,16 +75,12 @@
   width: 5px;
   height: 100%;
   background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
-  border-radius: var(--ifm-card-border-radius) 0 0 var(--ifm-card-border-radius);
 }
 
 .characterCard:hover {
   transform: translateY(-4px);
   border-color: var(--ifm-color-accent);
-  box-shadow: var(--ifm-global-shadow-tl);
-  text-decoration: none;
-  color: var(--ifm-font-color-base);
-  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-accent-lightest));
+  box-shadow: var(--ifm-global-shadow-lg);
 }
 
 /* Alternate card colors for different characters */
@@ -107,41 +105,73 @@
 .characterHeader {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
 }
 
 .characterAvatar {
-  font-size: 3rem;
-  margin-right: 1rem;
-  width: 60px;
-  height: 60px;
+  font-size: 4rem;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--ifm-color-accent-light), var(--ifm-color-secondary-light));
   border-radius: 50%;
+  flex-shrink: 0;
   box-shadow: var(--ifm-global-shadow-md);
-  border: 3px solid var(--ifm-color-accent-lightest);
-}
-
-.characterCol:nth-child(even) .characterAvatar {
-  background: linear-gradient(135deg, var(--ifm-color-lavender-light), var(--ifm-color-secondary-light));
-  border-color: var(--ifm-color-lavender-lightest);
-}
-
-.characterInfo h3 {
-  margin: 0;
+  border: 4px solid var(--ifm-color-accent-lightest);
+  font-weight: bold;
   color: var(--ifm-color-primary-darker);
+}
+
+/* Dark mode fix for avatar */
+[data-theme='dark'] .characterAvatar {
+  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-secondary-dark));
+  border-color: var(--ifm-color-accent);
+  color: var(--ifm-color-white);
+}
+
+.characterInfo h2 {
+  margin: 0 0 0.25rem 0;
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.75rem;
   font-weight: var(--ifm-heading-font-weight);
 }
 
-.characterRole {
-  margin: 0.25rem 0 0.5rem 0;
+/* Dark mode fix for character name */
+[data-theme='dark'] .characterInfo h2 {
+  color: var(--ifm-color-white);
+}
+
+.occupation {
+  margin: 0 0 0.5rem 0;
   background: linear-gradient(90deg, var(--ifm-color-accent-dark), var(--ifm-color-lavender-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: var(--ifm-font-weight-semibold);
+  font-size: 1.1rem;
+}
+
+/* Dark mode fix for occupation */
+[data-theme='dark'] .occupation {
+  background: linear-gradient(90deg, var(--ifm-color-accent-light), var(--ifm-color-lavender-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.characterMeta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Dark mode fix for metadata */
+[data-theme='dark'] .characterMeta {
+  color: var(--ifm-color-emphasis-600);
 }
 
 .profileLink {
@@ -162,9 +192,162 @@
   padding-bottom: 2px;
 }
 
-.characterDescription {
-  margin-bottom: 1.5rem;
+.description {
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark mode fix for description */
+[data-theme='dark'] .description {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.backgroundSection,
+.challengesSection,
+.episodesSection {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.backgroundSection h4,
+.challengesSection h4,
+.episodesSection h4 {
+  margin: 0 0 1rem 0;
+  color: var(--ifm-color-accent-darkest);
+  font-size: 1.1rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  border-left: 3px solid var(--ifm-color-accent);
+  padding-left: 0.75rem;
+}
+
+/* Dark mode fix for section headings */
+[data-theme='dark'] .backgroundSection h4,
+[data-theme='dark'] .challengesSection h4,
+[data-theme='dark'] .episodesSection h4 {
+  color: var(--ifm-color-white);
+  border-left-color: var(--ifm-color-accent-light);
+}
+
+.backgroundGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.backgroundGrid > div {
+  padding: 0.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.backgroundGrid strong {
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Dark mode fix for background grid */
+[data-theme='dark'] .backgroundGrid > div {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .backgroundGrid strong {
+  color: var(--ifm-color-accent-light);
+}
+
+.challengesList {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.challengesList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.challengesList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Dark mode fix for challenges list */
+[data-theme='dark'] .challengesList li {
+  color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme='dark'] .challengesList li::before {
+  color: var(--ifm-color-accent-light);
+}
+
+.episodesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.episodeItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  transition: all 0.2s ease;
+}
+
+.episodeItem:hover {
+  background: var(--ifm-color-accent-lightest);
+  border-color: var(--ifm-color-accent);
+}
+
+/* Dark mode fix for episode items */
+[data-theme='dark'] .episodeItem {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .episodeItem:hover {
+  background: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-accent-light);
+}
+
+.episodeNumber {
+  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-dark));
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: var(--ifm-font-weight-bold);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.episodeTitle {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Dark mode fix for episode title */
+[data-theme='dark'] .episodeTitle {
+  color: var(--ifm-color-emphasis-600);
 }
 
 .characterChallenges {
@@ -289,11 +472,23 @@
   .characterHeader {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .characterAvatar {
-    margin-right: 0;
     margin-bottom: 1rem;
+  }
+
+  .characterInfo h2 {
+    font-size: 1.5rem;
+  }
+
+  .characterMeta {
+    justify-content: center;
+  }
+
+  .backgroundGrid {
+    grid-template-columns: 1fr;
   }
 
   .contextLinks {

@@ -407,4 +407,254 @@
   background-color: var(--ifm-code-background);
   border-radius: 4px;
   margin: 0.5rem 0;
+}/* ========================================
+   DARK MODE FIXES FOR INTERACTIVE COMPONENTS
+   ======================================== */
+
+/* Dark mode fix for prompt text */
+[data-theme='dark'] .promptText {
+  color: var(--ifm-color-white);
+}
+
+/* Ensure choice buttons background is visible in dark mode */
+[data-theme='dark'] .choiceButtons {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Ensure choice background stands out in dark mode */
+[data-theme='dark'] .choice {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .choice.disabled {
+  background-color: var(--ifm-color-emphasis-300);
+}
+
+/* Dark mode fix for slider value */
+[data-theme='dark'] .sliderValue {
+  color: var(--ifm-color-white);
+}
+
+/* Dark mode fix for calculation label */
+[data-theme='dark'] .calculationLabel {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Ensure number slider containers are visible in dark mode */
+[data-theme='dark'] .numberSliderContainer {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .numberSlider {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Dark mode fix for comparison column heading */
+[data-theme='dark'] .comparisonColumn h5 {
+  color: var(--ifm-color-white);
+}
+
+/* Ensure comparison columns are visible in dark mode */
+[data-theme='dark'] .comparisonColumn {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Ensure choice review is visible in dark mode */
+[data-theme='dark'] .choiceReview {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* ========================================
+   ThoughtBubble Component
+   ======================================== */
+
+.thoughtBubble {
+  position: relative;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  background: var(--ifm-color-emphasis-100);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  box-shadow: var(--ifm-global-shadow-lw);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.thoughtBubble.animating {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bubbleIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bubbleContent {
+  color: var(--ifm-font-color-base);
+}
+
+.bubbleContent p {
+  margin: 0.5rem 0;
+}
+
+.bubbleContent p:first-child {
+  margin-top: 0;
+}
+
+.bubbleContent p:last-child {
+  margin-bottom: 0;
+}
+
+.bubbleContent strong {
+  color: var(--ifm-color-primary-darker);
+  font-weight: 600;
+}
+
+.bubbleDismiss {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-600);
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+
+.bubbleDismiss:hover {
+  color: var(--ifm-color-primary);
+}
+
+.bubbleTail {
+  display: none; /* Can be styled later for visual effect */
+}
+
+/* Bubble variants */
+.bubble-insight {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-color: #2196f3;
+}
+
+.bubble-question {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border-color: #ff9800;
+}
+
+.bubble-warning {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+  border-color: #e91e63;
+}
+
+.bubble-success {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-color: #4caf50;
+}
+
+/* Dark mode fixes for ThoughtBubble */
+[data-theme='dark'] .thoughtBubble {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .bubbleContent {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .bubbleContent p,
+[data-theme='dark'] .bubbleContent strong {
+  color: var(--ifm-font-color-base) !important;
+}
+
+[data-theme='dark'] .bubble-insight {
+  background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+  border-color: #42a5f5;
+}
+
+[data-theme='dark'] .bubble-question {
+  background: linear-gradient(135deg, #e65100 0%, #f57c00 100%);
+  border-color: #ff9800;
+}
+
+[data-theme='dark'] .bubble-warning {
+  background: linear-gradient(135deg, #ad1457 0%, #c2185b 100%);
+  border-color: #ec407a;
+}
+
+[data-theme='dark'] .bubble-success {
+  background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+  border-color: #66bb6a;
+}
+
+/* ========================================
+   RevealBubble Component
+   ======================================== */
+
+.revealBubble {
+  margin: 1.5rem 0;
+}
+
+.revealButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.revealButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+[data-theme='dark'] .revealButton {
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-secondary-dark));
+}
+
+/* ========================================
+   Dark Mode Fixes for Comparison Slider
+   ======================================== */
+
+[data-theme='dark'] .vatRateSliderContainer {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .vatRateSliderContainer label {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .vatRateSliderContainer label strong {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .comparisonInsight {
+  background-color: var(--ifm-color-emphasis-200);
+  border-left-color: var(--ifm-color-info-light);
+}
+
+[data-theme='dark'] .comparisonStats p {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .comparisonStats strong {
+  color: var(--ifm-color-primary-light);
 }

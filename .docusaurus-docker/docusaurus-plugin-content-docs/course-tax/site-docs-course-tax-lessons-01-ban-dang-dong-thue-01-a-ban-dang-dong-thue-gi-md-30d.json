@@ -1,7 +1,7 @@
 {
   "id": "lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
-  "title": "Bạn đang đóng thuế gì?",
-  "description": "Hãy tưởng tượng bạn đang mua 1kg thịt lợn tại chợ hoặc siêu thị với giá 250.000 đồng. Trong số tiền đó, có 25.000 đồng—tương đương 10%—là thuế giá trị gia tăng (VAT) mà bạn đã trả cho Nhà nước.",
+  "title": "Lược sử của Thuế",
+  "description": "",
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-a-ban-dang-dong-thue-gi.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
@@ -11,10 +11,14 @@
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "Lược sử của Thuế",
+    "description": "",
+    "hide_title": true
+  },
   "sidebar": "courseTax",
   "previous": {
-    "title": "index",
+    "title": "1. Thuế ơi thuế à",
     "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/"
   },
   "next": {

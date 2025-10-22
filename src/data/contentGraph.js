@@ -15,13 +15,13 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'canh-2a',
           context: 'Sinh viên mua bánh mì và phát hiện thuế VAT',
         },
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'canh-2b',
           context: 'Sinh viên thấy VAT trên hóa đơn cà phê',
         },
@@ -37,7 +37,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'canh-3-1',
           context: 'So sánh người giàu nghèo cùng mua bánh mì',
         },
@@ -53,7 +53,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'module-c',
           context: 'Tìm hiểu về thuế lũy tiến',
         },
@@ -69,7 +69,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '02-Gặp-khó',
+          scene: 'story',
           timestamp: 'canh-4',
           context: 'Khách hàng yêu cầu mã số thuế',
         },
@@ -85,7 +85,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'module-c',
           context: 'Giải thích thuế lũy tiến với ví dụ lương 20 triệu',
         },
@@ -101,7 +101,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '03-ket-thuc',
+          scene: 'story',
           timestamp: 'canh-7-2',
           context: 'Suy ngẫm về mối liên hệ giữa thuế và dịch vụ công',
         },
@@ -126,7 +126,7 @@ export const contentGraph = {
       stories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           timestamp: 'canh-3-1',
           context: 'Câu hỏi về công bằng trong thuế VAT',
         },
@@ -145,7 +145,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scenes: ['01-thuc-tinh'],
+          scenes: ['story'],
           priority: 'high',
           description: 'Xem sinh viên khám phá thuế VAT trong cuộc sống hàng ngày',
         },
@@ -166,7 +166,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scenes: ['01-thuc-tinh', '03-ket-thuc'],
+          scenes: ['story'],
           priority: 'high',
           description: 'Theo dõi sinh viên nhận ra ý nghĩa của thuế',
         },
@@ -186,7 +186,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scenes: ['03-ket-thuc'],
+          scenes: ['story'],
           priority: 'high',
           description: 'Chơi minigame phân bổ ngân sách',
         },
@@ -206,7 +206,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scenes: ['01-thuc-tinh'],
+          scenes: ['story'],
           priority: 'high',
           description: 'Khám phá công bằng thuế qua so sánh người giàu nghèo',
         },
@@ -250,17 +250,17 @@ export const contentGraph = {
     'sinh-vien': {
       id: 'sinh-vien',
       character: 'Sinh viên',
-      title: 'Hành trình thức tỉnh',
+      title: 'Hành trình khám phá thuế',
       description: 'Theo dõi sinh viên khám phá thuế qua cuộc sống hàng ngày',
       path: '/course-tax/characters/sinh-vien',
       avatar: '🎓',
       scenes: [
         {
-          id: '01-thuc-tinh',
-          title: 'Phần 1: Thức tỉnh',
-          path: '/course-tax/characters/sinh-vien/01-thuc-tinh',
+          id: 'story',
+          title: 'Hành trình khám phá thuế',
+          path: '/course-tax/characters/sinh-vien/story',
           relatedLessons: ['01-ban-dang-dong-thue-gi', '02-tai-sao-dong-thue', '04-nguyen-tac-thu-thue'],
-          concepts: ['vat', 'indirect-tax', 'fairness'],
+          concepts: ['vat', 'indirect-tax', 'fairness', 'tax-id', 'social-contract', 'progressive-tax'],
           hooks: [
             {
               timestamp: 'canh-2a',
@@ -283,15 +283,6 @@ export const contentGraph = {
               module: 'module-c-progressive-tax',
               text: 'Thuế lũy tiến hoạt động như thế nào?',
             },
-          ],
-        },
-        {
-          id: '02-Gặp-khó',
-          title: 'Phần 2: Gặp-khó',
-          path: '/course-tax/characters/sinh-vien/02-Gặp-khó',
-          relatedLessons: ['01-ban-dang-dong-thue-gi'],
-          concepts: ['tax-id'],
-          hooks: [
             {
               timestamp: 'canh-4',
               concept: 'tax-id',
@@ -306,15 +297,6 @@ export const contentGraph = {
               module: 'module-d-freelance-vs-employee',
               text: 'Freelance và nhân viên khác nhau thế nào về thuế?',
             },
-          ],
-        },
-        {
-          id: '03-ket-thuc',
-          title: 'Phần 3: Suy-nghiệm',
-          path: '/course-tax/characters/sinh-vien/03-ket-thuc',
-          relatedLessons: ['02-tai-sao-dong-thue', '03-tien-thue-di-dau'],
-          concepts: ['social-contract'],
-          hooks: [
             {
               timestamp: 'canh-7-2',
               concept: 'social-contract',
@@ -346,7 +328,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           context: 'Khám phá thuế VAT trong cuộc sống hàng ngày',
         },
       ],
@@ -361,7 +343,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scene: '02-Gặp-khó',
+          scene: 'story',
           context: 'Khách hàng yêu cầu mã số thuế',
         },
       ],
@@ -376,7 +358,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           context: 'Giải thích thuế lũy tiến',
         },
       ],
@@ -391,7 +373,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scene: '02-Gặp-khó',
+          scene: 'story',
           context: 'So sánh thuế cho freelancer và nhân viên',
         },
       ],
@@ -406,7 +388,7 @@ export const contentGraph = {
       relatedStories: [
         {
           character: 'sinh-vien',
-          scene: '01-thuc-tinh',
+          scene: 'story',
           context: 'Câu hỏi về công bằng',
         },
       ],

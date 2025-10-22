@@ -38,13 +38,8 @@ export default [
     exact: true
   },
   {
-    path: '/MassEdu/characters/giang',
-    component: ComponentCreator('/MassEdu/characters/giang', 'f3a'),
-    exact: true
-  },
-  {
-    path: '/MassEdu/characters/khanh',
-    component: ComponentCreator('/MassEdu/characters/khanh', 'bba'),
+    path: '/MassEdu/characters/sinhvien',
+    component: ComponentCreator('/MassEdu/characters/sinhvien', '06d'),
     exact: true
   },
   {
@@ -89,11 +84,11 @@ export default [
   },
   {
     path: '/MassEdu/course-tax',
-    component: ComponentCreator('/MassEdu/course-tax', 'f2f'),
+    component: ComponentCreator('/MassEdu/course-tax', 'fa2'),
     routes: [
       {
         path: '/MassEdu/course-tax',
-        component: ComponentCreator('/MassEdu/course-tax', 'f16'),
+        component: ComponentCreator('/MassEdu/course-tax', '781'),
         routes: [
           {
             path: '/MassEdu/course-tax/tags',
@@ -122,7 +117,7 @@ export default [
           },
           {
             path: '/MassEdu/course-tax',
-            component: ComponentCreator('/MassEdu/course-tax', 'ebf'),
+            component: ComponentCreator('/MassEdu/course-tax', '70c'),
             routes: [
               {
                 path: '/MassEdu/course-tax/cac-loai-thue',
@@ -130,66 +125,8 @@ export default [
                 exact: true
               },
               {
-                path: '/MassEdu/course-tax/characters/giang-ban-hang-rong',
-                component: ComponentCreator('/MassEdu/course-tax/characters/giang-ban-hang-rong', 'b31'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi',
-                component: ComponentCreator('/MassEdu/course-tax/characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi', 'd0e'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/giang-ban-hang-rong/di-nop-thu-tuc',
-                component: ComponentCreator('/MassEdu/course-tax/characters/giang-ban-hang-rong/di-nop-thu-tuc', 'aec'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/giang-ban-hang-rong/tinh-huong-kho-khan',
-                component: ComponentCreator('/MassEdu/course-tax/characters/giang-ban-hang-rong/tinh-huong-kho-khan', '83c'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/khanh-chu-cua-hang',
-                component: ComponentCreator('/MassEdu/course-tax/characters/khanh-chu-cua-hang', '393'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/khanh-chu-cua-hang/nghia-vu-khac',
-                component: ComponentCreator('/MassEdu/course-tax/characters/khanh-chu-cua-hang/nghia-vu-khac', '075'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/khanh-chu-cua-hang/quyet-dinh-mo-rong',
-                component: ComponentCreator('/MassEdu/course-tax/characters/khanh-chu-cua-hang/quyet-dinh-mo-rong', 'dcc'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/khanh-chu-cua-hang/thang-dau-kho-khan',
-                component: ComponentCreator('/MassEdu/course-tax/characters/khanh-chu-cua-hang/thang-dau-kho-khan', '255'),
-                exact: true
-              },
-              {
-                path: '/MassEdu/course-tax/characters/sinh-vien',
-                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien', '53e'),
-                exact: true,
-                sidebar: "courseTax"
-              },
-              {
-                path: '/MassEdu/course-tax/characters/sinh-vien/gap-kho',
-                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien/gap-kho', 'd15'),
-                exact: true,
-                sidebar: "courseTax"
-              },
-              {
-                path: '/MassEdu/course-tax/characters/sinh-vien/suy-nghiem',
-                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien/suy-nghiem', '93e'),
-                exact: true,
-                sidebar: "courseTax"
-              },
-              {
-                path: '/MassEdu/course-tax/characters/sinh-vien/thuc-tinh',
-                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien/thuc-tinh', '2ac'),
+                path: '/MassEdu/course-tax/characters/sinh-vien/story',
+                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien/story', '361'),
                 exact: true,
                 sidebar: "courseTax"
               },

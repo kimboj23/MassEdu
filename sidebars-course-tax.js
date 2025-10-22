@@ -36,25 +36,9 @@ const sidebars = {
           collapsed: false,
           link: {
             type: 'doc',
-            id: 'characters/sinh-vien/index',
+            id: 'characters/sinh-vien/story',
           },
-          items: [
-            {
-              type: 'doc',
-              id: 'characters/sinh-vien/thuc-tinh',
-              label: 'Phần 1: Thức tỉnh',
-            },
-            {
-              type: 'doc',
-              id: 'characters/sinh-vien/gap-kho',
-              label: 'Phần 2: Gặp khó',
-            },
-            {
-              type: 'doc',
-              id: 'characters/sinh-vien/suy-nghiem',
-              label: 'Phần 3: Suy ngẫm',
-            },
-          ],
+          items: [], // Remove sub-items as they are now merged into the main story
         },
         // Future characters can be added here
       ],
@@ -69,7 +53,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: '1. Bạn đang đóng thuế gì?',
+          label: '1. Thuế ơi thuế à',
           collapsed: false,
           link: {
             type: 'doc',
@@ -113,11 +97,11 @@ const sidebars = {
           id: 'lessons/tai-sao-dong-thue',
           label: '2. Tại sao bạn đóng thuế?',
         },
-        // {
-        //   type: 'doc',
-        //   id: 'lessons/tien-thue-di-dau', // This file doesn't exist yet
-        //   label: '3. Tiền thuế đi đâu?',
-        // },
+          //{
+          //  type: 'doc',
+          //  id: 'lessons/tien-thue-di-dau', // This file is still empty
+          //  label: '3. Tiền thuế đi đâu?',
+          //},
         {
           type: 'doc',
           id: 'lessons/nguyen-tac-thu-thue',

@@ -1,7 +1,7 @@
 {
   "id": "lessons/ban-dang-dong-thue/d-suy-nghi-thue",
-  "title": "d-suy-nghi-thue",
-  "description": "Hãy suy nghĩ về thuế: Câu hỏi để bạn tự đặt ra",
+  "title": "Vài suy ngẫm vể Thuế",
+  "description": "",
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-d-suy-nghi-thue.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/d-suy-nghi-thue",
@@ -11,7 +11,11 @@
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "Vài suy ngẫm vể Thuế",
+    "description": "",
+    "hide_title": true
+  },
   "sidebar": "courseTax",
   "previous": {
     "title": "Phân loại thuế",

@@ -5,7 +5,7 @@
  */
 export default {
   "title": "MassEdu",
-  "tagline": "Human rights are cool",
+  "tagline": "Human rights are cool 😎",
   "favicon": "img/favicon.ico",
   "url": "https://kimboj23.github.io",
   "baseUrl": "/MassEdu/",

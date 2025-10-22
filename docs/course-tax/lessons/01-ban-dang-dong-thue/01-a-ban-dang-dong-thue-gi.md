@@ -1,3 +1,9 @@
+---
+title: "Lược sử của Thuế"
+description: ""
+hide_title: true
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

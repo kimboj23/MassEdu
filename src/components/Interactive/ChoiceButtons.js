@@ -14,12 +14,46 @@ export function StoryProgressProvider({ children }) {
     return {};
   });
 
+  // Track the current active scene
+  const [currentScene, setCurrentScene] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('massedu-current-scene');
+      return saved || null;
+    }
+    return null;
+  });
+
+  // Track scene history
+  const [sceneHistory, setSceneHistory] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('massedu-scene-history');
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
+
   const addChoice = (sceneId, choiceId, choiceText, nextScene) => {
     const newChoices = {
       ...choices,
       [sceneId]: { choiceId, choiceText, nextScene, timestamp: new Date().toISOString() },
     };
     setChoices(newChoices);
+
+    // Add current scene to history before navigating
+    if (currentScene && !sceneHistory.includes(currentScene)) {
+      const newHistory = [...sceneHistory, currentScene];
+      setSceneHistory(newHistory);
+      localStorage.setItem('massedu-scene-history', JSON.stringify(newHistory));
+    }
+
+    // Update current scene
+    const nextSceneId = nextScene?.replace('#', '');
+    if (nextSceneId) {
+      setCurrentScene(nextSceneId);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('massedu-current-scene', nextSceneId);
+      }
+    }
 
     // Save to localStorage
     if (typeof window !== 'undefined') {
@@ -31,13 +65,36 @@ export function StoryProgressProvider({ children }) {
 
   const clearProgress = () => {
     setChoices({});
+    setCurrentScene(null);
     if (typeof window !== 'undefined') {
       localStorage.removeItem('massedu-story-progress');
+      localStorage.removeItem('massedu-current-scene');
+      localStorage.removeItem('massedu-scene-history');
     }
   };
 
+  const goBack = () => {
+    if (sceneHistory.length === 0) return;
+
+    const newHistory = [...sceneHistory];
+    const previousScene = newHistory.pop();
+
+    setSceneHistory(newHistory);
+    setCurrentScene(previousScene);
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('massedu-scene-history', JSON.stringify(newHistory));
+      localStorage.setItem('massedu-current-scene', previousScene);
+    }
+  };
+
+  const restart = () => {
+    clearProgress();
+    window.location.reload();
+  };
+
   return (
-    <StoryProgressContext.Provider value={{ choices, addChoice, getChoices, clearProgress }}>
+    <StoryProgressContext.Provider value={{ choices, currentScene, setCurrentScene, addChoice, getChoices, clearProgress, goBack, restart, sceneHistory }}>
       {children}
     </StoryProgressContext.Provider>
   );
@@ -71,12 +128,6 @@ export default function ChoiceButtons({
 
   return (
     <div className={`${styles.choiceButtons} ${layoutClass} ${className}`}>
-      {showProgress && (
-        <div className={styles.choicePrompt}>
-          <span className={styles.promptIcon}>🤔</span>
-          <span className={styles.promptText}>Bạn sẽ làm gì?</span>
-        </div>
-      )}
       <div className={styles.choicesContainer}>
         {React.Children.map(children, (child) => {
           if (child && child.type === Choice) {
@@ -269,13 +320,21 @@ export function TimedChoice({
  * ProgressIndicator - Shows story progress based on choices made
  */
 export function ProgressIndicator({ totalScenes }) {
-  const { getChoices } = useStoryProgress();
+  const { getChoices, goBack, restart, sceneHistory } = useStoryProgress();
   const choices = getChoices();
   const completedScenes = Object.keys(choices).length;
   const progress = (completedScenes / totalScenes) * 100;
 
   return (
     <div className={styles.progressIndicator}>
+      <div className={styles.progressControls}>
+        <button onClick={goBack} disabled={sceneHistory.length === 0} className={styles.progressButton}>
+          <span>← Quay lại</span>
+        </button>
+        <button onClick={restart} className={styles.progressButton}>
+          <span>🔄 Bắt đầu lại</span>
+        </button>
+      </div>
       <div className={styles.progressBar}>
         <div
           className={styles.progressFill}
@@ -283,7 +342,7 @@ export function ProgressIndicator({ totalScenes }) {
         />
       </div>
       <div className={styles.progressText}>
-        {completedScenes} / {totalScenes} cảnh hoàn thành
+        {completedScenes} / {totalScenes} hoàn thành
       </div>
     </div>
   );

@@ -5,8 +5,8 @@ import Link from '@docusaurus/Link';
 import { getCharacter } from '@site/src/data/characters';
 import CharacterProfile from '@site/src/components/CharacterProfile';
 
-export default function KhanhPage() {
-  const character = getCharacter('khanh');
+export default function SinhVienPage() {
+  const character = getCharacter('sinhvien');
 
   if (!character) {
     return (
@@ -43,7 +43,7 @@ export default function KhanhPage() {
               Khám phá câu chuyện và hành trình của {character.name} qua các tình huống thực tế về thuế và ngân sách.
             </p>
 
-            <CharacterProfile characterId="khanh" showProgress={true} />
+            <CharacterProfile characterId="sinhvien" showProgress={true} />
 
             <div className="margin-top--lg text--center">
               <Link

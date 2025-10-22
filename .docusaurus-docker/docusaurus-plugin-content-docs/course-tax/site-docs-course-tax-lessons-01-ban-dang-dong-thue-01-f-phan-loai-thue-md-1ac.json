@@ -1,7 +1,7 @@
 {
   "id": "lessons/ban-dang-dong-thue/f-phan-loai-thue",
-  "title": "f-phan-loai-thue",
-  "description": "Phân loại thuế",
+  "title": "Phân loại Thuế",
+  "description": "",
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-f-phan-loai-thue.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/f-phan-loai-thue",
@@ -11,7 +11,11 @@
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "Phân loại Thuế",
+    "description": "",
+    "hide_title": true
+  },
   "sidebar": "courseTax",
   "previous": {
     "title": "Vậy Thuế là gì?",

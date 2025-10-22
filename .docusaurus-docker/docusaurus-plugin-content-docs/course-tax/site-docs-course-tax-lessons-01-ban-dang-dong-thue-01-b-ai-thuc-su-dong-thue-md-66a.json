@@ -1,7 +1,7 @@
 {
   "id": "lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
-  "title": "b-ai-thuc-su-dong-thue",
-  "description": "Ai đang thực sự đóng thuế?",
+  "title": "Ai đóng thuế?",
+  "description": "",
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-b-ai-thuc-su-dong-thue.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
@@ -11,7 +11,11 @@
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "Ai đóng thuế?",
+    "description": "",
+    "hide_title": true
+  },
   "sidebar": "courseTax",
   "previous": {
     "title": "Bạn đang đóng thuế gì?",

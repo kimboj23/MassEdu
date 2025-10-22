@@ -7,6 +7,7 @@ function formatNum(num) {
 
 export default function NumberSlider({
   value: controlledValue,
+  defaultValue,
   onValueChange,
   min = 0,
   max = 1000000,
@@ -19,14 +20,26 @@ export default function NumberSlider({
   showCalculation = true,
   className = '',
 }) {
-  const [internalValue, setInternalValue] = useState(controlledValue ?? 0);
-  const value = controlledValue ?? internalValue;
+  // Determine if controlled or uncontrolled
+  const isControlled = controlledValue !== undefined;
+  const [internalValue, setInternalValue] = useState(defaultValue ?? controlledValue ?? 0);
+  const value = isControlled ? controlledValue : internalValue;
 
   const [isDragging, setIsDragging] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const dragStartX = useRef(0);
   const dragStartValue = useRef(value);
   const containerRef = useRef(null);
+  const handleDragMoveRef = useRef(null);
+  const handleDragEndRef = useRef(null);
+
+  // Store handler params in refs so they're always current
+  const paramsRef = useRef({ min, max, step });
+  paramsRef.current = { min, max, step };
+
+  // Store callback ref that gets updated
+  const onValueChangeRef = useRef(onValueChange);
+  onValueChangeRef.current = onValueChange;
 
   const handleValueChange = (newValue) => {
     setInternalValue(newValue);
@@ -42,27 +55,28 @@ export default function NumberSlider({
     document.body.style.userSelect = 'none';
   };
 
-  // Handle drag move
-  const handleDragMove = (e) => {
-    if (!isDragging) return;
+  // Update drag handlers on every render to capture latest closures
+  useEffect(() => {
+    handleDragMoveRef.current = (e) => {
+      e.preventDefault();
+      const currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+      const deltaX = currentX - dragStartX.current;
 
-    e.preventDefault();
-    const currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-    const deltaX = currentX - dragStartX.current;
+      // Sensitivity: 1 pixel = step amount
+      const { min, max, step } = paramsRef.current;
+      const deltaValue = Math.round(deltaX / 2) * step;
+      const newValue = Math.max(min, Math.min(max, dragStartValue.current + deltaValue));
 
-    // Sensitivity: 1 pixel = step amount
-    const deltaValue = Math.round(deltaX / 2) * step;
-    const newValue = Math.max(min, Math.min(max, dragStartValue.current + deltaValue));
+      setInternalValue(newValue);
+      if (onValueChangeRef.current) onValueChangeRef.current(newValue);
+    };
 
-    handleValueChange(newValue);
-  };
-
-  // Handle drag end
-  const handleDragEnd = () => {
-    setIsDragging(false);
-    document.body.style.cursor = '';
-    document.body.style.userSelect = '';
-  };
+    handleDragEndRef.current = () => {
+      setIsDragging(false);
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    };
+  });
 
   // Keyboard controls
   const handleKeyDown = (e) => {
@@ -100,19 +114,22 @@ export default function NumberSlider({
   // Add/remove event listeners
   useEffect(() => {
     if (isDragging) {
-      window.addEventListener('mousemove', handleDragMove);
-      window.addEventListener('mouseup', handleDragEnd);
-      window.addEventListener('touchmove', handleDragMove);
-      window.addEventListener('touchend', handleDragEnd);
+      const handleMove = handleDragMoveRef.current;
+      const handleEnd = handleDragEndRef.current;
+
+      window.addEventListener('mousemove', handleMove);
+      window.addEventListener('mouseup', handleEnd);
+      window.addEventListener('touchmove', handleMove, { passive: false });
+      window.addEventListener('touchend', handleEnd);
 
       return () => {
-        window.removeEventListener('mousemove', handleDragMove);
-        window.removeEventListener('mouseup', handleDragEnd);
-        window.removeEventListener('touchmove', handleDragMove);
-        window.removeEventListener('touchend', handleDragEnd);
+        window.removeEventListener('mousemove', handleMove);
+        window.removeEventListener('mouseup', handleEnd);
+        window.removeEventListener('touchmove', handleMove);
+        window.removeEventListener('touchend', handleEnd);
       };
     }
-  }, [isDragging, value]);
+  }, [isDragging]);
 
   return (
     <div className={className}>
@@ -159,6 +176,45 @@ export function NumberSliderGroup({ children, title, description }) {
       {description && <p className={styles.groupDescription}>{description}</p>}
       <div className={styles.groupSliders}>
         {children}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * NumberSliderWithCalculation - Slider with live VAT calculation
+ */
+export function NumberSliderWithCalculation({
+  defaultValue = 25000,
+  min = 15000,
+  max = 50000,
+  step = 5000,
+  unit = 'đồng',
+  vatRate = 10,
+  calculationLabel = 'Thuế VAT',
+}) {
+  const [value, setValue] = useState(defaultValue);
+
+  const taxAmount = Math.round(value / (1 + 100 / vatRate));
+
+  return (
+    <div className={styles.numberSliderContainer}>
+      <NumberSlider
+        value={value}
+        onValueChange={setValue}
+        min={min}
+        max={max}
+        step={step}
+        unit={unit}
+      />
+      <div className={styles.calculationDisplay}>
+        <div className={styles.calculationLabel}>{calculationLabel} ({vatRate}%):</div>
+        <div className={styles.calculationValue}>
+          {new Intl.NumberFormat('vi-VN').format(taxAmount)} {unit}
+        </div>
+      </div>
+      <div className={styles.sliderHint}>
+        💡 Di chuột vào số để kéo thay đổi giá trị.
       </div>
     </div>
   );
