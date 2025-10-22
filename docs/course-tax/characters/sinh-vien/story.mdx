@@ -306,11 +306,63 @@ Bạn chợt nghĩ: *"May mà đường này sửa rồi, năm ngoái đi kinh k
 </ConditionalContent>
 
 <ChoiceButtons sceneId="canh-3">
-  <Choice value="continue" nextScene="#canh-4" emoji="➡️">
-    Tiếp tục
+  <Choice value="fairness" nextScene="#canh-3-1" emoji="🤔" variant="learn">
+    "Khoan... mọi người đều đóng 10% như nhau - công bằng không nhỉ?"
+  </Choice>
+  <Choice value="continue" nextScene="#canh-4" emoji="➡️" variant="skip">
+    Tiếp tục đến trường
   </Choice>
 </ChoiceButtons>
 
+</Scene>
+
+<Scene id="canh-3-1">
+<div style={{
+  padding: '2rem',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  borderRadius: '12px',
+  color: 'white',
+  marginBottom: '2rem'
+}}>
+  <h3 style={{ color: 'white', marginTop: 0 }}>💡 Câu hỏi hay đấy!</h3>
+  <p style={{ fontSize: '1.125rem', marginBottom: 0 }}>
+    Hãy tưởng tượng hai người cùng mua bánh mì...
+  </p>
+</div>
+
+<ComparisonSlider
+  label1="Bạn (Thu nhập 5 triệu/tháng)"
+  income1={5000000}
+  label2="Người khác (Thu nhập 50 triệu/tháng)"
+  income2={50000000}
+/>
+
+<div style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--ifm-color-warning-lightest)', borderRadius: '12px', border: '2px solid var(--ifm-color-warning)' }}>
+  <h4>🤔 Suy nghĩ thêm:</h4>
+  <p>
+    Cả hai đều trả 2.273 đồng thuế VAT cho chiếc bánh mì 25.000 đồng.
+    Nhưng nếu so với thu nhập:
+  </p>
+  <ul>
+    <li><strong>Với bạn (5 triệu/tháng):</strong> 2.273 đồng = 0.045% thu nhập hàng tháng</li>
+    <li><strong>Với người kia (50 triệu/tháng):</strong> 2.273 đồng = 0.0045% thu nhập hàng tháng</li>
+  </ul>
+  <p style={{ marginBottom: 0 }}>
+    👉 Đây là lý do tại sao thuế VAT được gọi là <strong>"thuế lũy thoái"</strong> (regressive tax) -
+    người thu nhập thấp gánh nặng hơn theo tỷ lệ so với thu nhập của họ.
+  </p>
+</div>
+
+<LearnMore
+  lesson="01-ban-dang-dong-thue-gi"
+  context="Tìm hiểu về công bằng thuế và thuế lũy tiến"
+/>
+
+<ChoiceButtons sceneId="canh-3-1">
+  <Choice value="continue" nextScene="#canh-4" variant="continue">
+    Tiếp tục đến trường →
+  </Choice>
+</ChoiceButtons>
 </Scene>
 
 <Scene id="canh-4">
