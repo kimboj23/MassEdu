@@ -1,0 +1,38 @@
+{
+  "id": "giay-phep-kinh-doanh-vn",
+  "title": "Giấy phép kinh doanh tại Việt Nam",
+  "description": "Quy định về giấy phép kinh doanh cho người bán hàng rong và cố định tại Việt Nam",
+  "source": "@site/docs/knowledge-base/giay-phep-kinh-doanh-vn.mdx",
+  "sourceDirName": ".",
+  "slug": "/giay-phep-kinh-doanh-vn",
+  "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/giay-phep-kinh-doanh-vn.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "luật pháp",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Giấy phép kinh doanh tại Việt Nam",
+    "description": "Quy định về giấy phép kinh doanh cho người bán hàng rong và cố định tại Việt Nam",
+    "sidebar_position": 1,
+    "tags": [
+      "luật pháp"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quiz Chính trị và Hiến pháp",
+    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol"
+  },
+  "next": {
+    "title": "Quiz Nhân quyền cơ bản",
+    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-hr"
+  }
+}

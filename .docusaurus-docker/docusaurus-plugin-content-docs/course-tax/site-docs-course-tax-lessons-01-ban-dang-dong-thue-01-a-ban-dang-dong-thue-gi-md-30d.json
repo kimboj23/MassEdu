@@ -1,0 +1,28 @@
+{
+  "id": "lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
+  "title": "Lược sử của Thuế",
+  "description": "",
+  "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-a-ban-dang-dong-thue-gi.md",
+  "sourceDirName": "lessons/01-ban-dang-dong-thue",
+  "slug": "/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
+  "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Lược sử của Thuế",
+    "description": "",
+    "hide_title": true
+  },
+  "sidebar": "courseTax",
+  "previous": {
+    "title": "1. Thuế ơi thuế à",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/"
+  },
+  "next": {
+    "title": "Ai đang thực sự đóng thuế?",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue"
+  }
+}

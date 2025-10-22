@@ -31,7 +31,7 @@ export default function TaxTypes() {
                 <p><strong>Cách tính:</strong> Dựa trên thu nhập - thu nhập cao đóng nhiều hơn</p>
 
                 <div className={styles.exampleBox}>
-                  <h4>Ví dụ với Khánh:</h4>
+                  <h4>Ví dụ:</h4>
                   <ul>
                     <li>Thu nhập tháng: 8 triệu đồng</li>
                     <li>Thuế suất: 10%</li>
@@ -88,7 +88,7 @@ export default function TaxTypes() {
 
                 <div className={styles.taxTypeCard}>
                   <h3>Phí sử dụng vỉa hè</h3>
-                  <p>Như trường hợp của Giang</p>
+                  <p>Đối với người bán hàng rong</p>
                 </div>
 
                 <div className={styles.taxTypeCard}>

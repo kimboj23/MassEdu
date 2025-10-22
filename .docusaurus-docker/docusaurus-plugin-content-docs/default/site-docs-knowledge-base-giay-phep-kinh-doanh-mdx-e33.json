@@ -1,0 +1,50 @@
+{
+  "id": "giay-phep-kinh-doanh",
+  "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
+  "description": "Phân tích toàn diện về nền tảng triết học, lịch sử và các quan điểm về giấy phép kinh doanh",
+  "source": "@site/docs/knowledge-base/giay-phep-kinh-doanh.mdx",
+  "sourceDirName": ".",
+  "slug": "/giay-phep-kinh-doanh",
+  "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/giay-phep-kinh-doanh.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "luật pháp",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+    },
+    {
+      "inline": true,
+      "label": "triết học",
+      "permalink": "/MassEdu/knowledge-base/tags/triết-học"
+    },
+    {
+      "inline": true,
+      "label": "lịch sử",
+      "permalink": "/MassEdu/knowledge-base/tags/lịch-sử"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
+    "description": "Phân tích toàn diện về nền tảng triết học, lịch sử và các quan điểm về giấy phép kinh doanh",
+    "sidebar_position": 2,
+    "tags": [
+      "luật pháp",
+      "triết học",
+      "lịch sử"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quiz Nhân quyền cơ bản",
+    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-hr"
+  },
+  "next": {
+    "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
+    "permalink": "/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen"
+  }
+}

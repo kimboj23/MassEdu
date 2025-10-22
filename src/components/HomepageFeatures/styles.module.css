@@ -160,7 +160,57 @@
 
 .sectionSubtitle {
   font-size: 1.25rem;
-  color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-emphasis-800);
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* ========================================
+   DARK MODE FIXES
+   ======================================== */
+
+/* Dark mode fix for section subtitle */
+[data-theme='dark'] .sectionSubtitle {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Dark mode fix for active storyline */
+[data-theme='dark'] .activeStoryline {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-300), var(--ifm-color-emphasis-400));
+  border-color: var(--ifm-color-accent-light);
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .activeStoryline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-400), var(--ifm-color-emphasis-500));
+  border-color: var(--ifm-color-accent);
+}
+
+/* Dark mode fix for color variant cards */
+[data-theme='dark'] .colorVariant1.activeStoryline,
+[data-theme='dark'] .colorVariant2.activeStoryline,
+[data-theme='dark'] .colorVariant3.activeStoryline {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-300), var(--ifm-color-emphasis-400));
+}
+
+[data-theme='dark'] .colorVariant1.activeStoryline:hover,
+[data-theme='dark'] .colorVariant2.activeStoryline:hover,
+[data-theme='dark'] .colorVariant3.activeStoryline:hover {
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-400), var(--ifm-color-emphasis-500));
+}
+
+/* Dark mode fix for active button */
+[data-theme='dark'] .activeButton {
+  background: var(--ifm-color-accent-dark);
+  color: var(--ifm-color-white);
+}
+
+[data-theme='dark'] .activeStoryline:hover .activeButton {
+  background: var(--ifm-color-accent);
+}
+
+/* Dark mode fix for coming soon badge */
+[data-theme='dark'] .comingSoonBadge {
+  background: var(--ifm-color-lavender-dark);
+  color: var(--ifm-color-white);
 }

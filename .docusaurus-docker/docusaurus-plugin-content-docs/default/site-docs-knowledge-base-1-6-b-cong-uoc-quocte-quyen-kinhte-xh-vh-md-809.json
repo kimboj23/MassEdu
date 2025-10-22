@@ -1,0 +1,64 @@
+{
+  "id": "1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
+  "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
+  "description": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa (ICESCR) 1966 - văn bản pháp lý quốc tế bảo vệ quyền làm việc, giáo dục, y tế và các quyền ESC khác.",
+  "source": "@site/docs/knowledge-base/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh.md",
+  "sourceDirName": ".",
+  "slug": "/cong-uoc-quocte-quyen-kinhte-xh-vh",
+  "permalink": "/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "công ước",
+      "permalink": "/MassEdu/knowledge-base/tags/cong-ước"
+    },
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "luật quốc tế",
+      "permalink": "/MassEdu/knowledge-base/tags/luật-quốc-tế"
+    },
+    {
+      "inline": true,
+      "label": "quyền ESC",
+      "permalink": "/MassEdu/knowledge-base/tags/quyền-esc"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
+    "slug": "cong-uoc-quocte-quyen-kinhte-xh-vh",
+    "sidebar_position": 12,
+    "description": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa (ICESCR) 1966 - văn bản pháp lý quốc tế bảo vệ quyền làm việc, giáo dục, y tế và các quyền ESC khác.",
+    "keywords": [
+      "Công ước ICESCR",
+      "quyền kinh tế",
+      "quyền xã hội",
+      "quyền văn hóa",
+      "luật nhân quyền"
+    ],
+    "tags": [
+      "công ước",
+      "nhân quyền",
+      "luật quốc tế",
+      "quyền ESC"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Các quyền kinh tế, xã hội, văn hóa",
+    "permalink": "/MassEdu/knowledge-base/quyen-kinhte-xahoi-vanhoa"
+  },
+  "next": {
+    "title": "Quyền giáo dục",
+    "permalink": "/MassEdu/knowledge-base/docthem-quyen-giaoduc"
+  }
+}

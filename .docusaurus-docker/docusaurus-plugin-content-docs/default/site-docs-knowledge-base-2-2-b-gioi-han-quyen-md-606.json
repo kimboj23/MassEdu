@@ -1,0 +1,64 @@
+{
+  "id": "2.2b-gioi-han-quyen",
+  "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
+  "description": "Tìm hiểu về việc giới hạn quyền con người, các quyền tuyệt đối không thể giới hạn, và điều kiện thoái lui nghĩa vụ thực hiện quyền trong tình huống khẩn cấp.",
+  "source": "@site/docs/knowledge-base/2.2b-gioi-han-quyen.md",
+  "sourceDirName": ".",
+  "slug": "/gioi-han-quyen",
+  "permalink": "/MassEdu/knowledge-base/gioi-han-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.2b-gioi-han-quyen.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "giới hạn quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/giới-hạn-quyền"
+    },
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "khẩn cấp",
+      "permalink": "/MassEdu/knowledge-base/tags/khẩn-cấp"
+    },
+    {
+      "inline": true,
+      "label": "nguyên tắc",
+      "permalink": "/MassEdu/knowledge-base/tags/nguyen-tắc"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3.2,
+  "frontMatter": {
+    "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
+    "slug": "gioi-han-quyen",
+    "sidebar_position": 3.2,
+    "description": "Tìm hiểu về việc giới hạn quyền con người, các quyền tuyệt đối không thể giới hạn, và điều kiện thoái lui nghĩa vụ thực hiện quyền trong tình huống khẩn cấp.",
+    "keywords": [
+      "giới hạn quyền",
+      "quyền tuyệt đối",
+      "thoái lui nghĩa vụ",
+      "tình huống khẩn cấp",
+      "nguyên tắc Siracusa"
+    ],
+    "tags": [
+      "giới hạn quyền",
+      "nhân quyền",
+      "khẩn cấp",
+      "nguyên tắc"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hiểu về vi phạm nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen"
+  },
+  "next": {
+    "title": "1.1. Nhân quyền là gì?",
+    "permalink": "/MassEdu/knowledge-base/tuan1/dinh-nghia"
+  }
+}

@@ -1,0 +1,291 @@
+---
+title: "Module A: Nhận diện thuế trong cuộc sống"
+description: "Khám phá và trải nghiệm tương tác với các loại thuế bạn đang đóng mỗi ngày"
+sidebar_label: "A. Nhận diện thuế hàng ngày"
+sidebar_position: 1
+tags: [thuế, VAT, interactive, thực hành]
+---
+
+import { LearnMore, StoryExample, StoryCallout } from '@site/src/components/Learning';
+import { NumberSlider, ComparisonSlider } from '@site/src/components/Interactive';
+import Tooltip from '@site/src/components/Tooltip';
+
+# Bạn đang đóng thuế gì?
+
+:::tip Bạn có biết?
+Mỗi khi bạn mua một ly trà sữa, một chiếc bánh mì, hay thậm chí một cốc cà phê - bạn đang đóng thuế. Không tin? Đọc tiếp để khám phá!
+:::
+
+<StoryCallout
+  character="sinh-vien"
+  scenes={['story']}
+  title="Muốn trải nghiệm trực tiếp?"
+  description="Theo dõi câu chuyện của một sinh viên khám phá thuế qua cuộc sống hàng ngày."
+/>
+
+## Thuế là gì?
+
+**Thuế** là khoản tiền bắt buộc mà Nhà nước thu từ cá nhân và tổ chức. Khác với việc bạn tự nguyện chi tiêu cho hàng hóa hay dịch vụ, thuế **không đi kèm quyền** nhận trực tiếp một dịch vụ hay hàng hóa cụ thể từ Nhà nước.
+
+### Hai đặc điểm then chốt của thuế:
+
+1. **Tính bắt buộc**: Nhà nước có quyền lực pháp lý buộc cá nhân, doanh nghiệp phải nộp thuế theo luật.
+
+2. **Không gắn với quyền lợi trực tiếp**: Khi đóng thuế, bạn không được "mua" một dịch vụ cụ thể; thay vào đó, Nhà nước dùng ngân sách để cung cấp dịch vụ công, phúc lợi, an ninh, hạ tầng... cho cộng đồng.
+
+<StoryExample
+  character="sinh-vien"
+  scene="story#canh-2a"
+  context="Xem sinh viên mua bánh mì và phát hiện thuế VAT ẩn trong giá"
+/>
+
+---
+
+## Bạn đang đóng thuế mỗi ngày
+
+Hãy thử một thí nghiệm nhỏ:
+
+<NumberSlider
+  initialValue={25000}
+  min={10000}
+  max={100000}
+  step={5000}
+  unit="đồng"
+  calculation={(value) => value * 0.1}
+  calculationLabel="Thuế VAT (10%)"
+  showCalculation={true}
+  concept="VAT"
+/>
+
+**Giải thích:** Khi bạn mua một món hàng giá 25.000 đồng, bạn đang đóng khoảng **2.273 đồng thuế VAT** (thuế giá trị gia tăng). Con số này **ẩn** trong giá bán - bạn không thấy nó trên tờ tiền, nhưng nó đã được tính vào rồi!
+
+### Những thứ bạn mua mỗi ngày có thuế VAT:
+
+- ✓ Đồ ăn (bánh mì, cơm, phở...)
+- ✓ Quần áo, giày dép
+- ✓ Thẻ cào điện thoại
+- ✓ Trà sữa, cà phê
+- ✓ Mỹ phẩm, đồ dùng cá nhân
+- ✓ Xăng dầu (còn có thêm thuế môi trường!)
+
+:::info Tiền thuế đi đâu?
+Tiền thuế VAT bạn đóng sẽ đi vào ngân sách nhà nước và được sử dụng cho:
+- 🛣️ Đường xá, cầu, đèn đường
+- 🏥 Bệnh viện công, vaccine
+- 🏫 Trường học, lương giáo viên
+- 👮 Công an, quân đội, cứu hỏa
+- 🌳 Công viên, xử lý rác, môi trường
+:::
+
+---
+
+## Phân loại thuế: Trực tiếp vs Gián thu
+
+Có thể có nhiều loại thuế với nhiều tên khác nhau, nhưng nếu phân loại đơn giản thì có **2 loại chính**:
+
+### 1. Thuế gián thu (Indirect Taxes)
+
+**Định nghĩa:** Thuế đánh vào giá trị hàng hóa, dịch vụ. Người bán thu hộ, người mua chịu thuế.
+
+**Ví dụ:**
+- Thuế VAT (10%)
+- Thuế tiêu thụ đặc biệt (rượu, bia, thuốc lá...)
+- Thuế xuất nhập khẩu
+- Thuế môi trường (xăng dầu, than...)
+
+**Đặc điểm:** Mọi người đóng **cùng tỷ lệ %** bất kể giàu hay nghèo.
+
+<StoryExample
+  character="sinh-vien"
+  scene="story#canh-3-1"
+  context="Xem so sánh người giàu và nghèo cùng mua bánh mì - ai chịu gánh nặng nặng hơn?"
+/>
+
+### 2. Thuế trực tiếp (Direct Taxes)
+
+**Định nghĩa:** Thuế đánh trực tiếp lên thu nhập, lợi nhuận, tài sản. Người nộp thuế chính là người chịu thuế.
+
+**Ví dụ:**
+- Thuế thu nhập cá nhân (TNCN)
+- Thuế thu nhập doanh nghiệp (CIT)
+- Thuế tài sản, đất đai
+- Thuế thừa kế, quà tặng (chưa áp dụng rộng)
+
+**Đặc điểm:** Ai kiếm nhiều đóng nhiều - **theo tỷ lệ lũy tiến** (5%-35%).
+
+---
+
+## So sánh: Ai chịu gánh nặng thuế nặng hơn?
+
+Hãy xem một ví dụ cụ thể về **thuế gián thu** (VAT):
+
+<ComparisonSlider
+  label1="Người A (thu nhập 5 triệu/tháng)"
+  label2="Người B (thu nhập 50 triệu/tháng)"
+  initialValue1={25000}
+  initialValue2={25000}
+  calculation={(value) => value * 0.1}
+  calculationLabel="Thuế VAT"
+/>
+
+**Nhận xét quan trọng:**
+
+Dù cả hai đều đóng **cùng số tiền thuế** (2.500 đồng cho bánh mì 25.000 đồng), nhưng:
+
+- Với **Người A** (thu nhập thấp): 2.500 đồng = **0.05%** thu nhập tháng
+- Với **Người B** (thu nhập cao): 2.500 đồng = **0.005%** thu nhập tháng
+
+→ Người nghèo chịu gánh nặng thuế **nặng gấp 10 lần** (theo tỷ lệ thu nhập)!
+
+:::warning Vấn đề công bằng
+Đây là lý do tại sao nhiều người cho rằng thuế gián thu (như VAT) **không công bằng**. Người giàu và người nghèo đóng cùng tỷ lệ %, nhưng tác động lên cuộc sống hoàn toàn khác nhau.
+
+Vậy có cách nào công bằng hơn không? → Có! Đó là **thuế trực tiếp** với hệ thống **lũy tiến**.
+:::
+
+---
+
+## Ai thực sự đóng thuế?
+
+### Câu trả lời ngắn gọn: **BẠN!**
+
+Cho dù là thuế trực tiếp hay gián thu, **người dân cuối cùng là người chịu thuế**.
+
+#### Thuế trực tiếp:
+- Bạn kiếm 15 triệu/tháng → Công ty khấu trừ thuế TNCN trước khi trả lương
+- Bạn nhận về lương "sau thuế" (net salary)
+- → Người chịu thuế: **BẠN**
+
+#### Thuế gián thu:
+- Bạn mua cà phê 45.000 đồng → trong đó có ~4.091 đồng thuế VAT
+- Quán cà phê chỉ "thu hộ" và nộp cho nhà nước
+- → Người chịu thuế: **BẠN**
+
+:::tip Điểm then chốt
+Dù doanh nghiệp là bên "nộp" thuế, nhưng chi phí thuế cuối cùng đều **chuyển gánh** sang người tiêu dùng (qua giá bán cao hơn) hoặc người lao động (qua lương thấp hơn).
+:::
+
+<StoryExample
+  character="sinh-vien"
+  scene="story#canh-2a-1"
+  context="Xem sinh viên tìm hiểu chi tiết về thuế VAT và cách nó ảnh hưởng"
+/>
+
+---
+
+## Mã số thuế cá nhân - Bạn có cần không?
+
+### Tin tốt: Từ 1/7/2025
+
+**Số CCCD 12 số của bạn = Mã số thuế của bạn**
+
+Không cần đăng ký riêng nữa! (Thông tư 86/2024/TT-BTC - Bộ Tài chính)
+
+### Khi nào thì phải lo về thuế?
+
+#### Nếu bạn làm thuê (có hợp đồng lao động):
+
+Chỉ phải nộp thuế TNCN khi **thu nhập sau khi trừ bảo hiểm và giảm trừ gia cảnh > 11 triệu đồng/tháng**.
+
+**Giảm trừ gia cảnh:**
+- Bản thân: **11 triệu/tháng** (miễn thuế)
+- Mỗi người phụ thuộc: **4.4 triệu/tháng**
+
+**Ví dụ:**
+```
+Lương gộp: 10 triệu/tháng
+- Trừ bảo hiểm (~1.05 triệu): còn ~8.95 triệu
+- Trừ giảm trừ gia cảnh (11 triệu): còn... âm
+→ KHÔNG phải nộp thuế!
+```
+
+#### Nếu bạn làm freelance / kinh doanh nhỏ:
+
+**Hiện tại (đến 31/12/2025):**
+- Doanh thu **< 100 triệu/năm**: ✅ Không phải nộp thuế
+- Doanh thu **≥ 100 triệu/năm**: ❌ Phải nộp thuế
+
+**Từ 1/1/2026:**
+- Doanh thu **< 200 triệu/năm**: ✅ Không phải nộp thuế
+- Doanh thu **≥ 200 triệu/năm**: ❌ Phải nộp thuế
+
+<StoryExample
+  character="sinh-vien"
+  scene="story#canh-4"
+  context="Xem sinh viên nhận được yêu cầu mã số thuế từ khách hàng"
+/>
+
+:::info Tìm hiểu thêm
+Muốn biết chi tiết về cách tính thuế thu nhập cá nhân, ngưỡng phải nộp, và phân biệt freelance vs nhân viên?
+
+👉 [Xem Module: Mã số thuế & Khi nào cần lo về thuế](/course-tax/modules/module-b-tax-id)
+:::
+
+---
+
+## Tóm tắt
+
+### Những điều quan trọng bạn cần nhớ:
+
+1. **Bạn đang đóng thuế mỗi ngày** qua thuế VAT (10%) khi mua hàng hóa, dịch vụ
+
+2. **Có 2 loại thuế chính:**
+   - **Thuế gián thu** (VAT): Mọi người đóng như nhau → gánh nặng nặng hơn với người nghèo
+   - **Thuế trực tiếp** (TNCN): Ai kiếm nhiều đóng nhiều → công bằng hơn
+
+3. **Mã số thuế = Số CCCD** (từ 1/7/2025)
+
+4. **Ngưỡng phải nộp thuế:**
+   - Lương: Thu nhập > 11 triệu/tháng (sau trừ)
+   - Freelance: Doanh thu ≥ 100 triệu/năm (2025) hoặc ≥ 200 triệu/năm (từ 2026)
+
+5. **Ai thực sự đóng thuế?** → **BẠN!** (Dù trực tiếp hay gián tiếp)
+
+---
+
+## Tiếp theo: Tìm hiểu thêm
+
+<div className="row" style={{ marginTop: '2rem' }}>
+  <div className="col col--6">
+    <div className="card">
+      <div className="card__header">
+        <h3>🎭 Trải nghiệm qua câu chuyện</h3>
+      </div>
+      <div className="card__body">
+        <p>Theo dõi hành trình của sinh viên khám phá thuế trong cuộc sống hàng ngày</p>
+      </div>
+      <div className="card__footer">
+        <a href="/course-tax/characters/sinh-vien/story" className="button button--primary button--block">
+          Bắt đầu câu chuyện →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--6">
+    <div className="card">
+      <div className="card__header">
+        <h3>📚 Học tiếp bài sau</h3>
+      </div>
+      <div className="card__body">
+        <p>Tìm hiểu tại sao bạn phải đóng thuế và ý nghĩa của khế ước xã hội</p>
+      </div>
+      <div className="card__footer">
+        <a href="/course-tax/lessons/02-tai-sao-dong-thue" className="button button--secondary button--block">
+          Bài 2: Tại sao bạn đóng thuế? →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Nguồn tham khảo
+
+- Luật Thuế GTGT 2008 (sửa đổi 2013, 2016, 2024)
+- Luật Thuế TNCN 2007 (sửa đổi 2012, 2014)
+- Thông tư 86/2024/TT-BTC (Đăng ký thuế)
+- Nghị quyết 954/2020/UBTVQH14 (Giảm trừ gia cảnh)
+- [Cổng Dịch vụ công Quốc gia](https://dichvucong.gov.vn)
+- [Tổng cục Thuế Việt Nam](https://www.gdt.gov.vn)

@@ -2,40 +2,40 @@
 // Each character has a unique ID and can appear in multiple storylines
 
 export const CHARACTERS = {
-  giang: {
-    id: 'giang',
-    name: 'Giang',
-    fullName: 'Giang',
-    age: 28,
-    occupation: 'Người bán hàng rong',
-    avatar: 'G',
-    description: 'Giang bán bánh mì trên vỉa hè để kiếm sống.',
+  sinhvien: {
+    id: 'sinhvien',
+    name: 'Sinh viên',
+    fullName: 'Sinh viên',
+    age: 20,
+    occupation: 'Sinh viên',
+    avatar: 'S',
+    description: 'Sinh viên năm 3 đang học ngành Marketing.',
     background: {
-      education: 'Tốt nghiệp cấp 3',
-      family: 'Có 2 con nhỏ, người bạn đời làm xe ôm',
-      income: 'Không ổn định, khoảng 4-6 triệu/tháng',
-      location: 'Quận 3, Thành phố Hồ Chí Minh'
+      education: 'Sinh viên ngành Marketing',
+      family: 'Quê Lâm Đồng, bố mẹ làm nông',
+      income: 'Thiết kế freelance và dạy kèm tiếng Anh, thu nhập khoảng 3-4 triệu/tháng',
+      location: 'Sài Gòn'
     },
     personalityTraits: [
-      'Chăm chỉ, cần cù',
-      'Lo lắng về tương lai',
-      'Mong muốn ổn định cuộc sống'
+      'Tò mò, ham học hỏi',
+      'Quan tâm đến vấn đề xã hội',
+      'Muốn hiểu rõ về trách nhiệm công dân'
     ],
     challenges: {
       tax: [
-        'Không có giấy phép kinh doanh',
-        'Phải đóng phí sử dụng vỉa hè',
-        'Thu nhập không ổn định'
+        'Chưa hiểu rõ về thuế và vai trò của nó',
+        'Thắc mắc về việc sử dụng ngân sách công',
+        'Muốn biết trách nhiệm của mình với xã hội'
       ],
       healthcare: [
-        'Không có bảo hiểm y tế đầy đủ',
-        'Khó tiếp cận dịch vụ y tế chất lượng',
-        'Chi phí khám chữa bệnh cao'
+        'Sử dụng bảo hiểm y tế sinh viên',
+        'Quan tâm đến chất lượng dịch vụ y tế công',
+        'Tìm hiểu về quyền lợi bảo hiểm'
       ],
       corruption: [
-        'Phải đưa "lót tay" để được bán hàng yên ổn',
-        'Bị các cán bộ phường "vòi vĩnh"',
-        'Không biết cách khiếu nại khi bị ức hiếp'
+        'Chứng kiến tham nhũng trong cuộc sống hàng ngày',
+        'Muốn hiểu nguyên nhân và hậu quả',
+        'Tìm cách góp phần thay đổi'
       ]
     },
     storylines: {
@@ -43,96 +43,10 @@ export const CHARACTERS = {
         title: 'Thuế và Ngân sách',
         episodes: [
           {
-            id: 'giang-tax-01',
-            title: 'Buổi sáng bán bánh mì',
-            slug: 'buoi-sang-ban-banh-mi',
-            path: '/course-tax/characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi'
-          },
-          {
-            id: 'giang-tax-02',
-            title: 'Đi nộp thủ tục',
-            slug: 'di-nop-thu-tuc',
-            path: '/course-tax/characters/giang-ban-hang-rong/di-nop-thu-tuc'
-          },
-          {
-            id: 'giang-tax-03',
-            title: 'Tình huống khó khăn',
-            slug: 'tinh-huong-kho-khan',
-            path: '/course-tax/characters/giang-ban-hang-rong/tinh-huong-kho-khan'
-          }
-        ]
-      },
-      // Placeholder for future storylines
-      healthcare: {
-        title: 'Y tế Công',
-        episodes: [],
-        status: 'coming-soon'
-      },
-      corruption: {
-        title: 'Tham nhũng',
-        episodes: [],
-        status: 'coming-soon'
-      }
-    }
-  },
-
-  khanh: {
-    id: 'khanh',
-    name: 'Khánh',
-    fullName: 'Khánh',
-    age: 35,
-    occupation: 'Chủ cửa hàng tạp hóa',
-    avatar: 'K',
-    description: 'Khánh có một cửa hàng tạp hóa nhỏ.',
-    background: {
-      education: 'Cao đẳng kinh tế',
-      family: 'Bạn đời và 1 con, cha mẹ già',
-      income: 'Ổn định, khoảng 15-20 triệu/tháng',
-      location: 'Quận Hai Bà Trưng, Hà Nội'
-    },
-    personalityTraits: [
-      'Tính toán, thận trọng',
-      'Muốn mở rộng kinh doanh',
-      'Quan tâm đến pháp luật'
-    ],
-    challenges: {
-      tax: [
-        'Phải đăng ký kinh doanh',
-        'Nộp thuế thu nhập cá nhân',
-        'Chi phí thuê mặt bằng cao'
-      ],
-      healthcare: [
-        'Tìm hiểu về bảo hiểm xã hội cho nhân viên',
-        'Cân nhắc gói bảo hiểm y tế gia đình',
-        'Lo lắng về sức khỏe do stress kinh doanh'
-      ],
-      corruption: [
-        'Gặp khó khăn trong việc xin giấy phép',
-        'Phải "bôi trơn" để được ưu tiên xử lý hồ sơ',
-        'Cạnh tranh không lành mạnh với đối thủ có "quan hệ"'
-      ]
-    },
-    storylines: {
-      tax: {
-        title: 'Thuế và Ngân sách',
-        episodes: [
-          {
-            id: 'khanh-tax-01',
-            title: 'Tháng đầu khó khăn',
-            slug: 'thang-dau-kho-khan',
-            path: '/course-tax/characters/khanh-chu-cua-hang/thang-dau-kho-khan'
-          },
-          {
-            id: 'khanh-tax-02',
-            title: 'Các nghĩa vụ khác',
-            slug: 'nghia-vu-khac',
-            path: '/course-tax/characters/khanh-chu-cua-hang/nghia-vu-khac'
-          },
-          {
-            id: 'khanh-tax-03',
-            title: 'Quyết định mở rộng',
-            slug: 'quyet-dinh-mo-rong',
-            path: '/course-tax/characters/khanh-chu-cua-hang/quyet-dinh-mo-rong'
+            id: 'sinhvien-tax-story',
+            title: 'Hành trình khám phá thuế',
+            slug: 'story',
+            path: '/course-tax/characters/sinh-vien/story'
           }
         ]
       },

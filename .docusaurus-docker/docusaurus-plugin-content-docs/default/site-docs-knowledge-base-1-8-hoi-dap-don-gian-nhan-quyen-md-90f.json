@@ -1,0 +1,51 @@
+{
+  "id": "1.8-hoi-dap-don-gian-nhan-quyen",
+  "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
+  "description": "Những câu hỏi và câu trả lời cơ bản nhất về nhân quyền",
+  "source": "@site/docs/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen.md",
+  "sourceDirName": ".",
+  "slug": "/tuan1/hoi-dap-nhan-quyen",
+  "permalink": "/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "hỏi đáp",
+      "permalink": "/MassEdu/knowledge-base/tags/hỏi-dap"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
+    "slug": "/tuan1/hoi-dap-nhan-quyen",
+    "sidebar_position": 15,
+    "description": "Những câu hỏi và câu trả lời cơ bản nhất về nhân quyền",
+    "keywords": [
+      "nhân quyền",
+      "câu hỏi",
+      "trả lời",
+      "cơ bản"
+    ],
+    "tags": [
+      "nhân quyền",
+      "hỏi đáp"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quyền giáo dục",
+    "permalink": "/MassEdu/knowledge-base/docthem-quyen-giaoduc"
+  },
+  "next": {
+    "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+    "permalink": "/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
+  }
+}

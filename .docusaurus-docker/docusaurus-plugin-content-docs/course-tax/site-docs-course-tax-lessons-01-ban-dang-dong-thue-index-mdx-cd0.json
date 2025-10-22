@@ -1,0 +1,29 @@
+{
+  "id": "lessons/ban-dang-dong-thue/index",
+  "title": "1. Thuế ơi thuế à",
+  "description": "Giới thiệu về các loại thuế bạn gặp hàng ngày, thuế là gì, và ai là người thực sự gánh chịu gánh nặng thuế.",
+  "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/index.mdx",
+  "sourceDirName": "lessons/01-ban-dang-dong-thue",
+  "slug": "/lessons/ban-dang-dong-thue/",
+  "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "1. Thuế ơi thuế à",
+    "description": "Giới thiệu về các loại thuế bạn gặp hàng ngày, thuế là gì, và ai là người thực sự gánh chịu gánh nặng thuế.",
+    "sidebar_position": 1,
+    "hide_title": true
+  },
+  "sidebar": "courseTax",
+  "previous": {
+    "title": "Sinh viên",
+    "permalink": "/MassEdu/course-tax/characters/sinh-vien/story"
+  },
+  "next": {
+    "title": "Bạn đang đóng thuế gì?",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi"
+  }
+}

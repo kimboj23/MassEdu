@@ -1,0 +1,50 @@
+{
+  "id": "1.1-nhan-quyen-la-gi",
+  "title": "1.1. Nhân quyền là gì?",
+  "description": "Định nghĩa và tìm hiểu về khái niệm nhân quyền cơ bản",
+  "source": "@site/docs/knowledge-base/1.1-nhan-quyen-la-gi.md",
+  "sourceDirName": ".",
+  "slug": "/tuan1/dinh-nghia",
+  "permalink": "/MassEdu/knowledge-base/tuan1/dinh-nghia",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.1-nhan-quyen-la-gi.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "định nghĩa",
+      "permalink": "/MassEdu/knowledge-base/tags/dịnh-nghia"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "1.1. Nhân quyền là gì?",
+    "slug": "/tuan1/dinh-nghia",
+    "sidebar_position": 5,
+    "description": "Định nghĩa và tìm hiểu về khái niệm nhân quyền cơ bản",
+    "keywords": [
+      "nhân quyền",
+      "định nghĩa",
+      "khái niệm"
+    ],
+    "tags": [
+      "nhân quyền",
+      "định nghĩa"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Giới hạn quyền và thoái lui nghĩa vụ thực hiện quyền",
+    "permalink": "/MassEdu/knowledge-base/gioi-han-quyen"
+  },
+  "next": {
+    "title": "1.2. Lược sử nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/tuan1/luoc-su"
+  }
+}

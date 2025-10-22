@@ -1,0 +1,24 @@
+{
+  "id": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+  "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+  "description": "---",
+  "source": "@site/docs/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung.md",
+  "sourceDirName": ".",
+  "slug": "/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+  "permalink": "/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen"
+  },
+  "next": {
+    "title": "2.1a-luat-nhanquyen-quocte",
+    "permalink": "/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte"
+  }
+}

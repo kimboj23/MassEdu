@@ -1,0 +1,57 @@
+{
+  "id": "1.5a-quyen-dan-su-chinh-tri",
+  "title": "1.5a. Các quyền dân sự, chính trị",
+  "description": "Tìm hiểu về các quyền dân sự và chính trị qua Công ước quốc tế ICCPR",
+  "source": "@site/docs/knowledge-base/1.5a-quyen-dan-su-chinh-tri.md",
+  "sourceDirName": ".",
+  "slug": "/tuan1/quyen-dan-su-chinh-tri",
+  "permalink": "/MassEdu/knowledge-base/tuan1/quyen-dan-su-chinh-tri",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.5a-quyen-dan-su-chinh-tri.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "quyền dân sự",
+      "permalink": "/MassEdu/knowledge-base/tags/quyền-dan-sự"
+    },
+    {
+      "inline": true,
+      "label": "quyền chính trị",
+      "permalink": "/MassEdu/knowledge-base/tags/quyền-chinh-trị"
+    },
+    {
+      "inline": true,
+      "label": "ICCPR",
+      "permalink": "/MassEdu/knowledge-base/tags/iccpr"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "1.5a. Các quyền dân sự, chính trị",
+    "slug": "/tuan1/quyen-dan-su-chinh-tri",
+    "sidebar_position": 9,
+    "description": "Tìm hiểu về các quyền dân sự và chính trị qua Công ước quốc tế ICCPR",
+    "keywords": [
+      "quyền dân sự",
+      "quyền chính trị",
+      "ICCPR",
+      "công ước quốc tế"
+    ],
+    "tags": [
+      "quyền dân sự",
+      "quyền chính trị",
+      "ICCPR"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "1.4b. Một số diễn giải về Tuyên ngôn nhân quyền phổ quát",
+    "permalink": "/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon"
+  },
+  "next": {
+    "title": "Công ước quốc tế về các quyền dân sự và chính trị",
+    "permalink": "/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri"
+  }
+}

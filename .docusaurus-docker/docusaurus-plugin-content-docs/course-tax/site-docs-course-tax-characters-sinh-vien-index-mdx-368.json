@@ -1,0 +1,25 @@
+{
+  "id": "characters/sinh-vien/index",
+  "title": "Hành trình khám phá thuế",
+  "description": "Hành trình khám phá thuế qua cuộc sống hàng ngày",
+  "source": "@site/docs/course-tax/characters/sinh-vien/index.mdx",
+  "sourceDirName": "characters/sinh-vien",
+  "slug": "/course-tax/characters/sinh-vien/story",
+  "permalink": "/MassEdu/course-tax/course-tax/characters/sinh-vien/story",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Hành trình khám phá thuế",
+    "slug": "/course-tax/characters/sinh-vien/story",
+    "description": "Hành trình khám phá thuế qua cuộc sống hàng ngày",
+    "sidebar_position": 2
+  },
+  "sidebar": "courseTax",
+  "next": {
+    "title": "index",
+    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/"
+  }
+}

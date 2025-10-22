@@ -17,31 +17,136 @@ const sidebars = {
   courseTax: [
     {
       type: 'html',
-      value: '<div style="padding: 1rem 0; border-bottom: 1px solid var(--ifm-color-emphasis-300); margin-bottom: 1rem;"><h3 style="margin: 0; color: var(--ifm-color-primary);">Thuế và Ngân sách</h3><p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--ifm-color-emphasis-700);">Khám phá qua góc nhìn của những nhân vật</p></div>',
+      value: '<div style="padding: 1rem 0; border-bottom: 1px solid var(--ifm-color-emphasis-300); margin-bottom: 1rem;"><h3 style="margin: 0; color: var(--ifm-color-primary);">Thuế và Ngân sách</h3><p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--ifm-color-emphasis-700);">Học qua câu chuyện và bài học</p></div>',
     },
-    {
-      type: 'category',
-      label: 'Giang - Người bán hàng rong',
-      collapsed: false,
-      items: [
-        'characters/giang-ban-hang-rong/buoi-sang-ban-banh-mi',
-        'characters/giang-ban-hang-rong/di-nop-thu-tuc',
-        'characters/giang-ban-hang-rong/tinh-huong-kho-khan',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Khánh - Chủ cửa hàng',
-      collapsed: false,
-      items: [
-        'characters/khanh-chu-cua-hang/thang-dau-kho-khan',
-        'characters/khanh-chu-cua-hang/nghia-vu-khac',
-        'characters/khanh-chu-cua-hang/quyet-dinh-mo-rong',
-      ],
-    },
+
+    // CHARACTERS/STORIES SECTION
     {
       type: 'html',
-      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 2rem;"><h4 style="margin: 0 0 0.5rem 0; color: var(--ifm-color-emphasis-800);">Bối cảnh & Tri thức</h4><p style="margin: 0; font-size: 0.85rem;"><a href="/tax-context/government-revenue" style="color: var(--ifm-color-primary);">Chính quyền lấy tiền từ đâu? →</a></p></div>',
+      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 1rem;"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Câu chuyện',
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Sinh viên',
+          collapsed: false,
+          link: {
+            type: 'doc',
+            id: 'characters/sinh-vien/story',
+          },
+          items: [], // Remove sub-items as they are now merged into the main story
+        },
+        // Future characters can be added here
+      ],
+    },
+
+    
+    // LESSONS SECTION
+    {
+      type: 'category',
+      label: 'Bài học',
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '1. Thuế ơi thuế à',
+          collapsed: false,
+          link: {
+            type: 'doc',
+            id: 'lessons/ban-dang-dong-thue/index',
+          },
+          items: [
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi',
+              label: 'Bạn đang đóng thuế gì?',
+            },
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue',
+              label: 'Ai đang thực sự đóng thuế?',
+            },
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/c-ganh-thue',
+              label: 'Ai thực sự gánh chịu thuế?',
+            },
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/e-thue-la-gi',
+              label: 'Vậy Thuế là gì?',
+            },
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/f-phan-loai-thue',
+              label: 'Phân loại thuế',
+            },
+            {
+              type: 'doc',
+              id: 'lessons/ban-dang-dong-thue/d-suy-nghi-thue',
+              label: 'Hãy suy nghĩ về thuế',
+            },
+          ],
+        },
+        {
+          type: 'doc',
+          id: 'lessons/tai-sao-dong-thue',
+          label: '2. Tại sao bạn đóng thuế?',
+        },
+          //{
+          //  type: 'doc',
+          //  id: 'lessons/tien-thue-di-dau', // This file is still empty
+          //  label: '3. Tiền thuế đi đâu?',
+          //},
+        {
+          type: 'doc',
+          id: 'lessons/nguyen-tac-thu-thue',
+          label: '4. Nguyên tắc thu thuế',
+        },
+        {
+          type: 'doc',
+          id: 'lessons/thue-va-minh-bach',
+          label: '5. Thuế và Minh bạch',
+        },
+        {
+          type: 'doc',
+          id: 'lessons/thue-va-chinh-tri',
+          label: '6. Thuế và Chính trị',
+        },
+      ],
+    },
+    
+    // MODULES SECTION (Deep dives)
+    {
+      type: 'html',
+      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 1rem;"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Chuyên sâu',
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'modules/module-a-recognizing-daily-taxes',
+          label: 'A. Nhận diện thuế hàng ngày',
+        },
+        // Future modules will be added here:
+        // 'modules/module-b-tax-id',
+        // 'modules/module-c-progressive-tax',
+        // 'modules/module-d-freelance-vs-employee',
+        // 'modules/module-e-tax-fairness',
+      ],
+    },
+
+    // HELPFUL LINKS
+    {
+      type: 'html',
+      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 1rem;"><h4 style="margin: 0 0 0.5rem 0; color: var(--ifm-color-emphasis-800);">Liên kết hữu ích</h4><ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;"><li><a href="/course-tax/lessons/01-ban-dang-dong-thue-gi" style="color: var(--ifm-color-primary);">Bắt đầu với bài học</a></li><li><a href="/course-tax/characters/sinh-vien" style="color: var(--ifm-color-primary);">Bắt đầu với câu chuyện</a></li></ul></div>',
     },
   ],
 };

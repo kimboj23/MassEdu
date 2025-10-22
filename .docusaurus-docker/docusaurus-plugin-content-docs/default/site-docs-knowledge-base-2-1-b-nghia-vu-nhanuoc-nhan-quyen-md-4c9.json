@@ -1,0 +1,64 @@
+{
+  "id": "2.1b-nghia-vu-nhanuoc-nhan-quyen",
+  "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
+  "description": "Phân tích ba nghĩa vụ chính của nhà nước đối với nhân quyền - tôn trọng, bảo vệ và bảo đảm, cùng với khái niệm nhà nước và chính quyền.",
+  "source": "@site/docs/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen.md",
+  "sourceDirName": ".",
+  "slug": "/nghia-vu-nhanuoc-nhan-quyen",
+  "permalink": "/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "nhà nước",
+      "permalink": "/MassEdu/knowledge-base/tags/nha-nước"
+    },
+    {
+      "inline": true,
+      "label": "nghĩa vụ",
+      "permalink": "/MassEdu/knowledge-base/tags/nghia-vụ"
+    },
+    {
+      "inline": true,
+      "label": "nhân quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+    },
+    {
+      "inline": true,
+      "label": "chính quyền",
+      "permalink": "/MassEdu/knowledge-base/tags/chinh-quyền"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2.2,
+  "frontMatter": {
+    "title": "Nghĩa vụ của Nhà nước trong việc thực thi và đảm bảo quyền con người",
+    "slug": "nghia-vu-nhanuoc-nhan-quyen",
+    "sidebar_position": 2.2,
+    "description": "Phân tích ba nghĩa vụ chính của nhà nước đối với nhân quyền - tôn trọng, bảo vệ và bảo đảm, cùng với khái niệm nhà nước và chính quyền.",
+    "keywords": [
+      "nghĩa vụ nhà nước",
+      "tôn trọng nhân quyền",
+      "bảo vệ nhân quyền",
+      "bảo đảm nhân quyền",
+      "chính quyền"
+    ],
+    "tags": [
+      "nhà nước",
+      "nghĩa vụ",
+      "nhân quyền",
+      "chính quyền"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
+    "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh"
+  },
+  "next": {
+    "title": "Hiểu về vi phạm nhân quyền",
+    "permalink": "/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen"
+  }
+}
