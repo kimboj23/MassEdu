@@ -1,6 +1,6 @@
 {
   "id": "characters/sinh-vien/story",
-  "title": "story",
+  "title": "Sinh viên",
   "description": "Hành trình khám phá thuế qua cuộc sống hàng ngày",
   "source": "@site/docs/course-tax/characters/sinh-vien/story.mdx",
   "sourceDirName": "characters/sinh-vien",
@@ -12,9 +12,10 @@
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {
-    "sidebar_label": "Sinh viên",
+    "title": "Sinh viên",
     "description": "Hành trình khám phá thuế qua cuộc sống hàng ngày",
-    "sidebar_position": 2
+    "sidebar_position": 2,
+    "hide_title": true
   },
   "sidebar": "courseTax",
   "next": {

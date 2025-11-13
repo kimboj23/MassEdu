@@ -20,7 +20,10 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(dir:*)",
-      "Bash(if exist .docusaurus-docker rmdir /s /q .docusaurus-docker)"
+      "Bash(if exist .docusaurus-docker rmdir /s /q .docusaurus-docker)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []
