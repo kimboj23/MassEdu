@@ -133,7 +133,12 @@ const sidebars = {
         {
           type: 'doc',
           id: 'modules/module-a-recognizing-daily-taxes',
-          label: 'A. Nhận diện thuế hàng ngày',
+          label: 'Nhận diện thuế hàng ngày',
+        },
+        {
+          type: 'doc',
+          id: 'concepts/salary-tax-calculation',
+          label: 'Cách tính thuế thu nhập cá nhân',
         },
         // Future modules will be added here:
         // 'modules/module-b-tax-id',
@@ -146,7 +151,7 @@ const sidebars = {
     // HELPFUL LINKS
     {
       type: 'html',
-      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 1rem;"><h4 style="margin: 0 0 0.5rem 0; color: var(--ifm-color-emphasis-800);">Liên kết hữu ích</h4><ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;"><li><a href="/course-tax/lessons/01-ban-dang-dong-thue-gi" style="color: var(--ifm-color-primary);">Bắt đầu với bài học</a></li><li><a href="/course-tax/characters/sinh-vien" style="color: var(--ifm-color-primary);">Bắt đầu với câu chuyện</a></li></ul></div>',
+      value: '<div style="padding: 1rem 0; border-top: 1px solid var(--ifm-color-emphasis-300); margin-top: 1rem;"><h4 style="margin: 0 0 0.5rem 0; color: var(--ifm-color-emphasis-800);">Liên kết hữu ích</h4><ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem;"><li><a href="MassEdu/course-tax/lessons/ban-dang-dong-thue" style="color: var(--ifm-color-primary);">Bắt đầu với bài học</a></li><li><a href="MassEdu/course-tax/characters/sinh-vien/story" style="color: var(--ifm-color-primary);">Bắt đầu với câu chuyện</a></li></ul></div>',
     },
   ],
 };

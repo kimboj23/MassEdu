@@ -658,3 +658,813 @@
 [data-theme='dark'] .comparisonStats strong {
   color: var(--ifm-color-primary-light);
 }
+
+/* ========================================
+   LessonScene Component - Chunked Navigation
+   ======================================== */
+
+.lessonScene {
+  animation: fadeIn 0.5s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.lessonSceneHeader {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  color: white;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1.5rem;
+}
+
+.lessonSceneHeader h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lessonSceneContent {
+  padding: 0;
+}
+
+/* ========================================
+   LessonChunkNavigation Component
+   ======================================== */
+
+.lessonNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.lessonProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressDots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-400);
+  transition: all 0.3s ease;
+}
+
+.progressDotComplete {
+  background-color: var(--ifm-color-success);
+}
+
+.progressDotActive {
+  background-color: var(--ifm-color-primary);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
+}
+
+.progressText {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+}
+
+.lessonButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navButton {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.navButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: var(--ifm-color-emphasis-400);
+}
+
+.navButtonPrev {
+  background-color: var(--ifm-color-secondary);
+}
+
+.navButtonPrev:hover:not(:disabled) {
+  background-color: var(--ifm-color-secondary-dark);
+}
+
+.navButtonNext {
+  background-color: var(--ifm-color-primary);
+}
+
+/* ========================================
+   LessonProgress Component - Overall Progress Bar
+   ======================================== */
+
+.lessonProgressBar {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.lessonProgressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.lessonProgressTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.lessonProgressPercent {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.resetButton {
+  background: var(--ifm-color-secondary);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.resetButton:hover {
+  transform: scale(1.1);
+  box-shadow: var(--ifm-global-shadow-md);
+  background: var(--ifm-color-secondary-dark);
+}
+
+.progressBarTrack {
+  height: 8px;
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* ========================================
+   Dark Mode Fixes for LessonScene
+   ======================================== */
+
+[data-theme='dark'] .lessonNavigation {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .progressText {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .navButton {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .navButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .navButton:disabled {
+  background-color: var(--ifm-color-emphasis-500);
+}
+
+[data-theme='dark'] .navButtonPrev {
+  background-color: var(--ifm-color-secondary-dark);
+}
+
+[data-theme='dark'] .navButtonPrev:hover:not(:disabled) {
+  background-color: var(--ifm-color-secondary-darker);
+}
+
+[data-theme='dark'] .lessonProgressBar {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .progressBarTrack {
+  background-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .lessonProgressPercent {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .resetButton {
+  background: var(--ifm-color-secondary-dark);
+}
+
+[data-theme='dark'] .resetButton:hover {
+  background: var(--ifm-color-secondary-darker);
+}
+
+/* ============================================
+   SALARY TAX CALCULATOR STYLES
+   ============================================ */
+
+.salaryTaxCalculator {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.calculatorHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.calculatorHeader h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.5rem;
+}
+
+.calculatorHeader p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
+
+.calculatorInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inputGroup label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.inputGroup label strong {
+  color: var(--ifm-color-primary);
+  font-size: 1.1rem;
+}
+
+.salarySlider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--ifm-color-emphasis-300);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.salarySlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.salarySlider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.salarySlider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.salarySlider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.sliderMarks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+}
+
+.calculatorResults {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resultCard {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-background-surface-color);
+  transition: all 0.2s ease;
+}
+
+.resultCard:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateX(4px);
+}
+
+.resultDeduction {
+  border-left-color: var(--ifm-color-warning);
+  background: var(--ifm-color-warning-lightest);
+}
+
+.resultTaxable {
+  border-left-color: var(--ifm-color-info);
+  background: var(--ifm-color-info-lightest);
+}
+
+.resultTax {
+  border-left-color: var(--ifm-color-danger);
+  background: var(--ifm-color-danger-lightest);
+}
+
+.resultNet {
+  border-left-color: var(--ifm-color-success);
+  background: var(--ifm-color-success-lightest);
+  border-left-width: 6px;
+}
+
+.resultLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.resultValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.resultPercent {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.resultDetails {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--ifm-color-emphasis-300);
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.resultDetails div {
+  padding: 0.25rem 0;
+}
+
+.calculatorActions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.detailsButton {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-dark);
+  border: 1px solid var(--ifm-color-primary-light);
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.detailsButton:hover {
+  background: var(--ifm-color-primary-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.calculatorNote {
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  border-left: 3px solid var(--ifm-color-info);
+}
+
+.calculatorNote p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.calculatorNote strong {
+  color: var(--ifm-color-info-dark);
+}
+
+/* Simple Salary Comparison */
+.simpleSalaryComparison {
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.comparisonSliderSection {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.sliderLabel {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.comparisonSlider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--ifm-color-emphasis-300);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.comparisonSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  border: 3px solid white;
+}
+
+.comparisonSlider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.comparisonSlider::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+
+.comparisonSlider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.comparisonSlider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.comparisonSlider::-moz-range-thumb:active {
+  transform: scale(1.1);
+}
+
+.comparisonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comparisonItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.comparisonLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+}
+
+.comparisonValue {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.highlightNet {
+  color: var(--ifm-color-success-dark);
+}
+
+.comparisonArrow {
+  font-size: 2rem;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+
+.comparisonDeduction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  justify-content: center;
+  text-align: center;
+}
+
+.deductionAmount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ifm-color-danger-dark);
+}
+
+.deductionPercent {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+}
+
+.deductionLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.comparisonBreakdown {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: transparent;
+  border-radius: 6px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.breakdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.breakdownLabel {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  text-align: center;
+}
+
+.breakdownValue {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--ifm-color-danger-dark);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .salaryTaxCalculator {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .calculatorInputs {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .resultCard {
+  background: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .simpleSalaryComparison {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .comparisonSliderSection {
+  background: transparent;
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .comparisonDeduction {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .comparisonBreakdown {
+  background: transparent;
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .salaryTaxCalculator {
+    padding: 1.5rem 1rem;
+  }
+
+  .calculatorInputs {
+    padding: 1rem;
+  }
+
+  .comparisonRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .comparisonArrow {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+  }
+
+  .comparisonBreakdown {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .breakdownItem {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .breakdownLabel {
+    text-align: left;
+  }
+
+  .resultValue {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================================
+   ACCESSIBLE UTILITY CLASSES
+   Simple, minimalistic styles for content
+   ============================================ */
+
+/* Info boxes - clean and accessible */
+.infoBox {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.successBox {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid var(--ifm-color-success);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.warningBox {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid var(--ifm-color-warning);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.errorBox {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid var(--ifm-color-danger);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* Highlight box - subtle emphasis */
+.highlightBox {
+  padding: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* Code/calculation display */
+.calculationBox {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Courier New', monospace;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+
+/* Grid layouts */
+.gridTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .gridTwo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .infoBox,
+[data-theme='dark'] .highlightBox,
+[data-theme='dark'] .calculationBox {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}

@@ -688,6 +688,12 @@ Tốt hơn là tìm hiểu ngay từ bây giờ! 😊
   <strong>→ KHÔNG phải nộp thuế!</strong>
 </div>
 
+<div style={{ textAlign: 'center', margin: '1.5rem 0' }}>
+  <Link to="/course-tax/concepts/salary-tax-calculation" className="button button--primary">
+    📊 Xem công cụ tính thuế lương chi tiết
+  </Link>
+</div>
+
 :::info Nguồn
 Nghị quyết 954/2020/UBTVQH14 về mức giảm trừ gia cảnh
 :::
@@ -875,11 +881,14 @@ Bạn cắm tai nghe, mở Spotify. Nhưng tâm trí cứ lang thang về tin nh
 }}>
   <h4>📊 Thuế Lũy Tiến là gì?</h4>
   <p>Giả sử sau này bạn có công việc ổn định, lương cao hơn. Bạn sẽ gặp bảng thuế lũy tiến...</p>
-  <p style={{ marginBottom: 0 }}>
-    <Link to="/course-tax/modules/module-c-progressive-tax" className="button button--primary">
-      Đọc Module C: Thuế Lũy Tiến →
+  <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+    <Link to="/course-tax/concepts/salary-tax-calculation" className="button button--primary">
+      📊 Công cụ tính thuế lương
     </Link>
-  </p>
+    <Link to="/course-tax/modules/module-c-progressive-tax" className="button button--secondary">
+      Module C: Thuế Lũy Tiến →
+    </Link>
+  </div>
 </div>
 
 <ChoiceButtons sceneId="module-c-preview-choice">
@@ -1826,7 +1835,7 @@ Rồi bạn suy nghĩ:
         <p>Xem lại lý thuyết chi tiết với đầy đủ tính toán</p>
       </div>
       <div className="card__footer">
-        <Link to="/course-tax/lessons/01-ban-dang-dong-thue-gi" className="button button--primary button--block">
+        <Link to="/course-tax/lessons/01-ban-dang-dong-thue/01-a-ban-dang-dong-thue-gi" className="button button--primary button--block">
           Bài 1: Bạn đang đóng thuế gì?
         </Link>
       </div>

@@ -84,11 +84,11 @@ export default [
   },
   {
     path: '/MassEdu/course-tax',
-    component: ComponentCreator('/MassEdu/course-tax', 'fa2'),
+    component: ComponentCreator('/MassEdu/course-tax', '3e2'),
     routes: [
       {
         path: '/MassEdu/course-tax',
-        component: ComponentCreator('/MassEdu/course-tax', '781'),
+        component: ComponentCreator('/MassEdu/course-tax', '388'),
         routes: [
           {
             path: '/MassEdu/course-tax/tags',
@@ -117,7 +117,7 @@ export default [
           },
           {
             path: '/MassEdu/course-tax',
-            component: ComponentCreator('/MassEdu/course-tax', '70c'),
+            component: ComponentCreator('/MassEdu/course-tax', '201'),
             routes: [
               {
                 path: '/MassEdu/course-tax/cac-loai-thue',
@@ -136,6 +136,12 @@ export default [
                 exact: true
               },
               {
+                path: '/MassEdu/course-tax/concepts/salary-tax-calculation',
+                component: ComponentCreator('/MassEdu/course-tax/concepts/salary-tax-calculation', '83e'),
+                exact: true,
+                sidebar: "courseTax"
+              },
+              {
                 path: '/MassEdu/course-tax/LearningContent-Tax',
                 component: ComponentCreator('/MassEdu/course-tax/LearningContent-Tax', '22a'),
                 exact: true
@@ -148,7 +154,7 @@ export default [
               },
               {
                 path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi', '6a2'),
+                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi', 'bbf'),
                 exact: true,
                 sidebar: "courseTax"
               },
@@ -178,7 +184,7 @@ export default [
               },
               {
                 path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue', 'e29'),
+                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue', 'bde'),
                 exact: true,
                 sidebar: "courseTax"
               },

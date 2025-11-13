@@ -23,7 +23,8 @@
       "Bash(if exist .docusaurus-docker rmdir /s /q .docusaurus-docker)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(cmd /c \"if exist .docusaurus-docker rmdir /s /q .docusaurus-docker\")"
     ],
     "deny": [],
     "ask": []

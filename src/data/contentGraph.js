@@ -140,8 +140,34 @@ export const contentGraph = {
     '01-ban-dang-dong-thue-gi': {
       id: '01-ban-dang-dong-thue-gi',
       title: 'Bạn đang đóng thuế gì?',
-      path: '/course-tax/lessons/01-ban-dang-dong-thue-gi',
+      path: '/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi',
       concepts: ['vat', 'indirect-tax', 'direct-tax', 'tax-id'],
+      chunks: [
+        {
+          id: 'chunk-1',
+          title: 'Bạn đang đóng thuế gì?',
+          concepts: ['vat', 'indirect-tax'],
+          storyLinks: [
+            {
+              character: 'sinh-vien',
+              scene: 'canh-2a',
+              context: 'Xem sinh viên phát hiện thuế VAT khi mua bánh mì 25k',
+            },
+          ],
+        },
+        {
+          id: 'chunk-2',
+          title: 'Thuế: Một phần không thể thiếu của xã hội có tổ chức',
+          concepts: ['social-contract'],
+          storyLinks: [
+            {
+              character: 'sinh-vien',
+              scene: 'canh-1',
+              context: 'Xem sinh viên nghe tin về thiếu kinh phí xây trường và bệnh viện',
+            },
+          ],
+        },
+      ],
       relatedStories: [
         {
           character: 'sinh-vien',
@@ -155,6 +181,59 @@ export const contentGraph = {
         'Nhận diện các loại thuế đang đóng hàng ngày',
         'Phân biệt thuế trực tiếp và gián thu',
         'Hiểu về mã số thuế cá nhân',
+      ],
+    },
+
+    '01-f-phan-loai-thue': {
+      id: '01-f-phan-loai-thue',
+      title: 'Phân loại thuế',
+      path: '/course-tax/lessons/01-ban-dang-dong-thue/01-f-phan-loai-thue',
+      concepts: ['vat', 'indirect-tax', 'direct-tax', 'progressive-tax', 'fairness'],
+      chunks: [
+        {
+          id: 'chunk-1',
+          title: 'Phân loại thuế',
+          concepts: ['indirect-tax', 'direct-tax'],
+          storyLinks: [],
+        },
+        {
+          id: 'chunk-2',
+          title: 'Phân loại thuế: Trực tiếp và Gián tiếp',
+          concepts: ['vat', 'indirect-tax', 'direct-tax'],
+          storyLinks: [
+            {
+              character: 'sinh-vien',
+              scene: 'canh-2a',
+              context: 'Xem sinh viên phát hiện thuế VAT khi mua bánh mì',
+            },
+          ],
+        },
+        {
+          id: 'chunk-3',
+          title: 'Phân loại thuế: Thoái lui, Lũy tiến và Tỷ lệ',
+          concepts: ['progressive-tax', 'fairness'],
+          storyLinks: [
+            {
+              character: 'sinh-vien',
+              scene: 'canh-3-1',
+              context: 'So sánh gánh nặng thuế VAT giữa người thu nhập thấp và cao',
+            },
+          ],
+        },
+      ],
+      relatedStories: [
+        {
+          character: 'sinh-vien',
+          scenes: ['story'],
+          priority: 'high',
+          description: 'Khám phá công bằng thuế qua so sánh người giàu nghèo',
+        },
+      ],
+      relatedModules: ['module-c-progressive-tax', 'module-e-tax-fairness'],
+      learningOutcomes: [
+        'Phân biệt thuế trực tiếp và gián tiếp',
+        'Hiểu về thuế lũy tiến, thoái lui và tỷ lệ',
+        'Nhận ra tác động công bằng của các loại thuế',
       ],
     },
 

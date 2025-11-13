@@ -1,0 +1,80 @@
+---
+title: "Lược sử của Thuế"
+description: ""
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
+import { StoryProgressProvider, SimpleSalaryComparison } from '@site/src/components/Interactive';
+import { LessonScene, LessonChunkNavigation, LessonProgress } from '@site/src/components/Interactive';
+import { StoryExample } from '@site/src/components/Learning/BidirectionalLink';
+
+<StoryProgressProvider>
+  <LessonProgress total={2} title="Bạn đang đóng thuế gì?" />
+
+  <LessonScene id="chunk-1" start={true} title="Bạn đang đóng thuế gì?" lessonId="01-a">
+    <div className="hero-banner">
+      <p>Hãy tưởng tượng bạn đang mua 1kg thịt lợn tại chợ hoặc siêu thị với giá 250.000 đồng. Trong số tiền đó, có 25.000 đồng—tương đương 10%—là thuế giá trị gia tăng (VAT) mà bạn đã trả cho Nhà nước.</p>
+
+      <p>Hoặc hãy nhìn vào bảng lương của bạn:</p>
+
+      <SimpleSalaryComparison defaultGrossSalary={13000000} interactive={true} />
+
+      <div style={{textAlign: 'center', marginTop: '1.5rem'}}>
+        <Link
+          to="/course-tax/concepts/salary-tax-calculation"
+          className="button button--primary button--lg"
+        >
+          💡 Xem chi tiết cách tính thuế và bảo hiểm
+        </Link>
+      </div>
+    </div>
+
+    <StoryExample
+      character="sinh-vien"
+      scene="canh-2a"
+      context="Xem sinh viên phát hiện thuế VAT khi mua bánh mì 25k"
+    />
+
+    <LessonChunkNavigation
+      currentChunk={1}
+      totalChunks={2}
+      prevChunk={null}
+      nextChunk="chunk-2"
+    />
+  </LessonScene>
+
+  <LessonScene id="chunk-2" title="Thuế: Một phần không thể thiếu của xã hội có tổ chức" lessonId="01-a">
+    <p>
+      Thuế không phải là một phát minh của thời hiện đại. Nó đã tồn tại từ những nền văn minh sơ khai nhất của loài người. Tại sao vậy? Bởi vì thuế là công cụ tài chính cơ bản để duy trì một xã hội có tổ chức. Từ thời Lưỡng Hà cổ đại (khoảng 3000 TCN), nơi người dân phải nộp một phần sản phẩm nông nghiệp cho các tư tế và quan lại, đến Ai Cập cổ đại, nơi thuế được sử dụng để xây dựng kim tự tháp và duy trì quân đội, thuế luôn là cầu nối giữa cá nhân và cộng đồng.
+    </p>
+
+    <p>
+      Trong Kinh Thánh, khái niệm <strong>thuế thập phân</strong> (một phần mười) được đề cập như một nghĩa vụ tôn giáo và xã hội. Người dân phải nộp một phần mười thu nhập hoặc sản phẩm của mình cho đền thờ hoặc nhà nước. Điều này không chỉ là một nghĩa vụ tài chính, mà còn là một biểu tượng của sự đoàn kết và trách nhiệm cộng đồng.
+    </p>
+
+    <blockquote>
+      "Thuế là thứ chúng ta phải trả cho một xã hội văn minh."
+      <footer>— Oliver Wendell Holmes Jr., Thẩm phán Tối cao tòa án Hoa Kỳ, 1927</footer>
+    </blockquote>
+
+    <p>
+      Câu nói trên của Thẩm phán Holmes nhấn mạnh rằng thuế không chỉ là một nghĩa vụ pháp lý, mà còn là một cam kết đối với sự tiến bộ và ổn định của xã hội. Khi bạn trả thuế, bạn đang đóng góp vào việc xây dựng trường học, bệnh viện, đường xá, hệ thống pháp luật, và an ninh quốc gia. Thuế là giá của một xã hội văn minh, nơi mọi người cùng chia sẻ gánh nặng để tạo dựng cuộc sống tốt đẹp hơn.
+    </p>
+
+    <StoryExample
+      character="sinh-vien"
+      scene="canh-1"
+      context="Xem sinh viên nghe tin về thiếu kinh phí xây trường và bệnh viện"
+    />
+
+    <LessonChunkNavigation
+      currentChunk={2}
+      totalChunks={2}
+      prevChunk="chunk-1"
+      nextChunk={null}
+    />
+  </LessonScene>
+</StoryProgressProvider>

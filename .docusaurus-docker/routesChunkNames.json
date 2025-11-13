@@ -105,13 +105,13 @@
     },
     "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
   },
-  "/MassEdu/course-tax-fa2": {
+  "/MassEdu/course-tax-3e2": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---mass-edu-course-tax-253-762"
     }
   },
-  "/MassEdu/course-tax-781": {
+  "/MassEdu/course-tax-388": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---mass-edu-course-tax-01-b-37b"
   },
@@ -135,7 +135,7 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---mass-edu-course-tax-tags-vat-133-be7"
   },
-  "/MassEdu/course-tax-70c": {
+  "/MassEdu/course-tax-201": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/MassEdu/course-tax/cac-loai-thue-12a": {
@@ -150,6 +150,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---mass-edu-course-tax-chinh-quyen-lay-tien-tu-dau-264-23a"
   },
+  "/MassEdu/course-tax/concepts/salary-tax-calculation-83e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---mass-edu-course-tax-concepts-salary-tax-calculation-6-db-2ca"
+  },
   "/MassEdu/course-tax/LearningContent-Tax-22a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---mass-edu-course-tax-learning-content-tax-9-ac-509"
@@ -158,9 +162,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thuecd-0-836"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi-6a2": {
+  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi-bbf": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-a-ban-dang-dong-thue-gi-30-d-b6b"
+    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-a-ban-dang-dong-thue-gid-27-66c"
   },
   "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue-a18": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -178,9 +182,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-e-thue-la-gibba-abe"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue-e29": {
+  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue-bde": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-f-phan-loai-thue-1-ac-7c5"
+    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-f-phan-loai-thue-109-889"
   },
   "/MassEdu/course-tax/lessons/nguyen-tac-thu-thue-914": {
     "__comp": "__comp---theme-doc-item-178-a40",

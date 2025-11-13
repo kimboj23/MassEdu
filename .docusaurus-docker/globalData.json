@@ -178,6 +178,11 @@
               "path": "/MassEdu/course-tax/chinh-quyen-lay-tien-tu-dau"
             },
             {
+              "id": "concepts/salary-tax-calculation",
+              "path": "/MassEdu/course-tax/concepts/salary-tax-calculation",
+              "sidebar": "courseTax"
+            },
+            {
               "id": "LearningContent-Tax",
               "path": "/MassEdu/course-tax/LearningContent-Tax"
             },

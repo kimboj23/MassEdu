@@ -48,5 +48,9 @@
   "previous": {
     "title": "6. Thuế và Chính trị",
     "permalink": "/MassEdu/course-tax/lessons/thue-va-chinh-tri"
+  },
+  "next": {
+    "title": "Cách tính thuế thu nhập cá nhân",
+    "permalink": "/MassEdu/course-tax/concepts/salary-tax-calculation"
   }
 }

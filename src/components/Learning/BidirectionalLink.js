@@ -37,9 +37,11 @@ export default function BidirectionalLink({
     targetType = 'lesson';
   } else if (to === 'story' && story) {
     targetContent = getStory(story);
+    // Get the story page path (first scene's path or construct it)
+    const storyPath = targetContent?.scenes?.[0]?.path || `${targetContent?.path || `/course-tax/characters/${story}`}/story`;
     targetPath = scene
-      ? `${targetContent?.path}/${scene}`
-      : targetContent?.path || `/course-tax/characters/${story}`;
+      ? `${storyPath}#${scene}`
+      : storyPath;
     targetTitle = scene
       ? targetContent?.scenes?.find(s => s.id === scene)?.title
       : targetContent?.title;
@@ -161,7 +163,7 @@ export function StoryExample({ character, scene, context, children }) {
       >
         {children || (
           <>
-            <strong>🎭 Xem ví dụ thực tế:</strong> {context}
+            <strong>Ví dụ:</strong> {context}
           </>
         )}
       </BidirectionalLink>

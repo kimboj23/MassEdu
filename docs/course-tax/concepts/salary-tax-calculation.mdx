@@ -1,0 +1,283 @@
+---
+title: "Cách tính thuế thu nhập cá nhân từ lương"
+description: "Hướng dẫn chi tiết cách tính thuế TNCN, bảo hiểm và các khoản khấu trừ từ lương"
+hide_title: false
+---
+
+import SalaryTaxCalculator from '@site/src/components/Interactive/SalaryTaxCalculator';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Cách tính thuế thu nhập cá nhân từ lương
+
+Khi nhận lương, bạn không nhận toàn bộ số tiền lương tổng (gross salary) mà công ty trả. Một phần đáng kể sẽ bị khấu trừ cho các khoản thuế và bảo hiểm bắt buộc. Hãy cùng tìm hiểu chi tiết cách tính toán này.
+
+## Công thức tính tổng quan
+
+```
+Thu nhập thực nhận = Lương tổng
+                    - Bảo hiểm bắt buộc (BHXH + BHYT + BHTN)
+                    - Thuế thu nhập cá nhân (TNCN)
+```
+
+## Bước 1: Tính các khoản bảo hiểm bắt buộc
+
+Người lao động phải đóng 3 loại bảo hiểm bắt buộc:
+
+<Tabs>
+  <TabItem value="bhxh" label="BHXH - 8%" default>
+    ### Bảo hiểm xã hội (BHXH)
+
+    **Mức đóng của người lao động:** 8% lương
+
+    **Công dụng:**
+    - Hưởng lương khi nghỉ ốm, thai sản
+    - Nhận lương hưu khi về già
+    - Trợ cấp tai nạn lao động, bệnh nghề nghiệp
+
+    **Ví dụ:** Lương 13.000.000 đồng → BHXH = 13.000.000 × 8% = **1.040.000 đồng**
+
+    :::info Lưu ý
+    Doanh nghiệp cũng đóng thêm phần của mình (khoảng 17,5%) vào quỹ BHXH, nhưng khoản này không trừ vào lương của bạn.
+    :::
+  </TabItem>
+
+  <TabItem value="bhyt" label="BHYT - 1.5%">
+    ### Bảo hiểm y tế (BHYT)
+
+    **Mức đóng của người lao động:** 1.5% lương
+
+    **Công dụng:**
+    - Khám chữa bệnh tại các cơ sở y tế công
+    - Được hỗ trợ chi phí thuốc, xét nghiệm, phẫu thuật
+
+    **Ví dụ:** Lương 13.000.000 đồng → BHYT = 13.000.000 × 1.5% = **195.000 đồng**
+
+    :::tip Mẹo
+    Giữ thẻ BHYT để được giảm 80-100% chi phí khám chữa bệnh tại bệnh viện công.
+    :::
+  </TabItem>
+
+  <TabItem value="bhtn" label="BHTN - 1%">
+    ### Bảo hiểm thất nghiệp (BHTN)
+
+    **Mức đóng của người lao động:** 1% lương
+
+    **Công dụng:**
+    - Nhận trợ cấp thất nghiệp khi mất việc
+    - Được hỗ trợ đào tạo nghề miễn phí
+
+    **Ví dụ:** Lương 13.000.000 đồng → BHTN = 13.000.000 × 1% = **130.000 đồng**
+
+    :::note Điều kiện
+    Để nhận trợ cấp thất nghiệp, bạn phải đóng BHTN đủ 12 tháng trong 24 tháng gần nhất.
+    :::
+  </TabItem>
+</Tabs>
+
+**Tổng bảo hiểm:** 8% + 1.5% + 1% = **10.5%** lương
+
+**Ví dụ:** Lương 13.000.000 đồng → Tổng bảo hiểm = **1.365.000 đồng**
+
+## Bước 2: Tính thu nhập chịu thuế
+
+Thu nhập chịu thuế được tính sau khi trừ đi các khoản:
+
+### 2.1. Các khoản được trừ:
+1. **Bảo hiểm bắt buộc** (đã tính ở Bước 1)
+2. **Giảm trừ gia cảnh bản thân:** 11.000.000 đồng/tháng
+3. **Giảm trừ người phụ thuộc:** 4.400.000 đồng/tháng cho mỗi người
+
+### 2.2. Người phụ thuộc là ai?
+- Con dưới 18 tuổi
+- Con trên 18 tuổi đang học đại học/cao đẳng
+- Vợ/chồng không có thu nhập
+- Cha mẹ trên 60 tuổi không có thu nhập hoặc thu nhập dưới 1 triệu/tháng
+
+### 2.3. Công thức:
+
+```
+Thu nhập chịu thuế = Lương tổng
+                    - Bảo hiểm bắt buộc
+                    - 11.000.000 (giảm trừ bản thân)
+                    - 4.400.000 × Số người phụ thuộc
+```
+
+### 2.4. Ví dụ tính toán:
+
+**Trường hợp 1: Không có người phụ thuộc**
+- Lương tổng: 13.000.000 đồng
+- Bảo hiểm: 1.365.000 đồng
+- Giảm trừ bản thân: 11.000.000 đồng
+- **Thu nhập chịu thuế** = 13.000.000 - 1.365.000 - 11.000.000 = **635.000 đồng**
+
+**Trường hợp 2: Có 2 người phụ thuộc**
+- Lương tổng: 13.000.000 đồng
+- Bảo hiểm: 1.365.000 đồng
+- Giảm trừ bản thân: 11.000.000 đồng
+- Giảm trừ người phụ thuộc: 4.400.000 × 2 = 8.800.000 đồng
+- **Thu nhập chịu thuế** = 13.000.000 - 1.365.000 - 11.000.000 - 8.800.000 = **-8.165.000 đồng**
+- → Không phải nộp thuế (thu nhập chịu thuế âm)
+
+## Bước 3: Tính thuế TNCN theo bảng lũy tiến
+
+Việt Nam áp dụng thuế suất lũy tiến từng phần với 7 bậc thuế:
+
+| Bậc | Thu nhập chịu thuế (tháng) | Thuế suất |
+|-----|----------------------------|-----------|
+| 1   | Đến 5 triệu               | 5%        |
+| 2   | Trên 5 - 10 triệu         | 10%       |
+| 3   | Trên 10 - 18 triệu        | 15%       |
+| 4   | Trên 18 - 32 triệu        | 20%       |
+| 5   | Trên 32 - 52 triệu        | 25%       |
+| 6   | Trên 52 - 80 triệu        | 30%       |
+| 7   | Trên 80 triệu             | 35%       |
+
+### Cách hiểu thuế lũy tiến:
+
+:::tip Quan trọng
+Mỗi bậc thuế chỉ áp dụng cho **phần thu nhập vượt quá ngưỡng** của bậc trước đó, không phải toàn bộ thu nhập.
+:::
+
+### Ví dụ chi tiết:
+
+**Thu nhập chịu thuế: 15.000.000 đồng/tháng**
+
+Cách tính:
+- **Bậc 1 (0 - 5 triệu):** 5.000.000 × 5% = 250.000 đồng
+- **Bậc 2 (5 - 10 triệu):** 5.000.000 × 10% = 500.000 đồng
+- **Bậc 3 (10 - 15 triệu):** 5.000.000 × 15% = 750.000 đồng
+- **Tổng thuế TNCN:** 250.000 + 500.000 + 750.000 = **1.500.000 đồng**
+
+**Lưu ý:** Bạn KHÔNG nộp 15% × 15.000.000 = 2.250.000 đồng. Bạn chỉ nộp 1.500.000 đồng do tính lũy tiến từng phần.
+
+### So sánh cách tính sai vs đúng:
+
+<Tabs>
+  <TabItem value="wrong" label="❌ Cách tính SAI">
+    ### Cách tính SAI (áp dụng mức cao nhất cho toàn bộ)
+
+    Thu nhập chịu thuế: 15.000.000 đồng
+
+    **Sai lầm:** Áp dụng thuế suất 15% cho toàn bộ số tiền:
+
+    ```
+    Thuế = 15.000.000 × 15% = 2.250.000 đồng ❌
+    ```
+
+    → **Cao hơn 750.000 đồng so với thực tế!**
+  </TabItem>
+
+  <TabItem value="correct" label="✅ Cách tính ĐÚNG">
+    ### Cách tính ĐÚNG (lũy tiến từng phần)
+
+    Thu nhập chịu thuế: 15.000.000 đồng
+
+    **Đúng:** Chia thành 3 bậc và tính riêng:
+
+    ```
+    Bậc 1: 5.000.000 × 5%  = 250.000 đồng
+    Bậc 2: 5.000.000 × 10% = 500.000 đồng
+    Bậc 3: 5.000.000 × 15% = 750.000 đồng
+    ────────────────────────────────────
+    Tổng thuế:               1.500.000 đồng ✅
+    ```
+  </TabItem>
+</Tabs>
+
+## Bước 4: Tính thu nhập thực nhận
+
+```
+Thu nhập thực nhận = Lương tổng - Bảo hiểm - Thuế TNCN
+```
+
+### Ví dụ hoàn chỉnh:
+
+**Cho:**
+- Lương tổng: 13.000.000 đồng
+- Không có người phụ thuộc
+
+**Tính toán:**
+
+1. **Bảo hiểm bắt buộc:**
+   - BHXH (8%): 1.040.000 đồng
+   - BHYT (1.5%): 195.000 đồng
+   - BHTN (1%): 130.000 đồng
+   - Tổng: **1.365.000 đồng**
+
+2. **Thu nhập chịu thuế:**
+   - = 13.000.000 - 1.365.000 - 11.000.000
+   - = **635.000 đồng**
+
+3. **Thuế TNCN:**
+   - Bậc 1: 635.000 × 5% = **31.750 đồng**
+
+4. **Thu nhập thực nhận:**
+   - = 13.000.000 - 1.365.000 - 31.750
+   - = **11.603.250 đồng**
+
+**Kết luận:** Từ lương tổng 13 triệu, bạn thực nhận **11.603.250 đồng** (89.3% lương tổng).
+
+## Công cụ tính toán tương tác
+
+Thử điều chỉnh các giá trị để xem thuế và thu nhập thực nhận thay đổi như thế nào:
+
+<SalaryTaxCalculator defaultSalary={13000000} />
+
+## Câu hỏi thường gặp
+
+<details>
+  <summary><strong>Nếu tăng lương lên sẽ có thể bị đẩy vào bậc thuế cao hơn và mất tiền phải không?</strong></summary>
+
+  **KHÔNG!** Do thuế lũy tiến từng phần, bạn chỉ nộp thuế cao hơn cho **phần thu nhập vượt ngưỡng**, không phải toàn bộ.
+
+  **Ví dụ:**
+  - Thu nhập chịu thuế tăng từ 4.999.999 đồng (5%) lên 5.000.001 đồng (vào bậc 10%)
+  - Bạn KHÔNG nộp 10% cho toàn bộ 5.000.001 đồng
+  - Bạn nộp 5% cho 5.000.000 đồng đầu tiên, và 10% CHỈ cho 1 đồng vượt ngưỡng
+
+  → Thu nhập thực tế của bạn **luôn tăng** khi lương tăng!
+</details>
+
+<details>
+  <summary><strong>Công ty có thể trả lương "gross" hay "net"?</strong></summary>
+
+  Có 2 cách trả lương phổ biến:
+
+  **1. Lương Gross (lương tổng):**
+  - Công ty trả một số tiền cố định
+  - Bạn chịu tất cả các khoản khấu trừ (bảo hiểm + thuế)
+  - Lương thực nhận thay đổi tùy thuộc vào số người phụ thuộc
+
+  **2. Lương Net (lương ròng):**
+  - Công ty cam kết bạn nhận một số tiền cố định
+  - Công ty chịu tất cả các khoản thuế và bảo hiểm
+  - Lương thực nhận luôn cố định
+
+  → Khi thương lượng lương, hãy làm rõ đang nói về "gross" hay "net"!
+</details>
+
+<details>
+  <summary><strong>Có cách nào giảm thuế TNCN hợp pháp không?</strong></summary>
+
+  Có một số cách hợp pháp:
+
+  1. **Đăng ký người phụ thuộc:** Giảm 4.4 triệu/người/tháng
+  2. **Đóng bảo hiểm hưu trí tự nguyện:** Được trừ vào thu nhập chịu thuế (tối đa 1 triệu/tháng)
+  3. **Quyên góp từ thiện:** Được trừ vào thu nhập chịu thuế (có điều kiện)
+  4. **Đóng BHXH cao hơn mức bắt buộc:** Giảm thu nhập chịu thuế, tăng lương hưu sau này
+
+  :::warning Cảnh báo
+  Tránh các "mánh khóe" như chia lương thành nhiều hợp đồng, nhận tiền mặt không kê khai. Đây là trốn thuế và có thể bị xử phạt nặng.
+  :::
+</details>
+
+## Tài liệu tham khảo
+
+- [Luật Thuế thu nhập cá nhân số 04/2007/QH12](https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2007-04-2007-QH12-53491.aspx)
+- [Nghị định 65/2013/NĐ-CP về giảm trừ gia cảnh](https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-65-2013-ND-CP-huong-dan-Luat-Thue-thu-nhap-ca-nhan-197308.aspx)
+- [Thông tư 111/2013/TT-BTC hướng dẫn tính thuế TNCN](https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-111-2013-TT-BTC-huong-dan-Luat-Thue-thu-nhap-ca-nhan-199194.aspx)
+
+---
+
+**Cập nhật lần cuối:** Tháng 11/2024 (theo quy định thuế hiện hành)
