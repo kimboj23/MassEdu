@@ -12,15 +12,26 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+        <Heading as="h1" className="hero__title display">
+          Học về quyền<br />
+          và trách nhiệm<br />
+          công dân
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle lead">
+          TepUp là nơi nằm ngoài "ao làng" quen thuộc,
+          nơi những "tép riu" có thể tự do học hỏi và
+          thể hiện chính kiến một cách an toàn.
+        </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--lg"
             to="#storylines">
-            Chọn câu chuyện để bắt đầu
+            Bắt đầu học
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/knowledge-base/1.0-gioi-thieu">
+            Tìm hiểu thêm
           </Link>
         </div>
       </div>

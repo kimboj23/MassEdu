@@ -11,7 +11,7 @@ export default function ThoughtBubble({
   sequence = 1,
   delay = 0,
   children,
-  icon = '💡',
+  icon = '',
   variant = 'insight', // insight, question, warning, success
   dismissible = false,
   autoShow = true,
@@ -51,7 +51,7 @@ export default function ThoughtBubble({
       className={`${styles.thoughtBubble} ${variantClass} ${isAnimating ? styles.animating : ''} ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className={styles.bubbleIcon}>{icon}</div>
+      {icon && <div className={styles.bubbleIcon}>{icon}</div>}
       <div className={styles.bubbleContent}>{children}</div>
       {dismissible && (
         <button
@@ -118,8 +118,8 @@ export function ThoughtBubbleSequence({
  */
 export function RevealBubble({
   children,
-  buttonText = 'Khoan đã... 🤔',
-  icon = '💡',
+  buttonText = 'Tìm hiểu thêm',
+  icon = '',
   variant = 'insight',
   className = '',
 }) {
@@ -179,7 +179,6 @@ export function HighlightThought({ trigger, children, variant = 'insight' }) {
         tabIndex={0}
       >
         {trigger}
-        <span className={styles.highlightIndicator}>💭</span>
       </span>
       {isExpanded && (
         <span className={styles.highlightContent}>

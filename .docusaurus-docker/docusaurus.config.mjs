@@ -4,9 +4,9 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "MassEdu",
-  "tagline": "Human rights are cool 😎",
-  "favicon": "img/favicon.ico",
+  "title": "TepUp",
+  "tagline": "Tép riu stép up, stép out.",
+  "favicon": "img/tepup_logo.png",
   "url": "https://kimboj23.github.io",
   "baseUrl": "/MassEdu/",
   "organizationName": "kimboj23",
@@ -66,10 +66,10 @@ export default {
     },
     "image": "img/social-card.png",
     "navbar": {
-      "title": "MassEdu",
+      "title": "TepUp",
       "logo": {
-        "alt": "MassEdu Logo",
-        "src": "img/logo.svg"
+        "alt": "TepUp.space Logo",
+        "src": "img/tepup_logo.png"
       },
       "items": [
         {
@@ -122,19 +122,6 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Lớp Học",
-          "items": [
-            {
-              "label": "Hạt mầm Nhân quyền",
-              "to": "/knowledge-base/1.0-gioi-thieu"
-            },
-            {
-              "label": "Chính trị Chính tôi",
-              "to": "/knowledge-base/2.0-gioi-thieu"
-            }
-          ]
-        },
-        {
           "title": "Community",
           "items": [
             {
@@ -161,7 +148,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2025 MassEdu. Dựng với khát vọng tự do và lòng yêu tri thức."
+      "copyright": "Copyright © 2026 TepUp.space. Nơi học về quyền và trách nhiệm công dân một cách an toàn và dễ tiếp cận."
     },
     "prism": {
       "theme": {

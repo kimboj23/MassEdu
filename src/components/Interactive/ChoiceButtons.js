@@ -188,11 +188,10 @@ export function Choice({
   // If nextScene is provided, render as Link
   const content = (
     <>
-      {emoji && <span className={styles.choiceEmoji}>{emoji}</span>}
-      <span className={styles.choiceText}>{children}</span>
+      <span className={styles.choiceContent}>{children}</span>
       {(lesson || moduleProp) && <BacklinkHint lesson={lesson} module={moduleProp} />}
       {points > 0 && (
-        <span className={styles.choicePoints}>+{points} điểm</span>
+        <span className={styles.choiceBadge}>+{points}</span>
       )}
     </>
   );
@@ -224,7 +223,6 @@ export function Choice({
     >
       {content}
       {!disabled && <span className={styles.choiceArrow}>→</span>}
-      {isSelected && <span className={styles.choiceCheck}>✓</span>}
     </button>
   );
 }
@@ -255,9 +253,7 @@ export function QuickChoice({ options, onSelect, sceneId }) {
           onClick={() => handleSelect(option.value, option.label)}
           disabled={selected && selected !== option.value}
         >
-          {option.emoji && <span>{option.emoji}</span>}
           <span>{option.label}</span>
-          {selected === option.value && <span className={styles.quickCheck}>✓</span>}
         </button>
       ))}
     </div>
@@ -300,7 +296,7 @@ export function TimedChoice({
         <div className={styles.timer}>
           <div className={styles.timerBar} style={{ width: `${(timeLeft / (timeout / 1000)) * 100}%` }} />
           <span className={styles.timerText}>
-            ⏱️ {timeLeft}s
+            {timeLeft}s
           </span>
         </div>
       )}
@@ -309,7 +305,7 @@ export function TimedChoice({
       </ChoiceButtons>
       {isExpired && (
         <div className={styles.timeoutMessage}>
-          ⏰ Hết giờ! Mặc định chọn: {defaultChoice}
+          Hết giờ! Mặc định chọn: {defaultChoice}
         </div>
       )}
     </div>
@@ -332,7 +328,7 @@ export function ProgressIndicator({ totalScenes }) {
           <span>← Quay lại</span>
         </button>
         <button onClick={restart} className={styles.progressButton}>
-          <span>🔄 Bắt đầu lại</span>
+          <span>Bắt đầu lại</span>
         </button>
       </div>
       <div className={styles.progressBar}>
@@ -361,7 +357,7 @@ export function ChoiceReview() {
 
   return (
     <div className={styles.choiceReview}>
-      <h4>📝 Các quyết định của bạn:</h4>
+      <h4>Các quyết định của bạn:</h4>
       <ul className={styles.reviewList}>
         {Object.entries(choices).map(([sceneId, choice]) => (
           <li key={sceneId} className={styles.reviewItem}>
@@ -374,7 +370,7 @@ export function ChoiceReview() {
         className={styles.clearButton}
         onClick={clearProgress}
       >
-        🔄 Chơi lại từ đầu
+        Chơi lại từ đầu
       </button>
     </div>
   );

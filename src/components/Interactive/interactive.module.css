@@ -1,4 +1,20 @@
+/**
+ * TepUp.space - Interactive Components
+ * Minimalist, accessible design with emphasized borders
+ */
+
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -18,37 +34,39 @@
    ======================================== */
 
 .choiceButtons {
-  background: var(--ifm-color-emphasis-100);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-card-border-radius);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: var(--ifm-global-shadow-lw);
+  background: var(--bg-secondary);
+  border: var(--border-width-thick) solid var(--color-creative);
+  border-radius: 0;
+  padding: var(--space-xl);
+  margin: var(--space-xl) 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .choicePrompt {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-width-default) solid var(--border-subtle);
 }
 
 .promptIcon {
   font-size: 1.5rem;
+  color: var(--color-creative);
 }
 
 .promptText {
-  font-size: 1.125rem;
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary-darker);
+  font-family: var(--font-subheading);
+  font-size: var(--text-body-large);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
 }
 
 .choicesContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-md);
 }
 
 /* Layouts */
@@ -70,131 +88,124 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  border: 2px solid transparent;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0;
+  border: var(--border-width-default) solid var(--border-default);
   text-align: left;
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body);
+  font-weight: var(--weight-normal);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--transition-base);
   position: relative;
-  background-color: var(--ifm-background-surface-color);
-  box-shadow: var(--ifm-global-shadow-lw);
-  color: var(--ifm-font-color-base);
+  background-color: var(--bg-primary);
+  box-shadow: none;
+  color: var(--text-secondary);
   text-decoration: none !important;
 }
 
 .choice:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-  border-color: var(--ifm-color-primary);
+  transform: translateX(8px);
+  box-shadow: -8px 0 0 0 var(--color-primary);
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
+  color: var(--text-primary);
 }
 
 .choice.disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background-color: var(--ifm-color-emphasis-200);
+  background-color: var(--bg-tertiary);
 }
 
 .choice.disabled:hover {
   transform: none;
-  box-shadow: var(--ifm-global-shadow-lw);
-  border-color: transparent;
+  box-shadow: none;
+  border-color: var(--border-default);
+  border-width: var(--border-width-default);
 }
 
-.choice.selected {
-  border-color: var(--ifm-color-success-dark);
-  background-color: var(--ifm-color-success-lightest);
-  color: var(--ifm-color-success-darkest);
+.choiceContent {
+  flex: 1;
+  color: inherit;
 }
 
-.choiceEmoji {
+.choiceLabel {
+  font-family: var(--font-body-primary);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.choiceDescription {
+  font-size: var(--text-body-small);
+  color: var(--text-tertiary);
+}
+
+.choiceIcon {
+  margin-right: var(--space-md);
   font-size: 1.25rem;
-  margin-right: 1rem;
+  color: var(--color-primary);
 }
 
-.choiceText {
-  flex-grow: 1;
-}
-
-.choiceArrow, .choiceCheck {
-  margin-left: 1rem;
-  font-weight: bold;
+.choiceArrow {
+  margin-left: var(--space-md);
   font-size: 1.25rem;
-  color: var(--ifm-color-primary);
-  transition: transform 0.2s ease;
+  color: var(--text-tertiary);
+  transition: transform var(--transition-base);
 }
 
 .choice:hover .choiceArrow {
   transform: translateX(4px);
+  color: var(--color-primary);
 }
 
-.choice.selected .choiceCheck {
-  color: var(--ifm-color-success);
+.choiceBadge {
+  position: absolute;
+  top: -8px;
+  right: var(--space-md);
+  background: var(--color-growth);
+  color: var(--text-on-growth);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-family: var(--font-body-primary);
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
 }
 
-/* Variants */
-.choice-primary {
-  border-color: var(--ifm-color-primary);
-}
-.choice-primary:hover {
-  background-color: var(--ifm-color-primary-lightest);
-}
-
-.choice-learn {
-  border-color: var(--ifm-color-info);
-}
-.choice-learn:hover {
-  background-color: var(--ifm-color-info-lightest);
+/* Feedback States */
+.choice.selected {
+  background: var(--color-primary-muted);
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
 }
 
-.choice-skip {
-  border-color: var(--ifm-color-emphasis-400);
-}
-.choice-skip:hover {
-  background-color: var(--ifm-color-emphasis-200);
-}
-
-/* ========================================
-   ProgressIndicator Component
-   ======================================== */
-
-.progressIndicator {
-  margin: 1.5rem 0;
+.choice.correct {
+  background: var(--color-growth-muted);
+  border-color: var(--color-growth);
+  border-width: var(--border-width-thick);
 }
 
-.progressBar {
-  height: 8px;
-  background-color: var(--ifm-color-emphasis-200);
-  border-radius: 4px;
-  overflow: hidden;
+.choice.incorrect {
+  background: var(--color-primary-muted);
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
 }
 
-.progressFill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--ifm-color-primary-light), var(--ifm-color-primary-dark));
-  border-radius: 4px;
-  transition: width 0.5s ease-in-out;
+/* Review section */
+.reviewSection {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--bg-tertiary);
+  border-left: var(--border-width-thick) solid var(--color-primary);
 }
 
-.progressText {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--ifm-color-emphasis-700);
-  text-align: right;
-}
-
-/* ========================================
-   ChoiceReview Component
-   ======================================== */
-
-.choiceReview {
-  background: var(--ifm-color-emphasis-100);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-card-border-radius);
-  padding: 1.5rem;
-  margin: 2rem 0;
+.reviewTitle {
+  font-family: var(--font-subheading);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
 }
 
 .reviewList {
@@ -203,14 +214,14 @@
 }
 
 .reviewItem {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: var(--space-sm) 0;
+  border-bottom: var(--border-width-thin) solid var(--border-subtle);
 }
 
 .reviewScene {
-  font-weight: bold;
-  margin-right: 0.5rem;
-  color: var(--ifm-color-primary);
+  font-weight: var(--weight-bold);
+  margin-right: var(--space-sm);
+  color: var(--color-primary);
 }
 
 /* ========================================
@@ -218,53 +229,56 @@
    ======================================== */
 
 .numberSliderContainer {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: var(--ifm-color-emphasis-100);
-  border-radius: var(--ifm-card-border-radius);
-  border: 1px solid var(--ifm-color-emphasis-300);
+  margin: var(--space-lg) 0;
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border-radius: 0;
+  border: var(--border-width-default) solid var(--border-default);
 }
 
 .numberSlider {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 2px solid transparent;
-  border-radius: 6px;
+  padding: var(--space-md) var(--space-lg);
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
   cursor: ew-resize;
-  transition: all 0.2s ease-in-out;
-  background-color: var(--ifm-background-surface-color);
+  transition: all var(--transition-base);
+  background-color: var(--bg-primary);
   user-select: none;
 }
 
 .numberSlider:focus {
-  outline: 2px solid var(--ifm-color-primary-light);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .numberSlider.active,
 .numberSlider:hover {
-  border-color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-md);
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
+  box-shadow: var(--shadow-md);
 }
 
 .sliderValue {
+  font-family: var(--font-headline);
   font-size: 1.5rem;
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary-darker);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
 }
 
 .sliderUnit {
-  margin-left: 0.5rem;
-  font-size: 1rem;
-  color: var(--ifm-color-emphasis-700);
+  margin-left: var(--space-sm);
+  font-family: var(--font-body-primary);
+  font-size: var(--text-body);
+  color: var(--text-secondary);
 }
 
 .sliderHandle {
   display: inline-block;
-  margin-left: 0.75rem;
-  color: var(--ifm-color-primary);
+  margin-left: var(--space-md);
+  color: var(--color-primary);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-base);
 }
 
 .numberSlider.active .sliderHandle,
@@ -273,195 +287,113 @@
 }
 
 .calculationDisplay {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed var(--ifm-color-emphasis-300);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-width-default) dashed var(--border-subtle);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .calculationLabel {
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-800);
+  font-family: var(--font-body-primary);
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
 }
 
 .calculationValue {
-  font-size: 1.1rem;
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary);
+  font-family: var(--font-headline);
+  font-size: var(--text-body-large);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
 }
 
 .sliderHint {
-  font-size: 0.8rem;
-  color: var(--ifm-color-emphasis-600);
-  margin-top: 0.5rem;
-}
-
-.conceptTag {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.25rem 0.75rem;
-  background-color: var(--ifm-color-secondary-lightest);
-  border-radius: 1rem;
-  font-size: 0.85rem;
-}
-
-.conceptIcon {
-  margin-right: 0.3rem;
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  margin-top: var(--space-sm);
 }
 
 /* ========================================
-   NumberSliderGroup & ComparisonSlider
+   ComparisonSlider Component
    ======================================== */
 
-.numberSliderGroup {
-  margin: 2rem 0;
+.comparisonContainer {
+  position: relative;
+  margin: var(--space-xl) 0;
+  border: var(--border-width-thick) solid var(--border-emphasis);
+  overflow: hidden;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
-.groupTitle {
-  margin-bottom: 0.5rem;
+.comparisonImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
 }
 
-.groupDescription {
-  margin-bottom: 1.5rem;
-  color: var(--ifm-color-emphasis-700);
+.comparisonImageBefore {
+  z-index: 1;
 }
 
-.groupSliders {
-  display: grid;
-  gap: 1.5rem;
+.comparisonImageAfter {
+  z-index: 2;
+  clip-path: inset(0 0 0 50%);
 }
 
 .comparisonSlider {
-  display: grid;
-  gap: 1.5rem;
-  align-items: start;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--border-width-thick);
+  height: 100%;
+  background: var(--color-primary);
+  cursor: ew-resize;
+  z-index: 3;
+  transform: translateX(-50%);
 }
 
-@media (min-width: 768px) {
-  .groupSliders {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  .comparisonSlider {
-    grid-template-columns: 1fr auto 1fr;
-  }
-}
-
-.comparisonColumn {
-  padding: 1.5rem;
-  background-color: var(--ifm-background-surface-color);
-  border-radius: var(--ifm-card-border-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.comparisonColumn h5 {
-  margin-top: 0;
-  color: var(--ifm-color-primary-darker);
-}
-
-.comparisonDivider {
+.comparisonHandle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  border: var(--border-width-thick) solid var(--text-on-primary);
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  color: var(--text-on-primary);
   font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--ifm-color-emphasis-500);
 }
 
-.comparisonStats {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+.comparisonLabel {
+  position: absolute;
+  bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-primary);
+  border: var(--border-width-default) solid var(--border-emphasis);
+  font-family: var(--font-body-primary);
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  z-index: 4;
 }
 
-.comparisonInsight {
-  grid-column: 1 / -1;
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: var(--ifm-color-info-lightest);
-  border-radius: var(--ifm-card-border-radius);
-  border-left: 4px solid var(--ifm-color-info);
+.comparisonLabelBefore {
+  left: var(--space-md);
 }
 
-.vatRateSliderContainer {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: var(--ifm-card-border-radius);
-}
-
-.vatRateSliderContainer label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.vatRateSlider {
-  width: 100%;
-}
-
-.formulaCode {
-  display: block;
-  padding: 0.75rem;
-  background-color: var(--ifm-code-background);
-  border-radius: 4px;
-  margin: 0.5rem 0;
-}/* ========================================
-   DARK MODE FIXES FOR INTERACTIVE COMPONENTS
-   ======================================== */
-
-/* Dark mode fix for prompt text */
-[data-theme='dark'] .promptText {
-  color: var(--ifm-color-white);
-}
-
-/* Ensure choice buttons background is visible in dark mode */
-[data-theme='dark'] .choiceButtons {
-  background: var(--ifm-color-emphasis-200);
-}
-
-/* Ensure choice background stands out in dark mode */
-[data-theme='dark'] .choice {
-  background-color: var(--ifm-color-emphasis-100);
-}
-
-[data-theme='dark'] .choice.disabled {
-  background-color: var(--ifm-color-emphasis-300);
-}
-
-/* Dark mode fix for slider value */
-[data-theme='dark'] .sliderValue {
-  color: var(--ifm-color-white);
-}
-
-/* Dark mode fix for calculation label */
-[data-theme='dark'] .calculationLabel {
-  color: var(--ifm-color-emphasis-600);
-}
-
-/* Ensure number slider containers are visible in dark mode */
-[data-theme='dark'] .numberSliderContainer {
-  background-color: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .numberSlider {
-  background-color: var(--ifm-color-emphasis-100);
-}
-
-/* Dark mode fix for comparison column heading */
-[data-theme='dark'] .comparisonColumn h5 {
-  color: var(--ifm-color-white);
-}
-
-/* Ensure comparison columns are visible in dark mode */
-[data-theme='dark'] .comparisonColumn {
-  background-color: var(--ifm-color-emphasis-100);
-}
-
-/* Ensure choice review is visible in dark mode */
-[data-theme='dark'] .choiceReview {
-  background: var(--ifm-color-emphasis-200);
+.comparisonLabelAfter {
+  right: var(--space-md);
 }
 
 /* ========================================
@@ -470,12 +402,13 @@
 
 .thoughtBubble {
   position: relative;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 12px;
-  background: var(--ifm-color-emphasis-100);
-  border: 2px solid var(--ifm-color-emphasis-300);
-  box-shadow: var(--ifm-global-shadow-lw);
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+  border-radius: 0;
+  background: var(--bg-secondary);
+  border: var(--border-width-default) solid var(--border-default);
+  border-left: var(--border-width-thick) solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
   animation: fadeIn 0.4s ease-out;
 }
 
@@ -483,28 +416,20 @@
   animation: slideUp 0.4s ease-out;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .bubbleIcon {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary);
 }
 
 .bubbleContent {
-  color: var(--ifm-font-color-base);
+  font-family: var(--font-body-secondary);
+  color: var(--text-secondary);
 }
 
 .bubbleContent p {
-  margin: 0.5rem 0;
+  margin: var(--space-sm) 0;
+  line-height: var(--line-height-loose);
 }
 
 .bubbleContent p:first-child {
@@ -516,85 +441,67 @@
 }
 
 .bubbleContent strong {
-  color: var(--ifm-color-primary-darker);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
 }
 
 .bubbleDismiss {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: var(--space-sm);
+  right: var(--space-sm);
   background: transparent;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--ifm-color-emphasis-600);
-  padding: 0.25rem 0.5rem;
+  color: var(--text-tertiary);
+  padding: var(--space-xs);
   line-height: 1;
+  transition: color var(--transition-base);
 }
 
 .bubbleDismiss:hover {
-  color: var(--ifm-color-primary);
+  color: var(--color-primary);
 }
 
 .bubbleTail {
-  display: none; /* Can be styled later for visual effect */
+  display: none;
 }
 
-/* Bubble variants */
+/* Bubble variants - using TepUp.space colors */
 .bubble-insight {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-  border-color: #2196f3;
+  background: var(--color-growth-muted);
+  border-left-color: var(--color-growth);
+}
+
+.bubble-insight .bubbleIcon {
+  color: var(--color-growth);
 }
 
 .bubble-question {
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-  border-color: #ff9800;
+  background: var(--color-creative-muted);
+  border-left-color: var(--color-creative);
+}
+
+.bubble-question .bubbleIcon {
+  color: var(--text-on-creative);
 }
 
 .bubble-warning {
-  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-  border-color: #e91e63;
+  background: var(--color-primary-muted);
+  border-left-color: var(--color-primary);
+}
+
+.bubble-warning .bubbleIcon {
+  color: var(--color-primary);
 }
 
 .bubble-success {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border-color: #4caf50;
+  background: var(--color-growth-muted);
+  border-left-color: var(--color-growth);
 }
 
-/* Dark mode fixes for ThoughtBubble */
-[data-theme='dark'] .thoughtBubble {
-  background: var(--ifm-color-emphasis-200);
-  border-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .bubbleContent {
-  color: var(--ifm-font-color-base);
-}
-
-[data-theme='dark'] .bubbleContent p,
-[data-theme='dark'] .bubbleContent strong {
-  color: var(--ifm-font-color-base) !important;
-}
-
-[data-theme='dark'] .bubble-insight {
-  background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
-  border-color: #42a5f5;
-}
-
-[data-theme='dark'] .bubble-question {
-  background: linear-gradient(135deg, #e65100 0%, #f57c00 100%);
-  border-color: #ff9800;
-}
-
-[data-theme='dark'] .bubble-warning {
-  background: linear-gradient(135deg, #ad1457 0%, #c2185b 100%);
-  border-color: #ec407a;
-}
-
-[data-theme='dark'] .bubble-success {
-  background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
-  border-color: #66bb6a;
+.bubble-success .bubbleIcon {
+  color: var(--color-growth);
 }
 
 /* ========================================
@@ -602,869 +509,271 @@
    ======================================== */
 
 .revealBubble {
-  margin: 1.5rem 0;
+  margin: var(--space-lg) 0;
 }
 
 .revealButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  border: var(--border-width-default) solid var(--color-primary);
+  border-radius: 0;
+  font-family: var(--font-body-primary);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all var(--transition-base);
 }
 
 .revealButton:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
   transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
+  box-shadow: var(--shadow-primary);
 }
 
-[data-theme='dark'] .revealButton {
-  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-secondary-dark));
+.revealButton:active {
+  background: var(--color-primary-active);
 }
 
-/* ========================================
-   Dark Mode Fixes for Comparison Slider
-   ======================================== */
-
-[data-theme='dark'] .vatRateSliderContainer {
-  background-color: var(--ifm-color-emphasis-200);
+.revealIcon {
+  font-size: 1.25rem;
+  transition: transform var(--transition-base);
 }
 
-[data-theme='dark'] .vatRateSliderContainer label {
-  color: var(--ifm-font-color-base);
+.revealButton.revealed .revealIcon {
+  transform: rotate(180deg);
 }
 
-[data-theme='dark'] .vatRateSliderContainer label strong {
-  color: var(--ifm-color-primary-light);
+.revealContent {
+  margin-top: var(--space-md);
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+  border: var(--border-width-default) solid var(--border-default);
+  border-left: var(--border-width-thick) solid var(--color-creative);
+  animation: fadeIn 0.4s ease-out;
 }
 
-[data-theme='dark'] .comparisonInsight {
-  background-color: var(--ifm-color-emphasis-200);
-  border-left-color: var(--ifm-color-info-light);
-}
-
-[data-theme='dark'] .comparisonStats p {
-  color: var(--ifm-font-color-base);
-}
-
-[data-theme='dark'] .comparisonStats strong {
-  color: var(--ifm-color-primary-light);
+.revealContent p {
+  font-family: var(--font-body-secondary);
+  color: var(--text-secondary);
+  line-height: var(--line-height-loose);
 }
 
 /* ========================================
-   LessonScene Component - Chunked Navigation
+   Lesson Scene Component
    ======================================== */
 
 .lessonScene {
-  animation: fadeIn 0.5s ease-in-out;
-  margin-bottom: 2rem;
+  padding: var(--space-xl) 0;
+  border-bottom: var(--border-width-thin) solid var(--border-subtle);
 }
 
-.lessonSceneHeader {
-  padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
-  color: white;
-  border-radius: 8px 8px 0 0;
-  margin-bottom: 1.5rem;
+.lessonScene:last-child {
+  border-bottom: none;
 }
 
-.lessonSceneHeader h3 {
-  margin: 0;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.lessonSceneContent {
-  padding: 0;
-}
-
-/* ========================================
-   LessonChunkNavigation Component
-   ======================================== */
-
-.lessonNavigation {
+.sceneHeader {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 8px;
-  border: 1px solid var(--ifm-color-emphasis-300);
-}
-
-.lessonProgress {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
-.progressDots {
+.sceneNumber {
+  font-family: var(--font-headline);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+}
+
+.sceneTitle {
+  font-family: var(--font-subheading);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.sceneContent {
+  font-family: var(--font-body-secondary);
+  color: var(--text-secondary);
+  max-width: 75ch;
+}
+
+.sceneNavigation {
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.progressDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--ifm-color-emphasis-400);
-  transition: all 0.3s ease;
-}
-
-.progressDotComplete {
-  background-color: var(--ifm-color-success);
-}
-
-.progressDotActive {
-  background-color: var(--ifm-color-primary);
-  transform: scale(1.3);
-  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
-}
-
-.progressText {
-  font-size: 0.875rem;
-  color: var(--ifm-color-emphasis-700);
-  font-weight: 500;
-}
-
-.lessonButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: var(--border-width-default) solid var(--border-subtle);
 }
 
 .navButton {
-  flex: 1;
-  max-width: 200px;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  border: 2px solid transparent;
-  font-size: 1rem;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: var(--border-width-default) solid var(--border-emphasis);
+  border-radius: 0;
+  font-family: var(--font-body-primary);
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  background-color: var(--ifm-color-primary);
-  color: white;
-  box-shadow: var(--ifm-global-shadow-lw);
+  text-decoration: none;
+  transition: all var(--transition-base);
 }
 
-.navButton:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-  background-color: var(--ifm-color-primary-dark);
+.navButton:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
 }
 
 .navButton:disabled {
-  opacity: 0.4;
+  opacity: 0.5;
   cursor: not-allowed;
-  background-color: var(--ifm-color-emphasis-400);
 }
 
-.navButtonPrev {
-  background-color: var(--ifm-color-secondary);
+.navButton:disabled:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-emphasis);
 }
 
-.navButtonPrev:hover:not(:disabled) {
-  background-color: var(--ifm-color-secondary-dark);
+.navButtonPrimary {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  border-color: var(--color-primary);
 }
 
-.navButtonNext {
-  background-color: var(--ifm-color-primary);
+.navButtonPrimary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: var(--text-on-primary);
 }
 
 /* ========================================
-   LessonProgress Component - Overall Progress Bar
+   Progress Indicators
    ======================================== */
 
-.lessonProgressBar {
-  margin: 2rem 0;
-  padding: 1rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 8px;
-  border: 1px solid var(--ifm-color-emphasis-300);
+.progressContainer {
+  margin: var(--space-xl) 0;
 }
 
-.lessonProgressInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.lessonProgressTitle {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--ifm-font-color-base);
-}
-
-.lessonProgressPercent {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--ifm-color-primary);
-}
-
-.resetButton {
-  background: var(--ifm-color-secondary);
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.resetButton:hover {
-  transform: scale(1.1);
-  box-shadow: var(--ifm-global-shadow-md);
-  background: var(--ifm-color-secondary-dark);
-}
-
-.progressBarTrack {
-  height: 8px;
-  background-color: var(--ifm-color-emphasis-300);
-  border-radius: 4px;
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: var(--bg-tertiary);
+  border: var(--border-width-thin) solid var(--border-default);
   overflow: hidden;
+  margin-bottom: var(--space-sm);
 }
 
-.progressBarFill {
+.progressFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
-  border-radius: 4px;
-  transition: width 0.4s ease;
+  background: linear-gradient(90deg,
+    var(--color-primary) 0%,
+    var(--color-growth) 100%
+  );
+  transition: width var(--transition-slow);
+  border-right: var(--border-width-default) solid var(--border-emphasis);
+}
+
+.progressLabel {
+  font-family: var(--font-body-primary);
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  text-align: right;
 }
 
 /* ========================================
-   Dark Mode Fixes for LessonScene
+   RESPONSIVE
    ======================================== */
 
-[data-theme='dark'] .lessonNavigation {
-  background: var(--ifm-color-emphasis-200);
-  border-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .progressText {
-  color: var(--ifm-font-color-base);
-}
-
-[data-theme='dark'] .navButton {
-  background-color: var(--ifm-color-primary-dark);
-}
-
-[data-theme='dark'] .navButton:hover:not(:disabled) {
-  background-color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .navButton:disabled {
-  background-color: var(--ifm-color-emphasis-500);
-}
-
-[data-theme='dark'] .navButtonPrev {
-  background-color: var(--ifm-color-secondary-dark);
-}
-
-[data-theme='dark'] .navButtonPrev:hover:not(:disabled) {
-  background-color: var(--ifm-color-secondary-darker);
-}
-
-[data-theme='dark'] .lessonProgressBar {
-  background: var(--ifm-color-emphasis-200);
-  border-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .progressBarTrack {
-  background-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .lessonProgressPercent {
-  color: var(--ifm-color-primary-light);
-}
-
-[data-theme='dark'] .resetButton {
-  background: var(--ifm-color-secondary-dark);
-}
-
-[data-theme='dark'] .resetButton:hover {
-  background: var(--ifm-color-secondary-darker);
-}
-
-/* ============================================
-   SALARY TAX CALCULATOR STYLES
-   ============================================ */
-
-.salaryTaxCalculator {
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.calculatorHeader {
-  text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--ifm-color-emphasis-200);
-}
-
-.calculatorHeader h4 {
-  margin: 0 0 0.5rem 0;
-  color: var(--ifm-color-primary);
-  font-size: 1.5rem;
-}
-
-.calculatorHeader p {
-  margin: 0;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.95rem;
-}
-
-.calculatorInputs {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 8px;
-}
-
-.inputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.inputGroup label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  color: var(--ifm-color-emphasis-800);
-}
-
-.inputGroup label strong {
-  color: var(--ifm-color-primary);
-  font-size: 1.1rem;
-}
-
-.salarySlider {
-  width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  background: var(--ifm-color-emphasis-300);
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-}
-
-.salarySlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: all 0.2s ease;
-}
-
-.salarySlider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-.salarySlider::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: all 0.2s ease;
-}
-
-.salarySlider::-moz-range-thumb:hover {
-  transform: scale(1.2);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-.sliderMarks {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: var(--ifm-color-emphasis-600);
-  margin-top: 0.25rem;
-}
-
-.calculatorResults {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.resultCard {
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--ifm-color-primary);
-  background: var(--ifm-background-surface-color);
-  transition: all 0.2s ease;
-}
-
-.resultCard:hover {
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateX(4px);
-}
-
-.resultDeduction {
-  border-left-color: var(--ifm-color-warning);
-  background: var(--ifm-color-warning-lightest);
-}
-
-.resultTaxable {
-  border-left-color: var(--ifm-color-info);
-  background: var(--ifm-color-info-lightest);
-}
-
-.resultTax {
-  border-left-color: var(--ifm-color-danger);
-  background: var(--ifm-color-danger-lightest);
-}
-
-.resultNet {
-  border-left-color: var(--ifm-color-success);
-  background: var(--ifm-color-success-lightest);
-  border-left-width: 6px;
-}
-
-.resultLabel {
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-}
-
-.resultValue {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--ifm-color-emphasis-900);
-}
-
-.resultPercent {
-  font-size: 0.85rem;
-  color: var(--ifm-color-emphasis-600);
-  margin-top: 0.25rem;
-  font-style: italic;
-}
-
-.resultDetails {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed var(--ifm-color-emphasis-300);
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
-  line-height: 1.6;
-}
-
-.resultDetails div {
-  padding: 0.25rem 0;
-}
-
-.calculatorActions {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.detailsButton {
-  background: var(--ifm-color-primary-lightest);
-  color: var(--ifm-color-primary-dark);
-  border: 1px solid var(--ifm-color-primary-light);
-  border-radius: 6px;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.detailsButton:hover {
-  background: var(--ifm-color-primary-light);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-.calculatorNote {
-  padding: 1rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 6px;
-  border-left: 3px solid var(--ifm-color-info);
-}
-
-.calculatorNote p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
-  line-height: 1.6;
-}
-
-.calculatorNote strong {
-  color: var(--ifm-color-info-dark);
-}
-
-/* Simple Salary Comparison */
-.simpleSalaryComparison {
-  background: var(--ifm-background-surface-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.comparisonSliderSection {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: transparent;
-  border-radius: 8px;
-  border: 1px solid var(--ifm-color-emphasis-200);
-}
-
-.sliderLabel {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ifm-color-emphasis-800);
-  margin-bottom: 0.75rem;
-  text-align: center;
-}
-
-.comparisonSlider {
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  background: var(--ifm-color-emphasis-300);
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.comparisonSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transition: all 0.2s ease;
-  border: 3px solid white;
-}
-
-.comparisonSlider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.comparisonSlider::-webkit-slider-thumb:active {
-  transform: scale(1.1);
-}
-
-.comparisonSlider::-moz-range-thumb {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  cursor: pointer;
-  border: 3px solid white;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transition: all 0.2s ease;
-}
-
-.comparisonSlider::-moz-range-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.comparisonSlider::-moz-range-thumb:active {
-  transform: scale(1.1);
-}
-
-.comparisonRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.comparisonItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex: 1;
-}
-
-.comparisonLabel {
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
-  font-weight: 500;
-}
-
-.comparisonValue {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--ifm-color-emphasis-900);
-}
-
-.highlightNet {
-  color: var(--ifm-color-success-dark);
-}
-
-.comparisonArrow {
-  font-size: 2rem;
-  color: var(--ifm-color-primary);
-  flex-shrink: 0;
-}
-
-.comparisonDeduction {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 8px;
-  justify-content: center;
-  text-align: center;
-}
-
-.deductionAmount {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--ifm-color-danger-dark);
-}
-
-.deductionPercent {
-  font-size: 1rem;
-  color: var(--ifm-color-emphasis-700);
-  font-weight: 500;
-}
-
-.deductionLabel {
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-600);
-}
-
-.comparisonBreakdown {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding: 0.75rem;
-  background: transparent;
-  border-radius: 6px;
-  border-top: 1px solid var(--ifm-color-emphasis-200);
-}
-
-.breakdownItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  flex: 1;
-}
-
-.breakdownLabel {
-  font-size: 0.8rem;
-  color: var(--ifm-color-emphasis-600);
-  text-align: center;
-}
-
-.breakdownValue {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: var(--ifm-color-danger-dark);
-}
-
-/* Dark mode adjustments */
-[data-theme='dark'] .salaryTaxCalculator {
-  background: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .calculatorInputs {
-  background: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .resultCard {
-  background: var(--ifm-color-emphasis-100);
-}
-
-[data-theme='dark'] .simpleSalaryComparison {
-  background: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-300);
-}
-
-[data-theme='dark'] .comparisonSliderSection {
-  background: transparent;
-  border-color: var(--ifm-color-emphasis-300);
-}
-
-[data-theme='dark'] .comparisonDeduction {
-  background: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .comparisonBreakdown {
-  background: transparent;
-  border-top-color: var(--ifm-color-emphasis-300);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .salaryTaxCalculator {
-    padding: 1.5rem 1rem;
+@media (max-width: 996px) {
+  .choiceButtons {
+    padding: var(--space-md);
   }
 
-  .calculatorInputs {
-    padding: 1rem;
+  .choice {
+    padding: var(--space-sm) var(--space-md);
   }
 
-  .comparisonRow {
+  .thoughtBubble,
+  .revealContent {
+    padding: var(--space-md);
+  }
+
+  .lessonScene {
+    padding: var(--space-lg) 0;
+  }
+
+  .sceneNavigation {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-md);
   }
 
-  .comparisonArrow {
-    transform: rotate(90deg);
-    font-size: 1.5rem;
+  .navButton {
+    width: 100%;
+    justify-content: center;
   }
-
-  .comparisonBreakdown {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .breakdownItem {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .breakdownLabel {
-    text-align: left;
-  }
-
-  .resultValue {
-    font-size: 1.2rem;
-  }
-}
-
-/* ============================================
-   ACCESSIBLE UTILITY CLASSES
-   Simple, minimalistic styles for content
-   ============================================ */
-
-/* Info boxes - clean and accessible */
-.infoBox {
-  padding: 1.5rem;
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-left: 4px solid var(--ifm-color-primary);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-.successBox {
-  padding: 1.5rem;
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-left: 4px solid var(--ifm-color-success);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-.warningBox {
-  padding: 1.5rem;
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-left: 4px solid var(--ifm-color-warning);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-.errorBox {
-  padding: 1.5rem;
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-left: 4px solid var(--ifm-color-danger);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-/* Highlight box - subtle emphasis */
-.highlightBox {
-  padding: 1.5rem;
-  background: var(--ifm-color-emphasis-100);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-/* Code/calculation display */
-.calculationBox {
-  padding: 1.5rem;
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Courier New', monospace;
-  margin: 1.5rem 0;
-  line-height: 1.8;
-}
-
-/* Grid layouts */
-.gridTwo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin: 2rem 0;
 }
 
 @media (max-width: 768px) {
-  .gridTwo {
+  .layout-horizontal {
+    flex-direction: column;
+  }
+
+  .layout-grid {
     grid-template-columns: 1fr;
   }
+
+  .comparisonContainer {
+    aspect-ratio: 4 / 3;
+  }
+
+  .promptText {
+    font-size: var(--text-body);
+  }
+
+  .sceneTitle {
+    font-size: var(--text-body-large);
+  }
 }
 
-/* Dark mode support */
-[data-theme='dark'] .infoBox,
-[data-theme='dark'] .highlightBox,
-[data-theme='dark'] .calculationBox {
-  background: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-300);
+/* ========================================
+   DARK THEME ENHANCEMENTS
+   ======================================== */
+
+[data-theme='dark'] .bubbleContent,
+[data-theme='dark'] .bubbleContent p,
+[data-theme='dark'] .revealContent p,
+[data-theme='dark'] .sceneContent {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .bubbleContent strong {
+  color: var(--color-primary);
+}
+
+[data-theme='dark'] .choiceLabel {
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .choiceDescription {
+  color: var(--text-tertiary);
+}
+
+/* Ensure good contrast in dark mode for all text */
+[data-theme='dark'] .choice {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .choice:hover {
+  color: var(--text-primary);
 }

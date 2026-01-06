@@ -1,936 +1,961 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * TepUp.space - Visual Identity System
+ * Complete implementation for light/dark themes
+ * Integrated with Docusaurus Infima framework
  */
 
-/* Import SF Pro Display & SF Pro Text fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
 
-/* You can override the default Infima variables here. */
+/* ============================================
+   ROOT VARIABLES - LIGHT THEME
+   ============================================ */
 :root {
-  /* Color Palette - Pastel Professional & Friendly */
-  /* Xám xanh đậm (#546A7B) - Primary color */
-  --ifm-color-primary: #546A7B;
-  --ifm-color-primary-dark: #4a5f6f;
-  --ifm-color-primary-darker: #455969;
-  --ifm-color-primary-darkest: #394957;
-  --ifm-color-primary-light: #5e7487;
-  --ifm-color-primary-lighter: #687d8f;
-  --ifm-color-primary-lightest: #7c8fa1;
+  /* ==================== SPACING (8px Grid) ==================== */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+  --space-2xl: 128px;
+  --space-3xl: 192px;
 
-  /* Trắng kem (#FAFAFA) - Background */
-  --ifm-background-color: #FAFAFA;
-  --ifm-background-surface-color: #FFFFFF;
+  --section-padding-y: 96px;
+  --section-padding-x: 32px;
 
-  /* Xanh dương pastel (#B4D4E1) - Secondary */
-  --ifm-color-secondary: #B4D4E1;
-  --ifm-color-secondary-dark: #9dc7d8;
-  --ifm-color-secondary-darker: #8fbfd1;
-  --ifm-color-secondary-darkest: #6ba8c0;
-  --ifm-color-secondary-light: #cbe1ea;
-  --ifm-color-secondary-lighter: #d9e9f0;
-  --ifm-color-secondary-lightest: #e7f1f5;
+  --container-narrow: 680px;
+  --container-medium: 960px;
+  --container-wide: 1200px;
 
-  /* Cam san hô pastel (#FFB8A0) - Accent/CTA */
-  --ifm-color-accent: #FFB8A0;
-  --ifm-color-accent-dark: #ffa586;
-  --ifm-color-accent-darker: #ff9a73;
-  --ifm-color-accent-darkest: #ff7d46;
-  --ifm-color-accent-light: #ffcbba;
-  --ifm-color-accent-lighter: #ffd6cd;
-  --ifm-color-accent-lightest: #ffe9e4;
+  /* ==================== COLORS - LIGHT THEME ==================== */
+  /* Backgrounds */
+  --bg-primary: #fffef1;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f3ed;
 
-  /* Tím lavender (#C5B8E8) - Decorative */
-  --ifm-color-lavender: #C5B8E8;
-  --ifm-color-lavender-dark: #b3a4df;
-  --ifm-color-lavender-darker: #a799db;
-  --ifm-color-lavender-darkest: #8473ce;
-  --ifm-color-lavender-light: #d7ccf1;
-  --ifm-color-lavender-lighter: #e3daf5;
-  --ifm-color-lavender-lightest: #efe8f9;
+  /* Brand Colors */
+  --color-primary: #eb3724;
+  --color-primary-hover: #ff4a38;
+  --color-primary-active: #d32f1f;
+  --color-primary-muted: rgba(235, 55, 36, 0.1);
 
-  /* Typography - SF Pro inspired (using Inter as fallback) */
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --color-growth: #00D68F;
+  --color-growth-muted: rgba(0, 214, 143, 0.1);
+
+  --color-creative: #ffe534;
+  --color-creative-muted: rgba(255, 229, 52, 0.1);
+
+  /* Text Colors */
+  --text-primary: #1a1816;
+  --text-secondary: #4a4540;
+  --text-tertiary: #9a9690;
+  --text-disabled: #c9c5be;
+  --text-on-primary: #ffffff;
+  --text-on-growth: #001a0f;
+  --text-on-creative: #332c00;
+
+  /* Border Colors - EMPHASIZED */
+  --border-subtle: #e2ddd5;
+  --border-default: #c9c5be;
+  --border-emphasis: #4a4540;
+  --border-primary: var(--color-primary);
+  --border-width-thin: 1px;
+  --border-width-default: 2px;
+  --border-width-thick: 4px;
+
+  /* ==================== TYPOGRAPHY ==================== */
+  /* Font Families */
+  --font-headline: 'Lexend', sans-serif;
+  --font-subheading: 'Poppins', sans-serif;
+  --font-body-primary: 'Lexend', sans-serif;
+  --font-body-secondary: 'Lora', serif;
+
+  /* Font Sizes - Minimalist Scale */
+  --text-display: clamp(48px, 8vw, 96px);
+  --text-h1: clamp(36px, 5vw, 64px);
+  --text-h2: clamp(28px, 4vw, 48px);
+  --text-h3: clamp(20px, 3vw, 32px);
+  --text-body-large: 20px;
+  --text-body: 18px;
+  --text-body-small: 16px;
+  --text-small: 14px;
+
+  /* Font Weights */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 1.9;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* ==================== TRANSITIONS ==================== */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  /* ==================== SHADOWS ==================== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-primary: 0 4px 16px rgba(235, 55, 36, 0.3);
+
+  /* ==================== DOCUSAURUS INFIMA INTEGRATION ==================== */
+  /* Map TepUp.space colors to Infima variables */
+  --ifm-color-primary: #eb3724;
+  --ifm-color-primary-dark: #d32f1f;
+  --ifm-color-primary-darker: #c2281a;
+  --ifm-color-primary-darkest: #a02116;
+  --ifm-color-primary-light: #ff4a38;
+  --ifm-color-primary-lighter: #ff5e4d;
+  --ifm-color-primary-lightest: #ff8672;
+
+  --ifm-background-color: #fffef1;
+  --ifm-background-surface-color: #ffffff;
+
+  --ifm-font-family-base: 'Lora', serif;
+  --ifm-heading-font-family: 'Lexend', sans-serif;
   --ifm-font-weight-semibold: 600;
   --ifm-font-weight-normal: 400;
-  --ifm-heading-font-weight: 600;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-color-base: #4a4540;
+  --ifm-heading-color: #1a1816;
 
-  /* Heading colors - differentiate from body text */
-  --ifm-heading-color: var(--ifm-color-primary);
-  --ifm-font-color-base: #000000;
-
-  /* Spacing & Layout */
-  --ifm-spacing-horizontal: 1.5rem;
-  --ifm-spacing-vertical: 1.5rem;
-  --ifm-global-spacing: 1.5rem;
-
-  /* Button Styles */
-  --ifm-button-border-radius: 6px;
-  --ifm-button-padding-horizontal: 1.5rem;
-  --ifm-button-padding-vertical: 0.75rem;
-
-  /* Card & Container Styles */
-  --ifm-card-border-radius: 8px;
-  --ifm-global-radius: 6px;
-
-  /* Code */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(84, 106, 123, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(235, 55, 36, 0.1);
 
-  /* Shadows - Subtle depth */
-  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(84, 106, 123, 0.1);
-  --ifm-global-shadow-md: 0 4px 6px -1px rgba(84, 106, 123, 0.1), 0 2px 4px -1px rgba(84, 106, 123, 0.06);
-  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(84, 106, 123, 0.1), 0 4px 6px -2px rgba(84, 106, 123, 0.05);
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --ifm-global-shadow-tl: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  /* Border Radius */
+  --ifm-global-radius: 0;
+  --ifm-button-border-radius: 0;
+  --ifm-card-border-radius: 0;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ==================== DARK THEME OVERRIDES ==================== */
 [data-theme='dark'] {
-  /* Increased contrast for primary text and elements */
-  --ifm-color-primary: #a8b9c7; /* Lighter gray-blue for better visibility */
-  --ifm-color-primary-dark: #90a1b3;
-  --ifm-color-primary-darker: #7c8fa1;
-  --ifm-color-primary-darkest: #687d8f;
-  --ifm-color-primary-light: #c0cedb;
-  --ifm-color-primary-lighter: #d8e1e9;
-  --ifm-color-primary-lightest: #f0f4f7;
+  /* Backgrounds */
+  --bg-primary: #1a1816;
+  --bg-secondary: #2d2a26;
+  --bg-tertiary: #3d3935;
 
-  /* Darker background for better contrast with light text */
-  --ifm-background-color: #1a1f26;
-  --ifm-background-surface-color: #242932;
+  /* Brand Colors - Adjusted for dark background */
+  --color-primary: #ff5a47;
+  --color-primary-hover: #ff6e5e;
+  --color-primary-active: #ff3d28;
+  --color-primary-muted: rgba(255, 90, 71, 0.15);
 
-  /* General text color - slightly off-white for comfort */
-  --ifm-font-color-base: #e0e6f1;
-  --ifm-heading-color: var(--ifm-color-primary-lightest);
+  --color-growth: #00f5a0;
+  --color-growth-muted: rgba(0, 245, 160, 0.15);
 
-  /* Adjusted accent colors for dark mode */
-  --ifm-color-secondary: #8fbfd1; /* Blue Pastel */
-  --ifm-color-secondary-dark: #7ab3c7;
-  --ifm-color-secondary-darker: #6ba8c0;
-  --ifm-color-secondary-darkest: #4d92ad;
-  --ifm-color-secondary-light: #a3cae5;
-  --ifm-color-secondary-lighter: #b7d5ee;
-  --ifm-color-secondary-lightest: #d2e6f5;
+  --color-creative: #ffd93d;
+  --color-creative-muted: rgba(255, 217, 61, 0.15);
 
-  --ifm-color-accent: #ff9a73; /* Coral Pastel */
-  --ifm-color-accent-dark: #ff8a5e;
-  --ifm-color-accent-darker: #ff7d46;
-  --ifm-color-accent-darkest: #f5682a;
-  --ifm-color-accent-light: #ffb299;
-  --ifm-color-accent-lighter: #ffc3b0;
-  --ifm-color-accent-lightest: #ffd9cc;
+  /* Text Colors */
+  --text-primary: #f5f3ed;
+  --text-secondary: #c9c5be;
+  --text-tertiary: #9a9690;
+  --text-disabled: #6b6862;
+  --text-on-primary: #ffffff;
+  --text-on-growth: #001a0f;
+  --text-on-creative: #332c00;
 
-  --ifm-color-lavender: #a799db; /* Lavender Pastel */
-  --ifm-color-lavender-light: #c5b8e8;
-  --ifm-color-lavender-lighter: #d7ccf1;
+  /* Border Colors - EMPHASIZED */
+  --border-subtle: #3d3935;
+  --border-default: #5e5850;
+  --border-emphasis: #9a9690;
+  --border-primary: var(--color-primary);
 
-  --docusaurus-highlighted-code-line-bg: rgba(124, 143, 161, 0.3);
-  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  /* Shadows - Enhanced for dark theme */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-primary: 0 4px 20px rgba(255, 90, 71, 0.4);
+
+  /* Typography adjustments for dark theme */
+  --weight-normal: 450;
+  --weight-medium: 550;
+  --weight-semibold: 650;
+
+  /* Docusaurus Infima dark mode */
+  --ifm-color-primary: #ff5a47;
+  --ifm-color-primary-dark: #ff3d28;
+  --ifm-color-primary-darker: #ff2b15;
+  --ifm-color-primary-darkest: #e61f0f;
+  --ifm-color-primary-light: #ff6e5e;
+  --ifm-color-primary-lighter: #ff8275;
+  --ifm-color-primary-lightest: #ffaa9f;
+
+  --ifm-background-color: #1a1816;
+  --ifm-background-surface-color: #2d2a26;
+  --ifm-font-color-base: #c9c5be;
+  --ifm-heading-color: #f5f3ed;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 90, 71, 0.15);
+
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --ifm-global-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --ifm-global-shadow-tl: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
-/*
-  Global fix for custom components overflowing the main content area.
-  This ensures that components like quizzes or other interactive elements
-  are properly contained within the layout boundaries.
-*/
-.markdown > div {
-  max-width: 100%;
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+@media (min-width: 768px) {
+  :root {
+    --section-padding-y: 128px;
+    --section-padding-x: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding-x: 80px;
+  }
+}
+
+/* ==================== GLOBAL RESETS & BASE ==================== */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* ========================================
-   BUTTON STYLES - Subtle shadows & rounded corners
-   ======================================== */
-
-/* Primary Button - Using coral accent for vibrancy */
-.button--primary {
-  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-  border-color: var(--ifm-color-accent);
-  color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--ifm-font-weight-semibold);
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Ensure all non-outline buttons have light text in dark mode */
-[data-theme='dark'] .button:not(.button--outline) {
-  color: var(--ifm-font-color-base);
+body {
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body);
+  font-weight: var(--weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition-base),
+              color var(--transition-base);
 }
 
-/* Ensure disabled buttons have legible text in dark mode */
-[data-theme='dark'] .button.disabled,
-[data-theme='dark'] .button:disabled {
-  color: var(--ifm-font-color-base);
+/* Vietnamese text optimization */
+body {
+  line-height: 1.8;
 }
-
-.button--primary:hover {
-  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
-  border-color: var(--ifm-color-accent-dark);
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateY(-1px);
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .button--primary:hover {
-  color: var(--ifm-font-color-base);
-}
-
-
-/* Secondary Button - Using blue pastel */
-.button--secondary {
-  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
-  border-color: var(--ifm-color-secondary);
-  color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.button--secondary:hover {
-  background: linear-gradient(135deg, var(--ifm-color-secondary-dark), var(--ifm-color-secondary));
-  border-color: var(--ifm-color-secondary-dark);
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateY(-1px);
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .button--secondary:hover {
-  color: var(--ifm-font-color-base);
-}
-
-/* Accent/CTA Button - Using coral pastel for highlights */
-.button--accent,
-.button--cta {
-  background-color: var(--ifm-color-accent);
-  border-color: var(--ifm-color-accent);
-  color: var(--ifm-color-primary);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.button--accent:hover,
-.button--cta:hover {
-  background-color: var(--ifm-color-accent-dark);
-  border-color: var(--ifm-color-accent-dark);
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateY(-1px);
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .button--accent:hover,
-[data-theme='dark'] .button--cta:hover {
-  color: var(--ifm-font-color-base);
-}
-
-/* Outline Button */
-.button--outline {
-  border: 2px solid var(--ifm-color-lavender);
-  color: var(--ifm-color-lavender-dark);
-  background-color: transparent;
-  transition: all 0.2s ease-in-out;
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.button--outline:hover {
-  background: linear-gradient(135deg, var(--ifm-color-lavender-light), var(--ifm-color-lavender));
-  color: var(--ifm-color-primary);
-  border-color: var(--ifm-color-lavender-dark);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transform: translateY(-1px);
-}
-
-/* All buttons - make them more vibrant */
-.button {
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.button--lg {
-  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-  color: var(--ifm-color-primary);
-  border-color: var(--ifm-color-accent);
-}
-
-.button--lg:hover {
-  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .button--lg:hover {
-  color: var(--ifm-font-color-base);
-}
-
-/* ========================================
-   CARD STYLES - Subtle shadows & spacing
-   ======================================== */
-
-.card {
-  box-shadow: var(--ifm-global-shadow-lw);
-  border-radius: var(--ifm-card-border-radius);
-  transition: all 0.3s ease-in-out;
-  background-color: var(--ifm-background-surface-color);
-  border: 2px solid transparent;
-  position: relative;
-}
-
-[data-theme='dark'] .card {
-  background-color: var(--ifm-background-surface-color);
-  border-color: transparent;
-}
-
-[data-theme='dark'] .card:hover {
-  border-color: var(--ifm-color-secondary);
-  background-color: #2a303a;
-}
-
-.card:hover {
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateY(-2px);
-  border-color: var(--ifm-color-secondary);
-}
-
-/* Add colorful decorative borders to cards */
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
-  border-radius: var(--ifm-card-border-radius) 0 0 var(--ifm-card-border-radius);
-}
-
-/* Alternate card colors */
-.card:nth-child(3n+1)::before {
-  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-}
-
-.card:nth-child(3n+2)::before {
-  background: linear-gradient(to bottom, var(--ifm-color-secondary), var(--ifm-color-secondary-dark));
-}
-
-.card:nth-child(3n+3)::before {
-  background: linear-gradient(to bottom, var(--ifm-color-lavender), var(--ifm-color-lavender-dark));
-}
-
-/* ========================================
-   NAVBAR STYLES
-   ======================================== */
-
-.navbar {
-  box-shadow: var(--ifm-global-shadow-lw);
-  background: linear-gradient(to bottom, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
-  border-bottom: 2px solid var(--ifm-color-secondary-light);
-}
-
-[data-theme='dark'] .navbar {
-  background: linear-gradient(to bottom, var(--ifm-background-surface-color), #20252d);
-  border-bottom-color: #333942;
-}
-
-.navbar__link {
-  transition: all 0.2s ease-in-out;
-  border-radius: 4px;
-  padding: 0.5rem 0.75rem;
-}
-
-.navbar__link:hover {
-  color: var(--ifm-color-accent);
-  background-color: var(--ifm-color-accent-lightest);
-}
-
-[data-theme='dark'] .navbar__link:hover {
-  color: var(--ifm-color-accent-light);
-  background-color: rgba(255, 154, 115, 0.1);
-}
-
-.navbar__link--active {
-  color: var(--ifm-color-accent-dark);
-  background-color: var(--ifm-color-accent-lightest);
-}
-
-/* Dropdown menu items */
-.dropdown__link:hover {
-  background-color: var(--ifm-color-lavender-lightest);
-  color: var(--ifm-color-primary);
-}
-
-/* ========================================
-   TAGS & BADGES - Using lavender accent
-   ======================================== */
-
-.badge {
-  background-color: var(--ifm-color-lavender);
-  color: var(--ifm-color-primary);
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  font-weight: var(--ifm-font-weight-semibold);
-}
-
-.badge--secondary {
-  background-color: var(--ifm-color-secondary-light);
-  color: var(--ifm-color-primary);
-}
-
-.badge--accent {
-  background-color: var(--ifm-color-accent-light);
-  color: var(--ifm-color-primary-dark);
-}
-
-/* ========================================
-   PROGRESS BAR - For courses & learning
-   ======================================== */
-
-.progress-bar {
-  height: 8px;
-  background-color: var(--ifm-color-secondary-lightest);
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 1rem 0;
-}
-
-.progress-bar__fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-  border-radius: 4px;
-  transition: width 0.3s ease-in-out;
-}
-
-/* ========================================
-   SPACING & WHITE SPACE ENHANCEMENTS
-   ======================================== */
-
-.container {
-  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal);
-}
-
-.margin-top--lg {
-  margin-top: 3rem !important;
-}
-
-.margin-bottom--lg {
-  margin-bottom: 3rem !important;
-}
-
-.padding--lg {
-  padding: 3rem !important;
-}
-
-/* Section spacing with alternating backgrounds */
-section {
-  padding: 4rem 0;
-}
-
-section:nth-child(even) {
-  background: linear-gradient(to bottom, transparent, var(--ifm-color-secondary-lightest), transparent);
-}
-
-section:nth-child(3n) {
-  background: linear-gradient(to bottom, transparent, var(--ifm-color-lavender-lightest), transparent);
-}
-
-/* ========================================
-   HEADING STYLES - Differentiated colors
-   ======================================== */
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--ifm-heading-color);
+  line-height: 1.3;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  font-family: var(--font-headline);
+  color: var(--text-primary);
 }
 
-[data-theme='dark'] h1,
-[data-theme='dark'] h2,
-[data-theme='dark'] h3,
-[data-theme='dark'] h4,
-[data-theme='dark'] h5,
-[data-theme='dark'] h6 {
-  color: var(--ifm-heading-color);
+/* ==================== TYPOGRAPHY ==================== */
+.display {
+  font-family: var(--font-headline);
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
 }
 
-/* Article/Content headings with decorative accents */
-.markdown h1 {
-  color: var(--ifm-color-primary-darkest);
+h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--weight-bold);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-lg);
 }
 
-.markdown h2 {
-  color: var(--ifm-color-primary-darker);
+h2 {
+  font-family: var(--font-subheading);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-semibold);
+  line-height: 1.3;
+  margin-bottom: var(--space-md);
 }
 
-.markdown h2::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 1.5rem;
-  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
-  margin-right: 0.75rem;
-  vertical-align: middle;
-  border-radius: 2px;
+h3 {
+  font-family: var(--font-subheading);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
 }
 
-.markdown h3 {
-  color: var(--ifm-color-primary-dark);
-  border-left: 3px solid var(--ifm-color-secondary);
-  padding-left: 0.75rem;
+p {
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body);
+  font-weight: var(--weight-normal);
+  line-height: var(--line-height-loose);
+  color: var(--text-secondary);
+  max-width: 65ch;
+  margin-bottom: var(--space-md);
 }
 
-/* Hero section titles - vivid and readable */
-.hero__title {
-  color: var(--ifm-color-primary-darkest) !important;
-  font-weight: var(--ifm-heading-font-weight);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+.lead {
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body-large);
+  font-weight: var(--weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  max-width: 60ch;
 }
 
-.hero__subtitle {
-  color: var(--ifm-color-primary-dark) !important;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+small {
+  font-family: var(--font-body-primary);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--text-tertiary);
 }
 
-[data-theme='dark'] .hero__title,
-[data-theme='dark'] .hero__subtitle {
-  color: var(--ifm-font-color-base) !important;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+/* Emphasis */
+strong, b {
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
 }
 
-/* Make hero banners more vibrant */
-.hero--primary {
-  background: linear-gradient(135deg, var(--ifm-color-accent-lighter), var(--ifm-color-secondary-lighter), var(--ifm-color-lavender-lighter)) !important;
+em, i {
+  font-style: italic;
+  color: var(--text-primary);
 }
 
-/* ========================================
-   MICRO-INTERACTIONS
-   ======================================== */
-
-/* Link hover effects */
+/* Links */
 a {
-  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-subtle);
+  text-underline-offset: 4px;
+  transition: color var(--transition-base),
+              text-decoration-color var(--transition-base);
 }
 
 a:hover {
-  opacity: 0.8;
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
 }
 
-[data-theme='dark'] a:hover {
-  color: var(--ifm-color-accent-light);
+/* Blockquotes */
+blockquote {
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body-large);
+  font-style: italic;
+  font-weight: var(--weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+  margin: var(--space-xl) 0;
+  padding-left: var(--space-lg);
+  border-left: var(--border-width-thick) solid var(--color-primary);
 }
 
-/* Content links with colorful underlines */
-.markdown a {
+/* ==================== NAVBAR CUSTOMIZATION ==================== */
+.navbar {
+  background: transparent;
+  border-bottom: var(--border-width-default) solid transparent;
+  transition: background var(--transition-base),
+              backdrop-filter var(--transition-base),
+              border-color var(--transition-base);
+}
+
+.navbar--fixed-top {
+  background: rgba(255, 254, 241, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--border-emphasis);
+}
+
+[data-theme='dark'] .navbar--fixed-top {
+  background: rgba(26, 24, 22, 0.95);
+}
+
+.navbar__logo {
+  height: 32px;
+  transition: transform var(--transition-base);
+  animation: logoPopIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navbar__logo:hover {
+  animation: logoSpin 0.8s ease-in-out;
+}
+
+@keyframes logoPopIn {
+  0% {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2) rotate(20deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.navbar__title {
+  font-family: var(--font-headline);
+  font-size: 24px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.01em;
+  transition: transform var(--transition-base), color var(--transition-base);
+  display: inline-block;
+  animation: titleSlideIn 0.5s ease-out;
+}
+
+.navbar__title:hover {
+  animation: titleBounce 0.6s ease-in-out;
+}
+
+@keyframes titleSlideIn {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+
+.navbar__link {
+  font-family: var(--font-body-primary);
+  font-size: 16px;
+  font-weight: var(--weight-medium);
+  transition: color var(--transition-base);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--color-primary);
+}
+
+/* ==================== BUTTONS ==================== */
+.button {
+  font-family: var(--font-body-primary);
+  font-size: 18px;
+  font-weight: var(--weight-semibold);
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: 0;
+  transition: all var(--transition-base);
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  border: var(--border-width-default) solid var(--color-primary);
+}
+
+.button--primary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+  color: var(--text-on-primary);
+}
+
+.button--secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: var(--border-width-default) solid var(--border-emphasis);
+}
+
+.button--secondary:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+/* Dark theme fix for secondary button */
+[data-theme='dark'] .button--secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-emphasis);
+}
+
+[data-theme='dark'] .button--secondary:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: var(--border-width-default) solid var(--color-primary);
+}
+
+.button--outline:hover {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+.button--lg {
+  padding: var(--space-lg) calc(var(--space-xl) * 1.5);
+  font-size: 20px;
+}
+
+/* ==================== CARDS ==================== */
+.card {
+  background: var(--bg-primary);
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
+  padding: var(--space-xl);
+  transition: border-color var(--transition-base),
+              transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--border-emphasis);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card--featured {
+  border-width: var(--border-width-thick);
+  border-color: var(--color-primary);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  padding: var(--space-md) var(--section-padding-x) var(--space-sm);
+  border-top: var(--border-width-thick) solid var(--border-emphasis);
+  background: var(--bg-secondary);
+}
+
+.footer__title {
+  font-family: var(--font-subheading);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: 4px;
+}
+
+.footer__item {
+  margin: 4px 0;
+  padding: 0;
+}
+
+.footer__links {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.footer__col {
+  margin-bottom: var(--space-sm);
+}
+
+.footer__link-item {
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+  transition: color var(--transition-base);
+  line-height: 1.4;
+  padding: 2px 0;
+  display: inline-block;
+}
+
+.footer__link-item:hover {
+  color: var(--color-primary);
   text-decoration: none;
-  background-image: linear-gradient(to right, var(--ifm-color-accent), var(--ifm-color-lavender));
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  background-position: left bottom;
-  transition: background-size 0.3s ease-in-out;
-  padding-bottom: 2px;
 }
 
-.markdown a:hover {
-  background-size: 100% 2px;
-  opacity: 1;
-}
-.markdown a:hover {
-  background-size: 100% 2px;
-  opacity: 1;
-}
-
-/* Icon hover effects */
-.icon {
-  transition: transform 0.2s ease-in-out;
+.footer__copyright {
+  font-size: var(--text-small);
+  color: var(--text-tertiary);
+  text-align: center;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: var(--border-width-thin) solid var(--border-subtle);
 }
 
-.icon:hover {
-  transform: scale(1.1);
+/* ==================== ACCESSIBILITY ==================== */
+/* Focus states - WCAG AAA compliant */
+*:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
-/* Sidebar link hover effects */
+button:focus,
+.button:focus,
+a:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-primary-muted);
+}
+
+/* Skip to main content */
+.skipToContent_fXgn {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  padding: var(--space-md) var(--space-lg);
+  font-weight: var(--weight-semibold);
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-width-default: 3px;
+    --border-width-thick: 5px;
+  }
+
+  .button,
+  .card {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-tertiary { color: var(--text-tertiary) !important; }
+
+.bg-primary { background: var(--bg-primary) !important; }
+.bg-secondary { background: var(--bg-secondary) !important; }
+
+.mt-xs { margin-top: var(--space-xs) !important; }
+.mt-sm { margin-top: var(--space-sm) !important; }
+.mt-md { margin-top: var(--space-md) !important; }
+.mt-lg { margin-top: var(--space-lg) !important; }
+.mt-xl { margin-top: var(--space-xl) !important; }
+
+.mb-xs { margin-bottom: var(--space-xs) !important; }
+.mb-sm { margin-bottom: var(--space-sm) !important; }
+.mb-md { margin-bottom: var(--space-md) !important; }
+.mb-lg { margin-bottom: var(--space-lg) !important; }
+.mb-xl { margin-bottom: var(--space-xl) !important; }
+
+.border-primary { border-color: var(--color-primary) !important; }
+.border-growth { border-color: var(--color-growth) !important; }
+.border-creative { border-color: var(--color-creative) !important; }
+
+/* ==================== DOCUSAURUS SPECIFIC OVERRIDES ==================== */
+/* Sidebar */
+.menu {
+  font-family: var(--font-body-primary);
+}
+
 .menu__link {
-  transition: all 0.2s ease-in-out;
-  border-radius: 4px;
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
+  border-left: var(--border-width-default) solid transparent;
+  transition: all var(--transition-base);
 }
 
 .menu__link:hover {
-  background-color: var(--ifm-color-secondary-lightest);
-  color: var(--ifm-color-primary);
-}
-
-[data-theme='dark'] .menu__link:hover {
-  background-color: rgba(143, 191, 209, 0.1);
-  color: var(--ifm-color-secondary-light);
+  background: var(--color-primary-muted);
+  border-left-color: var(--color-primary);
+  color: var(--text-primary);
 }
 
 .menu__link--active {
-  background: linear-gradient(90deg, var(--ifm-color-accent-lightest), var(--ifm-color-lavender-lightest));
-  border-left: 3px solid var(--ifm-color-accent);
-  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
+  background: var(--color-primary-muted);
+  border-left-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
 }
 
-/* Styles for Story Progress Controls */
-.progressIndicator_QELo {
-  position: sticky;
-  top: 60px; /* Adjust based on navbar height */
-  background-color: var(--ifm-background-color);
-  padding: 0.75rem 0;
-  z-index: 10;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  margin-bottom: 1.5rem;
+/* Pagination */
+.pagination-nav__link {
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
+  transition: all var(--transition-base);
 }
 
-.progressControls_S_s_ {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-  justify-content: flex-start;
+.pagination-nav__link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-muted);
 }
 
-.progressButton_j3_v {
-  background-color: var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-emphasis-800);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 4px;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: background-color 0.2s;
+/* Table of Contents */
+.table-of-contents__link {
+  color: var(--text-secondary);
+  font-size: var(--text-body-small);
+  transition: color var(--transition-base);
 }
 
-.progressButton_j3_v:hover:not(:disabled) {
-  background-color: var(--ifm-color-emphasis-300);
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
 }
 
-.progressButton_j3_v:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-/* ========================================
-   RESPONSIVE ADJUSTMENTS
-   ======================================== */
-
-@media screen and (max-width: 996px) {
-  section {
-    padding: 2rem 0;
-  }
-
-  .container {
-    padding: var(--ifm-spacing-vertical) 1rem;
-  }
+/* Admonitions */
+.admonition {
+  border-left: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 0;
+  font-family: var(--font-body-secondary);
 }
 
-/* ========================================
-   LESSON CONTENT STYLES
-   Specific styles for lesson pages
-   ======================================== */
-
-/* Hero banner - Introduction section with pastel background */
-.hero-banner {
-  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), var(--ifm-color-lavender-lightest));
-  padding: 2rem;
-  border-radius: var(--ifm-card-border-radius);
-  margin: 2rem 0;
-  border-left: 4px solid var(--ifm-color-accent);
-  box-shadow: var(--ifm-global-shadow-lw);
+.admonition-heading {
+  font-family: var(--font-subheading);
+  font-weight: var(--weight-semibold);
 }
 
-.hero-highlight {
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary-darker);
-  font-size: 1.1rem;
-  line-height: 1.6;
+/* Tabs */
+.tabs__item {
+  font-family: var(--font-body-primary);
+  font-weight: var(--weight-medium);
+  border-radius: 0;
+  border-bottom: var(--border-width-default) solid transparent;
+  transition: all var(--transition-base);
 }
 
-/* Rule box - Important concepts highlighted */
-.rule-box {
-  background: linear-gradient(135deg, var(--ifm-color-secondary-lightest), rgba(180, 212, 225, 0.3));
-  padding: 1.5rem;
-  border-left: 4px solid var(--ifm-color-secondary-dark);
-  margin: 2rem 0;
-  border-radius: var(--ifm-card-border-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
+.tabs__item:hover {
+  border-bottom-color: var(--border-emphasis);
 }
 
-.rule-box h2 {
-  color: var(--ifm-color-primary-darkest);
-  margin-top: 0;
+.tabs__item--active {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
 }
 
-/* CTA box - Call to action section */
-.cta-box {
-  background: linear-gradient(135deg, var(--ifm-color-accent-lightest), rgba(255, 184, 160, 0.2));
-  padding: 1.5rem;
-  border-left: 4px solid var(--ifm-color-accent-dark);
-  margin: 2rem 0;
-  border-radius: var(--ifm-card-border-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
+/* Code blocks */
+code {
+  border: var(--border-width-thin) solid var(--border-subtle);
+  border-radius: 0;
+  font-size: var(--text-body-small);
 }
 
-.cta-box p:first-child {
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-primary-darkest);
+pre code {
+  border: none;
 }
 
-/* Details/Summary (Accordion replacement) */
-details {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  border: 2px solid var(--ifm-color-secondary-light);
-  border-radius: var(--ifm-card-border-radius);
-  background-color: var(--ifm-background-surface-color);
-  transition: all 0.3s ease-in-out;
+.prism-code {
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
 }
 
-details:hover {
-  border-color: var(--ifm-color-secondary);
-  box-shadow: var(--ifm-global-shadow-lw);
+/* Search */
+.navbar__search-input {
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
+  font-family: var(--font-body-primary);
+  transition: border-color var(--transition-base);
 }
 
-details[open] {
-  border-color: var(--ifm-color-accent);
-  background: linear-gradient(135deg, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
-  box-shadow: var(--ifm-global-shadow-md);
+.navbar__search-input:focus {
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
 }
 
-summary {
-  font-weight: var(--ifm-font-weight-semibold);
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
-  color: var(--ifm-color-primary-darker);
-  list-style: none; /* Remove default triangle */
+/* Dropdown menu */
+.dropdown__menu {
+  border: var(--border-width-default) solid var(--border-emphasis);
+  border-radius: 0;
+  box-shadow: var(--shadow-md);
 }
 
-summary::-webkit-details-marker {
-  display: none; /* Remove default triangle in webkit browsers */
+.dropdown__link {
+  font-family: var(--font-body-primary);
+  transition: all var(--transition-base);
 }
 
-summary::before {
-  content: '▶';
-  display: inline-block;
-  margin-right: 0.5rem;
-  transition: transform 0.3s ease-in-out;
-  color: var(--ifm-color-accent-dark);
+.dropdown__link:hover {
+  background: var(--color-primary-muted);
+  color: var(--color-primary);
 }
 
-details[open] > summary::before {
-  transform: rotate(90deg);
-}
-
-summary:hover {
-  background-color: var(--ifm-color-secondary-lightest);
-  color: var(--ifm-color-primary-darkest);
-}
-
-details > div {
-  padding-top: 1rem;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
+/* ==================== ANIMATIONS ==================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/* Homepage Features Card Text Color Fix for Dark Mode (light background) */
-[data-theme='dark'] .activeStoryline_sLDe h3,
-[data-theme='dark'] .activeStoryline_sLDe p {
-  color: var(--ifm-color-emphasis-800); /* Use a dark color for text */
-}
-[data-theme='dark'] .activeStoryline_sLDe .activeButton_KZBX {
-  color: var(--ifm-color-emphasis-0); /* Use a very dark color for button text */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--transition-slow) forwards;
 }
 
-/* ========================================
-   DARK MODE TEXT LEGIBILITY FIXES FOR INLINE-STYLED CONTENT
-   ======================================== */
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
 
-/* Fix inline-styled divs with gradient backgrounds (like the "6h30 sáng" boxes) */
-[data-theme='dark'] .markdown div[style*="background"] p,
-[data-theme='dark'] .markdown div[style*="background"] strong,
-[data-theme='dark'] .markdown div[style*="linear-gradient"] p,
-[data-theme='dark'] .markdown div[style*="linear-gradient"] strong,
-[data-theme='dark'] .markdown div[style*="linear-gradient"] h2,
-[data-theme='dark'] .markdown div[style*="linear-gradient"] h3,
-[data-theme='dark'] .markdown div[style*="linear-gradient"] h4 {
-  color: #1c1e21 !important;
+/* Hover lift effect */
+.hover-lift {
+  transition: transform var(--transition-base);
 }
 
-/* Fix emphasis-100 background divs - they need dark text in dark mode */
-[data-theme='dark'] .markdown div[style*="--ifm-color-emphasis-100"] p,
-[data-theme='dark'] .markdown div[style*="--ifm-color-emphasis-100"] strong,
-[data-theme='dark'] .markdown div[style*="emphasis-100"] p,
-[data-theme='dark'] .markdown div[style*="emphasis-100"] strong {
-  color: #1c1e21 !important;
+.hover-lift:hover {
+  transform: translateY(-8px);
 }
 
-/* Fix all card content - ensure proper colors in dark mode */
-[data-theme='dark'] .card h3,
-[data-theme='dark'] .card h4 {
-  color: var(--ifm-color-white) !important;
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-width: 996px) {
+  h1 {
+    font-size: clamp(28px, 6vw, 48px);
+  }
+
+  h2 {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 4vw, 28px);
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__item {
+    border-bottom: var(--border-width-thin) solid var(--border-subtle);
+  }
+
+  /* Mobile menu fixes - Compact size */
+  .navbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    max-width: 50vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--bg-primary);
+    border-left: var(--border-width-thick) solid var(--border-emphasis);
+    padding: var(--space-md);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-sidebar__brand {
+    margin-bottom: var(--space-md);
+  }
+
+  .navbar-sidebar__items {
+    height: auto;
+    min-height: auto;
+  }
+
+  .navbar-sidebar__item {
+    font-size: var(--text-body-small);
+    padding: var(--space-sm) 0;
+  }
+
+  .menu__link {
+    font-size: var(--text-body-small);
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  /* Dropdown in mobile menu */
+  .dropdown__menu {
+    position: static;
+    box-shadow: none;
+    background: var(--bg-tertiary);
+    margin-left: var(--space-sm);
+    padding: var(--space-xs);
+  }
+
+  .dropdown__link {
+    font-size: var(--text-small);
+    padding: var(--space-xs);
+  }
 }
 
-[data-theme='dark'] .card p,
-[data-theme='dark'] .card strong,
-[data-theme='dark'] .card span {
-  color: var(--ifm-color-emphasis-600) !important;
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: 64px;
+    --section-padding-x: 16px;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  /* Slightly wider mobile menu on small screens */
+  .navbar-sidebar {
+    width: 60vw;
+    max-width: 60vw;
+  }
 }
 
-/* Fix text inside any div with inline padding/display styles within cards */
-[data-theme='dark'] .card div[style] h3,
-[data-theme='dark'] .card div[style] h4 {
-  color: var(--ifm-color-white) !important;
-}
+@media (max-width: 480px) {
+  /* Even wider on very small phones for better usability */
+  .navbar-sidebar {
+    width: 75vw;
+    max-width: 75vw;
+    padding: var(--space-sm);
+  }
 
-[data-theme='dark'] .card div[style] p,
-[data-theme='dark'] .card div[style] strong {
-  color: var(--ifm-color-emphasis-600) !important;
-}
-
-/* ========================================
-   DARK MODE FIXES FOR INLINE-STYLED CONTENT BOXES
-   Distinguish between LIGHT and DARK background gradients
-   ======================================== */
-
-/* LIGHT background gradients need DARK text in dark mode */
-/* Yellow/warm gradients (#ffeaa7, #fdcb6e) */
-[data-theme='dark'] div[style*="#ffeaa7"] p,
-[data-theme='dark'] div[style*="#ffeaa7"] strong,
-[data-theme='dark'] div[style*="#fdcb6e"] p,
-[data-theme='dark'] div[style*="#fdcb6e"] strong {
-  color: #1c1e21 !important;
-}
-
-/* DARK background gradients need WHITE text in dark mode */
-/* Purple/dark gradients (#667eea, #764ba2, #a29bfe, #6c5ce7) */
-/* Pink/red gradients (#f093fb, #f5576c) */
-/* Blue/cyan gradients (#2c3e50, #3498db, #4facfe, #00f2fe) */
-[data-theme='dark'] div[style*="#667eea"] p,
-[data-theme='dark'] div[style*="#667eea"] strong,
-[data-theme='dark'] div[style*="#667eea"] h2,
-[data-theme='dark'] div[style*="#667eea"] h3,
-[data-theme='dark'] div[style*="#764ba2"] p,
-[data-theme='dark'] div[style*="#764ba2"] strong,
-[data-theme='dark'] div[style*="#764ba2"] h2,
-[data-theme='dark'] div[style*="#764ba2"] h3,
-[data-theme='dark'] div[style*="#a29bfe"] p,
-[data-theme='dark'] div[style*="#a29bfe"] strong,
-[data-theme='dark'] div[style*="#a29bfe"] h2,
-[data-theme='dark'] div[style*="#a29bfe"] h3,
-[data-theme='dark'] div[style*="#6c5ce7"] p,
-[data-theme='dark'] div[style*="#6c5ce7"] strong,
-[data-theme='dark'] div[style*="#6c5ce7"] h2,
-[data-theme='dark'] div[style*="#6c5ce7"] h3,
-[data-theme='dark'] div[style*="#f093fb"] p,
-[data-theme='dark'] div[style*="#f093fb"] strong,
-[data-theme='dark'] div[style*="#f093fb"] h2,
-[data-theme='dark'] div[style*="#f093fb"] h3,
-[data-theme='dark'] div[style*="#f5576c"] p,
-[data-theme='dark'] div[style*="#f5576c"] strong,
-[data-theme='dark'] div[style*="#f5576c"] h2,
-[data-theme='dark'] div[style*="#f5576c"] h3,
-[data-theme='dark'] div[style*="#f5576c"] li,
-[data-theme='dark'] div[style*="#2c3e50"] p,
-[data-theme='dark'] div[style*="#2c3e50"] strong,
-[data-theme='dark'] div[style*="#2c3e50"] h2,
-[data-theme='dark'] div[style*="#2c3e50"] h3,
-[data-theme='dark'] div[style*="#3498db"] p,
-[data-theme='dark'] div[style*="#3498db"] strong,
-[data-theme='dark'] div[style*="#3498db"] h2,
-[data-theme='dark'] div[style*="#3498db"] h3,
-[data-theme='dark'] div[style*="#4facfe"] p,
-[data-theme='dark'] div[style*="#4facfe"] strong,
-[data-theme='dark'] div[style*="#4facfe"] h2,
-[data-theme='dark'] div[style*="#4facfe"] h3,
-[data-theme='dark'] div[style*="#00f2fe"] p,
-[data-theme='dark'] div[style*="#00f2fe"] strong,
-[data-theme='dark'] div[style*="#00f2fe"] h2,
-[data-theme='dark'] div[style*="#00f2fe"] h3 {
-  color: white !important;
-}
-
-/* Fix emphasis-100 backgrounds - force LIGHT background with DARK text in dark mode */
-/* In dark mode, emphasis-100 is actually dark, so we need to override the background itself */
-[data-theme='dark'] div[style*="--ifm-color-emphasis-100"] {
-  background: #f0f0f0 !important;
-}
-
-[data-theme='dark'] div[style*="--ifm-color-emphasis-100"] p,
-[data-theme='dark'] div[style*="--ifm-color-emphasis-100"] strong {
-  color: #1c1e21 !important;
-}
-
-/* Fix warning-lightest backgrounds - these stay light even in dark mode */
-[data-theme='dark'] div[style*="var(--ifm-color-warning-lightest)"] p,
-[data-theme='dark'] div[style*="var(--ifm-color-warning-lightest)"] strong,
-[data-theme='dark'] div[style*="var(--ifm-color-warning-lightest)"] h3 {
-  color: #1c1e21 !important;
-}
-
-/* Fix white backgrounds in dark mode */
-[data-theme='dark'] div[style*="background: white"] p,
-[data-theme='dark'] div[style*="background: white"] strong {
-  color: #1c1e21 !important;
-}
-
-/* Fix markdown headings to be white in dark mode */
-[data-theme='dark'] .markdown > h2,
-[data-theme='dark'] .markdown > h3,
-[data-theme='dark'] .markdown > h4 {
-  color: var(--ifm-color-white) !important;
-}
-
-/* Override for headings that are siblings of content */
-[data-theme='dark'] article h2,
-[data-theme='dark'] article h3,
-[data-theme='dark'] article h4 {
-  color: var(--ifm-color-white) !important;
-}
-
-/* Ensure main content headings are always white */
-[data-theme='dark'] .theme-doc-markdown h2,
-[data-theme='dark'] .theme-doc-markdown h3,
-[data-theme='dark'] .theme-doc-markdown h4 {
-  color: var(--ifm-color-white) !important;
-}
-
-/* Nuclear option for all markdown content */
-[data-theme='dark'] main h2,
-[data-theme='dark'] main h3,
-[data-theme='dark'] main h4 {
-  color: var(--ifm-color-white) !important;
-}
-/* Dark mode adjustments */
-[data-theme='dark'] .hero-banner {
-  background: linear-gradient(135deg, rgba(143, 191, 209, 0.15), rgba(167, 153, 219, 0.15));
-  border-left-color: var(--ifm-color-accent);
-
-}
-
-
-[data-theme='dark'] .rule-box {
-  background: linear-gradient(135deg, rgba(143, 191, 209, 0.1), rgba(143, 191, 209, 0.05));
-  border-left-color: var(--ifm-color-secondary);
-}
-
-[data-theme='dark'] .cta-box {
-  background: linear-gradient(135deg, rgba(255, 154, 115, 0.15), rgba(255, 154, 115, 0.05));
-  border-left-color: var(--ifm-color-accent);
-}
-
-[data-theme='dark'] details {
-  border-color: rgba(143, 191, 209, 0.3);
-  background-color: var(--ifm-background-surface-color);
-}
-
-[data-theme='dark'] details[open] {
-  border-color: var(--ifm-color-accent);
-  background: linear-gradient(135deg, var(--ifm-background-surface-color), rgba(143, 191, 209, 0.1));
+  .navbar-sidebar__item {
+    font-size: var(--text-small);
+  }
 }

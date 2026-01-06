@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MassEdu',
-  tagline: 'Human rights are cool 😎',
-  favicon: 'img/favicon.ico',
+  title: 'TepUp',
+  tagline: 'Tép riu stép up, stép out.',
+  favicon: 'img/tepup_logo.png',
 
   // Set the production url of your site here
   url: 'https://kimboj23.github.io',
@@ -81,10 +81,10 @@ const config = {
       },
       image: 'img/social-card.png',
       navbar: {
-        title: 'MassEdu',
+        title: 'TepUp',
         logo: {
-          alt: 'MassEdu Logo',
-          src: 'img/logo.svg',
+          alt: 'TepUp.space Logo',
+          src: 'img/tepup_logo.png',
         },
         items: [
           {
@@ -136,19 +136,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Lớp Học',
-            items: [
-              {
-                label: 'Hạt mầm Nhân quyền',
-                to: '/knowledge-base/1.0-gioi-thieu',
-              },
-              {
-                label: 'Chính trị Chính tôi',
-                to: '/knowledge-base/2.0-gioi-thieu',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
@@ -175,7 +162,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} MassEdu. Dựng với khát vọng tự do và lòng yêu tri thức.`,
+        copyright: `Copyright © ${new Date().getFullYear()} TepUp.space. Nơi học về quyền và trách nhiệm công dân một cách an toàn và dễ tiếp cận.`,
       },
       prism: {
         theme: prismThemes.github,

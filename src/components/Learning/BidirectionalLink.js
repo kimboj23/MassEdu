@@ -10,7 +10,6 @@ import styles from './learning.module.css';
  */
 
 export default function BidirectionalLink({
-  from,
   to,
   lesson,
   story,
@@ -60,9 +59,6 @@ export default function BidirectionalLink({
 
   // Icon based on link type
   const getIcon = () => {
-    if (from === 'lesson' && to === 'story') return '🎭';
-    if (from === 'story' && to === 'lesson') return '📚';
-    if (to === 'module') return '🔍';
     if (to === 'concept') return '💡';
     return '→';
   };
@@ -129,7 +125,6 @@ export function LearnMore({ lesson, concept, module: moduleProp, children, conte
   return (
     <div className={styles.learnMoreContainer}>
       <BidirectionalLink
-        from="story"
         to={lesson ? 'lesson' : (moduleProp ? 'module' : 'concept')}
         lesson={lesson}
         module={moduleProp}
@@ -139,7 +134,7 @@ export function LearnMore({ lesson, concept, module: moduleProp, children, conte
       >
         {children || (
           <>
-            <strong>📚 Tìm hiểu thêm:</strong> {context || 'Đọc bài học chi tiết'}
+            <strong>Tìm hiểu thêm:</strong> {context || 'Đọc bài học chi tiết'}
           </>
         )}
       </BidirectionalLink>
@@ -154,7 +149,6 @@ export function StoryExample({ character, scene, context, children }) {
   return (
     <div className={styles.storyExampleContainer}>
       <BidirectionalLink
-        from="lesson"
         to="story"
         story={character}
         scene={scene}
@@ -177,8 +171,7 @@ export function StoryExample({ character, scene, context, children }) {
 export function BacklinkHint({ lesson, module: moduleProp }) {
   return (
     <span className={styles.backlinkHint}>
-      {lesson && <span className={styles.hintIcon}>📚</span>}
-      {moduleProp && <span className={styles.hintIcon}>🔍</span>}
+      {(lesson || moduleProp) && <span className={styles.hintIcon}>→</span>}
     </span>
   );
 }
@@ -192,7 +185,6 @@ export function StoryCallout({ character, scenes = [], title, description }) {
   return (
     <div className={styles.storyCallout}>
       <div className={styles.calloutHeader}>
-        <span className={styles.calloutIcon}>🎭</span>
         <h4>{title || 'Muốn trải nghiệm trực tiếp?'}</h4>
       </div>
       <p>{description || `Theo dõi câu chuyện của ${storyData?.character} để thấy những khái niệm này xuất hiện trong cuộc sống như thế nào.`}</p>

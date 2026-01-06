@@ -43,36 +43,31 @@ const StorylineList = [
   },
 ];
 
-function StorylineCard({Svg, title, description, link, status, cardIndex}) {
+function StorylineCard({title, description, link, status, cardIndex}) {
   const isActive = status === 'active';
   const isComingSoon = status === 'coming-soon';
 
   const CardContent = () => (
-    <>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+    <div className={styles.cardContent}>
+      <div className={styles.cardHeader}>
+        <h3 className={styles.cardTitle}>{title}</h3>
         {isComingSoon && (
-          <div className={styles.comingSoonBadge}>
-            Sắp ra mắt
-          </div>
-        )}
-        {isActive && (
-          <div className={styles.activeButton}>
-             Bắt đầu khám phá →
-          </div>
+          <span className={styles.comingSoonBadge}>Sắp ra mắt</span>
         )}
       </div>
-    </>
+      <p className={styles.cardDescription}>{description}</p>
+      {isActive && (
+        <div className={styles.cardAction}>
+          Bắt đầu khám phá →
+        </div>
+      )}
+    </div>
   );
 
   const colorClass = `colorVariant${(cardIndex % 3) + 1}`;
 
   return (
-    <div className={clsx('col col--4')}>
+    <div className={styles.cardWrapper}>
       {isActive ? (
         <Link to={link} className={clsx(styles.featureLink, styles.activeStoryline, styles[colorClass])}>
           <CardContent />
@@ -90,11 +85,11 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features} id="storylines">
       <div className="container">
-        <div className="text--center margin-bottom--xl">
+        <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Chọn câu chuyện để khám phá</h2>
           <p className={styles.sectionSubtitle}>Mỗi câu chuyện sẽ đưa bạn vào vai những người khác nhau trong xã hội, giúp bạn hiểu sâu hơn về các vấn đề quan trọng.</p>
         </div>
-        <div className="row">
+        <div className={styles.cardsGrid}>
           {StorylineList.map((props, idx) => (
             <StorylineCard key={idx} {...props} cardIndex={idx} />
           ))}
