@@ -79,7 +79,7 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-      image: 'img/social-card.png',
+      image: 'img/tepup_logo.png',
       navbar: {
         title: 'TepUp',
         logo: {

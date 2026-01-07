@@ -18,7 +18,7 @@ function HomepageHeader() {
           công dân
         </Heading>
         <p className="hero__subtitle lead">
-          TepUp là nơi nằm ngoài "ao làng" quen thuộc,
+          TepUp là nơi nằm ngoài ao làng quen thuộc,
           nơi những "tép riu" có thể tự do học hỏi và
           thể hiện chính kiến một cách an toàn.
         </p>

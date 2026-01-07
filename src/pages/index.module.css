@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-3xl) var(--section-padding-x);
+  padding: var(--space-xl) var(--section-padding-x) var(--space-3xl);
   border-bottom: var(--border-width-thick) solid var(--border-emphasis);
   background: var(--bg-primary);
   position: relative;

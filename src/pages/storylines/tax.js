@@ -10,71 +10,60 @@ function CharacterCard({ character }) {
   const isAvailable = taxStoryline && taxStoryline.episodes && taxStoryline.episodes.length > 0;
 
   return (
-    <div className="col col--12 margin-bottom--lg">
-      <div className={`card ${!isAvailable ? 'card--disabled' : ''} ${styles.characterCard}`}>
-        <div className="card__header">
-          <div className={styles.characterHeader}>
-            <div className={styles.characterAvatar}>{character.avatar}</div>
-            <div className={styles.characterInfo}>
-              <h2>{character.name}</h2>
-              <p className={styles.occupation}>{character.occupation}</p>
-              <div className={styles.characterMeta}>
-                <span>Tuổi: {character.age}</span>
-                <span>•</span>
-                <span>{character.background.location}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card__body">
-          <p className={styles.description}>{character.description}</p>
-
-          <div className={styles.backgroundSection}>
-            <h4>Hoàn cảnh</h4>
-            <div className={styles.backgroundGrid}>
-              <div>
-                <strong>Học vấn:</strong> {character.background.education}
-              </div>
-              <div>
-                <strong>Gia đình:</strong> {character.background.family}
-              </div>
-              <div>
-                <strong>Thu nhập:</strong> {character.background.income}
-              </div>
-            </div>
+    <div className={styles.cardWrapper}>
+      <div className={`${styles.characterCard} ${!isAvailable ? styles.comingSoon : ''}`}>
+        {/* Card Frame */}
+        <div className={styles.cardFrame}>
+          {/* Avatar/Image Section - Top portion */}
+          <div className={styles.cardImage}>
+            <div className={styles.avatarCircle}>{character.avatar}</div>
+            {!isAvailable && (
+              <div className={styles.comingSoonBadge}>Sắp ra mắt</div>
+            )}
           </div>
 
-          <div className={styles.challengesSection}>
-            <h4>Thách thức về thuế</h4>
-            <ul className={styles.challengesList}>
-              {character.challenges.tax.map((challenge, idx) => (
-                <li key={idx}>{challenge}</li>
-              ))}
-            </ul>
-          </div>
+          {/* Character Info - Main body */}
+          <div className={styles.cardBody}>
+            <h3 className={styles.characterName}>{character.name}</h3>
+            <p className={styles.occupation}>{character.occupation}</p>
 
-          {isAvailable && (
-            <div className={styles.episodesSection}>
-              <h4>Hành trình ({taxStoryline.episodes.length} phần)</h4>
-              <div className={styles.episodesList}>
-                {taxStoryline.episodes.map((episode, idx) => (
-                  <div key={episode.id} className={styles.episodeItem}>
-                    <span className={styles.episodeNumber}>{idx + 1}</span>
-                    <span className={styles.episodeTitle}>{episode.title}</span>
-                  </div>
-                ))}
+            <div className={styles.statsBar}>
+              <div className={styles.stat}>
+                <span className={styles.statLabel}>Tuổi</span>
+                <span className={styles.statValue}>{character.age}</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statLabel}>Vị trí</span>
+                <span className={styles.statValue}>{character.background.location}</span>
               </div>
             </div>
-          )}
-        </div>
-        <div className="card__footer">
-          <Link
-            className={`button button--primary button--lg button--block ${!isAvailable ? 'disabled' : ''}`}
-            to={isAvailable ? taxStoryline.episodes[0].path : undefined}
-            aria-disabled={!isAvailable}
-          >
-            {isAvailable ? 'Bắt đầu hành trình' : 'Sắp ra mắt'}
-          </Link>
+
+            <p className={styles.description}>{character.description}</p>
+
+            {/* Key challenge preview */}
+            {character.challenges.tax.length > 0 && (
+              <div className={styles.challenge}>
+                <span className={styles.challengeIcon}>⚡</span>
+                <span className={styles.challengeText}>{character.challenges.tax[0]}</span>
+              </div>
+            )}
+          </div>
+
+          {/* Card Footer - Action buttons */}
+          <div className={styles.cardFooter}>
+            <Link
+              className={`${styles.actionButton} ${styles.primaryAction} ${!isAvailable ? styles.disabled : ''}`}
+              to={isAvailable ? taxStoryline.episodes[0].path : '#'}
+            >
+              {isAvailable ? 'Bắt đầu hành trình →' : 'Sắp ra mắt'}
+            </Link>
+            <Link
+              className={`${styles.actionButton} ${styles.secondaryAction}`}
+              to={`/course-tax/characters/${character.id}`}
+            >
+              Xem hồ sơ
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +87,7 @@ export default function TaxStorylines() {
             Chọn một nhân vật để bắt đầu hành trình tìm hiểu về thuế và ngân sách nhà nước.
           </p>
         </div>
-        <div className="row">
+        <div className={styles.cardsGrid}>
           {characters.map((char) => (
             <CharacterCard key={char.id} character={char} />
           ))}

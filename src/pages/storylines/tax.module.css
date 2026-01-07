@@ -1,504 +1,334 @@
-.heroSection {
-  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-secondary), var(--ifm-color-lavender));
-  padding: 4rem 0;
-  margin-bottom: 3rem;
-  position: relative;
-  overflow: hidden;
-}
+/**
+ * TepUp.space - Character Card Game Style
+ * Inspired by Pokemon/Yu-Gi-Oh! trading cards
+ */
 
-.heroSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 184, 160, 0.9), rgba(180, 212, 225, 0.8), rgba(197, 184, 232, 0.9));
-  z-index: 0;
-}
-
-.heroSection > div {
-  position: relative;
-  z-index: 1;
-}
-
-.heroTitle {
-  color: var(--ifm-color-primary-darker);
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: var(--ifm-heading-font-weight);
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
-}
-
-.heroSubtitle {
-  font-size: 1.25rem;
-  color: var(--ifm-color-primary-darker);
-  font-weight: 500;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.main {
-  padding-bottom: 4rem;
-}
-
-.characterSection {
-  margin-bottom: 4rem;
-}
-
-.characterCol {
-  margin-bottom: 2rem;
-}
-
+/* ==================== HERO SECTION ==================== */
 .hero {
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-2xl);
+  text-align: center;
 }
 
+/* ==================== CARDS GRID ==================== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+/* ==================== CARD WRAPPER ==================== */
+.cardWrapper {
+  perspective: 1000px;
+}
+
+/* ==================== CHARACTER CARD - Game Card Style ==================== */
 .characterCard {
-  border: 2px solid var(--ifm-color-secondary-light);
-  border-radius: var(--ifm-card-border-radius);
-  height: 100%;
-  color: var(--ifm-font-color-base);
-  transition: all 0.3s ease;
-  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-secondary-lightest));
-  box-shadow: var(--ifm-global-shadow-md);
   position: relative;
+  background: var(--bg-primary);
+  border: var(--border-width-thick) solid var(--border-emphasis);
+  border-radius: 12px;
   overflow: hidden;
-}
-
-.characterCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
   height: 100%;
-  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-lavender));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .characterCard:hover {
-  transform: translateY(-4px);
-  border-color: var(--ifm-color-accent);
-  box-shadow: var(--ifm-global-shadow-lg);
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow: 0 12px 24px rgba(235, 55, 36, 0.3);
 }
 
-/* Alternate card colors for different characters */
-.characterCol:nth-child(odd) .characterCard {
-  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-accent-lightest));
-  border-color: var(--ifm-color-accent-light);
-}
-
-.characterCol:nth-child(odd) .characterCard::before {
-  background: linear-gradient(to bottom, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-}
-
-.characterCol:nth-child(even) .characterCard {
-  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-color-lavender-lightest));
-  border-color: var(--ifm-color-lavender-light);
-}
-
-.characterCol:nth-child(even) .characterCard::before {
-  background: linear-gradient(to bottom, var(--ifm-color-lavender), var(--ifm-color-secondary));
-}
-
-.characterHeader {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.characterAvatar {
-  font-size: 4rem;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--ifm-color-accent-light), var(--ifm-color-secondary-light));
-  border-radius: 50%;
-  flex-shrink: 0;
-  box-shadow: var(--ifm-global-shadow-md);
-  border: 4px solid var(--ifm-color-accent-lightest);
-  font-weight: bold;
-  color: var(--ifm-color-primary-darker);
-}
-
-/* Dark mode fix for avatar */
-[data-theme='dark'] .characterAvatar {
-  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-secondary-dark));
-  border-color: var(--ifm-color-accent);
-  color: var(--ifm-color-white);
-}
-
-.characterInfo h2 {
-  margin: 0 0 0.25rem 0;
-  color: var(--ifm-color-primary-darker);
-  font-size: 1.75rem;
-  font-weight: var(--ifm-heading-font-weight);
-}
-
-/* Dark mode fix for character name */
-[data-theme='dark'] .characterInfo h2 {
-  color: var(--ifm-color-white);
-}
-
-.occupation {
-  margin: 0 0 0.5rem 0;
-  background: linear-gradient(90deg, var(--ifm-color-accent-dark), var(--ifm-color-lavender-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: var(--ifm-font-weight-semibold);
-  font-size: 1.1rem;
-}
-
-/* Dark mode fix for occupation */
-[data-theme='dark'] .occupation {
-  background: linear-gradient(90deg, var(--ifm-color-accent-light), var(--ifm-color-lavender-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.characterMeta {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
-}
-
-/* Dark mode fix for metadata */
-[data-theme='dark'] .characterMeta {
-  color: var(--ifm-color-emphasis-600);
-}
-
-.profileLink {
-  font-size: 0.85rem;
-  color: var(--ifm-color-accent-dark);
-  text-decoration: none;
-  font-weight: var(--ifm-font-weight-semibold);
-  transition: all 0.2s ease;
-}
-
-.profileLink:hover {
-  color: var(--ifm-color-lavender-dark);
-  text-decoration: none;
-  background-image: linear-gradient(to right, var(--ifm-color-accent), var(--ifm-color-lavender));
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position: left bottom;
-  padding-bottom: 2px;
-}
-
-.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  color: var(--ifm-color-emphasis-800);
-}
-
-/* Dark mode fix for description */
-[data-theme='dark'] .description {
-  color: var(--ifm-color-emphasis-600);
-}
-
-.backgroundSection,
-.challengesSection,
-.episodesSection {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--ifm-color-emphasis-300);
-}
-
-.backgroundSection h4,
-.challengesSection h4,
-.episodesSection h4 {
-  margin: 0 0 1rem 0;
-  color: var(--ifm-color-accent-darkest);
-  font-size: 1.1rem;
-  font-weight: var(--ifm-font-weight-semibold);
-  border-left: 3px solid var(--ifm-color-accent);
-  padding-left: 0.75rem;
-}
-
-/* Dark mode fix for section headings */
-[data-theme='dark'] .backgroundSection h4,
-[data-theme='dark'] .challengesSection h4,
-[data-theme='dark'] .episodesSection h4 {
-  color: var(--ifm-color-white);
-  border-left-color: var(--ifm-color-accent-light);
-}
-
-.backgroundGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.backgroundGrid > div {
-  padding: 0.5rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.backgroundGrid strong {
-  color: var(--ifm-color-primary-darker);
-}
-
-/* Dark mode fix for background grid */
-[data-theme='dark'] .backgroundGrid > div {
-  background: var(--ifm-color-emphasis-200);
-}
-
-[data-theme='dark'] .backgroundGrid strong {
-  color: var(--ifm-color-accent-light);
-}
-
-.challengesList {
-  margin: 0;
-  padding-left: 1.5rem;
-  list-style-type: none;
-}
-
-.challengesList li {
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 0.95rem;
-  color: var(--ifm-color-emphasis-800);
-}
-
-.challengesList li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--ifm-color-accent);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Dark mode fix for challenges list */
-[data-theme='dark'] .challengesList li {
-  color: var(--ifm-color-emphasis-600);
-}
-
-[data-theme='dark'] .challengesList li::before {
-  color: var(--ifm-color-accent-light);
-}
-
-.episodesList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.episodeItem {
-  display: flex;
-  align-items: center;
-  padding: 0.75rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 6px;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  transition: all 0.2s ease;
-}
-
-.episodeItem:hover {
-  background: var(--ifm-color-accent-lightest);
-  border-color: var(--ifm-color-accent);
-}
-
-/* Dark mode fix for episode items */
-[data-theme='dark'] .episodeItem {
-  background: var(--ifm-color-emphasis-200);
-  border-color: var(--ifm-color-emphasis-400);
-}
-
-[data-theme='dark'] .episodeItem:hover {
-  background: var(--ifm-color-emphasis-300);
-  border-color: var(--ifm-color-accent-light);
-}
-
-.episodeNumber {
-  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-dark));
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: var(--ifm-font-weight-bold);
-  margin-right: 0.75rem;
-  flex-shrink: 0;
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.episodeTitle {
-  flex-grow: 1;
-  font-size: 0.95rem;
-  font-weight: var(--ifm-font-weight-semibold);
-  color: var(--ifm-color-emphasis-900);
-}
-
-/* Dark mode fix for episode title */
-[data-theme='dark'] .episodeTitle {
-  color: var(--ifm-color-emphasis-600);
-}
-
-.characterChallenges {
-  margin-bottom: 2rem;
-}
-
-.characterChallenges h4 {
-  margin: 0 0 0.75rem 0;
-  font-size: 1rem;
-  color: var(--ifm-color-accent-darkest);
-  font-weight: var(--ifm-font-weight-semibold);
-  border-left: 3px solid var(--ifm-color-accent);
-  padding-left: 0.5rem;
-}
-
-.characterChallenges ul {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
-.characterChallenges li {
-  margin-bottom: 0.25rem;
-  color: #000000;
-}
-
-.actionButtons {
-  margin-top: auto;
-}
-
-.startButton {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--ifm-color-accent), var(--ifm-color-accent-dark));
-  color: var(--ifm-color-primary);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--ifm-button-border-radius);
-  font-weight: var(--ifm-font-weight-semibold);
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.startButton:hover {
-  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
-  color: var(--ifm-color-primary-darker);
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-.characterCard:hover .startButton {
-  background: linear-gradient(135deg, var(--ifm-color-accent-dark), var(--ifm-color-accent-darker));
-}
-
-/* Alternate button color for even cards */
-.characterCol:nth-child(even) .startButton {
-  background: linear-gradient(135deg, var(--ifm-color-lavender), var(--ifm-color-lavender-dark));
-}
-
-.characterCol:nth-child(even) .startButton:hover,
-.characterCol:nth-child(even) .characterCard:hover .startButton {
-  background: linear-gradient(135deg, var(--ifm-color-lavender-dark), var(--ifm-color-lavender-darker));
-}
-
-.contextSection {
-  border-top: 1px solid var(--ifm-color-emphasis-300);
-  padding-top: 3rem;
-}
-
-.contextLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.contextLink {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--ifm-color-secondary);
-  border-radius: var(--ifm-button-border-radius);
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-  font-weight: var(--ifm-font-weight-semibold);
-  transition: all 0.2s ease;
-  background: var(--ifm-color-secondary-lightest);
-}
-
-.contextLink:hover {
-  background: linear-gradient(135deg, var(--ifm-color-secondary), var(--ifm-color-secondary-light));
-  color: var(--ifm-color-primary-darker);
-  border-color: var(--ifm-color-secondary-dark);
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.contextLinkDisabled {
-  border-color: var(--ifm-color-lavender-light);
-  color: var(--ifm-color-primary);
-  background: var(--ifm-color-lavender-lightest);
+.characterCard.comingSoon {
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
-.contextLinkDisabled:hover {
-  background: var(--ifm-color-lavender-lightest);
-  color: var(--ifm-color-primary);
+.characterCard.comingSoon:hover {
   transform: none;
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== CARD FRAME ==================== */
+.cardFrame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+}
+
+/* ==================== CARD IMAGE - Top Section ==================== */
+.cardImage {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-primary-muted) 0%, var(--color-creative-muted) 100%);
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  border-bottom: var(--border-width-thick) solid var(--border-emphasis);
+}
+
+[data-theme='dark'] .cardImage {
+  background: linear-gradient(135deg, rgba(235, 55, 36, 0.2) 0%, rgba(255, 229, 52, 0.2) 100%);
+}
+
+.avatarCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: var(--border-width-thick) solid var(--border-emphasis);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: var(--weight-bold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.characterCard:hover .avatarCircle {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.comingSoonBadge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--color-creative);
+  color: var(--text-on-creative);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
+  border: var(--border-width-thin) solid var(--border-emphasis);
+}
+
+/* ==================== CARD BODY ==================== */
+.cardBody {
+  flex: 1;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.characterName {
+  font-family: var(--font-headline);
+  font-size: var(--text-h4);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.occupation {
+  font-family: var(--font-subheading);
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== STATS BAR - Game Card Style ==================== */
+.statsBar {
+  display: flex;
+  gap: var(--space-xs);
+  margin: var(--space-sm) 0;
+  padding: var(--space-xs);
+  background: var(--bg-tertiary);
+  border: var(--border-width-default) solid var(--border-default);
+  border-radius: 0;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-xs);
+  border-right: var(--border-width-thin) solid var(--border-subtle);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.statLabel {
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: var(--text-body);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+}
+
+/* ==================== DESCRIPTION ==================== */
+.description {
+  font-family: var(--font-body-secondary);
+  font-size: var(--text-body-small);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==================== CHALLENGE BOX ==================== */
+.challenge {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--color-creative-muted);
+  border-left: var(--border-width-thick) solid var(--color-creative);
+  margin-top: auto;
+}
+
+[data-theme='dark'] .challenge {
+  background: rgba(255, 229, 52, 0.1);
+}
+
+.challengeIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.challengeText {
+  font-size: var(--text-small);
+  line-height: 1.4;
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+}
+
+/* ==================== CARD FOOTER - Action Buttons ==================== */
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-top: var(--border-width-default) solid var(--border-default);
+  background: var(--bg-secondary);
+}
+
+.actionButton {
+  font-family: var(--font-body-primary);
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-semibold);
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-width-default) solid var(--border-emphasis);
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  display: block;
+}
+
+.primaryAction {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  border-color: var(--color-primary);
+}
+
+.primaryAction:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+  text-decoration: none;
+  color: var(--text-on-primary);
+}
+
+.secondaryAction {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-emphasis);
+}
+
+.secondaryAction:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  text-decoration: none;
+}
+
+.actionButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 996px) {
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cardFrame {
+    min-height: 420px;
+  }
+
+  .avatarCircle {
+    width: 100px;
+    height: 100px;
+    font-size: 52px;
+  }
+
+  .characterName {
+    font-size: var(--text-h5);
+  }
 }
 
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2rem;
-  }
-
-  .heroSubtitle {
-    font-size: 1.1rem;
-  }
-
-  .characterHeader {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .characterAvatar {
-    margin-bottom: 1rem;
-  }
-
-  .characterInfo h2 {
-    font-size: 1.5rem;
-  }
-
-  .characterMeta {
-    justify-content: center;
-  }
-
-  .backgroundGrid {
+  .cardsGrid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+    max-width: 360px;
   }
 
-  .contextLinks {
+  .cardImage {
+    min-height: 140px;
+    padding: var(--space-md);
+  }
+
+  .avatarCircle {
+    width: 90px;
+    height: 90px;
+    font-size: 48px;
+  }
+
+  .cardFrame {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsBar {
     flex-direction: column;
-    align-items: center;
   }
 
-  .contextLink {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+  .stat {
+    border-right: none;
+    border-bottom: var(--border-width-thin) solid var(--border-subtle);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
   }
 }

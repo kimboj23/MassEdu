@@ -35,38 +35,40 @@ export default function ComparisonSlider({
   };
 
   return (
-    <div className={styles.comparisonSlider}>
-      <div className={styles.comparisonColumn}>
-        <h5>{label1}</h5>
-        <NumberSlider
-          value={purchaseAmount}
-          onValueChange={handleSliderChange}
-          min={10000}
-          max={100000}
-          step={1000}
-          unit="đồng"
-        />
-        <div className={styles.comparisonStats}>
-          <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
-          <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage1)}</strong></p>
+    <div className={styles.taxComparisonSlider}>
+      <div className={styles.comparisonRow}>
+        <div className={styles.comparisonColumn}>
+          <h5>{label1}</h5>
+          <NumberSlider
+            value={purchaseAmount}
+            onValueChange={handleSliderChange}
+            min={10000}
+            max={100000}
+            step={1000}
+            unit="đồng"
+          />
+          <div className={styles.comparisonStats}>
+            <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
+            <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage1)}</strong></p>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.comparisonDivider}>vs</div>
+        <div className={styles.comparisonDivider}>vs</div>
 
-      <div className={styles.comparisonColumn}>
-        <h5>{label2}</h5>
-        <NumberSlider
-          value={purchaseAmount}
-          onValueChange={handleSliderChange}
-          min={10000}
-          max={100000}
-          step={1000}
-          unit="đồng"
-        />
-        <div className={styles.comparisonStats}>
-          <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
-          <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage2)}</strong></p>
+        <div className={styles.comparisonColumn}>
+          <h5>{label2}</h5>
+          <NumberSlider
+            value={purchaseAmount}
+            onValueChange={handleSliderChange}
+            min={10000}
+            max={100000}
+            step={1000}
+            unit="đồng"
+          />
+          <div className={styles.comparisonStats}>
+            <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
+            <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage2)}</strong></p>
+          </div>
         </div>
       </div>
 
