@@ -496,6 +496,13 @@ blockquote {
   color: var(--text-on-primary);
 }
 
+/* Fix button text contrast - ensure all children inherit button text color */
+.button--primary p,
+.button--primary * {
+  color: inherit;
+  margin-bottom: 0;
+}
+
 .button--secondary {
   background: var(--bg-secondary);
   color: var(--text-primary);
@@ -506,6 +513,12 @@ blockquote {
   background: var(--text-primary);
   color: var(--bg-primary);
   border-color: var(--text-primary);
+}
+
+/* Fix button text contrast on hover - ensure all children inherit hover text color */
+.button--secondary:hover *,
+.button--secondary:hover p {
+  color: inherit;
 }
 
 /* Dark theme fix for secondary button */
@@ -957,5 +970,119 @@ pre code {
 
   .navbar-sidebar__item {
     font-size: var(--text-small);
+  }
+}
+
+/* ============================================
+   TOUCH INTERACTIONS & HAPTIC FEEDBACK
+   ============================================ */
+
+/* Touch-specific styles for better mobile UX */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch target sizes for better accessibility */
+  button,
+  .button,
+  a,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px; /* iOS Human Interface Guidelines minimum */
+    min-width: 44px;
+  }
+
+  /* Enhanced active states for touch feedback */
+  button:active,
+  .button:active,
+  a:active,
+  [role="button"]:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+  }
+
+  /* Primary button active state */
+  .button--primary:active {
+    background-color: var(--color-primary-active);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Logo touch feedback */
+  .navbar__logo:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+
+  /* Card touch feedback */
+  .card:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+  }
+
+  /* Link touch feedback with visual highlight */
+  a:active {
+    color: var(--color-primary-active);
+    background-color: var(--color-primary-muted);
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: -2px -4px;
+  }
+
+  /* Slider touch enhancements */
+  input[type="range"]:active {
+    cursor: grabbing;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+  }
+
+  input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+  }
+
+  /* Story choice buttons touch feedback */
+  .choiceButton:active,
+  .storyChoice:active {
+    background-color: var(--color-primary-active);
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+  }
+
+  /* Progress buttons touch feedback */
+  .progressButton:active {
+    background-color: var(--bg-tertiary);
+    border-color: var(--color-primary);
+    transform: scale(0.97);
+  }
+
+  /* Disable hover effects on touch devices (prevent sticky hover states) */
+  button:hover,
+  .button:hover,
+  a:hover,
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* Prevent text selection during touch interactions */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  .button,
+  [role="button"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Smooth scrolling for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 }

@@ -24,7 +24,15 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(git log:*)",
-      "Bash(cmd /c \"if exist .docusaurus-docker rmdir /s /q .docusaurus-docker\")"
+      "Bash(cmd /c \"if exist .docusaurus-docker rmdir /s /q .docusaurus-docker\")",
+      "Bash(powershell -Command \"Get-Content ''c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\docs\\\\course-tax\\\\characters\\\\sinh-vien\\\\story.mdx'' | Select-Object -Last 50\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\utils\\\\interactivity.js\" del \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\utils\\\\interactivity.js\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\utils\\\\toast.js\" del \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\utils\\\\toast.js\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\CustomCursor\" rmdir /s /q \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\CustomCursor\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\InteractivityProvider\" rmdir /s /q \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\InteractivityProvider\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\WaveAnimation\" rmdir /s /q \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\WaveAnimation\")",
+      "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\docs\\\\INTERACTIVITY.md\" del \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\docs\\\\INTERACTIVITY.md\")",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": []

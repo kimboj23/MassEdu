@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import WaveAnimation from '@site/src/components/WaveAnimation';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -45,6 +46,7 @@ export default function Home() {
     <Layout
       title={`Mại vô ${siteConfig.title}`}
       description="Bên nhau học hành">
+      <WaveAnimation />
       <HomepageHeader />
       <main>
         <HomepageFeatures />

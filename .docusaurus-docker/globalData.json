@@ -245,6 +245,11 @@
               "id": "modules/module-a-recognizing-daily-taxes",
               "path": "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes",
               "sidebar": "courseTax"
+            },
+            {
+              "id": "modules/module-b-tax-id-obligations",
+              "path": "/MassEdu/course-tax/modules/module-b-tax-id-obligations",
+              "sidebar": "courseTax"
             }
           ],
           "draftIds": [],

@@ -105,13 +105,13 @@
     },
     "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
   },
-  "/MassEdu/course-tax-3e2": {
+  "/MassEdu/course-tax-003": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---mass-edu-course-tax-253-762"
     }
   },
-  "/MassEdu/course-tax-388": {
+  "/MassEdu/course-tax-9b6": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---mass-edu-course-tax-01-b-37b"
   },
@@ -123,6 +123,14 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---mass-edu-course-tax-tags-interactivefce-900"
   },
+  "/MassEdu/course-tax/tags/ma-số-thuế-58c": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---mass-edu-course-tax-tags-ma-số-thuế-852-d9f"
+  },
+  "/MassEdu/course-tax/tags/nghia-vụ-thuế-e62": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---mass-edu-course-tax-tags-nghia-vụ-thuế-28-e-f79"
+  },
   "/MassEdu/course-tax/tags/thực-hanh-04e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---mass-edu-course-tax-tags-thực-hanh-299-39c"
@@ -131,11 +139,15 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---mass-edu-course-tax-tags-thuếf-55-b40"
   },
+  "/MassEdu/course-tax/tags/tncn-f33": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---mass-edu-course-tax-tags-tncn-58-f-139"
+  },
   "/MassEdu/course-tax/tags/vat-0fb": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---mass-edu-course-tax-tags-vat-133-be7"
   },
-  "/MassEdu/course-tax-201": {
+  "/MassEdu/course-tax-68c": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/MassEdu/course-tax/cac-loai-thue-12a": {
@@ -205,6 +217,10 @@
   "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes-239": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---mass-edu-course-tax-modules-module-a-recognizing-daily-taxes-102-828"
+  },
+  "/MassEdu/course-tax/modules/module-b-tax-id-obligations-b9b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---mass-edu-course-tax-modules-module-b-tax-id-obligationsf-8-d-9f8"
   },
   "/MassEdu/knowledge-base-7aa": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",

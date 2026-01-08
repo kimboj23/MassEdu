@@ -84,11 +84,11 @@ export default [
   },
   {
     path: '/MassEdu/course-tax',
-    component: ComponentCreator('/MassEdu/course-tax', '3e2'),
+    component: ComponentCreator('/MassEdu/course-tax', '003'),
     routes: [
       {
         path: '/MassEdu/course-tax',
-        component: ComponentCreator('/MassEdu/course-tax', '388'),
+        component: ComponentCreator('/MassEdu/course-tax', '9b6'),
         routes: [
           {
             path: '/MassEdu/course-tax/tags',
@@ -98,6 +98,16 @@ export default [
           {
             path: '/MassEdu/course-tax/tags/interactive',
             component: ComponentCreator('/MassEdu/course-tax/tags/interactive', 'b0f'),
+            exact: true
+          },
+          {
+            path: '/MassEdu/course-tax/tags/ma-số-thuế',
+            component: ComponentCreator('/MassEdu/course-tax/tags/ma-số-thuế', '58c'),
+            exact: true
+          },
+          {
+            path: '/MassEdu/course-tax/tags/nghia-vụ-thuế',
+            component: ComponentCreator('/MassEdu/course-tax/tags/nghia-vụ-thuế', 'e62'),
             exact: true
           },
           {
@@ -111,13 +121,18 @@ export default [
             exact: true
           },
           {
+            path: '/MassEdu/course-tax/tags/tncn',
+            component: ComponentCreator('/MassEdu/course-tax/tags/tncn', 'f33'),
+            exact: true
+          },
+          {
             path: '/MassEdu/course-tax/tags/vat',
             component: ComponentCreator('/MassEdu/course-tax/tags/vat', '0fb'),
             exact: true
           },
           {
             path: '/MassEdu/course-tax',
-            component: ComponentCreator('/MassEdu/course-tax', '201'),
+            component: ComponentCreator('/MassEdu/course-tax', '68c'),
             routes: [
               {
                 path: '/MassEdu/course-tax/cac-loai-thue',
@@ -215,6 +230,12 @@ export default [
               {
                 path: '/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes',
                 component: ComponentCreator('/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes', '239'),
+                exact: true,
+                sidebar: "courseTax"
+              },
+              {
+                path: '/MassEdu/course-tax/modules/module-b-tax-id-obligations',
+                component: ComponentCreator('/MassEdu/course-tax/modules/module-b-tax-id-obligations', 'b9b'),
                 exact: true,
                 sidebar: "courseTax"
               }

@@ -7,8 +7,9 @@ tags: [thuế, VAT, interactive, thực hành]
 ---
 
 import { LearnMore, StoryExample, StoryCallout } from '@site/src/components/Learning';
-import { NumberSlider, ComparisonSlider } from '@site/src/components/Interactive';
+import { NumberSlider, NumberSliderWithCalculation, ComparisonSlider } from '@site/src/components/Interactive';
 import Tooltip from '@site/src/components/Tooltip';
+import Link from '@docusaurus/Link';
 
 # Bạn đang đóng thuế gì?
 
@@ -45,19 +46,16 @@ Mỗi khi bạn mua một ly trà sữa, một chiếc bánh mì, hay thậm ch�
 
 Hãy thử một thí nghiệm nhỏ:
 
-<NumberSlider
-  initialValue={25000}
+<NumberSliderWithCalculation
+  defaultValue={25000}
   min={10000}
   max={100000}
   step={5000}
   unit="đồng"
-  calculation={(value) => value * 0.1}
-  calculationLabel="Thuế VAT (10%)"
-  showCalculation={true}
-  concept="VAT"
+  vatRate={10}
+  calculationLabel="Thuế VAT"
+  showExplanation={true}
 />
-
-**Giải thích:** Khi bạn mua một món hàng giá 25.000 đồng, bạn đang đóng khoảng **2.273 đồng thuế VAT** (thuế giá trị gia tăng). Con số này **ẩn** trong giá bán - bạn không thấy nó trên tờ tiền, nhưng nó đã được tính vào rồi!
 
 ### Những thứ bạn mua mỗi ngày có thuế VAT:
 
@@ -121,21 +119,11 @@ Hãy xem một ví dụ cụ thể về **thuế gián thu** (VAT):
 
 <ComparisonSlider
   label1="Người A (thu nhập 5 triệu/tháng)"
+  income1={5000000}
   label2="Người B (thu nhập 50 triệu/tháng)"
-  initialValue1={25000}
-  initialValue2={25000}
-  calculation={(value) => value * 0.1}
-  calculationLabel="Thuế VAT"
+  income2={50000000}
+  initialPurchaseAmount={25000}
 />
-
-**Nhận xét quan trọng:**
-
-Dù cả hai đều đóng **cùng số tiền thuế** (2.500 đồng cho bánh mì 25.000 đồng), nhưng:
-
-- Với **Người A** (thu nhập thấp): 2.500 đồng = **0.05%** thu nhập tháng
-- Với **Người B** (thu nhập cao): 2.500 đồng = **0.005%** thu nhập tháng
-
-→ Người nghèo chịu gánh nặng thuế **nặng gấp 10 lần** (theo tỷ lệ thu nhập)!
 
 :::warning Vấn đề công bằng
 Đây là lý do tại sao nhiều người cho rằng thuế gián thu (như VAT) **không công bằng**. Người giàu và người nghèo đóng cùng tỷ lệ %, nhưng tác động lên cuộc sống hoàn toàn khác nhau.
@@ -170,115 +158,6 @@ Dù doanh nghiệp là bên "nộp" thuế, nhưng chi phí thuế cuối cùng 
   scene="story#canh-2a-1"
   context="Xem sinh viên tìm hiểu chi tiết về thuế VAT và cách nó ảnh hưởng"
 />
-
----
-
-## Mã số thuế cá nhân - Bạn có cần không?
-
-### Tin tốt: Từ 1/7/2025
-
-**Số CCCD 12 số của bạn = Mã số thuế của bạn**
-
-Không cần đăng ký riêng nữa! (Thông tư 86/2024/TT-BTC - Bộ Tài chính)
-
-### Khi nào thì phải lo về thuế?
-
-#### Nếu bạn làm thuê (có hợp đồng lao động):
-
-Chỉ phải nộp thuế TNCN khi **thu nhập sau khi trừ bảo hiểm và giảm trừ gia cảnh > 11 triệu đồng/tháng**.
-
-**Giảm trừ gia cảnh:**
-- Bản thân: **11 triệu/tháng** (miễn thuế)
-- Mỗi người phụ thuộc: **4.4 triệu/tháng**
-
-**Ví dụ:**
-```
-Lương gộp: 10 triệu/tháng
-- Trừ bảo hiểm (~1.05 triệu): còn ~8.95 triệu
-- Trừ giảm trừ gia cảnh (11 triệu): còn... âm
-→ KHÔNG phải nộp thuế!
-```
-
-#### Nếu bạn làm freelance / kinh doanh nhỏ:
-
-**Hiện tại (đến 31/12/2025):**
-- Doanh thu **< 100 triệu/năm**: ✅ Không phải nộp thuế
-- Doanh thu **≥ 100 triệu/năm**: ❌ Phải nộp thuế
-
-**Từ 1/1/2026:**
-- Doanh thu **< 200 triệu/năm**: ✅ Không phải nộp thuế
-- Doanh thu **≥ 200 triệu/năm**: ❌ Phải nộp thuế
-
-<StoryExample
-  character="sinh-vien"
-  scene="story#canh-4"
-  context="Xem sinh viên nhận được yêu cầu mã số thuế từ khách hàng"
-/>
-
-:::info Tìm hiểu thêm
-Muốn biết chi tiết về cách tính thuế thu nhập cá nhân, ngưỡng phải nộp, và phân biệt freelance vs nhân viên?
-
-👉 [Xem Module: Mã số thuế & Khi nào cần lo về thuế](/course-tax/modules/module-b-tax-id)
-:::
-
----
-
-## Tóm tắt
-
-### Những điều quan trọng bạn cần nhớ:
-
-1. **Bạn đang đóng thuế mỗi ngày** qua thuế VAT (10%) khi mua hàng hóa, dịch vụ
-
-2. **Có 2 loại thuế chính:**
-   - **Thuế gián thu** (VAT): Mọi người đóng như nhau → gánh nặng nặng hơn với người nghèo
-   - **Thuế trực tiếp** (TNCN): Ai kiếm nhiều đóng nhiều → công bằng hơn
-
-3. **Mã số thuế = Số CCCD** (từ 1/7/2025)
-
-4. **Ngưỡng phải nộp thuế:**
-   - Lương: Thu nhập > 11 triệu/tháng (sau trừ)
-   - Freelance: Doanh thu ≥ 100 triệu/năm (2025) hoặc ≥ 200 triệu/năm (từ 2026)
-
-5. **Ai thực sự đóng thuế?** → **BẠN!** (Dù trực tiếp hay gián tiếp)
-
----
-
-## Tiếp theo: Tìm hiểu thêm
-
-<div className="row" style={{ marginTop: '2rem' }}>
-  <div className="col col--6">
-    <div className="card">
-      <div className="card__header">
-        <h3>🎭 Trải nghiệm qua câu chuyện</h3>
-      </div>
-      <div className="card__body">
-        <p>Theo dõi hành trình của sinh viên khám phá thuế trong cuộc sống hàng ngày</p>
-      </div>
-      <div className="card__footer">
-        <a href="/course-tax/characters/sinh-vien/story" className="button button--primary button--block">
-          Bắt đầu câu chuyện →
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div className="col col--6">
-    <div className="card">
-      <div className="card__header">
-        <h3>📚 Học tiếp bài sau</h3>
-      </div>
-      <div className="card__body">
-        <p>Tìm hiểu tại sao bạn phải đóng thuế và ý nghĩa của khế ước xã hội</p>
-      </div>
-      <div className="card__footer">
-        <a href="/course-tax/lessons/02-tai-sao-dong-thue" className="button button--secondary button--block">
-          Bài 2: Tại sao bạn đóng thuế? →
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
 ---
 
 ## Nguồn tham khảo

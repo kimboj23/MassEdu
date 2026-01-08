@@ -68,7 +68,7 @@ const sidebars = {
             {
               type: 'doc',
               id: 'lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue',
-              label: 'Ai đang thực sự đóng thuế?',
+              label: 'Ai đang đóng thuế?',
             },
             {
               type: 'doc',
@@ -133,16 +133,19 @@ const sidebars = {
         {
           type: 'doc',
           id: 'modules/module-a-recognizing-daily-taxes',
-          label: 'Nhận diện thuế hàng ngày',
+          label: 'A. Nhận diện thuế hàng ngày',
+        },
+        {
+          type: 'doc',
+          id: 'modules/module-b-tax-id-obligations',
+          label: 'B. Mã số thuế & Nghĩa vụ',
         },
         {
           type: 'doc',
           id: 'concepts/salary-tax-calculation',
-          label: 'Cách tính thuế thu nhập cá nhân',
+          label: 'C. Công cụ: Tính thuế trên lương',
         },
         // Future modules will be added here:
-        // 'modules/module-b-tax-id',
-        // 'modules/module-c-progressive-tax',
         // 'modules/module-d-freelance-vs-employee',
         // 'modules/module-e-tax-fairness',
       ],

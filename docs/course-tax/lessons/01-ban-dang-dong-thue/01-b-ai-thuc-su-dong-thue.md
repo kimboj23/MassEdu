@@ -8,7 +8,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-## Ai đang thực sự đóng thuế?
+## Ai đang đóng thuế?
 
 <Tabs>
   <TabItem value="legal" label="Trên giấy tờ">

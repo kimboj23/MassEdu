@@ -192,6 +192,7 @@ export function NumberSliderWithCalculation({
   unit = 'đồng',
   vatRate = 10,
   calculationLabel = 'Thuế VAT',
+  showExplanation = false,
 }) {
   const [value, setValue] = useState(defaultValue);
 
@@ -213,6 +214,17 @@ export function NumberSliderWithCalculation({
           {new Intl.NumberFormat('vi-VN').format(taxAmount)} {unit}
         </div>
       </div>
+      {showExplanation && (
+        <div className={styles.sliderExplanation}>
+          <p>
+            <strong>Giải thích:</strong> Khi bạn mua một món hàng giá{' '}
+            <strong>{formatNum(value)} {unit}</strong>, bạn đang đóng khoảng{' '}
+            <strong>{formatNum(taxAmount)} {unit} thuế VAT</strong> (thuế giá trị gia tăng).
+            Con số này <strong>ẩn</strong> trong giá bán - bạn không thấy nó trên tờ tiền,
+            nhưng nó đã được tính vào rồi!
+          </p>
+        </div>
+      )}
       <div className={styles.sliderHint}>
         💡 Di chuột vào số để kéo thay đổi giá trị.
       </div>

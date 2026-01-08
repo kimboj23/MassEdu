@@ -315,6 +315,21 @@
   margin-top: var(--space-sm);
 }
 
+.sliderExplanation {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-left: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 0;
+}
+
+.sliderExplanation p {
+  margin: 0;
+  font-size: var(--text-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
 /* ========================================
    ComparisonSlider Component
    ======================================== */
@@ -700,10 +715,7 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg,
-    var(--color-primary) 0%,
-    var(--color-growth) 100%
-  );
+  background: var(--text-primary);
   transition: width var(--transition-slow);
   border-right: var(--border-width-default) solid var(--border-emphasis);
 }
@@ -840,12 +852,16 @@
 
 .comparisonRow {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   align-items: stretch;
+  margin-top: var(--space-sm);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .comparisonColumn {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -891,7 +907,8 @@
   font-size: var(--text-h4);
   font-weight: var(--weight-bold);
   color: var(--text-tertiary);
-  padding: 0 var(--space-sm);
+  padding: 0 var(--space-xs);
+  flex-shrink: 0;
 }
 
 .comparisonInsight {
@@ -1295,6 +1312,47 @@
   padding: var(--space-xl) 0;
 }
 
+/* Ensure good contrast for buttons in storyCenterAction */
+.storyCenterAction .button,
+.storyCenterAction :global(.button) {
+  color: #ffffff;
+  font-weight: var(--weight-semibold);
+}
+
+.storyCenterAction .button--primary,
+.storyCenterAction :global(.button--primary) {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.storyCenterAction .button--primary:hover,
+.storyCenterAction :global(.button--primary:hover) {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #ffffff !important;
+}
+
+/* Ensure all children inherit white color on hover */
+.storyCenterAction .button--primary:hover *,
+.storyCenterAction :global(.button--primary:hover) * {
+  color: #ffffff !important;
+}
+
+.storyCenterAction .button--secondary,
+.storyCenterAction :global(.button--secondary) {
+  background-color: transparent;
+  border-color: var(--border-emphasis);
+  color: var(--text-primary);
+}
+
+.storyCenterAction .button--secondary:hover,
+.storyCenterAction :global(.button--secondary:hover) {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-emphasis);
+  color: var(--text-primary);
+}
+
 /* Nested highlight box */
 .storyNestedHighlight {
   padding: var(--space-md);
@@ -1442,11 +1500,11 @@
 }
 
 .resultDeduction {
-  border-left-color: var(--color-creative);
+  border-left-color: var(--text-secondary);
 }
 
 .resultDeduction .resultValue {
-  color: var(--color-creative);
+  color: var(--text-primary);
 }
 
 .resultTaxable {
@@ -1564,32 +1622,93 @@
   border-radius: 0;
   outline: none;
   cursor: pointer;
-  margin-bottom: var(--space-xs);
+  margin: 0 0 var(--space-md) 0;
+  -webkit-appearance: none;
+  appearance: none;
+  /* Add larger hit area without affecting visual height */
+  padding: var(--space-sm) 0;
+  background-clip: content-box;
+  /* Ensure interactivity */
+  pointer-events: auto;
+  touch-action: none;
+  /* Ensure slider is above other elements */
+  position: relative;
+  z-index: 10;
 }
 
 .comparisonSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: var(--color-primary);
   border: var(--border-width-default) solid var(--border-emphasis);
   border-radius: 0;
-  cursor: pointer;
+  cursor: grab;
+  /* Ensure thumb is above track */
+  position: relative;
+  z-index: 2;
+}
+
+.comparisonSlider::-webkit-slider-thumb:active {
+  cursor: grabbing;
 }
 
 .comparisonSlider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: var(--color-primary);
   border: var(--border-width-default) solid var(--border-emphasis);
   border-radius: 0;
-  cursor: pointer;
+  cursor: grab;
+  /* Remove default appearance */
+  border: var(--border-width-default) solid var(--border-emphasis);
+}
+
+.comparisonSlider::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+
+/* Ensure slider track is visible and interactive */
+.comparisonSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: 0;
+}
+
+.comparisonSlider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: 0;
+}
+
+.comparisonSlider:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.comparisonSlider:hover::-webkit-slider-thumb {
+  background: var(--color-primary-dark);
+}
+
+.comparisonSlider:hover::-moz-range-thumb {
+  background: var(--color-primary-dark);
 }
 
 .comparisonItem {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  flex: 1;
+  min-width: 0; /* Allow flex items to shrink below content size */
+  padding: var(--space-sm);
+  background: var(--bg-primary);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: 0;
 }
 
 .comparisonLabel {
@@ -1604,6 +1723,8 @@
   font-weight: var(--weight-bold);
   font-family: var(--ifm-font-family-monospace);
   color: var(--text-primary);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .comparisonArrow {
@@ -1611,7 +1732,8 @@
   color: var(--color-creative);
   display: flex;
   align-items: center;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-sm);
+  flex-shrink: 0; /* Prevent arrow from shrinking */
 }
 
 .highlightNet {
@@ -1624,7 +1746,7 @@
   background: var(--color-primary-muted);
   border: var(--border-width-default) solid var(--color-primary);
   border-radius: 0;
-  margin: var(--space-md) 0;
+  margin: var(--space-sm) 0 var(--space-md) 0;
 }
 
 [data-theme='dark'] .comparisonDeduction {
@@ -1694,4 +1816,233 @@
     align-items: flex-start;
     gap: var(--space-xs);
   }
+}
+
+/* ============================================
+   STORY SECTION HEADERS - Following Visual Guidelines
+   ============================================ */
+
+/* Night scene header - dark with primary accent */
+.storyNightHeader {
+  padding: var(--space-md);
+  background: var(--text-primary);
+  border: var(--border-width-default) solid var(--border-emphasis);
+  border-left: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 0;
+  color: var(--text-on-primary);
+  margin-bottom: var(--space-md);
+}
+
+[data-theme='dark'] .storyNightHeader {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.storyNightHeader p {
+  margin-bottom: 0;
+  color: inherit;
+}
+
+/* Summary header - primary color emphasis */
+.storySummaryHeader {
+  padding: var(--space-lg);
+  background: var(--color-primary-muted);
+  border: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 0;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+[data-theme='dark'] .storySummaryHeader {
+  background: rgba(235, 55, 36, 0.15);
+}
+
+.storySummaryHeader h3 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: var(--text-h3);
+}
+
+/* Reflection header - growth color */
+.storyReflectionHeader {
+  padding: var(--space-lg);
+  background: var(--color-growth-muted);
+  border: var(--border-width-thick) solid var(--color-growth);
+  border-radius: 0;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+[data-theme='dark'] .storyReflectionHeader {
+  background: rgba(0, 214, 143, 0.15);
+}
+
+.storyReflectionHeader p {
+  margin-bottom: 0;
+}
+
+/* Minigame header - creative color */
+.storyMinigameHeader {
+  padding: var(--space-lg);
+  background: var(--color-creative-muted);
+  border: var(--border-width-thick) solid var(--color-creative);
+  border-radius: 0;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+[data-theme='dark'] .storyMinigameHeader {
+  background: rgba(255, 229, 52, 0.15);
+}
+
+.storyMinigameHeader h3 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.storyMinigameHeader p {
+  margin-bottom: 0;
+}
+
+/* Morning scene header - creative/warm */
+.storyMorningHeader {
+  padding: var(--space-md);
+  background: var(--color-creative-muted);
+  border: var(--border-width-default) solid var(--color-creative);
+  border-left: var(--border-width-thick) solid var(--color-creative);
+  border-radius: 0;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+[data-theme='dark'] .storyMorningHeader {
+  background: rgba(255, 229, 52, 0.15);
+}
+
+.storyMorningHeader p {
+  margin-bottom: 0;
+}
+
+/* Ending header - primary emphasis */
+.storyEndingHeader {
+  padding: var(--space-2xl);
+  background: var(--color-primary-muted);
+  border: var(--border-width-thick) solid var(--color-primary);
+  border-radius: 0;
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+[data-theme='dark'] .storyEndingHeader {
+  background: rgba(235, 55, 36, 0.15);
+}
+
+.storyEndingHeader h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.storyEndingHeader p {
+  line-height: var(--line-height-relaxed);
+}
+
+/* Final message header - growth/success color */
+.storyFinalHeader {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-growth-muted);
+  border: var(--border-width-thick) solid var(--color-growth);
+  border-radius: 0;
+  color: var(--text-primary);
+  margin-top: var(--space-2xl);
+}
+
+[data-theme='dark'] .storyFinalHeader {
+  background: rgba(0, 214, 143, 0.15);
+}
+
+.storyFinalHeader h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.storyFinalHeader p {
+  font-size: var(--text-body-large);
+  margin-bottom: var(--space-lg);
+}
+
+/* Story final buttons styling */
+.storyFinalButtons {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.storyFinalButtons .button {
+  min-width: 180px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+/* Responsive: Stack buttons on mobile */
+@media (max-width: 768px) {
+  .storyFinalButtons {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .storyFinalButtons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ========================================
+   Progress Indicator Controls (Quay lại / Bắt đầu lại)
+   ======================================== */
+.progressIndicator {
+  position: relative;
+  margin: var(--space-sm) 0;
+}
+
+.progressControls {
+  display: flex;
+  gap: var(--space-xs);
+  justify-content: flex-end;
+  margin-bottom: var(--space-xs);
+}
+
+.progressButton {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-body-primary);
+  font-size: 0.875rem;
+  font-weight: normal;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.progressButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--text-primary);
+}
+
+.progressButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  color: var(--text-tertiary);
+}
+
+.progressButton span {
+  display: inline-block;
 }
