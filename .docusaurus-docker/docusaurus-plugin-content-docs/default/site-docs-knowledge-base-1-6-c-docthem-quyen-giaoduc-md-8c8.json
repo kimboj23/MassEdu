@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/1.6c-docthem-quyen-giaoduc.md",
   "sourceDirName": ".",
   "slug": "/docthem-quyen-giaoduc",
-  "permalink": "/MassEdu/knowledge-base/docthem-quyen-giaoduc",
+  "permalink": "/knowledge-base/docthem-quyen-giaoduc",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.6c-docthem-quyen-giaoduc.md",
@@ -13,22 +13,22 @@
     {
       "inline": true,
       "label": "giáo dục",
-      "permalink": "/MassEdu/knowledge-base/tags/giao-dục"
+      "permalink": "/knowledge-base/tags/giao-dục"
     },
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "bài đọc thêm",
-      "permalink": "/MassEdu/knowledge-base/tags/bai-dọc-them"
+      "permalink": "/knowledge-base/tags/bai-dọc-them"
     },
     {
       "inline": true,
       "label": "quyền trẻ em",
-      "permalink": "/MassEdu/knowledge-base/tags/quyền-trẻ-em"
+      "permalink": "/knowledge-base/tags/quyền-trẻ-em"
     }
   ],
   "version": "current",
@@ -55,10 +55,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Công ước quốc tế về các quyền kinh tế, xã hội và văn hóa",
-    "permalink": "/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh"
+    "permalink": "/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh"
   },
   "next": {
     "title": "1.8. Những câu hỏi và trả lời đơn giản nhất về nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen"
+    "permalink": "/knowledge-base/tuan1/hoi-dap-nhan-quyen"
   }
 }

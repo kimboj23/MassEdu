@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen.md",
   "sourceDirName": ".",
   "slug": "/nghia-vu-nhanuoc-nhan-quyen",
-  "permalink": "/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen",
+  "permalink": "/knowledge-base/nghia-vu-nhanuoc-nhan-quyen",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.1b-nghia-vu-nhanuoc-nhan-quyen.md",
@@ -13,22 +13,22 @@
     {
       "inline": true,
       "label": "nhà nước",
-      "permalink": "/MassEdu/knowledge-base/tags/nha-nước"
+      "permalink": "/knowledge-base/tags/nha-nước"
     },
     {
       "inline": true,
       "label": "nghĩa vụ",
-      "permalink": "/MassEdu/knowledge-base/tags/nghia-vụ"
+      "permalink": "/knowledge-base/tags/nghia-vụ"
     },
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "chính quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/chinh-quyền"
+      "permalink": "/knowledge-base/tags/chinh-quyền"
     }
   ],
   "version": "current",
@@ -55,10 +55,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
-    "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh"
+    "permalink": "/knowledge-base/giay-phep-kinh-doanh"
   },
   "next": {
     "title": "Hiểu về vi phạm nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen"
+    "permalink": "/knowledge-base/hieu-ve-vi-pham-nhanquyen"
   }
 }

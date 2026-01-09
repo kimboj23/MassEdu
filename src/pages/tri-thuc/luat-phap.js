@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import { getArticlesByTag } from '../../utils/knowledgeBase';
+import TriThucHero from '@site/src/components/TriThucHero';
 
 // Article card component
 function ArticleCard({ article }) {
@@ -83,16 +84,10 @@ export default function LuatPhapPage() {
       description="Tổng hợp kiến thức về hệ thống pháp luật, quyền và nghĩa vụ pháp lý">
 
       {/* Hero Section */}
-      <div className="hero hero--primary">
-        <div className="container">
-          <Heading as="h1" className="hero__title">
-            Luật pháp
-          </Heading>
-          <p className="hero__subtitle">
-            Tìm hiểu về hệ thống pháp luật, quyền và nghĩa vụ của công dân trong xã hội
-          </p>
-        </div>
-      </div>
+      <TriThucHero
+        title="Luật pháp"
+        subtitle="Tìm hiểu về hệ thống pháp luật, quyền và nghĩa vụ của công dân trong xã hội"
+      />
 
       {/* Main Content */}
       <main className="margin-vert--lg">

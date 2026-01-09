@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/chinh-quyen-dinh-nghia.md",
   "sourceDirName": ".",
   "slug": "/chinh-quyen-dinh-nghia",
-  "permalink": "/MassEdu/knowledge-base/chinh-quyen-dinh-nghia",
+  "permalink": "/knowledge-base/chinh-quyen-dinh-nghia",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/chinh-quyen-dinh-nghia.md",
@@ -13,12 +13,12 @@
     {
       "inline": true,
       "label": "chính trị",
-      "permalink": "/MassEdu/knowledge-base/tags/chinh-trị"
+      "permalink": "/knowledge-base/tags/chinh-trị"
     },
     {
       "inline": true,
       "label": "luật pháp",
-      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+      "permalink": "/knowledge-base/tags/luật-phap"
     }
   ],
   "version": "current",
@@ -34,10 +34,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "2.1a-luat-nhanquyen-quocte",
-    "permalink": "/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte"
+    "permalink": "/knowledge-base/2.1a-luat-nhanquyen-quocte"
   },
   "next": {
     "title": "Hiến pháp",
-    "permalink": "/MassEdu/knowledge-base/hien-phap"
+    "permalink": "/knowledge-base/hien-phap"
   }
 }

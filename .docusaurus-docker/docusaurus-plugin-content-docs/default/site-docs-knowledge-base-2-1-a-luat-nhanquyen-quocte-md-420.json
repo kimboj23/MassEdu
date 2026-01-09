@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/2.1a-luat-nhanquyen-quocte.md",
   "sourceDirName": ".",
   "slug": "/2.1a-luat-nhanquyen-quocte",
-  "permalink": "/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte",
+  "permalink": "/knowledge-base/2.1a-luat-nhanquyen-quocte",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.1a-luat-nhanquyen-quocte.md",
@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
-    "permalink": "/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
+    "permalink": "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
   },
   "next": {
     "title": "Chính quyền là gì?",
-    "permalink": "/MassEdu/knowledge-base/chinh-quyen-dinh-nghia"
+    "permalink": "/knowledge-base/chinh-quyen-dinh-nghia"
   }
 }

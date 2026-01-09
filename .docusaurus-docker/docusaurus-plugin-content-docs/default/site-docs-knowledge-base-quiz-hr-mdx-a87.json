@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/QuizHR.mdx",
   "sourceDirName": ".",
   "slug": "/tuan1/quiz-hr",
-  "permalink": "/MassEdu/knowledge-base/tuan1/quiz-hr",
+  "permalink": "/knowledge-base/tuan1/quiz-hr",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/QuizHR.mdx",
@@ -13,17 +13,17 @@
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "quyền cơ bản",
-      "permalink": "/MassEdu/knowledge-base/tags/quyền-cơ-bản"
+      "permalink": "/knowledge-base/tags/quyền-cơ-bản"
     },
     {
       "inline": true,
       "label": "quiz",
-      "permalink": "/MassEdu/knowledge-base/tags/quiz"
+      "permalink": "/knowledge-base/tags/quiz"
     }
   ],
   "version": "current",
@@ -49,10 +49,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Giấy phép kinh doanh tại Việt Nam",
-    "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn"
+    "permalink": "/knowledge-base/giay-phep-kinh-doanh-vn"
   },
   "next": {
     "title": "Giấy phép kinh doanh: Nghiên cứu chuyên sâu",
-    "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh"
+    "permalink": "/knowledge-base/giay-phep-kinh-doanh"
   }
 }

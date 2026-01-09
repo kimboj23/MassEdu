@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import { getArticlesByTag } from '../../utils/knowledgeBase';
+import TriThucHero from '@site/src/components/TriThucHero';
 
 // Article card component
 function ArticleCard({ article }) {
@@ -83,16 +84,10 @@ export default function NhanQuyenPage() {
       description="Tổng hợp kiến thức về nhân quyền, bình đẳng và các quyền cơ bản của con người">
 
       {/* Hero Section */}
-      <div className="hero hero--primary">
-        <div className="container">
-          <Heading as="h1" className="hero__title">
-            Nhân quyền
-          </Heading>
-          <p className="hero__subtitle">
-            Tìm hiểu về các quyền cơ bản của con người, nguyên tắc bình đẳng và các khái niệm nhân quyền quan trọng
-          </p>
-        </div>
-      </div>
+      <TriThucHero
+        title="Nhân quyền"
+        subtitle="Tìm hiểu về các quyền cơ bản của con người, nguyên tắc bình đẳng và các khái niệm nhân quyền quan trọng"
+      />
 
       {/* Main Content */}
       <main className="margin-vert--lg">

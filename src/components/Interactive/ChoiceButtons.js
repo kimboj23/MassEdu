@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import { BacklinkHint } from '@site/src/components/Learning/BidirectionalLink';
 import { StoryProgressContext } from './StoryProgressContext';
@@ -17,11 +17,33 @@ export function StoryProgressProvider({ children }) {
   // Track the current active scene
   const [currentScene, setCurrentScene] = useState(() => {
     if (typeof window !== 'undefined') {
+      // Check if there's a hash in the URL (e.g., #canh-2a)
+      const hash = window.location.hash?.replace('#', '');
+      if (hash) {
+        return hash;
+      }
+      // Otherwise, load from localStorage
       const saved = localStorage.getItem('massedu-current-scene');
       return saved || null;
     }
     return null;
   });
+
+  // Listen for hash changes to update current scene when navigating via links
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash?.replace('#', '');
+      if (hash) {
+        setCurrentScene(hash);
+        localStorage.setItem('massedu-current-scene', hash);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('hashchange', handleHashChange);
+      return () => window.removeEventListener('hashchange', handleHashChange);
+    }
+  }, []);
 
   // Track scene history
   const [sceneHistory, setSceneHistory] = useState(() => {

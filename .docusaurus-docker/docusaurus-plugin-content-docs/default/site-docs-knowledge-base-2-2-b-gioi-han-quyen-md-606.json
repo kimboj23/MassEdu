@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/2.2b-gioi-han-quyen.md",
   "sourceDirName": ".",
   "slug": "/gioi-han-quyen",
-  "permalink": "/MassEdu/knowledge-base/gioi-han-quyen",
+  "permalink": "/knowledge-base/gioi-han-quyen",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.2b-gioi-han-quyen.md",
@@ -13,22 +13,22 @@
     {
       "inline": true,
       "label": "giới hạn quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/giới-hạn-quyền"
+      "permalink": "/knowledge-base/tags/giới-hạn-quyền"
     },
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "khẩn cấp",
-      "permalink": "/MassEdu/knowledge-base/tags/khẩn-cấp"
+      "permalink": "/knowledge-base/tags/khẩn-cấp"
     },
     {
       "inline": true,
       "label": "nguyên tắc",
-      "permalink": "/MassEdu/knowledge-base/tags/nguyen-tắc"
+      "permalink": "/knowledge-base/tags/nguyen-tắc"
     }
   ],
   "version": "current",
@@ -55,10 +55,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Hiểu về vi phạm nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen"
+    "permalink": "/knowledge-base/hieu-ve-vi-pham-nhanquyen"
   },
   "next": {
     "title": "1.1. Nhân quyền là gì?",
-    "permalink": "/MassEdu/knowledge-base/tuan1/dinh-nghia"
+    "permalink": "/knowledge-base/tuan1/dinh-nghia"
   }
 }

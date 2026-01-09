@@ -5,7 +5,7 @@
   "source": "@site/docs/course-tax/characters/sinh-vien/story.mdx",
   "sourceDirName": "characters/sinh-vien",
   "slug": "/characters/sinh-vien/story",
-  "permalink": "/MassEdu/course-tax/characters/sinh-vien/story",
+  "permalink": "/course-tax/characters/sinh-vien/story",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -20,6 +20,6 @@
   "sidebar": "courseTax",
   "next": {
     "title": "1. Thuế ơi thuế à",
-    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/"
+    "permalink": "/course-tax/lessons/ban-dang-dong-thue/"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/QuizPOL.mdx",
   "sourceDirName": ".",
   "slug": "/tuan1/quiz-pol",
-  "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol",
+  "permalink": "/knowledge-base/tuan1/quiz-pol",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/QuizPOL.mdx",
@@ -13,17 +13,17 @@
     {
       "inline": true,
       "label": "chính trị",
-      "permalink": "/MassEdu/knowledge-base/tags/chinh-trị"
+      "permalink": "/knowledge-base/tags/chinh-trị"
     },
     {
       "inline": true,
       "label": "hiến pháp",
-      "permalink": "/MassEdu/knowledge-base/tags/hiến-phap"
+      "permalink": "/knowledge-base/tags/hiến-phap"
     },
     {
       "inline": true,
       "label": "quiz",
-      "permalink": "/MassEdu/knowledge-base/tags/quiz"
+      "permalink": "/knowledge-base/tags/quiz"
     }
   ],
   "version": "current",
@@ -49,10 +49,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/gioi-thieu-chuong-2"
+    "permalink": "/knowledge-base/gioi-thieu-chuong-2"
   },
   "next": {
     "title": "Giấy phép kinh doanh tại Việt Nam",
-    "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn"
+    "permalink": "/knowledge-base/giay-phep-kinh-doanh-vn"
   }
 }

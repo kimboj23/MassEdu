@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import { getArticlesByTag } from '../../utils/knowledgeBase';
+import TriThucHero from '@site/src/components/TriThucHero';
 
 // Article card component
 function ArticleCard({ article }) {
@@ -83,16 +84,10 @@ export default function ChinhTriPage() {
       description="Tổng hợp kiến thức về hệ thống chính trị, chính quyền và dân chủ">
 
       {/* Hero Section */}
-      <div className="hero hero--primary">
-        <div className="container">
-          <Heading as="h1" className="hero__title">
-            Chính trị
-          </Heading>
-          <p className="hero__subtitle">
-            Hiểu về hệ thống chính trị, cách thức hoạt động của chính quyền và quyền tham gia dân chủ
-          </p>
-        </div>
-      </div>
+      <TriThucHero
+        title="Chính trị"
+        subtitle="Hiểu về hệ thống chính trị, cách thức hoạt động của chính quyền và quyền tham gia dân chủ"
+      />
 
       {/* Main Content */}
       <main className="margin-vert--lg">

@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/1.0-gioi-thieu.md",
   "sourceDirName": ".",
   "slug": "/tuan1/gioi-thieu",
-  "permalink": "/MassEdu/knowledge-base/tuan1/gioi-thieu",
+  "permalink": "/knowledge-base/tuan1/gioi-thieu",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.0-gioi-thieu.md",
@@ -13,12 +13,12 @@
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "giới thiệu",
-      "permalink": "/MassEdu/knowledge-base/tags/giới-thiệu"
+      "permalink": "/knowledge-base/tags/giới-thiệu"
     }
   ],
   "version": "current",
@@ -41,6 +41,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/gioi-thieu-chuong-2"
+    "permalink": "/knowledge-base/gioi-thieu-chuong-2"
   }
 }

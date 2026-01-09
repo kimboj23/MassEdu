@@ -5,7 +5,7 @@
   "source": "@site/docs/course-tax/lessons/06-thue-va-chinh-tri.mdx",
   "sourceDirName": "lessons",
   "slug": "/lessons/thue-va-chinh-tri",
-  "permalink": "/MassEdu/course-tax/lessons/thue-va-chinh-tri",
+  "permalink": "/course-tax/lessons/thue-va-chinh-tri",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "courseTax",
   "previous": {
     "title": "5. Thuế và Minh bạch",
-    "permalink": "/MassEdu/course-tax/lessons/thue-va-minh-bach"
+    "permalink": "/course-tax/lessons/thue-va-minh-bach"
   },
   "next": {
     "title": "A. Nhận diện thuế hàng ngày",
-    "permalink": "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes"
+    "permalink": "/course-tax/modules/module-a-recognizing-daily-taxes"
   }
 }

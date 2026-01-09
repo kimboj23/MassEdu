@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen.md",
   "sourceDirName": ".",
   "slug": "/tuan1/hoi-dap-nhan-quyen",
-  "permalink": "/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen",
+  "permalink": "/knowledge-base/tuan1/hoi-dap-nhan-quyen",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.8-hoi-dap-don-gian-nhan-quyen.md",
@@ -13,12 +13,12 @@
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     },
     {
       "inline": true,
       "label": "hỏi đáp",
-      "permalink": "/MassEdu/knowledge-base/tags/hỏi-dap"
+      "permalink": "/knowledge-base/tags/hỏi-dap"
     }
   ],
   "version": "current",
@@ -42,10 +42,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Quyền giáo dục",
-    "permalink": "/MassEdu/knowledge-base/docthem-quyen-giaoduc"
+    "permalink": "/knowledge-base/docthem-quyen-giaoduc"
   },
   "next": {
     "title": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
-    "permalink": "/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
+    "permalink": "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung"
   }
 }

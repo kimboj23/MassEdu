@@ -1,493 +1,500 @@
 {
-  "/MassEdu/__docusaurus/debug-1fd": {
+  "/__docusaurus/debug-5ff": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/__docusaurus/debug/config-ecf": {
+  "/__docusaurus/debug/config-5ba": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/__docusaurus/debug/content-548": {
+  "/__docusaurus/debug/content-a2b": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     },
-    "__props": "__props---mass-edu-docusaurus-debug-content-5-c-2-70c"
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
   },
-  "/MassEdu/__docusaurus/debug/globalData-abf": {
+  "/__docusaurus/debug/globalData-c3c": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/__docusaurus/debug/metadata-e1b": {
+  "/__docusaurus/debug/metadata-156": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/__docusaurus/debug/registry-6e0": {
+  "/__docusaurus/debug/registry-88c": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/__docusaurus/debug/routes-167": {
+  "/__docusaurus/debug/routes-000": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---mass-edu-docusaurus-debugb-38-b0c"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/MassEdu/characters/sinhvien-06d": {
-    "__comp": "__comp---site-src-pages-characters-sinhvien-jsc-40-653",
-    "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
-    },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
-  },
-  "/MassEdu/markdown-page-b0c": {
+  "/about-8b4": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "content": "content---mass-edu-markdown-page-393-476"
+    "content": "content---aboutc-9-f-e93"
   },
-  "/MassEdu/storylines/tax-6c2": {
+  "/characters/sinhvien-ebf": {
+    "__comp": "__comp---site-src-pages-characters-sinhvien-jsc-40-653",
+    "__context": {
+      "plugin": "plugin---abouta-74-d48"
+    },
+    "config": "config---characters-sinhvien-5-e-9-9ef"
+  },
+  "/markdown-page-3d7": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---abouta-74-d48"
+    },
+    "content": "content---markdown-page-393-028"
+  },
+  "/storylines/tax-5f6": {
     "__comp": "__comp---site-src-pages-storylines-tax-jsf-5-e-98b",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tax-context/government-revenue-1e2": {
+  "/tax-context/government-revenue-86c": {
     "__comp": "__comp---site-src-pages-tax-context-government-revenue-js-915-1d5",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tax-context/tax-types-b61": {
+  "/tax-context/tax-types-79b": {
     "__comp": "__comp---site-src-pages-tax-context-tax-types-jsb-66-707",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tax-context/what-is-government-630": {
+  "/tax-context/what-is-government-482": {
     "__comp": "__comp---site-src-pages-tax-context-what-is-government-js-088-f63",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tri-thuc/chinh-tri-350": {
+  "/tri-thuc/chinh-tri-98f": {
     "__comp": "__comp---site-src-pages-tri-thuc-chinh-tri-js-18-f-3db",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tri-thuc/luat-phap-5f3": {
+  "/tri-thuc/luat-phap-0d0": {
     "__comp": "__comp---site-src-pages-tri-thuc-luat-phap-js-88-d-2d7",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/tri-thuc/nhan-quyen-48d": {
+  "/tri-thuc/nhan-quyen-44f": {
     "__comp": "__comp---site-src-pages-tri-thuc-nhan-quyen-js-993-a6d",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/MassEdu/course-tax-003": {
+  "/course-tax-245": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---mass-edu-course-tax-253-762"
+      "plugin": "plugin---course-tax-253-e81"
     }
   },
-  "/MassEdu/course-tax-9b6": {
+  "/course-tax-537": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---mass-edu-course-tax-01-b-37b"
+    "__props": "__props---course-tax-453-cf8"
   },
-  "/MassEdu/course-tax/tags-345": {
+  "/course-tax/tags-f9e": {
     "__comp": "__comp---theme-doc-tags-list-page-372-89e",
-    "__props": "__props---mass-edu-course-tax-tags-546-7cd"
+    "__props": "__props---course-tax-tagsac-2-ac5"
   },
-  "/MassEdu/course-tax/tags/interactive-b0f": {
+  "/course-tax/tags/interactive-20e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-interactivefce-900"
+    "__props": "__props---course-tax-tags-interactive-762-0c1"
   },
-  "/MassEdu/course-tax/tags/ma-số-thuế-58c": {
+  "/course-tax/tags/ma-số-thuế-c28": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-ma-số-thuế-852-d9f"
+    "__props": "__props---course-tax-tags-ma-số-thuế-169-349"
   },
-  "/MassEdu/course-tax/tags/nghia-vụ-thuế-e62": {
+  "/course-tax/tags/nghia-vụ-thuế-6ad": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-nghia-vụ-thuế-28-e-f79"
+    "__props": "__props---course-tax-tags-nghia-vụ-thuế-068-93a"
   },
-  "/MassEdu/course-tax/tags/thực-hanh-04e": {
+  "/course-tax/tags/thực-hanh-898": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-thực-hanh-299-39c"
+    "__props": "__props---course-tax-tags-thực-hanh-5-c-7-bfa"
   },
-  "/MassEdu/course-tax/tags/thuế-421": {
+  "/course-tax/tags/thuế-47c": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-thuếf-55-b40"
+    "__props": "__props---course-tax-tags-thuế-64-b-03d"
   },
-  "/MassEdu/course-tax/tags/tncn-f33": {
+  "/course-tax/tags/tncn-1d4": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-tncn-58-f-139"
+    "__props": "__props---course-tax-tags-tncnc-0-f-803"
   },
-  "/MassEdu/course-tax/tags/vat-0fb": {
+  "/course-tax/tags/vat-42f": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-course-tax-tags-vat-133-be7"
+    "__props": "__props---course-tax-tags-vat-78-b-dab"
   },
-  "/MassEdu/course-tax-68c": {
+  "/course-tax-aa7": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/MassEdu/course-tax/cac-loai-thue-12a": {
+  "/course-tax/cac-loai-thue-e8a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-cac-loai-thue-00-e-369"
+    "content": "content---course-tax-cac-loai-thue-00-e-9d8"
   },
-  "/MassEdu/course-tax/characters/sinh-vien/story-361": {
+  "/course-tax/characters/sinh-vien/story-d22": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-characters-sinh-vien-story-0-bd-edc"
+    "content": "content---course-tax-characters-sinh-vien-story-0-bd-e7c"
   },
-  "/MassEdu/course-tax/chinh-quyen-lay-tien-tu-dau-048": {
+  "/course-tax/chinh-quyen-lay-tien-tu-dau-1b2": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-chinh-quyen-lay-tien-tu-dau-264-23a"
+    "content": "content---course-tax-chinh-quyen-lay-tien-tu-dau-264-a0d"
   },
-  "/MassEdu/course-tax/concepts/salary-tax-calculation-83e": {
+  "/course-tax/concepts/salary-tax-calculation-37e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-concepts-salary-tax-calculation-6-db-2ca"
+    "content": "content---course-tax-concepts-salary-tax-calculation-6-db-79a"
   },
-  "/MassEdu/course-tax/LearningContent-Tax-22a": {
+  "/course-tax/LearningContent-Tax-14a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-learning-content-tax-9-ac-509"
+    "content": "content---course-tax-learning-content-tax-9-ac-4c6"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue-961": {
+  "/course-tax/lessons/ban-dang-dong-thue-1ec": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thuecd-0-836"
+    "content": "content---course-tax-lessons-ban-dang-dong-thuecd-0-3bf"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi-bbf": {
+  "/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi-718": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-a-ban-dang-dong-thue-gid-27-66c"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-a-ban-dang-dong-thue-gid-27-f48"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue-a18": {
+  "/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue-c7c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-b-ai-thuc-su-dong-thue-66-a-c9c"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-b-ai-thuc-su-dong-thue-66-a-5ff"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue-ded": {
+  "/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue-d81": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-c-ganh-thue-7-a-0-791"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-c-ganh-thue-7-a-0-2bf"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue-ff6": {
+  "/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue-a01": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-d-suy-nghi-thuecef-c18"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-d-suy-nghi-thuecef-8c8"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi-63b": {
+  "/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi-248": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-e-thue-la-gibba-abe"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-e-thue-la-gibba-8f4"
   },
-  "/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue-bde": {
+  "/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue-e3f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-ban-dang-dong-thue-f-phan-loai-thue-109-889"
+    "content": "content---course-tax-lessons-ban-dang-dong-thue-f-phan-loai-thue-109-cbb"
   },
-  "/MassEdu/course-tax/lessons/nguyen-tac-thu-thue-914": {
+  "/course-tax/lessons/nguyen-tac-thu-thue-893": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-nguyen-tac-thu-thue-402-633"
+    "content": "content---course-tax-lessons-nguyen-tac-thu-thue-402-8af"
   },
-  "/MassEdu/course-tax/lessons/tai-sao-dong-thue-344": {
+  "/course-tax/lessons/tai-sao-dong-thue-936": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-tai-sao-dong-thued-65-b93"
+    "content": "content---course-tax-lessons-tai-sao-dong-thued-65-85f"
   },
-  "/MassEdu/course-tax/lessons/thue-va-chinh-tri-d95": {
+  "/course-tax/lessons/thue-va-chinh-tri-0aa": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-thue-va-chinh-tri-24-d-121"
+    "content": "content---course-tax-lessons-thue-va-chinh-tri-24-d-d03"
   },
-  "/MassEdu/course-tax/lessons/thue-va-minh-bach-593": {
+  "/course-tax/lessons/thue-va-minh-bach-6d7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-lessons-thue-va-minh-bacha-3-e-498"
+    "content": "content---course-tax-lessons-thue-va-minh-bacha-3-e-fd3"
   },
-  "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes-239": {
+  "/course-tax/modules/module-a-recognizing-daily-taxes-b39": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-modules-module-a-recognizing-daily-taxes-102-828"
+    "content": "content---course-tax-modules-module-a-recognizing-daily-taxes-102-feb"
   },
-  "/MassEdu/course-tax/modules/module-b-tax-id-obligations-b9b": {
+  "/course-tax/modules/module-b-tax-id-obligations-8ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-course-tax-modules-module-b-tax-id-obligationsf-8-d-9f8"
+    "content": "content---course-tax-modules-module-b-tax-id-obligationsf-8-d-3c8"
   },
-  "/MassEdu/knowledge-base-7aa": {
+  "/knowledge-base-893": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---mass-edu-knowledge-baseaba-9ff"
+      "plugin": "plugin---knowledge-baseaba-9ae"
     }
   },
-  "/MassEdu/knowledge-base-293": {
+  "/knowledge-base-00a": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---mass-edu-knowledge-basee-10-d74"
+    "__props": "__props---knowledge-base-069-f4a"
   },
-  "/MassEdu/knowledge-base/tags-e7d": {
+  "/knowledge-base/tags-1b6": {
     "__comp": "__comp---theme-doc-tags-list-page-372-89e",
-    "__props": "__props---mass-edu-knowledge-base-tagsb-7-b-531"
+    "__props": "__props---knowledge-base-tags-0-f-6-c16"
   },
-  "/MassEdu/knowledge-base/tags/bai-dọc-them-154": {
+  "/knowledge-base/tags/bai-dọc-them-853": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-bai-dọc-them-165-e21"
+    "__props": "__props---knowledge-base-tags-bai-dọc-themb-37-bfa"
   },
-  "/MassEdu/knowledge-base/tags/binh-dẳng-f62": {
+  "/knowledge-base/tags/binh-dẳng-634": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-binh-dẳnge-55-63d"
+    "__props": "__props---knowledge-base-tags-binh-dẳngdc-7-ede"
   },
-  "/MassEdu/knowledge-base/tags/chinh-quyền-87c": {
+  "/knowledge-base/tags/chinh-quyền-eaf": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-chinh-quyền-444-722"
+    "__props": "__props---knowledge-base-tags-chinh-quyền-494-b18"
   },
-  "/MassEdu/knowledge-base/tags/chinh-trị-9be": {
+  "/knowledge-base/tags/chinh-trị-d5e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-chinh-trịf-24-939"
+    "__props": "__props---knowledge-base-tags-chinh-trị-1-b-9-8d0"
   },
-  "/MassEdu/knowledge-base/tags/chương-2-4fd": {
+  "/knowledge-base/tags/chương-2-446": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-chương-2538-ad9"
+    "__props": "__props---knowledge-base-tags-chương-254-a-c48"
   },
-  "/MassEdu/knowledge-base/tags/cong-ước-1f1": {
+  "/knowledge-base/tags/cong-ước-ef8": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-cong-ướcc-47-f74"
+    "__props": "__props---knowledge-base-tags-cong-ước-9-c-2-8d0"
   },
-  "/MassEdu/knowledge-base/tags/diễn-giải-c21": {
+  "/knowledge-base/tags/diễn-giải-7ac": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-diễn-giải-24-a-50e"
+    "__props": "__props---knowledge-base-tags-diễn-giải-963-a65"
   },
-  "/MassEdu/knowledge-base/tags/dịnh-nghia-3c9": {
+  "/knowledge-base/tags/dịnh-nghia-ae6": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-dịnh-nghiafdf-895"
+    "__props": "__props---knowledge-base-tags-dịnh-nghia-36-d-467"
   },
-  "/MassEdu/knowledge-base/tags/giao-dục-dd4": {
+  "/knowledge-base/tags/giao-dục-a2f": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-giao-dục-078-071"
+    "__props": "__props---knowledge-base-tags-giao-dụcbba-a8c"
   },
-  "/MassEdu/knowledge-base/tags/giới-hạn-quyền-ba5": {
+  "/knowledge-base/tags/giới-hạn-quyền-5fb": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-giới-hạn-quyền-398-071"
+    "__props": "__props---knowledge-base-tags-giới-hạn-quyềnf-5-d-8a8"
   },
-  "/MassEdu/knowledge-base/tags/giới-thiệu-654": {
+  "/knowledge-base/tags/giới-thiệu-d05": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-giới-thiệu-742-f8a"
+    "__props": "__props---knowledge-base-tags-giới-thiệuf-91-2d8"
   },
-  "/MassEdu/knowledge-base/tags/hiến-phap-3f7": {
+  "/knowledge-base/tags/hiến-phap-885": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-hiến-phapeff-94c"
+    "__props": "__props---knowledge-base-tags-hiến-phapc-97-e19"
   },
-  "/MassEdu/knowledge-base/tags/hỏi-dap-c11": {
+  "/knowledge-base/tags/hỏi-dap-240": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-hỏi-dap-3-c-1-ca4"
+    "__props": "__props---knowledge-base-tags-hỏi-dapde-4-916"
   },
-  "/MassEdu/knowledge-base/tags/iccpr-988": {
+  "/knowledge-base/tags/iccpr-3fa": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-iccpr-042-93a"
+    "__props": "__props---knowledge-base-tags-iccpr-8-f-5-737"
   },
-  "/MassEdu/knowledge-base/tags/khẩn-cấp-403": {
+  "/knowledge-base/tags/khẩn-cấp-e31": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-khẩn-cấp-3-af-bf5"
+    "__props": "__props---knowledge-base-tags-khẩn-cấp-785-e64"
   },
-  "/MassEdu/knowledge-base/tags/khong-phan-biệt-dối-xử-2ba": {
+  "/knowledge-base/tags/khong-phan-biệt-dối-xử-368": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-khong-phan-biệt-dối-xửeb-1-7d1"
+    "__props": "__props---knowledge-base-tags-khong-phan-biệt-dối-xử-918-8c1"
   },
-  "/MassEdu/knowledge-base/tags/lịch-sử-4c1": {
+  "/knowledge-base/tags/lịch-sử-9eb": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-lịch-sử-12-f-852"
+    "__props": "__props---knowledge-base-tags-lịch-sửe-9-f-83a"
   },
-  "/MassEdu/knowledge-base/tags/luật-nhan-quyền-11b": {
+  "/knowledge-base/tags/luật-nhan-quyền-613": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-luật-nhan-quyềnede-87d"
+    "__props": "__props---knowledge-base-tags-luật-nhan-quyềncf-8-8c1"
   },
-  "/MassEdu/knowledge-base/tags/luật-phap-1f4": {
+  "/knowledge-base/tags/luật-phap-804": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-luật-phap-839-51e"
+    "__props": "__props---knowledge-base-tags-luật-phap-335-dae"
   },
-  "/MassEdu/knowledge-base/tags/luật-quốc-tế-32e": {
+  "/knowledge-base/tags/luật-quốc-tế-f2e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-luật-quốc-tế-1-fe-710"
+    "__props": "__props---knowledge-base-tags-luật-quốc-tế-401-57e"
   },
-  "/MassEdu/knowledge-base/tags/nghia-vụ-6ae": {
+  "/knowledge-base/tags/nghia-vụ-e5b": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-nghia-vụe-54-066"
+    "__props": "__props---knowledge-base-tags-nghia-vụbaf-8b1"
   },
-  "/MassEdu/knowledge-base/tags/nguyen-tắc-59e": {
+  "/knowledge-base/tags/nguyen-tắc-d89": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-nguyen-tắc-2-df-83f"
+    "__props": "__props---knowledge-base-tags-nguyen-tắc-83-b-5f9"
   },
-  "/MassEdu/knowledge-base/tags/nha-nước-029": {
+  "/knowledge-base/tags/nha-nước-b6d": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-nha-nước-054-e3d"
+    "__props": "__props---knowledge-base-tags-nha-nướcacc-1ed"
   },
-  "/MassEdu/knowledge-base/tags/nhan-quyền-3a1": {
+  "/knowledge-base/tags/nhan-quyền-ecd": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-nhan-quyền-303-153"
+    "__props": "__props---knowledge-base-tags-nhan-quyềnab-1-461"
   },
-  "/MassEdu/knowledge-base/tags/phan-tich-e3e": {
+  "/knowledge-base/tags/phan-tich-26e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-phan-tichcfc-011"
+    "__props": "__props---knowledge-base-tags-phan-ticha-50-3e6"
   },
-  "/MassEdu/knowledge-base/tags/phap-luật-e4c": {
+  "/knowledge-base/tags/phap-luật-b8f": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-phap-luậtc-9-c-f58"
+    "__props": "__props---knowledge-base-tags-phap-luật-7-ba-7c1"
   },
-  "/MassEdu/knowledge-base/tags/quiz-627": {
+  "/knowledge-base/tags/quiz-ac6": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quiza-02-e2a"
+    "__props": "__props---knowledge-base-tags-quiz-717-c7d"
   },
-  "/MassEdu/knowledge-base/tags/quyền-chinh-trị-da2": {
+  "/knowledge-base/tags/quyền-chinh-trị-737": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quyền-chinh-trị-71-d-a01"
+    "__props": "__props---knowledge-base-tags-quyền-chinh-trị-7-b-8-3a7"
   },
-  "/MassEdu/knowledge-base/tags/quyền-cơ-bản-a89": {
+  "/knowledge-base/tags/quyền-cơ-bản-ba6": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quyền-cơ-bảnb-58-7cb"
+    "__props": "__props---knowledge-base-tags-quyền-cơ-bản-627-5b1"
   },
-  "/MassEdu/knowledge-base/tags/quyền-dan-sự-965": {
+  "/knowledge-base/tags/quyền-dan-sự-f43": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quyền-dan-sự-30-b-773"
+    "__props": "__props---knowledge-base-tags-quyền-dan-sự-919-2bb"
   },
-  "/MassEdu/knowledge-base/tags/quyền-esc-dfc": {
+  "/knowledge-base/tags/quyền-esc-658": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quyền-esc-514-6d9"
+    "__props": "__props---knowledge-base-tags-quyền-esc-034-6c0"
   },
-  "/MassEdu/knowledge-base/tags/quyền-trẻ-em-fd2": {
+  "/knowledge-base/tags/quyền-trẻ-em-540": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-quyền-trẻ-em-731-d62"
+    "__props": "__props---knowledge-base-tags-quyền-trẻ-em-2-e-5-61e"
   },
-  "/MassEdu/knowledge-base/tags/triết-học-3b3": {
+  "/knowledge-base/tags/triết-học-868": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-triết-học-4-a-2-d37"
+    "__props": "__props---knowledge-base-tags-triết-họcc-41-00c"
   },
-  "/MassEdu/knowledge-base/tags/tuyen-ngon-nhan-quyền-a14": {
+  "/knowledge-base/tags/tuyen-ngon-nhan-quyền-c84": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-tuyen-ngon-nhan-quyền-61-a-887"
+    "__props": "__props---knowledge-base-tags-tuyen-ngon-nhan-quyền-4-e-2-1e3"
   },
-  "/MassEdu/knowledge-base/tags/vi-phạm-435": {
+  "/knowledge-base/tags/vi-phạm-703": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---mass-edu-knowledge-base-tags-vi-phạm-9-d-1-7d3"
+    "__props": "__props---knowledge-base-tags-vi-phạmfcb-9ab"
   },
-  "/MassEdu/knowledge-base-cc5": {
+  "/knowledge-base-ab4": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung-0ee": {
+  "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung-860": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-1-7-docthem-tuyenngon-nguyentac-longkhoandung-280-06b"
+    "content": "content---knowledge-base-1-7-docthem-tuyenngon-nguyentac-longkhoandung-280-93e"
   },
-  "/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte-e73": {
+  "/knowledge-base/2.1a-luat-nhanquyen-quocte-c43": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-2-1-a-luat-nhanquyen-quocte-420-9a7"
+    "content": "content---knowledge-base-2-1-a-luat-nhanquyen-quocte-420-e90"
   },
-  "/MassEdu/knowledge-base/chinh-quyen-dinh-nghia-1b8": {
+  "/knowledge-base/chinh-quyen-dinh-nghia-7a6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-chinh-quyen-dinh-nghiaaba-41a"
+    "content": "content---knowledge-base-chinh-quyen-dinh-nghiaaba-06e"
   },
-  "/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri-9a2": {
+  "/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri-a59": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-cong-uoc-quoc-te-quyen-dansu-chinhtri-9-ce-e75"
+    "content": "content---knowledge-base-cong-uoc-quoc-te-quyen-dansu-chinhtri-9-ce-b80"
   },
-  "/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh-9f8": {
+  "/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh-777": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-cong-uoc-quocte-quyen-kinhte-xh-vh-809-d37"
+    "content": "content---knowledge-base-cong-uoc-quocte-quyen-kinhte-xh-vh-809-1dc"
   },
-  "/MassEdu/knowledge-base/docthem-quyen-giaoduc-c2f": {
+  "/knowledge-base/docthem-quyen-giaoduc-f84": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-docthem-quyen-giaoduc-8-c-8-3ed"
+    "content": "content---knowledge-base-docthem-quyen-giaoduc-8-c-8-225"
   },
-  "/MassEdu/knowledge-base/giay-phep-kinh-doanh-b71": {
+  "/knowledge-base/giay-phep-kinh-doanh-2c3": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-giay-phep-kinh-doanhe-33-9f8"
+    "content": "content---knowledge-base-giay-phep-kinh-doanhe-33-369"
   },
-  "/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn-544": {
+  "/knowledge-base/giay-phep-kinh-doanh-vn-b8a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-giay-phep-kinh-doanh-vn-568-bbd"
+    "content": "content---knowledge-base-giay-phep-kinh-doanh-vn-568-c54"
   },
-  "/MassEdu/knowledge-base/gioi-han-quyen-77a": {
+  "/knowledge-base/gioi-han-quyen-aa5": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-gioi-han-quyen-606-d74"
+    "content": "content---knowledge-base-gioi-han-quyen-606-281"
   },
-  "/MassEdu/knowledge-base/gioi-thieu-chuong-2-d22": {
+  "/knowledge-base/gioi-thieu-chuong-2-1b4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-gioi-thieu-chuong-2-b-02-ac0"
+    "content": "content---knowledge-base-gioi-thieu-chuong-2-b-02-c11"
   },
-  "/MassEdu/knowledge-base/hien-phap-49a": {
+  "/knowledge-base/hien-phap-55e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-hien-phap-7-a-3-1e6"
+    "content": "content---knowledge-base-hien-phap-7-a-3-847"
   },
-  "/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen-45c": {
+  "/knowledge-base/hieu-ve-vi-pham-nhanquyen-81f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-hieu-ve-vi-pham-nhanquyen-3-ac-28b"
+    "content": "content---knowledge-base-hieu-ve-vi-pham-nhanquyen-3-ac-a2f"
   },
-  "/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen-961": {
+  "/knowledge-base/nghia-vu-nhanuoc-nhan-quyen-0b6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-nghia-vu-nhanuoc-nhan-quyen-4-c-9-4c6"
+    "content": "content---knowledge-base-nghia-vu-nhanuoc-nhan-quyen-4-c-9-f72"
   },
-  "/MassEdu/knowledge-base/nhan-quyen-dinh-nghia-39a": {
+  "/knowledge-base/nhan-quyen-dinh-nghia-50e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-nhan-quyen-dinh-nghia-6-ff-d37"
+    "content": "content---knowledge-base-nhan-quyen-dinh-nghia-6-ff-7bc"
   },
-  "/MassEdu/knowledge-base/quyen-kinhte-xahoi-vanhoa-f23": {
+  "/knowledge-base/quyen-kinhte-xahoi-vanhoa-7ab": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-quyen-kinhte-xahoi-vanhoa-33-a-a89"
+    "content": "content---knowledge-base-quyen-kinhte-xahoi-vanhoa-33-a-2b7"
   },
-  "/MassEdu/knowledge-base/thue-dinh-nghia-5b9": {
+  "/knowledge-base/thue-dinh-nghia-f8d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-thue-dinh-nghia-970-0ae"
+    "content": "content---knowledge-base-thue-dinh-nghia-970-624"
   },
-  "/MassEdu/knowledge-base/tuan1/binh-dang-71e": {
+  "/knowledge-base/tuan1/binh-dang-609": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-binh-dang-2-b-6-5cb"
+    "content": "content---knowledge-base-tuan-1-binh-dang-2-b-6-22f"
   },
-  "/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon-31c": {
+  "/knowledge-base/tuan1/dien-giai-tuyen-ngon-889": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-dien-giai-tuyen-ngonf-43-f7c"
+    "content": "content---knowledge-base-tuan-1-dien-giai-tuyen-ngonf-43-9a2"
   },
-  "/MassEdu/knowledge-base/tuan1/dinh-nghia-c5b": {
+  "/knowledge-base/tuan1/dinh-nghia-2bf": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-dinh-nghiaf-31-a54"
+    "content": "content---knowledge-base-tuan-1-dinh-nghiaf-31-27f"
   },
-  "/MassEdu/knowledge-base/tuan1/gioi-thieu-cd6": {
+  "/knowledge-base/tuan1/gioi-thieu-1f0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-gioi-thieubdd-6a5"
+    "content": "content---knowledge-base-tuan-1-gioi-thieubdd-959"
   },
-  "/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen-67f": {
+  "/knowledge-base/tuan1/hoi-dap-nhan-quyen-113": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-hoi-dap-nhan-quyen-90-f-fa6"
+    "content": "content---knowledge-base-tuan-1-hoi-dap-nhan-quyen-90-f-1f6"
   },
-  "/MassEdu/knowledge-base/tuan1/luoc-su-2fb": {
+  "/knowledge-base/tuan1/luoc-su-6df": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-luoc-sude-8-1ab"
+    "content": "content---knowledge-base-tuan-1-luoc-sude-8-167"
   },
-  "/MassEdu/knowledge-base/tuan1/quiz-hr-5e4": {
+  "/knowledge-base/tuan1/quiz-hr-a83": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-quiz-hra-87-83e"
+    "content": "content---knowledge-base-tuan-1-quiz-hra-87-8be"
   },
-  "/MassEdu/knowledge-base/tuan1/quiz-pol-d49": {
+  "/knowledge-base/tuan1/quiz-pol-615": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-quiz-polba-7-bdb"
+    "content": "content---knowledge-base-tuan-1-quiz-polba-7-791"
   },
-  "/MassEdu/knowledge-base/tuan1/quyen-dan-su-chinh-tri-62d": {
+  "/knowledge-base/tuan1/quyen-dan-su-chinh-tri-7fa": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuan-1-quyen-dan-su-chinh-tri-9-a-2-2d2"
+    "content": "content---knowledge-base-tuan-1-quyen-dan-su-chinh-tri-9-a-2-869"
   },
-  "/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen-1af": {
+  "/knowledge-base/tuyen-ngon-nhan-quyen-651": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mass-edu-knowledge-base-tuyen-ngon-nhan-quyen-57-b-d3d"
+    "content": "content---knowledge-base-tuyen-ngon-nhan-quyen-57-b-5c4"
   },
-  "/MassEdu/-99d": {
+  "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "plugin---mass-edu-characters-sinhviena-74-52f"
+      "plugin": "plugin---abouta-74-d48"
     },
-    "config": "config---mass-edu-characters-sinhvien-5-e-9-b21"
+    "config": "config---characters-sinhvien-5-e-9-9ef"
   }
 }

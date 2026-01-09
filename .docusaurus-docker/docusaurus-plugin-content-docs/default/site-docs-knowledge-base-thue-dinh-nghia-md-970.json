@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/thue-dinh-nghia.md",
   "sourceDirName": ".",
   "slug": "/thue-dinh-nghia",
-  "permalink": "/MassEdu/knowledge-base/thue-dinh-nghia",
+  "permalink": "/knowledge-base/thue-dinh-nghia",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/thue-dinh-nghia.md",
@@ -13,7 +13,7 @@
     {
       "inline": true,
       "label": "luật pháp",
-      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+      "permalink": "/knowledge-base/tags/luật-phap"
     }
   ],
   "version": "current",
@@ -28,10 +28,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Nhân quyền là gì?",
-    "permalink": "/MassEdu/knowledge-base/nhan-quyen-dinh-nghia"
+    "permalink": "/knowledge-base/nhan-quyen-dinh-nghia"
   },
   "next": {
     "title": "Tuyên ngôn nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen"
+    "permalink": "/knowledge-base/tuyen-ngon-nhan-quyen"
   }
 }

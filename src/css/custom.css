@@ -383,10 +383,22 @@ blockquote {
   background: rgba(26, 24, 22, 0.95);
 }
 
-.navbar__logo {
+.navbar__logo img {
   height: 32px;
+  width: auto;
+  max-width: 150px;
+  display: inline-block;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.navbar__logo {
+  display: flex !important;
+  align-items: center;
   transition: transform var(--transition-base);
   animation: logoPopIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .navbar__logo:hover {
@@ -990,71 +1002,54 @@ pre code {
     min-width: 44px;
   }
 
-  /* Enhanced active states for touch feedback */
+  /* Simple opacity-based touch feedback - clean and clear */
   button:active,
   .button:active,
-  a:active,
   [role="button"]:active {
-    transform: scale(0.97);
-    transition: transform 0.1s ease;
+    opacity: 0.7;
+    transition: opacity 0.1s ease;
   }
 
-  /* Primary button active state */
+  /* Primary button active state - subtle color change */
   .button--primary:active {
     background-color: var(--color-primary-active);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  /* Logo touch feedback */
+  /* Logo touch feedback - simple opacity */
   .navbar__logo:active {
-    transform: scale(0.95);
-    transition: transform 0.1s ease;
+    opacity: 0.7;
   }
 
-  /* Card touch feedback */
+  /* Card touch feedback - simple opacity */
   .card:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.1s ease;
+    opacity: 0.85;
   }
 
-  /* Link touch feedback with visual highlight */
+  /* Link touch feedback - simple opacity */
   a:active {
-    color: var(--color-primary-active);
-    background-color: var(--color-primary-muted);
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin: -2px -4px;
+    opacity: 0.7;
   }
 
-  /* Slider touch enhancements */
-  input[type="range"]:active {
-    cursor: grabbing;
-  }
-
+  /* Slider touch enhancements - no transform, just visual cue */
   input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.2);
-    transition: transform 0.1s ease;
+    background-color: var(--color-primary-active);
   }
 
   input[type="range"]::-moz-range-thumb:active {
-    transform: scale(1.2);
-    transition: transform 0.1s ease;
+    background-color: var(--color-primary-active);
   }
 
   /* Story choice buttons touch feedback */
   .choiceButton:active,
   .storyChoice:active {
     background-color: var(--color-primary-active);
-    transform: scale(0.98);
-    transition: all 0.1s ease;
+    opacity: 0.9;
   }
 
   /* Progress buttons touch feedback */
   .progressButton:active {
     background-color: var(--bg-tertiary);
     border-color: var(--color-primary);
-    transform: scale(0.97);
   }
 
   /* Disable hover effects on touch devices (prevent sticky hover states) */
@@ -1063,6 +1058,7 @@ pre code {
   a:hover,
   .card:hover {
     transform: none;
+    opacity: 1;
   }
 }
 
@@ -1084,5 +1080,153 @@ pre code {
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix content overflow and cropping on mobile */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Ensure containers don't overflow */
+  .container {
+    max-width: 100%;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    overflow-x: hidden;
+  }
+
+  /* Fix button sizing on mobile */
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    white-space: normal;
+    word-wrap: break-word;
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Homepage buttons responsive */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+  }
+
+  .buttons .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Fix cards and content boxes */
+  .card,
+  [class*="card"] {
+    max-width: 100%;
+    overflow: hidden;
+    padding: var(--space-sm);
+  }
+
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Fix table overflow */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix hero section on mobile */
+  .hero {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Ensure modals and overlays are properly sized */
+  [role="dialog"],
+  .modal {
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Fix navbar on mobile */
+  .navbar {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* ============================================
+   TRI THUC PAGES HERO SECTION
+   ============================================ */
+
+/* Specific styling for tri-thuc pages hero sections - excludes homepage header */
+main > .hero--primary.hero,
+main > div.hero.hero--primary,
+main .hero.hero--primary:not(header .hero) {
+  background-color: rgba(235, 55, 36, 0.1) !important;
+  background-image: none !important;
+  color: #1a1816 !important;
+  padding: 96px 32px !important;
+  border-bottom: 3px solid #eb3724 !important;
+}
+
+main > .hero--primary .hero__title,
+main > div.hero.hero--primary .hero__title,
+main .hero.hero--primary:not(header .hero) .hero__title {
+  color: #1a1816 !important;
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 700 !important;
+  margin-bottom: 32px !important;
+  text-shadow: none !important;
+}
+
+main > .hero--primary .hero__subtitle,
+main > div.hero.hero--primary .hero__subtitle,
+main .hero.hero--primary:not(header .hero) .hero__subtitle {
+  color: #4a4745 !important;
+  font-size: clamp(1rem, 2vw, 1.25rem) !important;
+  line-height: 1.6 !important;
+  max-width: 56ch !important;
+  margin: 0 auto !important;
+  text-shadow: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  main > .hero--primary.hero,
+  main > div.hero.hero--primary,
+  main .hero.hero--primary:not(header .hero) {
+    padding: 64px 16px !important;
+  }
+
+  main > .hero--primary .hero__title,
+  main > div.hero.hero--primary .hero__title,
+  main .hero.hero--primary:not(header .hero) .hero__title {
+    font-size: 2rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  main > .hero--primary .hero__subtitle,
+  main > div.hero.hero--primary .hero__subtitle,
+  main .hero.hero--primary:not(header .hero) .hero__subtitle {
+    font-size: 1rem !important;
   }
 }

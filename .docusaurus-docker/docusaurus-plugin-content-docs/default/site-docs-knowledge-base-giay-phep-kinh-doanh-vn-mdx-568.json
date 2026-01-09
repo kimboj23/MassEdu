@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/giay-phep-kinh-doanh-vn.mdx",
   "sourceDirName": ".",
   "slug": "/giay-phep-kinh-doanh-vn",
-  "permalink": "/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn",
+  "permalink": "/knowledge-base/giay-phep-kinh-doanh-vn",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/giay-phep-kinh-doanh-vn.mdx",
@@ -13,7 +13,7 @@
     {
       "inline": true,
       "label": "luật pháp",
-      "permalink": "/MassEdu/knowledge-base/tags/luật-phap"
+      "permalink": "/knowledge-base/tags/luật-phap"
     }
   ],
   "version": "current",
@@ -29,10 +29,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Quiz Chính trị và Hiến pháp",
-    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol"
+    "permalink": "/knowledge-base/tuan1/quiz-pol"
   },
   "next": {
     "title": "Quiz Nhân quyền cơ bản",
-    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-hr"
+    "permalink": "/knowledge-base/tuan1/quiz-hr"
   }
 }

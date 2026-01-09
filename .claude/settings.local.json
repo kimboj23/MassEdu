@@ -32,7 +32,8 @@
       "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\InteractivityProvider\" rmdir /s /q \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\InteractivityProvider\")",
       "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\WaveAnimation\" rmdir /s /q \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\src\\\\components\\\\WaveAnimation\")",
       "Bash(if exist \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\docs\\\\INTERACTIVITY.md\" del \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\docs\\\\INTERACTIVITY.md\")",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(del \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\DOCKER.md\" \"c:\\\\Users\\\\NinaTran\\\\Downloads\\\\MassEdu\\\\MassEdu\\\\DOCKER-TROUBLESHOOTING.md\")"
     ],
     "deny": [],
     "ask": []

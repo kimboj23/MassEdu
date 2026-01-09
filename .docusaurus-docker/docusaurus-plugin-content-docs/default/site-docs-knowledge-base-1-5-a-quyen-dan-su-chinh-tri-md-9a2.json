@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/1.5a-quyen-dan-su-chinh-tri.md",
   "sourceDirName": ".",
   "slug": "/tuan1/quyen-dan-su-chinh-tri",
-  "permalink": "/MassEdu/knowledge-base/tuan1/quyen-dan-su-chinh-tri",
+  "permalink": "/knowledge-base/tuan1/quyen-dan-su-chinh-tri",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.5a-quyen-dan-su-chinh-tri.md",
@@ -13,17 +13,17 @@
     {
       "inline": true,
       "label": "quyền dân sự",
-      "permalink": "/MassEdu/knowledge-base/tags/quyền-dan-sự"
+      "permalink": "/knowledge-base/tags/quyền-dan-sự"
     },
     {
       "inline": true,
       "label": "quyền chính trị",
-      "permalink": "/MassEdu/knowledge-base/tags/quyền-chinh-trị"
+      "permalink": "/knowledge-base/tags/quyền-chinh-trị"
     },
     {
       "inline": true,
       "label": "ICCPR",
-      "permalink": "/MassEdu/knowledge-base/tags/iccpr"
+      "permalink": "/knowledge-base/tags/iccpr"
     }
   ],
   "version": "current",
@@ -48,10 +48,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "1.4b. Một số diễn giải về Tuyên ngôn nhân quyền phổ quát",
-    "permalink": "/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon"
+    "permalink": "/knowledge-base/tuan1/dien-giai-tuyen-ngon"
   },
   "next": {
     "title": "Công ước quốc tế về các quyền dân sự và chính trị",
-    "permalink": "/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri"
+    "permalink": "/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/2.0-gioi-thieu.md",
   "sourceDirName": ".",
   "slug": "/gioi-thieu-chuong-2",
-  "permalink": "/MassEdu/knowledge-base/gioi-thieu-chuong-2",
+  "permalink": "/knowledge-base/gioi-thieu-chuong-2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/2.0-gioi-thieu.md",
@@ -13,22 +13,22 @@
     {
       "inline": true,
       "label": "giới thiệu",
-      "permalink": "/MassEdu/knowledge-base/tags/giới-thiệu"
+      "permalink": "/knowledge-base/tags/giới-thiệu"
     },
     {
       "inline": true,
       "label": "chương 2",
-      "permalink": "/MassEdu/knowledge-base/tags/chương-2"
+      "permalink": "/knowledge-base/tags/chương-2"
     },
     {
       "inline": true,
       "label": "luật nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/luật-nhan-quyền"
+      "permalink": "/knowledge-base/tags/luật-nhan-quyền"
     },
     {
       "inline": true,
       "label": "vi phạm",
-      "permalink": "/MassEdu/knowledge-base/tags/vi-phạm"
+      "permalink": "/knowledge-base/tags/vi-phạm"
     }
   ],
   "version": "current",
@@ -54,10 +54,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "1.0 Giới thiệu về nhân quyền",
-    "permalink": "/MassEdu/knowledge-base/tuan1/gioi-thieu"
+    "permalink": "/knowledge-base/tuan1/gioi-thieu"
   },
   "next": {
     "title": "Quiz Chính trị và Hiến pháp",
-    "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol"
+    "permalink": "/knowledge-base/tuan1/quiz-pol"
   }
 }

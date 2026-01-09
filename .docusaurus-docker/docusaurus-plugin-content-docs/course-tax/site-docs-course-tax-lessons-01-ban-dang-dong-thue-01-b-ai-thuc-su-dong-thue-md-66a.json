@@ -5,7 +5,7 @@
   "source": "@site/docs/course-tax/lessons/01-ban-dang-dong-thue/01-b-ai-thuc-su-dong-thue.md",
   "sourceDirName": "lessons/01-ban-dang-dong-thue",
   "slug": "/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
-  "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
+  "permalink": "/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "courseTax",
   "previous": {
     "title": "Bạn đang đóng thuế gì?",
-    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi"
+    "permalink": "/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi"
   },
   "next": {
     "title": "Ai thực sự gánh chịu thuế?",
-    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue"
+    "permalink": "/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue"
   }
 }

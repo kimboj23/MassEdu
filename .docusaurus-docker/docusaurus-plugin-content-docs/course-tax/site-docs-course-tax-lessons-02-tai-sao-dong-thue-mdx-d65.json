@@ -5,7 +5,7 @@
   "source": "@site/docs/course-tax/lessons/02-tai-sao-dong-thue.mdx",
   "sourceDirName": "lessons",
   "slug": "/lessons/tai-sao-dong-thue",
-  "permalink": "/MassEdu/course-tax/lessons/tai-sao-dong-thue",
+  "permalink": "/course-tax/lessons/tai-sao-dong-thue",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -19,10 +19,10 @@
   "sidebar": "courseTax",
   "previous": {
     "title": "Hãy suy nghĩ về thuế",
-    "permalink": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue"
+    "permalink": "/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue"
   },
   "next": {
     "title": "4. Nguyên tắc thu thuế",
-    "permalink": "/MassEdu/course-tax/lessons/nguyen-tac-thu-thue"
+    "permalink": "/course-tax/lessons/nguyen-tac-thu-thue"
   }
 }

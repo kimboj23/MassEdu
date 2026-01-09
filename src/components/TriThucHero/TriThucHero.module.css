@@ -1,0 +1,39 @@
+.triThucHero {
+  background-color: rgba(235, 55, 36, 0.1);
+  color: var(--text-primary);
+  padding: 96px 32px;
+  border-bottom: 3px solid var(--color-primary);
+  text-align: left;
+}
+
+.triThucHeroTitle {
+  color: var(--text-primary);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--weight-bold);
+  margin-bottom: 32px;
+  text-shadow: none;
+}
+
+.triThucHeroSubtitle {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: var(--line-height-relaxed);
+  max-width: 56ch;
+  margin: 0;
+  text-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  .triThucHero {
+    padding: 64px 16px;
+  }
+
+  .triThucHeroTitle {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .triThucHeroSubtitle {
+    font-size: 1rem;
+  }
+}

@@ -10,13 +10,22 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
+  const handleScrollToStorylines = (e) => {
+    e.preventDefault();
+    const storylinesSection = document.getElementById('storylines');
+    if (storylinesSection) {
+      storylinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title display">
-          Học về quyền<br />
-          và trách nhiệm<br />
-          công dân
+          Tép riu<br />
+          stép up<br />
+          stép out
         </Heading>
         <p className="hero__subtitle lead">
           TepUp là nơi nằm ngoài ao làng quen thuộc,
@@ -24,14 +33,14 @@ function HomepageHeader() {
           thể hiện chính kiến một cách an toàn.
         </p>
         <div className={styles.buttons}>
-          <Link
+          <button
             className="button button--primary button--lg"
-            to="#storylines">
+            onClick={handleScrollToStorylines}>
             Bắt đầu học
-          </Link>
+          </button>
           <Link
             className="button button--secondary button--lg"
-            to="/knowledge-base/1.0-gioi-thieu">
+            to="/about">
             Tìm hiểu thêm
           </Link>
         </div>

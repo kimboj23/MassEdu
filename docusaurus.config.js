@@ -15,10 +15,10 @@ const config = {
   favicon: 'img/tepup_logo.png',
 
   // Set the production url of your site here
-  url: 'https://kimboj23.github.io',
+  url: 'https://www.tepup.space',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/MassEdu/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'kimboj23', // Your GitHub username.

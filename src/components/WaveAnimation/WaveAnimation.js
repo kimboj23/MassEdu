@@ -11,11 +11,34 @@ export default function WaveAnimation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      setScrollY(window.scrollY || window.pageYOffset || document.documentElement.scrollTop);
     };
 
+    // Initial call to set scrollY on mount
+    handleScroll();
+
+    // Add multiple scroll event listeners for better mobile support
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Also listen for touchmove as a fallback on mobile
+    let ticking = false;
+    const handleTouchScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('touchmove', handleTouchScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleTouchScroll);
+    };
   }, []);
 
   // Calculate wave animation based on scroll position

@@ -3,239 +3,244 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/MassEdu/__docusaurus/debug',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug', '1fd'),
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '5ff'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/config',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/config', 'ecf'),
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/content',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/content', '548'),
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/globalData',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/globalData', 'abf'),
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/metadata',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/metadata', 'e1b'),
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/registry',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/registry', '6e0'),
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
     exact: true
   },
   {
-    path: '/MassEdu/__docusaurus/debug/routes',
-    component: ComponentCreator('/MassEdu/__docusaurus/debug/routes', '167'),
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
     exact: true
   },
   {
-    path: '/MassEdu/characters/sinhvien',
-    component: ComponentCreator('/MassEdu/characters/sinhvien', '06d'),
+    path: '/about',
+    component: ComponentCreator('/about', '8b4'),
     exact: true
   },
   {
-    path: '/MassEdu/markdown-page',
-    component: ComponentCreator('/MassEdu/markdown-page', 'b0c'),
+    path: '/characters/sinhvien',
+    component: ComponentCreator('/characters/sinhvien', 'ebf'),
     exact: true
   },
   {
-    path: '/MassEdu/storylines/tax',
-    component: ComponentCreator('/MassEdu/storylines/tax', '6c2'),
+    path: '/markdown-page',
+    component: ComponentCreator('/markdown-page', '3d7'),
     exact: true
   },
   {
-    path: '/MassEdu/tax-context/government-revenue',
-    component: ComponentCreator('/MassEdu/tax-context/government-revenue', '1e2'),
+    path: '/storylines/tax',
+    component: ComponentCreator('/storylines/tax', '5f6'),
     exact: true
   },
   {
-    path: '/MassEdu/tax-context/tax-types',
-    component: ComponentCreator('/MassEdu/tax-context/tax-types', 'b61'),
+    path: '/tax-context/government-revenue',
+    component: ComponentCreator('/tax-context/government-revenue', '86c'),
     exact: true
   },
   {
-    path: '/MassEdu/tax-context/what-is-government',
-    component: ComponentCreator('/MassEdu/tax-context/what-is-government', '630'),
+    path: '/tax-context/tax-types',
+    component: ComponentCreator('/tax-context/tax-types', '79b'),
     exact: true
   },
   {
-    path: '/MassEdu/tri-thuc/chinh-tri',
-    component: ComponentCreator('/MassEdu/tri-thuc/chinh-tri', '350'),
+    path: '/tax-context/what-is-government',
+    component: ComponentCreator('/tax-context/what-is-government', '482'),
     exact: true
   },
   {
-    path: '/MassEdu/tri-thuc/luat-phap',
-    component: ComponentCreator('/MassEdu/tri-thuc/luat-phap', '5f3'),
+    path: '/tri-thuc/chinh-tri',
+    component: ComponentCreator('/tri-thuc/chinh-tri', '98f'),
     exact: true
   },
   {
-    path: '/MassEdu/tri-thuc/nhan-quyen',
-    component: ComponentCreator('/MassEdu/tri-thuc/nhan-quyen', '48d'),
+    path: '/tri-thuc/luat-phap',
+    component: ComponentCreator('/tri-thuc/luat-phap', '0d0'),
     exact: true
   },
   {
-    path: '/MassEdu/course-tax',
-    component: ComponentCreator('/MassEdu/course-tax', '003'),
+    path: '/tri-thuc/nhan-quyen',
+    component: ComponentCreator('/tri-thuc/nhan-quyen', '44f'),
+    exact: true
+  },
+  {
+    path: '/course-tax',
+    component: ComponentCreator('/course-tax', '245'),
     routes: [
       {
-        path: '/MassEdu/course-tax',
-        component: ComponentCreator('/MassEdu/course-tax', '9b6'),
+        path: '/course-tax',
+        component: ComponentCreator('/course-tax', '537'),
         routes: [
           {
-            path: '/MassEdu/course-tax/tags',
-            component: ComponentCreator('/MassEdu/course-tax/tags', '345'),
+            path: '/course-tax/tags',
+            component: ComponentCreator('/course-tax/tags', 'f9e'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/interactive',
-            component: ComponentCreator('/MassEdu/course-tax/tags/interactive', 'b0f'),
+            path: '/course-tax/tags/interactive',
+            component: ComponentCreator('/course-tax/tags/interactive', '20e'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/ma-số-thuế',
-            component: ComponentCreator('/MassEdu/course-tax/tags/ma-số-thuế', '58c'),
+            path: '/course-tax/tags/ma-số-thuế',
+            component: ComponentCreator('/course-tax/tags/ma-số-thuế', 'c28'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/nghia-vụ-thuế',
-            component: ComponentCreator('/MassEdu/course-tax/tags/nghia-vụ-thuế', 'e62'),
+            path: '/course-tax/tags/nghia-vụ-thuế',
+            component: ComponentCreator('/course-tax/tags/nghia-vụ-thuế', '6ad'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/thực-hanh',
-            component: ComponentCreator('/MassEdu/course-tax/tags/thực-hanh', '04e'),
+            path: '/course-tax/tags/thực-hanh',
+            component: ComponentCreator('/course-tax/tags/thực-hanh', '898'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/thuế',
-            component: ComponentCreator('/MassEdu/course-tax/tags/thuế', '421'),
+            path: '/course-tax/tags/thuế',
+            component: ComponentCreator('/course-tax/tags/thuế', '47c'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/tncn',
-            component: ComponentCreator('/MassEdu/course-tax/tags/tncn', 'f33'),
+            path: '/course-tax/tags/tncn',
+            component: ComponentCreator('/course-tax/tags/tncn', '1d4'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax/tags/vat',
-            component: ComponentCreator('/MassEdu/course-tax/tags/vat', '0fb'),
+            path: '/course-tax/tags/vat',
+            component: ComponentCreator('/course-tax/tags/vat', '42f'),
             exact: true
           },
           {
-            path: '/MassEdu/course-tax',
-            component: ComponentCreator('/MassEdu/course-tax', '68c'),
+            path: '/course-tax',
+            component: ComponentCreator('/course-tax', 'aa7'),
             routes: [
               {
-                path: '/MassEdu/course-tax/cac-loai-thue',
-                component: ComponentCreator('/MassEdu/course-tax/cac-loai-thue', '12a'),
+                path: '/course-tax/cac-loai-thue',
+                component: ComponentCreator('/course-tax/cac-loai-thue', 'e8a'),
                 exact: true
               },
               {
-                path: '/MassEdu/course-tax/characters/sinh-vien/story',
-                component: ComponentCreator('/MassEdu/course-tax/characters/sinh-vien/story', '361'),
+                path: '/course-tax/characters/sinh-vien/story',
+                component: ComponentCreator('/course-tax/characters/sinh-vien/story', 'd22'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/chinh-quyen-lay-tien-tu-dau',
-                component: ComponentCreator('/MassEdu/course-tax/chinh-quyen-lay-tien-tu-dau', '048'),
+                path: '/course-tax/chinh-quyen-lay-tien-tu-dau',
+                component: ComponentCreator('/course-tax/chinh-quyen-lay-tien-tu-dau', '1b2'),
                 exact: true
               },
               {
-                path: '/MassEdu/course-tax/concepts/salary-tax-calculation',
-                component: ComponentCreator('/MassEdu/course-tax/concepts/salary-tax-calculation', '83e'),
+                path: '/course-tax/concepts/salary-tax-calculation',
+                component: ComponentCreator('/course-tax/concepts/salary-tax-calculation', '37e'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/LearningContent-Tax',
-                component: ComponentCreator('/MassEdu/course-tax/LearningContent-Tax', '22a'),
+                path: '/course-tax/LearningContent-Tax',
+                component: ComponentCreator('/course-tax/LearningContent-Tax', '14a'),
                 exact: true
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue', '961'),
+                path: '/course-tax/lessons/ban-dang-dong-thue',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue', '1ec'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi', 'bbf'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi', '718'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue', 'a18'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue', 'c7c'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue', 'ded'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue', 'd81'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue', 'ff6'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue', 'a01'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi', '63b'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi', '248'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue', 'bde'),
+                path: '/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue',
+                component: ComponentCreator('/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue', 'e3f'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/nguyen-tac-thu-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/nguyen-tac-thu-thue', '914'),
+                path: '/course-tax/lessons/nguyen-tac-thu-thue',
+                component: ComponentCreator('/course-tax/lessons/nguyen-tac-thu-thue', '893'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/tai-sao-dong-thue',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/tai-sao-dong-thue', '344'),
+                path: '/course-tax/lessons/tai-sao-dong-thue',
+                component: ComponentCreator('/course-tax/lessons/tai-sao-dong-thue', '936'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/thue-va-chinh-tri',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/thue-va-chinh-tri', 'd95'),
+                path: '/course-tax/lessons/thue-va-chinh-tri',
+                component: ComponentCreator('/course-tax/lessons/thue-va-chinh-tri', '0aa'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/lessons/thue-va-minh-bach',
-                component: ComponentCreator('/MassEdu/course-tax/lessons/thue-va-minh-bach', '593'),
+                path: '/course-tax/lessons/thue-va-minh-bach',
+                component: ComponentCreator('/course-tax/lessons/thue-va-minh-bach', '6d7'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes',
-                component: ComponentCreator('/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes', '239'),
+                path: '/course-tax/modules/module-a-recognizing-daily-taxes',
+                component: ComponentCreator('/course-tax/modules/module-a-recognizing-daily-taxes', 'b39'),
                 exact: true,
                 sidebar: "courseTax"
               },
               {
-                path: '/MassEdu/course-tax/modules/module-b-tax-id-obligations',
-                component: ComponentCreator('/MassEdu/course-tax/modules/module-b-tax-id-obligations', 'b9b'),
+                path: '/course-tax/modules/module-b-tax-id-obligations',
+                component: ComponentCreator('/course-tax/modules/module-b-tax-id-obligations', '8ce'),
                 exact: true,
                 sidebar: "courseTax"
               }
@@ -246,350 +251,350 @@ export default [
     ]
   },
   {
-    path: '/MassEdu/knowledge-base',
-    component: ComponentCreator('/MassEdu/knowledge-base', '7aa'),
+    path: '/knowledge-base',
+    component: ComponentCreator('/knowledge-base', '893'),
     routes: [
       {
-        path: '/MassEdu/knowledge-base',
-        component: ComponentCreator('/MassEdu/knowledge-base', '293'),
+        path: '/knowledge-base',
+        component: ComponentCreator('/knowledge-base', '00a'),
         routes: [
           {
-            path: '/MassEdu/knowledge-base/tags',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags', 'e7d'),
+            path: '/knowledge-base/tags',
+            component: ComponentCreator('/knowledge-base/tags', '1b6'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/bai-dọc-them',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/bai-dọc-them', '154'),
+            path: '/knowledge-base/tags/bai-dọc-them',
+            component: ComponentCreator('/knowledge-base/tags/bai-dọc-them', '853'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/binh-dẳng',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/binh-dẳng', 'f62'),
+            path: '/knowledge-base/tags/binh-dẳng',
+            component: ComponentCreator('/knowledge-base/tags/binh-dẳng', '634'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/chinh-quyền',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/chinh-quyền', '87c'),
+            path: '/knowledge-base/tags/chinh-quyền',
+            component: ComponentCreator('/knowledge-base/tags/chinh-quyền', 'eaf'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/chinh-trị',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/chinh-trị', '9be'),
+            path: '/knowledge-base/tags/chinh-trị',
+            component: ComponentCreator('/knowledge-base/tags/chinh-trị', 'd5e'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/chương-2',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/chương-2', '4fd'),
+            path: '/knowledge-base/tags/chương-2',
+            component: ComponentCreator('/knowledge-base/tags/chương-2', '446'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/cong-ước',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/cong-ước', '1f1'),
+            path: '/knowledge-base/tags/cong-ước',
+            component: ComponentCreator('/knowledge-base/tags/cong-ước', 'ef8'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/diễn-giải',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/diễn-giải', 'c21'),
+            path: '/knowledge-base/tags/diễn-giải',
+            component: ComponentCreator('/knowledge-base/tags/diễn-giải', '7ac'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/dịnh-nghia',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/dịnh-nghia', '3c9'),
+            path: '/knowledge-base/tags/dịnh-nghia',
+            component: ComponentCreator('/knowledge-base/tags/dịnh-nghia', 'ae6'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/giao-dục',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/giao-dục', 'dd4'),
+            path: '/knowledge-base/tags/giao-dục',
+            component: ComponentCreator('/knowledge-base/tags/giao-dục', 'a2f'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/giới-hạn-quyền',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/giới-hạn-quyền', 'ba5'),
+            path: '/knowledge-base/tags/giới-hạn-quyền',
+            component: ComponentCreator('/knowledge-base/tags/giới-hạn-quyền', '5fb'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/giới-thiệu',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/giới-thiệu', '654'),
+            path: '/knowledge-base/tags/giới-thiệu',
+            component: ComponentCreator('/knowledge-base/tags/giới-thiệu', 'd05'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/hiến-phap',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/hiến-phap', '3f7'),
+            path: '/knowledge-base/tags/hiến-phap',
+            component: ComponentCreator('/knowledge-base/tags/hiến-phap', '885'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/hỏi-dap',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/hỏi-dap', 'c11'),
+            path: '/knowledge-base/tags/hỏi-dap',
+            component: ComponentCreator('/knowledge-base/tags/hỏi-dap', '240'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/iccpr',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/iccpr', '988'),
+            path: '/knowledge-base/tags/iccpr',
+            component: ComponentCreator('/knowledge-base/tags/iccpr', '3fa'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/khẩn-cấp',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/khẩn-cấp', '403'),
+            path: '/knowledge-base/tags/khẩn-cấp',
+            component: ComponentCreator('/knowledge-base/tags/khẩn-cấp', 'e31'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/khong-phan-biệt-dối-xử',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/khong-phan-biệt-dối-xử', '2ba'),
+            path: '/knowledge-base/tags/khong-phan-biệt-dối-xử',
+            component: ComponentCreator('/knowledge-base/tags/khong-phan-biệt-dối-xử', '368'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/lịch-sử',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/lịch-sử', '4c1'),
+            path: '/knowledge-base/tags/lịch-sử',
+            component: ComponentCreator('/knowledge-base/tags/lịch-sử', '9eb'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/luật-nhan-quyền',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/luật-nhan-quyền', '11b'),
+            path: '/knowledge-base/tags/luật-nhan-quyền',
+            component: ComponentCreator('/knowledge-base/tags/luật-nhan-quyền', '613'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/luật-phap',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/luật-phap', '1f4'),
+            path: '/knowledge-base/tags/luật-phap',
+            component: ComponentCreator('/knowledge-base/tags/luật-phap', '804'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/luật-quốc-tế',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/luật-quốc-tế', '32e'),
+            path: '/knowledge-base/tags/luật-quốc-tế',
+            component: ComponentCreator('/knowledge-base/tags/luật-quốc-tế', 'f2e'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/nghia-vụ',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/nghia-vụ', '6ae'),
+            path: '/knowledge-base/tags/nghia-vụ',
+            component: ComponentCreator('/knowledge-base/tags/nghia-vụ', 'e5b'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/nguyen-tắc',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/nguyen-tắc', '59e'),
+            path: '/knowledge-base/tags/nguyen-tắc',
+            component: ComponentCreator('/knowledge-base/tags/nguyen-tắc', 'd89'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/nha-nước',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/nha-nước', '029'),
+            path: '/knowledge-base/tags/nha-nước',
+            component: ComponentCreator('/knowledge-base/tags/nha-nước', 'b6d'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/nhan-quyền',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/nhan-quyền', '3a1'),
+            path: '/knowledge-base/tags/nhan-quyền',
+            component: ComponentCreator('/knowledge-base/tags/nhan-quyền', 'ecd'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/phan-tich',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/phan-tich', 'e3e'),
+            path: '/knowledge-base/tags/phan-tich',
+            component: ComponentCreator('/knowledge-base/tags/phan-tich', '26e'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/phap-luật',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/phap-luật', 'e4c'),
+            path: '/knowledge-base/tags/phap-luật',
+            component: ComponentCreator('/knowledge-base/tags/phap-luật', 'b8f'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quiz',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quiz', '627'),
+            path: '/knowledge-base/tags/quiz',
+            component: ComponentCreator('/knowledge-base/tags/quiz', 'ac6'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quyền-chinh-trị',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quyền-chinh-trị', 'da2'),
+            path: '/knowledge-base/tags/quyền-chinh-trị',
+            component: ComponentCreator('/knowledge-base/tags/quyền-chinh-trị', '737'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quyền-cơ-bản',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quyền-cơ-bản', 'a89'),
+            path: '/knowledge-base/tags/quyền-cơ-bản',
+            component: ComponentCreator('/knowledge-base/tags/quyền-cơ-bản', 'ba6'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quyền-dan-sự',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quyền-dan-sự', '965'),
+            path: '/knowledge-base/tags/quyền-dan-sự',
+            component: ComponentCreator('/knowledge-base/tags/quyền-dan-sự', 'f43'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quyền-esc',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quyền-esc', 'dfc'),
+            path: '/knowledge-base/tags/quyền-esc',
+            component: ComponentCreator('/knowledge-base/tags/quyền-esc', '658'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/quyền-trẻ-em',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/quyền-trẻ-em', 'fd2'),
+            path: '/knowledge-base/tags/quyền-trẻ-em',
+            component: ComponentCreator('/knowledge-base/tags/quyền-trẻ-em', '540'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/triết-học',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/triết-học', '3b3'),
+            path: '/knowledge-base/tags/triết-học',
+            component: ComponentCreator('/knowledge-base/tags/triết-học', '868'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/tuyen-ngon-nhan-quyền',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/tuyen-ngon-nhan-quyền', 'a14'),
+            path: '/knowledge-base/tags/tuyen-ngon-nhan-quyền',
+            component: ComponentCreator('/knowledge-base/tags/tuyen-ngon-nhan-quyền', 'c84'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base/tags/vi-phạm',
-            component: ComponentCreator('/MassEdu/knowledge-base/tags/vi-phạm', '435'),
+            path: '/knowledge-base/tags/vi-phạm',
+            component: ComponentCreator('/knowledge-base/tags/vi-phạm', '703'),
             exact: true
           },
           {
-            path: '/MassEdu/knowledge-base',
-            component: ComponentCreator('/MassEdu/knowledge-base', 'cc5'),
+            path: '/knowledge-base',
+            component: ComponentCreator('/knowledge-base', 'ab4'),
             routes: [
               {
-                path: '/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung',
-                component: ComponentCreator('/MassEdu/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung', '0ee'),
+                path: '/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung',
+                component: ComponentCreator('/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung', '860'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte',
-                component: ComponentCreator('/MassEdu/knowledge-base/2.1a-luat-nhanquyen-quocte', 'e73'),
+                path: '/knowledge-base/2.1a-luat-nhanquyen-quocte',
+                component: ComponentCreator('/knowledge-base/2.1a-luat-nhanquyen-quocte', 'c43'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/chinh-quyen-dinh-nghia',
-                component: ComponentCreator('/MassEdu/knowledge-base/chinh-quyen-dinh-nghia', '1b8'),
+                path: '/knowledge-base/chinh-quyen-dinh-nghia',
+                component: ComponentCreator('/knowledge-base/chinh-quyen-dinh-nghia', '7a6'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri',
-                component: ComponentCreator('/MassEdu/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri', '9a2'),
+                path: '/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri',
+                component: ComponentCreator('/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri', 'a59'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh',
-                component: ComponentCreator('/MassEdu/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh', '9f8'),
+                path: '/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh',
+                component: ComponentCreator('/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh', '777'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/docthem-quyen-giaoduc',
-                component: ComponentCreator('/MassEdu/knowledge-base/docthem-quyen-giaoduc', 'c2f'),
+                path: '/knowledge-base/docthem-quyen-giaoduc',
+                component: ComponentCreator('/knowledge-base/docthem-quyen-giaoduc', 'f84'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/giay-phep-kinh-doanh',
-                component: ComponentCreator('/MassEdu/knowledge-base/giay-phep-kinh-doanh', 'b71'),
+                path: '/knowledge-base/giay-phep-kinh-doanh',
+                component: ComponentCreator('/knowledge-base/giay-phep-kinh-doanh', '2c3'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn',
-                component: ComponentCreator('/MassEdu/knowledge-base/giay-phep-kinh-doanh-vn', '544'),
+                path: '/knowledge-base/giay-phep-kinh-doanh-vn',
+                component: ComponentCreator('/knowledge-base/giay-phep-kinh-doanh-vn', 'b8a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/gioi-han-quyen',
-                component: ComponentCreator('/MassEdu/knowledge-base/gioi-han-quyen', '77a'),
+                path: '/knowledge-base/gioi-han-quyen',
+                component: ComponentCreator('/knowledge-base/gioi-han-quyen', 'aa5'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/gioi-thieu-chuong-2',
-                component: ComponentCreator('/MassEdu/knowledge-base/gioi-thieu-chuong-2', 'd22'),
+                path: '/knowledge-base/gioi-thieu-chuong-2',
+                component: ComponentCreator('/knowledge-base/gioi-thieu-chuong-2', '1b4'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/hien-phap',
-                component: ComponentCreator('/MassEdu/knowledge-base/hien-phap', '49a'),
+                path: '/knowledge-base/hien-phap',
+                component: ComponentCreator('/knowledge-base/hien-phap', '55e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen',
-                component: ComponentCreator('/MassEdu/knowledge-base/hieu-ve-vi-pham-nhanquyen', '45c'),
+                path: '/knowledge-base/hieu-ve-vi-pham-nhanquyen',
+                component: ComponentCreator('/knowledge-base/hieu-ve-vi-pham-nhanquyen', '81f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen',
-                component: ComponentCreator('/MassEdu/knowledge-base/nghia-vu-nhanuoc-nhan-quyen', '961'),
+                path: '/knowledge-base/nghia-vu-nhanuoc-nhan-quyen',
+                component: ComponentCreator('/knowledge-base/nghia-vu-nhanuoc-nhan-quyen', '0b6'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/nhan-quyen-dinh-nghia',
-                component: ComponentCreator('/MassEdu/knowledge-base/nhan-quyen-dinh-nghia', '39a'),
+                path: '/knowledge-base/nhan-quyen-dinh-nghia',
+                component: ComponentCreator('/knowledge-base/nhan-quyen-dinh-nghia', '50e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/quyen-kinhte-xahoi-vanhoa',
-                component: ComponentCreator('/MassEdu/knowledge-base/quyen-kinhte-xahoi-vanhoa', 'f23'),
+                path: '/knowledge-base/quyen-kinhte-xahoi-vanhoa',
+                component: ComponentCreator('/knowledge-base/quyen-kinhte-xahoi-vanhoa', '7ab'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/thue-dinh-nghia',
-                component: ComponentCreator('/MassEdu/knowledge-base/thue-dinh-nghia', '5b9'),
+                path: '/knowledge-base/thue-dinh-nghia',
+                component: ComponentCreator('/knowledge-base/thue-dinh-nghia', 'f8d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/binh-dang',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/binh-dang', '71e'),
+                path: '/knowledge-base/tuan1/binh-dang',
+                component: ComponentCreator('/knowledge-base/tuan1/binh-dang', '609'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/dien-giai-tuyen-ngon', '31c'),
+                path: '/knowledge-base/tuan1/dien-giai-tuyen-ngon',
+                component: ComponentCreator('/knowledge-base/tuan1/dien-giai-tuyen-ngon', '889'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/dinh-nghia',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/dinh-nghia', 'c5b'),
+                path: '/knowledge-base/tuan1/dinh-nghia',
+                component: ComponentCreator('/knowledge-base/tuan1/dinh-nghia', '2bf'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/gioi-thieu',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/gioi-thieu', 'cd6'),
+                path: '/knowledge-base/tuan1/gioi-thieu',
+                component: ComponentCreator('/knowledge-base/tuan1/gioi-thieu', '1f0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/hoi-dap-nhan-quyen', '67f'),
+                path: '/knowledge-base/tuan1/hoi-dap-nhan-quyen',
+                component: ComponentCreator('/knowledge-base/tuan1/hoi-dap-nhan-quyen', '113'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/luoc-su',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/luoc-su', '2fb'),
+                path: '/knowledge-base/tuan1/luoc-su',
+                component: ComponentCreator('/knowledge-base/tuan1/luoc-su', '6df'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/quiz-hr',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/quiz-hr', '5e4'),
+                path: '/knowledge-base/tuan1/quiz-hr',
+                component: ComponentCreator('/knowledge-base/tuan1/quiz-hr', 'a83'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/quiz-pol',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/quiz-pol', 'd49'),
+                path: '/knowledge-base/tuan1/quiz-pol',
+                component: ComponentCreator('/knowledge-base/tuan1/quiz-pol', '615'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuan1/quyen-dan-su-chinh-tri',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuan1/quyen-dan-su-chinh-tri', '62d'),
+                path: '/knowledge-base/tuan1/quyen-dan-su-chinh-tri',
+                component: ComponentCreator('/knowledge-base/tuan1/quyen-dan-su-chinh-tri', '7fa'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen',
-                component: ComponentCreator('/MassEdu/knowledge-base/tuyen-ngon-nhan-quyen', '1af'),
+                path: '/knowledge-base/tuyen-ngon-nhan-quyen',
+                component: ComponentCreator('/knowledge-base/tuyen-ngon-nhan-quyen', '651'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -600,8 +605,8 @@ export default [
     ]
   },
   {
-    path: '/MassEdu/',
-    component: ComponentCreator('/MassEdu/', '99d'),
+    path: '/',
+    component: ComponentCreator('/', '2e1'),
     exact: true
   },
   {

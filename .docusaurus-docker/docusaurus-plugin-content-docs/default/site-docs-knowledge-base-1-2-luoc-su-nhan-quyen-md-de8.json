@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/1.2-luoc-su-nhan-quyen.md",
   "sourceDirName": ".",
   "slug": "/tuan1/luoc-su",
-  "permalink": "/MassEdu/knowledge-base/tuan1/luoc-su",
+  "permalink": "/knowledge-base/tuan1/luoc-su",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/1.2-luoc-su-nhan-quyen.md",
@@ -13,12 +13,12 @@
     {
       "inline": true,
       "label": "lịch sử",
-      "permalink": "/MassEdu/knowledge-base/tags/lịch-sử"
+      "permalink": "/knowledge-base/tags/lịch-sử"
     },
     {
       "inline": true,
       "label": "nhân quyền",
-      "permalink": "/MassEdu/knowledge-base/tags/nhan-quyền"
+      "permalink": "/knowledge-base/tags/nhan-quyền"
     }
   ],
   "version": "current",
@@ -42,10 +42,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "1.1. Nhân quyền là gì?",
-    "permalink": "/MassEdu/knowledge-base/tuan1/dinh-nghia"
+    "permalink": "/knowledge-base/tuan1/dinh-nghia"
   },
   "next": {
     "title": "1.3. Bình đẳng và không phân biệt đối xử",
-    "permalink": "/MassEdu/knowledge-base/tuan1/binh-dang"
+    "permalink": "/knowledge-base/tuan1/binh-dang"
   }
 }
