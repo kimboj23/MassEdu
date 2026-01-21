@@ -238,14 +238,20 @@
 }
 
 .numberSlider {
-  display: inline-block;
-  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
   border: var(--border-width-default) solid var(--border-default);
   border-radius: 0;
   cursor: ew-resize;
   transition: all var(--transition-base);
   background-color: var(--bg-primary);
   user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .numberSlider:focus {
@@ -262,24 +268,28 @@
 
 .sliderValue {
   font-family: var(--font-headline);
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   font-weight: var(--weight-bold);
   color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sliderUnit {
-  margin-left: var(--space-sm);
   font-family: var(--font-body-primary);
-  font-size: var(--text-body);
+  font-size: var(--text-body-small);
   color: var(--text-secondary);
+  flex-shrink: 0;
 }
 
 .sliderHandle {
-  display: inline-block;
-  margin-left: var(--space-md);
+  display: flex;
+  align-items: center;
   color: var(--color-primary);
   opacity: 0;
   transition: opacity var(--transition-base);
+  flex-shrink: 0;
 }
 
 .numberSlider.active .sliderHandle,
@@ -607,7 +617,7 @@
    ======================================== */
 
 .lessonScene {
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0 var(--space-xl) 0;
   border-bottom: var(--border-width-thin) solid var(--border-subtle);
 }
 
@@ -770,7 +780,7 @@
   }
 
   .lessonScene {
-    padding: var(--space-lg) 0;
+    padding: var(--space-sm) 0 var(--space-lg) 0;
   }
 
   .sceneNavigation {
@@ -1711,14 +1721,14 @@
   border-radius: 0;
 }
 
-.comparisonLabel {
+.salaryLabel {
   font-size: var(--text-small);
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.comparisonValue {
+.salaryValue {
   font-size: var(--text-h4);
   font-weight: var(--weight-bold);
   font-family: var(--ifm-font-family-monospace);
@@ -2045,4 +2055,62 @@
 
 .progressButton span {
   display: inline-block;
+}
+
+/* ==================== LESSON PROGRESS BAR ==================== */
+.lessonProgressBar {
+  margin-bottom: 4px;
+}
+
+.lessonProgressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.lessonProgressTitle {
+  font-size: var(--text-body-small);
+  color: var(--text-secondary);
+}
+
+.lessonProgressControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lessonProgressPercent {
+  font-size: var(--text-body-small);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+}
+
+.resetButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.resetButton:hover {
+  opacity: 1;
+}
+
+.progressBarTrack {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border: var(--border-width-thin) solid var(--border-default);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
 }

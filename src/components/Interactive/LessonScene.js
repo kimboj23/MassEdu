@@ -100,7 +100,7 @@ export function LessonChunkNavigation({
           ))}
         </div>
         <div className={styles.progressText}>
-          Phần {currentChunk} / {totalChunks}
+          Trang {currentChunk} / {totalChunks}
         </div>
       </div>
 
@@ -109,17 +109,17 @@ export function LessonChunkNavigation({
           onClick={handlePrev}
           disabled={!prevChunk}
           className={`${styles.navButton} ${styles.navButtonPrev}`}
-          aria-label="Previous chunk"
+          aria-label="Trang trước"
         >
-          ← Trước
+          ← Trang trước
         </button>
         <button
           onClick={handleNext}
           disabled={!nextChunk}
           className={`${styles.navButton} ${styles.navButtonNext}`}
-          aria-label="Next chunk"
+          aria-label="Trang kế"
         >
-          Tiếp theo →
+          Trang kế →
         </button>
       </div>
     </div>
@@ -130,7 +130,7 @@ export function LessonChunkNavigation({
  * LessonProgress Component
  * Shows overall progress through a lesson
  */
-export function LessonProgress({ total, title, showReset = true, startChunkId = 'chunk-1' }) {
+export function LessonProgress({ total, title, showTitle = false, showReset = true, startChunkId = 'chunk-1' }) {
   const { currentScene, setCurrentScene } = useContext(StoryProgressContext);
 
   // Extract chunk number from currentScene (e.g., "chunk-1" -> 1)
@@ -151,14 +151,17 @@ export function LessonProgress({ total, title, showReset = true, startChunkId = 
   return (
     <div className={styles.lessonProgressBar}>
       <div className={styles.lessonProgressInfo}>
-        <span className={styles.lessonProgressTitle}>{title}</span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        {showTitle && title && (
+          <span className={styles.lessonProgressTitle}>{title}</span>
+        )}
+        <div className={styles.lessonProgressControls}>
           <span className={styles.lessonProgressPercent}>{percentage}%</span>
           {showReset && (
             <button
               onClick={handleReset}
               className={styles.resetButton}
               title="Bắt đầu lại từ đầu"
+              aria-label="Bắt đầu lại từ đầu"
             >
               🔄
             </button>
@@ -173,6 +176,7 @@ export function LessonProgress({ total, title, showReset = true, startChunkId = 
           aria-valuenow={percentage}
           aria-valuemin="0"
           aria-valuemax="100"
+          aria-label={`Tiến độ bài học: ${percentage}%`}
         />
       </div>
     </div>

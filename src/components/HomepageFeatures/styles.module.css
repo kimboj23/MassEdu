@@ -44,6 +44,9 @@
   gap: var(--space-md);
   max-width: 900px;
   margin: 0 auto;
+  /* Reset list styles for semantic ul/li */
+  list-style: none;
+  padding-left: 0;
 }
 
 .cardWrapper {

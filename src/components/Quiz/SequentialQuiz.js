@@ -86,91 +86,101 @@ export default function SequentialQuiz({
 
   if (questions.length === 0) {
     return (
-      <div className={styles.quizContainer}>
-        <div className={styles.emptyState}>
+      <section className={styles.quizContainer} aria-label="Bài quiz">
+        <div className={styles.emptyState} role="status">
           <h3>Không có câu hỏi nào</h3>
           <p>Vui lòng thêm câu hỏi vào bài quiz.</p>
         </div>
-      </div>
+      </section>
     );
   }
 
   if (isComplete) {
     const correctCount = answers.filter(a => a.isCorrect).length;
     const accuracy = Math.round((correctCount / questions.length) * 100);
-    
+    const resultMessage = accuracy >= 80 ? 'Xuất sắc!' : accuracy >= 60 ? 'Làm tốt lắm!' : 'Cố gắng thêm nha!';
+
     return (
-      <div className={styles.quizContainer}>
+      <section className={styles.quizContainer} aria-label="Kết quả bài quiz">
         <div className={styles.completionContainer}>
           <div className={styles.completionHeader}>
-            <div className={styles.completionIcon}>
+            <div className={styles.completionIcon} aria-hidden="true">
               {accuracy >= 80 ? '🏆' : accuracy >= 60 ? '🎉' : '💪'}
             </div>
-            <h2 className={styles.completionTitle}>
-              {accuracy >= 80 ? 'Xuất sắc!' : accuracy >= 60 ? 'Làm tốt lắm!' : 'Cố gắng thêm nha!'}
+            <h2 className={styles.completionTitle} aria-live="polite">
+              {resultMessage}
             </h2>
-            <div className={styles.completionStats}>
+            <div className={styles.completionStats} role="group" aria-label="Thống kê kết quả">
               <div className={styles.stat}>
-                <span className={styles.statNumber}>{correctCount}/{questions.length}</span>
+                <span className={styles.statNumber} aria-label={`${correctCount} trên ${questions.length} câu đúng`}>{correctCount}/{questions.length}</span>
                 <span className={styles.statLabel}>Đúng</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>{accuracy}%</span>
+                <span className={styles.statNumber} aria-label={`Độ chính xác ${accuracy} phần trăm`}>{accuracy}%</span>
                 <span className={styles.statLabel}>Độ chính xác</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>{totalPoints}</span>
+                <span className={styles.statNumber} aria-label={`${totalPoints} điểm kinh nghiệm`}>{totalPoints}</span>
                 <span className={styles.statLabel}>XP</span>
               </div>
             </div>
           </div>
-          
-          <div className={styles.resultsBreakdown}>
-            <h4>Kết quả chi tiết:</h4>
+
+          <ul className={styles.resultsBreakdown} aria-label="Kết quả chi tiết từng câu hỏi">
+            <h4 id="results-heading">Kết quả chi tiết:</h4>
             {questions.map((question, index) => (
-              <div 
-                key={index} 
+              <li
+                key={index}
                 className={`${styles.resultItem} ${answers[index]?.isCorrect ? styles.resultCorrect : styles.resultIncorrect}`}
+                aria-label={`Câu ${index + 1}: ${answers[index]?.isCorrect ? 'Đúng' : 'Sai'}`}
               >
-                <span className={styles.resultNumber}>Q{index + 1}</span>
-                <span className={styles.resultStatus}>
+                <span className={styles.resultNumber} aria-hidden="true">Q{index + 1}</span>
+                <span className={styles.resultStatus} aria-hidden="true">
                   {answers[index]?.isCorrect ? '✓' : '✗'}
                 </span>
                 <span className={styles.resultText}>
-                  {question.question.length > 50 
-                    ? question.question.substring(0, 50) + '...' 
+                  {question.question.length > 50
+                    ? question.question.substring(0, 50) + '...'
                     : question.question}
                 </span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <button 
+          <button
             className={styles.restartButton}
             onClick={handleRestart}
+            aria-label="Làm lại bài quiz từ đầu"
           >
             Làm lại
-            <span className={styles.arrow}>🔄</span>
+            <span className={styles.arrow} aria-hidden="true">🔄</span>
           </button>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className={styles.sequentialQuizContainer}>
+    <section className={styles.sequentialQuizContainer} aria-label="Bài quiz">
       {/* Overall Progress */}
       <div className={styles.overallProgress}>
         <div className={styles.progressInfo}>
-          <span className={styles.progressText}>
+          <span className={styles.progressText} aria-live="polite">
             Câu {currentQuestionIndex + 1} / {questions.length}
           </span>
-          <span className={styles.pointsDisplay}>
+          <span className={styles.pointsDisplay} aria-label={`${totalPoints} điểm kinh nghiệm`}>
             {totalPoints} XP
           </span>
         </div>
-        <div className={styles.overallProgressBar}>
-          <div 
+        <div
+          className={styles.overallProgressBar}
+          role="progressbar"
+          aria-valuenow={Math.round(progress)}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`Tiến độ bài quiz: ${Math.round(progress)}%`}
+        >
+          <div
             className={styles.overallProgressFill}
             style={{ width: `${progress}%` }}
           />
@@ -179,7 +189,7 @@ export default function SequentialQuiz({
 
       {/* Current Question */}
       <MultipleChoice
-        key={currentQuestionIndex} // Force re-mount when question changes
+        key={currentQuestionIndex}
         question={currentQuestion.question}
         options={currentQuestion.options}
         correct={currentQuestion.correct}
@@ -189,7 +199,9 @@ export default function SequentialQuiz({
         enableSounds={enableSounds}
         enableHaptics={enableHaptics}
         onComplete={handleQuestionComplete}
+        questionNumber={currentQuestionIndex + 1}
+        totalQuestions={questions.length}
       />
-    </div>
+    </section>
   );
 }

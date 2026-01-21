@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'TepUp',
   tagline: 'Tép riu stép up, stép out.',
-  favicon: 'img/tepup_logo.png',
+  favicon: 'img/Tepup-Color-Logo-0.png',
 
   // Set the production url of your site here
   url: 'https://www.tepup.space',
@@ -79,12 +79,12 @@ const config = {
           autoCollapseCategories: true,
         },
       },
-      image: 'img/tepup_logo.png',
+      image: 'img/Tepup-Color-Logo-1.png',
       navbar: {
         title: 'TepUp',
         logo: {
           alt: 'TepUp.space Logo',
-          src: 'img/tepup_logo.png',
+          src: 'img/Tepup-Color-Logo-1.png',
         },
         items: [
           {
@@ -139,16 +139,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'About',
+                href: '/about',
               },
             ],
           },

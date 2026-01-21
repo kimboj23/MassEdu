@@ -19,6 +19,7 @@ export default function NumberSlider({
   calculationLabel = 'Thuế VAT',
   showCalculation = true,
   className = '',
+  ariaLabel = null,
 }) {
   // Determine if controlled or uncontrolled
   const isControlled = controlledValue !== undefined;
@@ -62,9 +63,10 @@ export default function NumberSlider({
       const currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
       const deltaX = currentX - dragStartX.current;
 
-      // Sensitivity: 1 pixel = step amount
+      // Reduced sensitivity: 8 pixels per step (was 2) for slower, more controlled changes
       const { min, max, step } = paramsRef.current;
-      const deltaValue = Math.round(deltaX / 2) * step;
+      const pixelsPerStep = 8;
+      const deltaValue = Math.round(deltaX / pixelsPerStep) * step;
       const newValue = Math.max(min, Math.min(max, dragStartValue.current + deltaValue));
 
       setInternalValue(newValue);
@@ -131,6 +133,8 @@ export default function NumberSlider({
     }
   }, [isDragging]);
 
+  const defaultAriaLabel = `Giá trị: ${formatNum(value)} ${unit}. Sử dụng phím mũi tên để điều chỉnh`;
+
   return (
     <div className={className}>
       <div
@@ -146,16 +150,17 @@ export default function NumberSlider({
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
-        aria-label={`Giá trị: ${formatNum(value)} ${unit}`}
+        aria-valuetext={`${formatNum(value)} ${unit}`}
+        aria-label={ariaLabel || defaultAriaLabel}
       >
-        <span className={styles.sliderValue}>
+        <span className={styles.sliderValue} aria-hidden="true">
           {formatNum(value)}
         </span>
-        <span className={styles.sliderUnit}>{unit}</span>
+        <span className={styles.sliderUnit} aria-hidden="true">{unit}</span>
 
         {(isHovering || isDragging) && (
-          <span className={styles.sliderHandle}>
-            <svg width="20" height="20" viewBox="0 0 20 20">
+          <span className={styles.sliderHandle} aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M7 10 L13 10 M10 7 L10 13" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
           </span>

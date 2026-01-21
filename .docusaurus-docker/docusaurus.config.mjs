@@ -6,7 +6,7 @@
 export default {
   "title": "TepUp",
   "tagline": "Tép riu stép up, stép out.",
-  "favicon": "img/tepup_logo.png",
+  "favicon": "img/Tepup-Color-Logo-0.png",
   "url": "https://www.tepup.space",
   "baseUrl": "/",
   "organizationName": "kimboj23",
@@ -64,12 +64,12 @@ export default {
       },
       "versionPersistence": "localStorage"
     },
-    "image": "img/tepup_logo.png",
+    "image": "img/Tepup-Color-Logo-1.png",
     "navbar": {
       "title": "TepUp",
       "logo": {
         "alt": "TepUp.space Logo",
-        "src": "img/tepup_logo.png"
+        "src": "img/Tepup-Color-Logo-1.png"
       },
       "items": [
         {
@@ -125,16 +125,8 @@ export default {
           "title": "Community",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "X",
-              "href": "https://x.com/docusaurus"
+              "label": "About",
+              "href": "/about"
             }
           ]
         },

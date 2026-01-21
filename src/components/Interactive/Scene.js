@@ -40,8 +40,14 @@ export function Scene({ id, start = false, children }) {
   });
 
   return (
-    <div id={id} ref={sceneRef} className={styles.scene}>
+    <section
+      id={id}
+      ref={sceneRef}
+      className={styles.scene}
+      aria-label={`Cảnh: ${id}`}
+      aria-live="polite"
+    >
       {filteredChildren}
-    </div>
+    </section>
   );
 }

@@ -76,18 +76,26 @@ export default function Tooltip({ children, conceptId, content, link, id }) {
 
   return (
     <>
-      <span
+      <button
+        type="button"
         data-tooltip-id={tooltipData.id}
         className="tooltip-trigger"
+        aria-describedby={tooltipData.id}
+        aria-expanded="false"
         style={{
           borderBottom: '2px dotted var(--ifm-color-primary)',
           cursor: 'pointer',
           textDecoration: 'none',
-          color: 'inherit'
+          color: 'inherit',
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          font: 'inherit',
+          display: 'inline'
         }}
       >
         {children}
-      </span>
+      </button>
       <ReactTooltip
         id={tooltipData.id}
         place={tooltipPlace}
@@ -95,6 +103,7 @@ export default function Tooltip({ children, conceptId, content, link, id }) {
         delayHide={500}
         positionStrategy="fixed"
         opacity={1}
+        role="tooltip"
         style={{
           zIndex: '99999',
           backgroundColor: '#ffffff',
@@ -107,23 +116,26 @@ export default function Tooltip({ children, conceptId, content, link, id }) {
           padding: '12px'
         }}
       >
-        <div className="tooltip-content">
+        <section className="tooltip-content" aria-label={tooltipData.title || 'Thông tin bổ sung'}>
           {/* Title (for concept tooltips) */}
           {tooltipData.title && (
-            <h4 style={{
-              margin: '0 0 8px 0',
-              color: '#1976d2',
-              fontSize: '1rem'
-            }}>
+            <h4
+              id={`${tooltipData.id}-title`}
+              style={{
+                margin: '0 0 8px 0',
+                color: '#1976d2',
+                fontSize: '1rem'
+              }}
+            >
               {tooltipData.title}
             </h4>
           )}
 
           {/* Tags (for concept tooltips) */}
           {tooltipData.tags && (
-            <div className="tooltip-tags" style={{ marginBottom: '12px' }}>
+            <ul className="tooltip-tags" style={{ marginBottom: '12px', listStyle: 'none', padding: 0, margin: '0 0 12px 0' }} aria-label="Thẻ liên quan">
               {tooltipData.tags.map(tag => (
-                <span
+                <li
                   key={tag}
                   className="tooltip-tag"
                   style={{
@@ -138,9 +150,9 @@ export default function Tooltip({ children, conceptId, content, link, id }) {
                   }}
                 >
                   {tag}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
           {/* Content */}
@@ -159,16 +171,17 @@ export default function Tooltip({ children, conceptId, content, link, id }) {
             }}>
               <Link
                 to={tooltipData.link}
+                aria-label={tooltipData.linkText}
                 style={{
                   fontSize: '0.85rem',
                   fontWeight: '500'
                 }}
               >
-                {tooltipData.linkText} →
+                {tooltipData.linkText} <span aria-hidden="true">→</span>
               </Link>
             </div>
           )}
-        </div>
+        </section>
       </ReactTooltip>
     </>
   );

@@ -6,10 +6,26 @@ import 'react-tooltip/dist/react-tooltip.css';
 export default function Term({ id, children, tip }) {
   return (
     <>
-      <a data-tooltip-id={id} data-tooltip-content={tip}>
+      <button
+        type="button"
+        data-tooltip-id={id}
+        data-tooltip-content={tip}
+        aria-describedby={id}
+        className="term-trigger"
+        style={{
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          font: 'inherit',
+          color: 'var(--ifm-color-primary)',
+          cursor: 'pointer',
+          textDecoration: 'underline',
+          display: 'inline'
+        }}
+      >
         {children}
-      </a>
-      <Tooltip id={id} />
+      </button>
+      <Tooltip id={id} role="tooltip" />
     </>
   );
 }

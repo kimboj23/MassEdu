@@ -35,10 +35,17 @@ export default function ComparisonSlider({
   };
 
   return (
-    <div className={styles.taxComparisonSlider}>
+    <section
+      className={styles.taxComparisonSlider}
+      aria-label="So sánh gánh nặng thuế VAT"
+    >
       <div className={styles.comparisonRow}>
-        <div className={styles.comparisonColumn}>
-          <h5>{label1}</h5>
+        <div
+          className={styles.comparisonColumn}
+          role="group"
+          aria-labelledby="comparison-label-1"
+        >
+          <h5 id="comparison-label-1">{label1}</h5>
           <NumberSlider
             value={purchaseAmount}
             onValueChange={handleSliderChange}
@@ -46,17 +53,22 @@ export default function ComparisonSlider({
             max={100000}
             step={1000}
             unit="đồng"
+            ariaLabel={`Số tiền mua hàng của ${label1}`}
           />
-          <div className={styles.comparisonStats}>
+          <div className={styles.comparisonStats} aria-live="polite">
             <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
-            <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage1)}</strong></p>
+            <p>Tỷ lệ trên thu nhập tháng: <strong aria-label={`${(percentage1 * 100).toFixed(3)} phần trăm`}>{formatPercentage(percentage1)}</strong></p>
           </div>
         </div>
 
-        <div className={styles.comparisonDivider}>vs</div>
+        <div className={styles.comparisonDivider} aria-hidden="true">vs</div>
 
-        <div className={styles.comparisonColumn}>
-          <h5>{label2}</h5>
+        <div
+          className={styles.comparisonColumn}
+          role="group"
+          aria-labelledby="comparison-label-2"
+        >
+          <h5 id="comparison-label-2">{label2}</h5>
           <NumberSlider
             value={purchaseAmount}
             onValueChange={handleSliderChange}
@@ -64,17 +76,18 @@ export default function ComparisonSlider({
             max={100000}
             step={1000}
             unit="đồng"
+            ariaLabel={`Số tiền mua hàng của ${label2}`}
           />
-          <div className={styles.comparisonStats}>
+          <div className={styles.comparisonStats} aria-live="polite">
             <p>Thuế VAT ({vatRate}%): <strong>{formatCurrency(taxAmount)} đồng</strong></p>
-            <p>Tỷ lệ trên thu nhập tháng: <strong>{formatPercentage(percentage2)}</strong></p>
+            <p>Tỷ lệ trên thu nhập tháng: <strong aria-label={`${(percentage2 * 100).toFixed(3)} phần trăm`}>{formatPercentage(percentage2)}</strong></p>
           </div>
         </div>
       </div>
 
       <div className={styles.comparisonInsight}>
         <div className={styles.vatRateSliderContainer}>
-          <label htmlFor="vatRate">Điều chỉnh thuế suất VAT: <strong>{vatRate}%</strong></label>
+          <label htmlFor="vatRate" id="vatRate-label">Điều chỉnh thuế suất VAT: <strong>{vatRate}%</strong></label>
           <input
             type="range"
             id="vatRate"
@@ -84,6 +97,11 @@ export default function ComparisonSlider({
             value={vatRate}
             onChange={handleVatChange}
             className={styles.vatRateSlider}
+            aria-labelledby="vatRate-label"
+            aria-valuemin={0}
+            aria-valuemax={25}
+            aria-valuenow={vatRate}
+            aria-valuetext={`${vatRate} phần trăm`}
           />
         </div>
         <RevealBubble buttonText="💡 Xem công thức tính">
@@ -93,7 +111,7 @@ export default function ComparisonSlider({
           </code>
           <p>Ví dụ: <strong>{formatCurrency(taxAmount)}</strong> = {formatCurrency(purchaseAmount)} / (1 + 100 / {vatRate})</p>
         </RevealBubble>
-        <ThoughtBubble icon="📊" variant="warning">
+        <ThoughtBubble variant="warning">
           <strong>Cùng số tiền thuế. Nhưng:</strong>
           <p style={{margin: '0.5rem 0 0 0'}}>
             → Người có thu nhập thấp chịu gánh nặng thuế <strong>nặng gấp {differenceFactor.toFixed(1)} lần</strong> (theo tỷ lệ thu nhập)!
@@ -107,6 +125,6 @@ export default function ComparisonSlider({
           </p>
         </ThoughtBubble>
       </div>
-    </div>
+    </section>
   );
 }

@@ -89,11 +89,11 @@ export default [
   },
   {
     path: '/course-tax',
-    component: ComponentCreator('/course-tax', '245'),
+    component: ComponentCreator('/course-tax', '0e4'),
     routes: [
       {
         path: '/course-tax',
-        component: ComponentCreator('/course-tax', '537'),
+        component: ComponentCreator('/course-tax', 'af2'),
         routes: [
           {
             path: '/course-tax/tags',
@@ -137,7 +137,7 @@ export default [
           },
           {
             path: '/course-tax',
-            component: ComponentCreator('/course-tax', 'aa7'),
+            component: ComponentCreator('/course-tax', '0a2'),
             routes: [
               {
                 path: '/course-tax/cac-loai-thue',
@@ -149,6 +149,11 @@ export default [
                 component: ComponentCreator('/course-tax/characters/sinh-vien/story', 'd22'),
                 exact: true,
                 sidebar: "courseTax"
+              },
+              {
+                path: '/course-tax/characters/tepsinhvien',
+                component: ComponentCreator('/course-tax/characters/tepsinhvien', '429'),
+                exact: true
               },
               {
                 path: '/course-tax/chinh-quyen-lay-tien-tu-dau',

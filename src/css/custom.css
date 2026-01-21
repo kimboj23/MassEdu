@@ -8,6 +8,35 @@
    GOOGLE FONTS IMPORT
    ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+/* ============================================
+   SKIP LINK - ACCESSIBILITY
+   ============================================ */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  outline: 2px solid var(--color-primary-active);
+  outline-offset: 2px;
+}
 
 /* ============================================
    ROOT VARIABLES - LIGHT THEME
@@ -567,10 +596,13 @@ blockquote {
   background: var(--bg-primary);
   border: var(--border-width-default) solid var(--border-default);
   border-radius: 0;
-  padding: var(--space-xl);
+  padding: var(--space-sm);
   transition: border-color var(--transition-base),
               transform var(--transition-base),
               box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -582,6 +614,61 @@ blockquote {
 .card--featured {
   border-width: var(--border-width-thick);
   border-color: var(--color-primary);
+}
+
+.card__header {
+  padding: var(--space-xs) 0;
+}
+
+.card__body {
+  flex: 1;
+  padding: var(--space-xs) 0;
+}
+
+.card__footer {
+  padding: var(--space-xs) 0;
+  margin-top: auto;
+}
+
+/* Horizontal Card - Reusable */
+.card--horizontal {
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--space-sm);
+}
+
+.card--horizontal .card__header {
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.card--horizontal .card__body {
+  flex: 1;
+  padding: var(--space-xs) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card--horizontal .card__footer {
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card--horizontal {
+    flex-direction: column;
+  }
+
+  .card--horizontal .card__header,
+  .card--horizontal .card__body,
+  .card--horizontal .card__footer {
+    padding: var(--space-xs) 0;
+  }
 }
 
 /* ==================== FOOTER ==================== */
@@ -1228,5 +1315,31 @@ main .hero.hero--primary:not(header .hero) .hero__subtitle {
   main > div.hero.hero--primary .hero__subtitle,
   main .hero.hero--primary:not(header .hero) .hero__subtitle {
     font-size: 1rem !important;
+  }
+}
+
+/* ============================================
+   INTRO SECTION COMPONENT
+   ============================================ */
+.intro-section {
+  max-width: 66.666%;
+  margin: 0 auto var(--space-lg) auto;
+  text-align: center;
+}
+
+.intro-section__text {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.intro-section__text.text--large {
+  font-size: var(--text-h4);
+}
+
+@media screen and (max-width: 768px) {
+  .intro-section {
+    max-width: 100%;
+    padding: 0 var(--space-sm);
   }
 }

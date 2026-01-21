@@ -87,6 +87,18 @@ Căn phòng trọ 20m² quen thuộc: bàn học chất đầy sách vở và la
 
 Cô chủ mỉm cười: "**25.000 đồng** nhe con."
 
+Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nóng, vỏ giòn rụm, trứng chảy vàng ươm. Hoàn hảo.
+
+<RevealBubble buttonText="💡 Khoan đã...">
+  <strong>"Bạn vừa đóng thuế đấy."</strong>
+
+  HẢ? Cái bánh mì 25.000 đồng này?
+
+  Khoảng **2.273 đồng là thuế VAT** (10% thuế đã ẩn trong giá).
+
+  Bạn không thấy nó. Không cảm nhận được. Nhưng bạn đã trả rồi đấy.
+</RevealBubble>
+
 <NumberSliderWithCalculation
   defaultValue={25000}
   min={15000}
@@ -103,18 +115,6 @@ Cô chủ mỉm cười: "**25.000 đồng** nhe con."
     Thuế VAT = Giá bán / (1 + 100 / Tỷ lệ VAT)
   </code>
   <p>Ví dụ với giá 25.000đ: <strong>2.273đ</strong> = 25.000đ / (1 + 100 / 10)</p>
-</RevealBubble>
-
-Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nóng, vỏ giòn rụm, trứng chảy vàng ươm. Hoàn hảo.
-
-<RevealBubble buttonText="💡 Khoan đã...">
-  <strong>"Bạn vừa đóng thuế đấy."</strong>
-
-  HẢ? Cái bánh mì 25.000 đồng này?
-
-  Khoảng **2.273 đồng là thuế VAT** (10% thuế đã ẩn trong giá).
-
-  Bạn không thấy nó. Không cảm nhận được. Nhưng bạn đã trả rồi đấy.
 </RevealBubble>
 
 <ChoiceButtons sceneId="canh-2a-choice">
@@ -340,7 +340,7 @@ Một tin nhắn từ chị chủ shop quần áo - người nhờ bạn thiết
 
     </div>
     <div className={styles.storyMessageContent}>
-      <strong>Chị chủ shop quần áo</strong><br/>
+      <strong>Chị Tép chủ shop quần áo</strong><br/>
       <small>Vừa xong</small>
     </div>
   </div>
@@ -457,27 +457,23 @@ Tốt hơn là tìm hiểu ngay từ bây giờ!
 
 <Scene id="canh-4-3">
 <h3>Cảnh 4-3: Hỏi Lại Khách Hàng</h3>
-<div className={styles.storyContextBox}>
-  <p>Bạn gõ tin nhắn:</p>
-</div>
+<p><strong>Bạn gõ tin nhắn:</strong></p>
 
 <div className={styles.storyMessage}>
   <p className={styles.storyMessageHighlight}>
     <strong>Bạn:</strong> "Chị ơi, em chưa có mã số thuế ạ. Em có cần không chị? Em làm freelance thôi mà..."
   </p>
   <div className={styles.storyNestedHighlight}>
-    <p><strong>Chị chủ shop:</strong></p>
+    <p><strong>Chị Tép chủ shop:</strong></p>
     <p>"Ồ, nếu em nhận tiền từ công ty thì nên có nhé. Không thì công ty chị khó kê khai chi phí lắm.</p>
     <p>Nhưng mà nếu em kiếm dưới X triệu/năm thì cũng không bắt buộc phải nộp thuế đâu.</p>
     <p>Em search 'đăng ký mã số thuế online' là ra liền. Dễ lắm!"</p>
   </div>
 </div>
-
-<ThoughtBubble sequence={1} variant="success" delay={500}>
   Bạn đọc xong, thở phào.
-
+<p>
   "À, thì ra không phức tạp như mình nghĩ?"
-</ThoughtBubble>
+</p>
 
 <ChoiceButtons sceneId="canh-4-3-choice">
   <Choice value="learn" nextScene="#module-b" variant="learn" module="module-b-tax-id">
@@ -491,7 +487,7 @@ Tốt hơn là tìm hiểu ngay từ bây giờ!
 
 <Scene id="module-b">
 <div className={styles.storyModuleHeader}>
-  <h3>Module B: Mã số thuế & Nghĩa vụ thuế TNCN</h3>
+  <h3>Module: Mã số thuế & Nghĩa vụ thuế TNCN</h3>
   <p>3 điểm cốt lõi bạn cần nhớ</p>
 </div>
 
@@ -531,7 +527,7 @@ Tốt hơn là tìm hiểu ngay từ bây giờ!
 
 <div className={styles.storyCenterAction}>
   <Link to="/course-tax/modules/module-b-tax-id-obligations" className="button button--secondary">
-    Đọc chi tiết Module B →
+    Đọc chi tiết Module →
   </Link>
   <Link to="/course-tax/concepts/salary-tax-calculation" className="button button--primary">
     Công cụ tính thuế
@@ -589,7 +585,7 @@ Bạn cắm tai nghe, mở Spotify. Nhưng tâm trí cứ lang thang về tin nh
 
 <Scene id="module-c">
 <div className={styles.storyModuleHeader}>
-  <h3>Module C: Tính thuế trên lương</h3>
+  <h3>Module: Tính thuế trên lương</h3>
   <p>Hiểu cách tính thuế thu nhập cá nhân với công cụ tương tác</p>
 </div>
 

@@ -4,15 +4,23 @@ import styles from './TriThucHero.module.css';
 
 export default function TriThucHero({ title, subtitle }) {
   return (
-    <div className={styles.triThucHero}>
+    <section
+      className={styles.triThucHero}
+      aria-labelledby="tri-thuc-hero-title"
+      role="banner"
+    >
       <div className="container">
-        <Heading as="h1" className={styles.triThucHeroTitle}>
+        <Heading
+          as="h1"
+          id="tri-thuc-hero-title"
+          className={styles.triThucHeroTitle}
+        >
           {title}
         </Heading>
         <p className={styles.triThucHeroSubtitle}>
           {subtitle}
         </p>
       </div>
-    </div>
+    </section>
   );
 }

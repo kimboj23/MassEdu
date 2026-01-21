@@ -51,8 +51,9 @@ export default function CustomCursor() {
 
   if (!isVisible) return null;
 
+  // Custom cursor is purely decorative and should be hidden from assistive technologies
   return (
-    <>
+    <div aria-hidden="true" role="presentation">
       {/* Main cursor dot */}
       <div
         className={`${styles.cursorDot} ${isHovering ? styles.hovering : ''}`}
@@ -69,6 +70,6 @@ export default function CustomCursor() {
           top: `${position.y}px`,
         }}
       />
-    </>
+    </div>
   );
 }

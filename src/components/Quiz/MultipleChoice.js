@@ -20,16 +20,18 @@ import styles from './Quiz.module.css';
  * @param {boolean} enableHaptics - Enable vibration feedback (default: true)
  * @param {function} onComplete - Callback fired when user advances (for sequential quizzes)
  */
-export default function MultipleChoice({ 
-  question, 
-  options, 
-  correct, 
+export default function MultipleChoice({
+  question,
+  options,
+  correct,
   explanation,
   points = 10,
   streak = 0,
   enableSounds = false,
   enableHaptics = true,
-  onComplete = null
+  onComplete = null,
+  questionNumber = null,
+  totalQuestions = null
 }) {
   // UI State Management
   const [selected, setSelected] = useState(null);           // Currently selected option index
@@ -229,64 +231,88 @@ export default function MultipleChoice({
     setShowCelebration(false);
   };
 
+  const questionLabel = questionNumber && totalQuestions
+    ? `Câu hỏi ${questionNumber} trên ${totalQuestions}`
+    : 'Câu hỏi trắc nghiệm';
+
   return (
-    <div className={`${styles.quizContainer} ${showCelebration ? styles.celebrating : ''}`}>
+    <section
+      className={`${styles.quizContainer} ${showCelebration ? styles.celebrating : ''}`}
+      aria-label={questionLabel}
+    >
       {/* Progress Bar */}
       <div className={styles.progressContainer}>
-        <div 
+        <div
           className={styles.progressBar}
           style={{ width: `${progress}%` }}
+          role="progressbar"
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`Tiến độ trả lời: ${progress}%`}
         />
-        <div className={styles.streakBadge}>
-          🔥 {streak}
+        <div className={styles.streakBadge} aria-label={`Chuỗi đúng: ${streak} câu`}>
+          <span aria-hidden="true">🔥</span> {streak}
         </div>
       </div>
 
       {/* Question */}
       <div className={styles.questionContainer} ref={questionRef}>
-        <h3 className={styles.question}>{question}</h3>
+        <h3 className={styles.question} id="quiz-question">{question}</h3>
       </div>
 
       {/* Options */}
-      <div className={styles.optionsContainer}>
+      <div
+        className={styles.optionsContainer}
+        role="radiogroup"
+        aria-labelledby="quiz-question"
+        aria-describedby={showResult ? 'quiz-result' : undefined}
+      >
         {options.map((option, index) => {
           let optionClass = styles.option;
-          
+          const isSelected = selected === index;
+          const isCorrectOption = index === correct;
+          const isIncorrect = isSelected && !isCorrectOption;
+
           if (showResult) {
-            if (index === correct) {
+            if (isCorrectOption) {
               optionClass += ` ${styles.correctOption}`;
-            } else if (index === selected && index !== correct) {
+            } else if (isIncorrect) {
               optionClass += ` ${styles.incorrectOption}`;
             } else {
               optionClass += ` ${styles.disabledOption}`;
             }
-          } else if (selected === index) {
+          } else if (isSelected) {
             optionClass += ` ${styles.selectedOption}`;
           }
 
           return (
             <div
               key={index}
-              className={`${optionClass} ${isAnimating && selected === index ? styles.bounce : ''}`}
+              className={`${optionClass} ${isAnimating && isSelected ? styles.bounce : ''}`}
               onClick={() => handleOptionSelect(index)}
-              role="button"
-              tabIndex={0}
+              role="radio"
+              aria-checked={isSelected}
+              aria-disabled={showResult}
+              tabIndex={showResult ? -1 : 0}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
                   handleOptionSelect(index);
                 }
               }}
+              aria-label={`${String.fromCharCode(65 + index)}. ${option}${showResult && isCorrectOption ? ', đáp án đúng' : ''}${showResult && isIncorrect ? ', đáp án sai' : ''}`}
             >
               <div className={styles.optionContent}>
-                <div className={styles.optionLetter}>
+                <div className={styles.optionLetter} aria-hidden="true">
                   {String.fromCharCode(65 + index)}
                 </div>
                 <span className={styles.optionText}>{option}</span>
-                {showResult && index === correct && (
-                  <div className={styles.checkmark}>✓</div>
+                {showResult && isCorrectOption && (
+                  <div className={styles.checkmark} aria-hidden="true">✓</div>
                 )}
-                {showResult && index === selected && index !== correct && (
-                  <div className={styles.crossmark}>✗</div>
+                {showResult && isIncorrect && (
+                  <div className={styles.crossmark} aria-hidden="true">✗</div>
                 )}
               </div>
             </div>
@@ -296,49 +322,56 @@ export default function MultipleChoice({
 
       {/* Submit Button - only show when answer is selected but result not shown */}
       {selected !== null && !showResult && (
-        <button 
+        <button
           className={`${styles.submitButton} ${styles.active}`}
           onClick={handleSubmit}
+          aria-label="Kiểm tra đáp án đã chọn"
         >
           Kiểm tra
-          <div className={styles.buttonGlow}></div>
+          <div className={styles.buttonGlow} aria-hidden="true"></div>
         </button>
       )}
 
       {/* Result Section */}
       {showResult && (
-        <div className={`${styles.resultContainer} ${isCorrect ? styles.correctResult : styles.incorrectResult}`}>
+        <div
+          id="quiz-result"
+          className={`${styles.resultContainer} ${isCorrect ? styles.correctResult : styles.incorrectResult}`}
+          role="alert"
+          aria-live="polite"
+        >
           <div className={styles.resultHeader}>
-            <div className={styles.resultIcon}>
+            <div className={styles.resultIcon} aria-hidden="true">
               {isCorrect ? '🎉' : '💭'}
             </div>
             <div className={styles.resultTitle}>
               {isCorrect ? 'Xuất sắc!' : 'Gần đúng rồi!'}
             </div>
             {isCorrect && (
-              <div className={styles.pointsEarned}>
+              <div className={styles.pointsEarned} aria-label={`Nhận được ${points} điểm kinh nghiệm`}>
                 +{points} XP
               </div>
             )}
           </div>
-          
+
           <div className={styles.explanation}>
             {explanation}
           </div>
-          
-          <button 
+
+          <button
             className={styles.continueButton}
             onClick={handleContinue}
+            aria-label={isCorrect ? 'Chuyển sang câu tiếp theo' : 'Thử lại câu này'}
           >
             {isCorrect ? 'Tiếp theo' : 'Thử lại'}
-            <span className={styles.arrow}>→</span>
+            <span className={styles.arrow} aria-hidden="true">→</span>
           </button>
         </div>
       )}
 
       {/* Celebration Animation */}
       {showCelebration && (
-        <div className={styles.celebration}>
+        <div className={styles.celebration} aria-hidden="true">
           {[...Array(8)].map((_, i) => (
             <div key={i} className={`${styles.confetti} ${styles[`confetti${i + 1}`]}`}>
               ✨
@@ -346,6 +379,6 @@ export default function MultipleChoice({
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

@@ -45,26 +45,34 @@ export default function ThoughtBubble({
   if (!isVisible) return null;
 
   const variantClass = styles[`bubble-${variant}`] || styles['bubble-insight'];
+  const variantLabels = {
+    insight: 'Thông tin',
+    question: 'Câu hỏi',
+    warning: 'Cảnh báo',
+    success: 'Thành công'
+  };
 
   return (
-    <div
+    <aside
       className={`${styles.thoughtBubble} ${variantClass} ${isAnimating ? styles.animating : ''} ${className}`}
       style={{ animationDelay: `${delay}ms` }}
+      role="note"
+      aria-label={variantLabels[variant] || 'Thông tin bổ sung'}
     >
-      {icon && <div className={styles.bubbleIcon}>{icon}</div>}
+      {icon && <div className={styles.bubbleIcon} aria-hidden="true">{icon}</div>}
       <div className={styles.bubbleContent}>{children}</div>
       {dismissible && (
         <button
           className={styles.bubbleDismiss}
           onClick={handleDismiss}
-          aria-label="Đóng"
+          aria-label="Đóng thông tin này"
         >
-          ×
+          <span aria-hidden="true">×</span>
         </button>
       )}
       {/* Bubble tail */}
-      <div className={styles.bubbleTail} />
-    </div>
+      <div className={styles.bubbleTail} aria-hidden="true" />
+    </aside>
   );
 }
 
@@ -92,11 +100,15 @@ export function ThoughtBubbleSequence({
   }, [currentIndex, childArray.length, baseDelay, staggerDelay]);
 
   return (
-    <div className={`${styles.thoughtSequence} ${className}`}>
-      {title && <h4 className={styles.sequenceTitle}>{title}</h4>}
-      <div className={styles.sequenceContainer}>
+    <section
+      className={`${styles.thoughtSequence} ${className}`}
+      aria-label={title || 'Chuỗi thông tin'}
+      aria-live="polite"
+    >
+      {title && <h4 className={styles.sequenceTitle} id="sequence-title">{title}</h4>}
+      <ul className={styles.sequenceContainer} style={{ listStyle: 'none', padding: 0, margin: 0 }}>
         {childArray.map((child, index) => (
-          <div
+          <li
             key={index}
             className={styles.sequenceItem}
             style={{
@@ -104,12 +116,13 @@ export function ThoughtBubbleSequence({
               transform: index <= currentIndex ? 'scale(1)' : 'scale(0.9)',
               transition: 'all 0.4s ease',
             }}
+            aria-hidden={index > currentIndex}
           >
             {child}
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }
 
@@ -131,6 +144,8 @@ export function RevealBubble({
         <button
           className={styles.revealButton}
           onClick={() => setIsRevealed(true)}
+          aria-expanded={isRevealed}
+          aria-label={`${buttonText} - Nhấn để hiển thị thông tin`}
         >
           {buttonText}
         </button>
@@ -154,11 +169,11 @@ export function RevealBubble({
  */
 export function ThinkingDots({ text = 'Đang suy nghĩ', duration = 2000 }) {
   return (
-    <div className={styles.thinkingDots}>
+    <div className={styles.thinkingDots} role="status" aria-live="polite" aria-label={text}>
       <span className={styles.thinkingText}>{text}</span>
-      <span className={styles.dot} style={{ animationDelay: '0s' }}>.</span>
-      <span className={styles.dot} style={{ animationDelay: '0.2s' }}>.</span>
-      <span className={styles.dot} style={{ animationDelay: '0.4s' }}>.</span>
+      <span className={styles.dot} style={{ animationDelay: '0s' }} aria-hidden="true">.</span>
+      <span className={styles.dot} style={{ animationDelay: '0.2s' }} aria-hidden="true">.</span>
+      <span className={styles.dot} style={{ animationDelay: '0.4s' }} aria-hidden="true">.</span>
     </div>
   );
 }
@@ -171,17 +186,31 @@ export function HighlightThought({ trigger, children, variant = 'insight' }) {
 
   return (
     <span className={styles.highlightThought}>
-      <span
+      <button
+        type="button"
         className={styles.highlightTrigger}
         onClick={() => setIsExpanded(!isExpanded)}
-        onKeyPress={(e) => e.key === 'Enter' && setIsExpanded(!isExpanded)}
-        role="button"
-        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setIsExpanded(!isExpanded);
+          }
+        }}
+        aria-expanded={isExpanded}
+        aria-label={`${trigger} - Nhấn để ${isExpanded ? 'ẩn' : 'hiển thị'} thông tin chi tiết`}
+        style={{
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          font: 'inherit',
+          color: 'inherit',
+          cursor: 'pointer'
+        }}
       >
         {trigger}
-      </span>
+      </button>
       {isExpanded && (
-        <span className={styles.highlightContent}>
+        <span className={styles.highlightContent} aria-live="polite">
           <ThoughtBubble variant={variant} delay={0} sequence={1}>
             {children}
           </ThoughtBubble>

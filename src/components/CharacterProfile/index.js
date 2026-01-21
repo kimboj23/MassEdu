@@ -8,19 +8,19 @@ function StorylineProgress({ character, currentStoryline, currentEpisode }) {
   const storylines = character.storylines;
 
   return (
-    <div className={styles.storylineProgress}>
-      <h4>Hành trình của {character.name}</h4>
+    <nav className={styles.storylineProgress} aria-label={`Hành trình của ${character.name}`}>
+      <h4 id="storyline-progress-title">Hành trình của {character.name}</h4>
       {Object.entries(storylines).map(([storylineId, storyline]) => (
-        <div key={storylineId} className={styles.storylineSection}>
+        <section key={storylineId} className={styles.storylineSection} aria-labelledby={`storyline-${storylineId}`}>
           <div className={styles.storylineHeader}>
-            <span className={styles.storylineTitle}>{storyline.title}</span>
+            <span className={styles.storylineTitle} id={`storyline-${storylineId}`}>{storyline.title}</span>
             {storyline.status === 'coming-soon' && (
-              <span className={styles.comingSoon}>Sắp ra mắt</span>
+              <span className={styles.comingSoon} aria-label="Sắp ra mắt">Sắp ra mắt</span>
             )}
           </div>
 
           {storyline.episodes && storyline.episodes.length > 0 && (
-            <div className={styles.episodeList}>
+            <ol className={styles.episodeList} aria-label={`Các tập trong ${storyline.title}`}>
               {storyline.episodes.map((episode, index) => {
                 const isCurrentEpisode =
                   storylineId === currentStoryline && episode.slug === currentEpisode;
@@ -30,37 +30,40 @@ function StorylineProgress({ character, currentStoryline, currentEpisode }) {
                   index < storyline.episodes.findIndex(ep => ep.slug === currentEpisode);
 
                 return (
-                  <Link
-                    key={episode.id}
-                    to={episode.path}
-                    className={clsx(
-                      styles.episodeLink,
-                      isCurrentEpisode && styles.currentEpisode,
-                      isCompleted && styles.completedEpisode
-                    )}
-                  >
-                    <span className={styles.episodeNumber}>{index + 1}</span>
-                    <span className={styles.episodeTitle}>{episode.title}</span>
-                    {isCurrentEpisode && <span className={styles.currentBadge}>Hiện tại</span>}
-                    {isCompleted && <span className={styles.completedBadge}>Hoàn thành</span>}
-                  </Link>
+                  <li key={episode.id}>
+                    <Link
+                      to={episode.path}
+                      className={clsx(
+                        styles.episodeLink,
+                        isCurrentEpisode && styles.currentEpisode,
+                        isCompleted && styles.completedEpisode
+                      )}
+                      aria-label={`Tập ${index + 1}: ${episode.title}${isCurrentEpisode ? ', đang xem' : ''}${isCompleted ? ', đã hoàn thành' : ''}`}
+                      aria-current={isCurrentEpisode ? 'step' : undefined}
+                    >
+                      <span className={styles.episodeNumber} aria-hidden="true">{index + 1}</span>
+                      <span className={styles.episodeTitle}>{episode.title}</span>
+                      {isCurrentEpisode && <span className={styles.currentBadge} aria-hidden="true">Hiện tại</span>}
+                      {isCompleted && <span className={styles.completedBadge} aria-hidden="true">Hoàn thành</span>}
+                    </Link>
+                  </li>
                 );
               })}
-            </div>
+            </ol>
           )}
-        </div>
+        </section>
       ))}
-    </div>
+    </nav>
   );
 }
 
 function CharacterCard({ character, compact = false }) {
   return (
-    <div className={clsx(styles.characterCard, compact && styles.compact)}>
+    <article className={clsx(styles.characterCard, compact && styles.compact)} aria-labelledby={`character-name-${character.id || character.name}`}>
       <div className={styles.characterHeader}>
-        <div className={styles.characterAvatar}>{character.avatar}</div>
+        <div className={styles.characterAvatar} role="img" aria-label={`Hình đại diện của ${character.name}`}>{character.avatar}</div>
         <div className={styles.characterBasicInfo}>
-          <h3 className={styles.characterName}>{character.name}</h3>
+          <h3 className={styles.characterName} id={`character-name-${character.id || character.name}`}>{character.name}</h3>
           <p className={styles.characterOccupation}>{character.occupation}</p>
           {!compact && (
             <>
@@ -75,26 +78,26 @@ function CharacterCard({ character, compact = false }) {
 
       {!compact && (
         <>
-          <div className={styles.characterBackground}>
-            <h4>Thông tin cá nhân</h4>
+          <section className={styles.characterBackground} aria-labelledby="personal-info-heading">
+            <h4 id="personal-info-heading">Thông tin cá nhân</h4>
             <ul>
               <li><strong>Học vấn:</strong> {character.background.education}</li>
               <li><strong>Gia đình:</strong> {character.background.family}</li>
               <li><strong>Thu nhập:</strong> {character.background.income}</li>
             </ul>
-          </div>
+          </section>
 
-          <div className={styles.personalityTraits}>
-            <h4>Tính cách</h4>
-            <div className={styles.traitTags}>
+          <section className={styles.personalityTraits} aria-labelledby="personality-heading">
+            <h4 id="personality-heading">Tính cách</h4>
+            <ul className={styles.traitTags} aria-label="Các đặc điểm tính cách" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {character.personalityTraits.map((trait, index) => (
-                <span key={index} className={styles.traitTag}>{trait}</span>
+                <li key={index} className={styles.traitTag} style={{ display: 'inline-block' }}>{trait}</li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </section>
         </>
       )}
-    </div>
+    </article>
   );
 }
 
@@ -108,11 +111,11 @@ export default function CharacterProfile({
   const character = getCharacter(characterId);
 
   if (!character) {
-    return <div>Không tìm thấy thông tin nhân vật.</div>;
+    return <div role="alert">Không tìm thấy thông tin nhân vật.</div>;
   }
 
   return (
-    <div className={styles.characterProfile}>
+    <section className={styles.characterProfile} aria-label={`Thông tin nhân vật ${character.name}`}>
       <CharacterCard character={character} compact={compact} />
       {showProgress && (
         <StorylineProgress
@@ -121,7 +124,7 @@ export default function CharacterProfile({
           currentEpisode={currentEpisode}
         />
       )}
-    </div>
+    </section>
   );
 }
 

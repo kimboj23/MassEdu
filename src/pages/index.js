@@ -16,15 +16,18 @@ function HomepageHeader() {
     const storylinesSection = document.getElementById('storylines');
     if (storylinesSection) {
       storylinesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Set focus for keyboard users
+      storylinesSection.setAttribute('tabindex', '-1');
+      storylinesSection.focus();
     }
   };
 
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} aria-labelledby="hero-title">
       <div className="container">
-        <Heading as="h1" className="hero__title display">
-          Tép riu<br />
-          stép up<br />
+        <Heading as="h1" id="hero-title" className="hero__title display">
+          Tép riu<br aria-hidden="true" />
+          stép up<br aria-hidden="true" />
           stép out
         </Heading>
         <p className="hero__subtitle lead">
@@ -32,15 +35,17 @@ function HomepageHeader() {
           nơi những "tép riu" có thể tự do học hỏi và
           thể hiện chính kiến một cách an toàn.
         </p>
-        <div className={styles.buttons}>
+        <div className={styles.buttons} role="group" aria-label="Các hành động chính">
           <button
             className="button button--primary button--lg"
-            onClick={handleScrollToStorylines}>
+            onClick={handleScrollToStorylines}
+            aria-label="Bắt đầu học - cuộn đến phần câu chuyện">
             Bắt đầu học
           </button>
           <Link
             className="button button--secondary button--lg"
-            to="/about">
+            to="/about"
+            aria-label="Tìm hiểu thêm về TepUp">
             Tìm hiểu thêm
           </Link>
         </div>
@@ -57,7 +62,7 @@ export default function Home() {
       description="Bên nhau học hành">
       <WaveAnimation />
       <HomepageHeader />
-      <main>
+      <main id="main-content" aria-label="Nội dung chính">
         <HomepageFeatures />
       </main>
     </Layout>

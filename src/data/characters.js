@@ -3,9 +3,9 @@
 
 export const CHARACTERS = {
   sinhvien: {
-    id: 'sinhvien',
-    name: 'Sinh viên',
-    fullName: 'Sinh viên',
+    id: 'tepsinhvien',
+    name: 'Tép sinh viên',
+    fullName: 'Tép sinh viên',
     age: 20,
     occupation: 'Sinh viên',
     avatar: 'S',

@@ -7,7 +7,6 @@ import Link from '@docusaurus/Link';
 const StorylineList = [
   {
     title: 'Thuế và Ngân sách Công',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
         Tiền thuế bạn đóng đi đâu? Khám phá qua góc nhìn của những người trong cuộc.
@@ -19,7 +18,6 @@ const StorylineList = [
   },
   {
     title: 'Y tế Công',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         Hệ thống y tế vận hành ra sao? Cùng tìm hiểu qua những câu chuyện
@@ -31,7 +29,6 @@ const StorylineList = [
   },
   {
     title: 'Tham nhũng',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         Tham nhũng ảnh hưởng đến cuộc sống của chúng ta như thế nào?
@@ -52,13 +49,13 @@ function StorylineCard({title, description, link, status, cardIndex}) {
       <div className={styles.cardHeader}>
         <h3 className={styles.cardTitle}>{title}</h3>
         {isComingSoon && (
-          <span className={styles.comingSoonBadge}>Sắp ra mắt</span>
+          <span className={styles.comingSoonBadge} aria-label="Chủ đề này sắp ra mắt">Sắp ra mắt</span>
         )}
       </div>
       <p className={styles.cardDescription}>{description}</p>
       {isActive && (
-        <div className={styles.cardAction}>
-          Bắt đầu khám phá →
+        <div className={styles.cardAction} aria-hidden="true">
+          Bắt đầu khám phá <span aria-hidden="true">→</span>
         </div>
       )}
     </div>
@@ -67,33 +64,42 @@ function StorylineCard({title, description, link, status, cardIndex}) {
   const colorClass = `colorVariant${(cardIndex % 3) + 1}`;
 
   return (
-    <div className={styles.cardWrapper}>
+    <article className={styles.cardWrapper}>
       {isActive ? (
-        <Link to={link} className={clsx(styles.featureLink, styles.activeStoryline, styles[colorClass])}>
+        <Link
+          to={link}
+          className={clsx(styles.featureLink, styles.activeStoryline, styles[colorClass])}
+          aria-label={`Khám phá câu chuyện: ${title}`}
+        >
           <CardContent />
         </Link>
       ) : (
-        <div className={clsx(styles.featureLink, styles.comingSoonStoryline, styles[colorClass])}>
+        <div
+          className={clsx(styles.featureLink, styles.comingSoonStoryline, styles[colorClass])}
+          aria-label={`${title} - Sắp ra mắt`}
+        >
           <CardContent />
         </div>
       )}
-    </div>
+    </article>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features} id="storylines">
+    <section className={styles.features} id="storylines" aria-labelledby="storylines-title">
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Chọn câu chuyện để khám phá</h2>
+          <h2 className={styles.sectionTitle} id="storylines-title">Chọn câu chuyện để khám phá</h2>
           <p className={styles.sectionSubtitle}>Mỗi câu chuyện sẽ đưa bạn vào vai những người khác nhau trong xã hội, giúp bạn hiểu sâu hơn về các vấn đề quan trọng.</p>
         </div>
-        <div className={styles.cardsGrid}>
+        <ul className={styles.cardsGrid} aria-label="Danh sách các câu chuyện">
           {StorylineList.map((props, idx) => (
-            <StorylineCard key={idx} {...props} cardIndex={idx} />
+            <li key={idx}>
+              <StorylineCard {...props} cardIndex={idx} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

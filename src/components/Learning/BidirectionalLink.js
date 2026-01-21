@@ -68,9 +68,9 @@ export default function BidirectionalLink({
     if (!showPreview || !targetContent) return null;
 
     return (
-      <div className={styles.linkPreview}>
+      <div className={styles.linkPreview} role="tooltip" aria-label={`Xem trước: ${targetTitle}`}>
         <div className={styles.previewHeader}>
-          <span className={styles.previewIcon}>{getIcon()}</span>
+          <span className={styles.previewIcon} aria-hidden="true">{getIcon()}</span>
           <strong>{targetTitle}</strong>
         </div>
         {context && (
@@ -81,7 +81,7 @@ export default function BidirectionalLink({
         {targetContent.learningOutcomes && (
           <div className={styles.previewOutcomes}>
             <small>Bạn sẽ học:</small>
-            <ul>
+            <ul aria-label="Các kết quả học tập">
               {targetContent.learningOutcomes.slice(0, 2).map((outcome, idx) => (
                 <li key={idx}>{outcome}</li>
               ))}
@@ -92,27 +92,42 @@ export default function BidirectionalLink({
     );
   };
 
+  const typeLabels = {
+    lesson: 'bài học',
+    story: 'câu chuyện',
+    module: 'module',
+    concept: 'khái niệm'
+  };
+
   return (
     <div
       className={`${styles.bidirectionalLink} ${styles[`link-${targetType}`]} ${className}`}
       onMouseEnter={() => setShowHover(true)}
       onMouseLeave={() => setShowHover(false)}
+      onFocus={() => setShowHover(true)}
+      onBlur={() => setShowHover(false)}
     >
       <Link
         to={targetPath}
         className={styles.linkButton}
+        aria-label={`Đi đến ${typeLabels[targetType] || 'nội dung'}: ${targetTitle}`}
+        aria-describedby={showHover && showPreview ? `preview-${targetType}-${targetPath.replace(/\//g, '-')}` : undefined}
       >
-        <span className={styles.linkIcon}>{getIcon()}</span>
+        <span className={styles.linkIcon} aria-hidden="true">{getIcon()}</span>
         <span className={styles.linkText}>
           {children || targetTitle}
         </span>
-        <span className={styles.linkArrow}>→</span>
+        <span className={styles.linkArrow} aria-hidden="true">→</span>
       </Link>
 
       {showHover && showPreview && (
-        <div className={styles.linkPreviewContainer}>
+        <section
+          className={styles.linkPreviewContainer}
+          id={`preview-${targetType}-${targetPath.replace(/\//g, '-')}`}
+          aria-live="polite"
+        >
           {renderPreview()}
-        </div>
+        </section>
       )}
     </div>
   );
@@ -183,12 +198,12 @@ export function StoryCallout({ character, scenes = [], title, description }) {
   const storyData = getStory(character);
 
   return (
-    <div className={styles.storyCallout}>
+    <aside className={styles.storyCallout} role="complementary" aria-labelledby="story-callout-title">
       <div className={styles.calloutHeader}>
-        <h4>{title || 'Muốn trải nghiệm trực tiếp?'}</h4>
+        <h4 id="story-callout-title">{title || 'Muốn trải nghiệm trực tiếp?'}</h4>
       </div>
       <p>{description || `Theo dõi câu chuyện của ${storyData?.character} để thấy những khái niệm này xuất hiện trong cuộc sống như thế nào.`}</p>
-      <div className={styles.calloutActions}>
+      <div className={styles.calloutActions} role="group" aria-label="Các lựa chọn câu chuyện">
         {scenes.length > 0 ? (
           scenes.map((scene) => {
             const sceneData = storyData?.scenes.find(s => s.id === scene);
@@ -197,6 +212,7 @@ export function StoryCallout({ character, scenes = [], title, description }) {
                 key={scene}
                 to={sceneData?.path || `${storyData?.path}/${scene}`}
                 className={styles.calloutButton}
+                aria-label={`Bắt đầu: ${sceneData?.title || 'câu chuyện'}`}
               >
                 {sceneData?.title || 'Bắt đầu câu chuyện'}
               </Link>
@@ -206,11 +222,12 @@ export function StoryCallout({ character, scenes = [], title, description }) {
           <Link
             to={storyData?.path}
             className={styles.calloutButton}
+            aria-label={`Bắt đầu câu chuyện của ${storyData?.character || character}`}
           >
             Bắt đầu câu chuyện
           </Link>
         )}
       </div>
-    </div>
+    </aside>
   );
 }

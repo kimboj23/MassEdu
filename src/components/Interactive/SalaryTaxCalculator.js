@@ -93,15 +93,15 @@ export default function SalaryTaxCalculator({ defaultSalary = 13000000 }) {
   };
 
   return (
-    <div className={styles.salaryTaxCalculator}>
+    <section className={styles.salaryTaxCalculator} aria-label="Máy tính thuế thu nhập cá nhân">
       <div className={styles.calculatorHeader}>
-        <h4>Tính thuế thu nhập cá nhân</h4>
+        <h4 id="calculator-title">Tính thuế thu nhập cá nhân</h4>
         <p>Điều chỉnh các giá trị để xem thuế và thu nhập thực nhận của bạn</p>
       </div>
 
-      <div className={styles.calculatorInputs}>
+      <div className={styles.calculatorInputs} role="group" aria-labelledby="calculator-title">
         <div className={styles.inputGroup}>
-          <label htmlFor="grossSalary">
+          <label htmlFor="grossSalary" id="grossSalary-label">
             Lương tổng (gross): <strong>{formatCurrency(grossSalary)}</strong>
           </label>
           <input
@@ -113,15 +113,20 @@ export default function SalaryTaxCalculator({ defaultSalary = 13000000 }) {
             value={grossSalary}
             onChange={(e) => setGrossSalary(Number(e.target.value))}
             className={styles.salarySlider}
+            aria-labelledby="grossSalary-label"
+            aria-valuemin={5000000}
+            aria-valuemax={50000000}
+            aria-valuenow={grossSalary}
+            aria-valuetext={formatCurrency(grossSalary)}
           />
-          <div className={styles.sliderMarks}>
+          <div className={styles.sliderMarks} aria-hidden="true">
             <span>5 triệu</span>
             <span>50 triệu</span>
           </div>
         </div>
 
         <div className={styles.inputGroup}>
-          <label htmlFor="dependents">
+          <label htmlFor="dependents" id="dependents-label">
             Số người phụ thuộc: <strong>{dependents}</strong>
           </label>
           <input
@@ -133,79 +138,86 @@ export default function SalaryTaxCalculator({ defaultSalary = 13000000 }) {
             value={dependents}
             onChange={(e) => setDependents(Number(e.target.value))}
             className={styles.salarySlider}
+            aria-labelledby="dependents-label"
+            aria-valuemin={0}
+            aria-valuemax={5}
+            aria-valuenow={dependents}
+            aria-valuetext={`${dependents} người`}
           />
-          <div className={styles.sliderMarks}>
+          <div className={styles.sliderMarks} aria-hidden="true">
             <span>0</span>
             <span>5</span>
           </div>
         </div>
       </div>
 
-      <div className={styles.calculatorResults}>
-        <div className={styles.resultCard}>
+      <section className={styles.calculatorResults} aria-live="polite" aria-atomic="false" aria-label="Kết quả tính toán">
+        <div className={styles.resultCard} role="group" aria-label="Lương tổng">
           <div className={styles.resultLabel}>Lương tổng</div>
-          <div className={styles.resultValue}>{formatCurrency(grossSalary)}</div>
+          <div className={styles.resultValue} aria-label={`Lương tổng: ${formatCurrency(grossSalary)}`}>{formatCurrency(grossSalary)}</div>
         </div>
 
-        <div className={styles.resultCard + ' ' + styles.resultDeduction}>
+        <div className={styles.resultCard + ' ' + styles.resultDeduction} role="group" aria-label="Bảo hiểm bắt buộc">
           <div className={styles.resultLabel}>Bảo hiểm bắt buộc</div>
-          <div className={styles.resultValue}>-{formatCurrency(insurance.total)}</div>
+          <div className={styles.resultValue} aria-label={`Trừ ${formatCurrency(insurance.total)} cho bảo hiểm`}>-{formatCurrency(insurance.total)}</div>
           {showDetails && (
-            <div className={styles.resultDetails}>
-              <div>• BHXH (8%): {formatCurrency(insurance.bhxh)}</div>
-              <div>• BHYT (1.5%): {formatCurrency(insurance.bhyt)}</div>
-              <div>• BHTN (1%): {formatCurrency(insurance.bhtn)}</div>
-            </div>
+            <ul className={styles.resultDetails} aria-label="Chi tiết bảo hiểm">
+              <li>BHXH (8%): {formatCurrency(insurance.bhxh)}</li>
+              <li>BHYT (1.5%): {formatCurrency(insurance.bhyt)}</li>
+              <li>BHTN (1%): {formatCurrency(insurance.bhtn)}</li>
+            </ul>
           )}
         </div>
 
-        <div className={styles.resultCard + ' ' + styles.resultDeduction}>
+        <div className={styles.resultCard + ' ' + styles.resultDeduction} role="group" aria-label="Giảm trừ gia cảnh">
           <div className={styles.resultLabel}>Giảm trừ gia cảnh</div>
-          <div className={styles.resultValue}>-{formatCurrency(deductions.total)}</div>
+          <div className={styles.resultValue} aria-label={`Trừ ${formatCurrency(deductions.total)} cho giảm trừ gia cảnh`}>-{formatCurrency(deductions.total)}</div>
           {showDetails && (
-            <div className={styles.resultDetails}>
-              <div>• Bản thân: {formatCurrency(deductions.personalDeduction)}</div>
+            <ul className={styles.resultDetails} aria-label="Chi tiết giảm trừ">
+              <li>Bản thân: {formatCurrency(deductions.personalDeduction)}</li>
               {dependents > 0 && (
-                <div>• Người phụ thuộc ({dependents}): {formatCurrency(deductions.dependentDeduction)}</div>
+                <li>Người phụ thuộc ({dependents}): {formatCurrency(deductions.dependentDeduction)}</li>
               )}
-            </div>
+            </ul>
           )}
         </div>
 
-        <div className={styles.resultCard + ' ' + styles.resultTaxable}>
+        <div className={styles.resultCard + ' ' + styles.resultTaxable} role="group" aria-label="Thu nhập tính thuế">
           <div className={styles.resultLabel}>Thu nhập tính thuế</div>
-          <div className={styles.resultValue}>{formatCurrency(Math.max(0, taxableIncome))}</div>
+          <div className={styles.resultValue} aria-label={`Thu nhập tính thuế: ${formatCurrency(Math.max(0, taxableIncome))}`}>{formatCurrency(Math.max(0, taxableIncome))}</div>
         </div>
 
-        <div className={styles.resultCard + ' ' + styles.resultTax}>
+        <div className={styles.resultCard + ' ' + styles.resultTax} role="group" aria-label="Thuế thu nhập cá nhân">
           <div className={styles.resultLabel}>Thuế TNCN</div>
-          <div className={styles.resultValue}>-{formatCurrency(tax.totalTax)}</div>
+          <div className={styles.resultValue} aria-label={`Trừ ${formatCurrency(tax.totalTax)} cho thuế`}>-{formatCurrency(tax.totalTax)}</div>
           {showDetails && tax.breakdown.length > 0 && (
-            <div className={styles.resultDetails}>
+            <ul className={styles.resultDetails} aria-label="Chi tiết thuế theo bậc">
               {tax.breakdown.map((bracket, idx) => (
-                <div key={idx}>
-                  • {bracket.label}: {formatCurrency(bracket.income)} × {formatPercent(bracket.rate)} = {formatCurrency(bracket.tax)}
-                </div>
+                <li key={idx}>
+                  {bracket.label}: {formatCurrency(bracket.income)} × {formatPercent(bracket.rate)} = {formatCurrency(bracket.tax)}
+                </li>
               ))}
-            </div>
+            </ul>
           )}
         </div>
 
-        <div className={styles.resultCard + ' ' + styles.resultNet}>
+        <div className={styles.resultCard + ' ' + styles.resultNet} role="group" aria-label="Thu nhập thực nhận">
           <div className={styles.resultLabel}>Thu nhập thực nhận</div>
-          <div className={styles.resultValue}>{formatCurrency(netSalary)}</div>
-          <div className={styles.resultPercent}>
+          <div className={styles.resultValue} aria-label={`Thu nhập thực nhận: ${formatCurrency(netSalary)}`}>{formatCurrency(netSalary)}</div>
+          <div className={styles.resultPercent} aria-label={`Chiếm ${((netSalary / grossSalary) * 100).toFixed(1)} phần trăm của lương tổng`}>
             {((netSalary / grossSalary) * 100).toFixed(1)}% của lương tổng
           </div>
         </div>
-      </div>
+      </section>
 
       <div className={styles.calculatorActions}>
         <button
           onClick={() => setShowDetails(!showDetails)}
           className={styles.detailsButton}
+          aria-expanded={showDetails}
+          aria-label={showDetails ? 'Ẩn chi tiết tính toán' : 'Xem chi tiết tính toán'}
         >
-          {showDetails ? '▲ Ẩn chi tiết' : '▼ Xem chi tiết tính toán'}
+          <span aria-hidden="true">{showDetails ? '▲' : '▼'}</span> {showDetails ? 'Ẩn chi tiết' : 'Xem chi tiết tính toán'}
         </button>
       </div>
 
@@ -216,7 +228,7 @@ export default function SalaryTaxCalculator({ defaultSalary = 13000000 }) {
           và quy định cụ thể của công ty.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -279,10 +291,10 @@ export function SimpleSalaryComparison({
   const percentage = ((deductions.total / grossSalary) * 100).toFixed(1);
 
   return (
-    <div className={styles.simpleSalaryComparison}>
+    <section className={styles.simpleSalaryComparison} aria-label="So sánh lương trước và sau thuế">
       {interactive && (
         <div className={styles.comparisonSliderSection}>
-          <label htmlFor="salary-slider" className={styles.sliderLabel}>
+          <label htmlFor="salary-slider" id="salary-slider-label" className={styles.sliderLabel}>
             Điều chỉnh lương để xem thay đổi:
           </label>
           <input
@@ -294,44 +306,49 @@ export function SimpleSalaryComparison({
             value={grossSalary}
             onChange={(e) => setGrossSalary(Number(e.target.value))}
             className={styles.comparisonSlider}
+            aria-labelledby="salary-slider-label"
+            aria-valuemin={5000000}
+            aria-valuemax={50000000}
+            aria-valuenow={grossSalary}
+            aria-valuetext={`${formatCurrency(grossSalary)} đồng`}
           />
-          <div className={styles.sliderMarks}>
+          <div className={styles.sliderMarks} aria-hidden="true">
             <span>5 triệu</span>
             <span>50 triệu</span>
           </div>
         </div>
       )}
 
-      <div className={styles.comparisonRow}>
+      <div className={styles.comparisonRow} aria-live="polite">
         <div className={styles.comparisonItem}>
-          <span className={styles.comparisonLabel}>Lương tổng:</span>
-          <span className={styles.comparisonValue}>{formatCurrency(grossSalary)} đồng</span>
+          <span className={styles.salaryLabel}>Lương tổng:</span>
+          <span className={styles.salaryValue} aria-label={`Lương tổng ${formatCurrency(grossSalary)} đồng`}>{formatCurrency(grossSalary)} đồng</span>
         </div>
-        <div className={styles.comparisonArrow}>→</div>
+        <div className={styles.comparisonArrow} aria-hidden="true">→</div>
         <div className={styles.comparisonItem}>
-          <span className={styles.comparisonLabel}>Thực nhận:</span>
-          <span className={styles.comparisonValue + ' ' + styles.highlightNet}>{formatCurrency(Math.round(netSalary))} đồng</span>
+          <span className={styles.salaryLabel}>Thực nhận:</span>
+          <span className={styles.salaryValue + ' ' + styles.highlightNet} aria-label={`Thực nhận ${formatCurrency(Math.round(netSalary))} đồng`}>{formatCurrency(Math.round(netSalary))} đồng</span>
         </div>
       </div>
 
-      <div className={styles.comparisonDeduction}>
+      <div className={styles.comparisonDeduction} aria-label={`Đã khấu trừ ${formatCurrency(Math.round(deductions.total))} đồng, chiếm ${percentage} phần trăm`}>
         <span className={styles.deductionAmount}>-{formatCurrency(Math.round(deductions.total))} đồng</span>
         <span className={styles.deductionPercent}>({percentage}%)</span>
         <span className={styles.deductionLabel}>đã bị khấu trừ cho thuế và bảo hiểm</span>
       </div>
 
       {interactive && (
-        <div className={styles.comparisonBreakdown}>
-          <div className={styles.breakdownItem}>
+        <ul className={styles.comparisonBreakdown} aria-label="Chi tiết khấu trừ">
+          <li className={styles.breakdownItem}>
             <span className={styles.breakdownLabel}>Bảo hiểm (10.5%):</span>
             <span className={styles.breakdownValue}>-{formatCurrency(Math.round(deductions.insurance))} đ</span>
-          </div>
-          <div className={styles.breakdownItem}>
+          </li>
+          <li className={styles.breakdownItem}>
             <span className={styles.breakdownLabel}>Thuế TNCN:</span>
             <span className={styles.breakdownValue}>-{formatCurrency(Math.round(deductions.tax))} đ</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       )}
-    </div>
+    </section>
   );
 }

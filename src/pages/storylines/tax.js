@@ -10,63 +10,75 @@ function CharacterCard({ character }) {
   const isAvailable = taxStoryline && taxStoryline.episodes && taxStoryline.episodes.length > 0;
 
   return (
-    <div className={styles.cardWrapper}>
+    <article className={styles.cardWrapper} aria-labelledby={`character-${character.id}-name`}>
       <div className={`${styles.characterCard} ${!isAvailable ? styles.comingSoon : ''}`}>
         {/* Card Frame */}
         <div className={styles.cardFrame}>
           {/* Avatar/Image Section - Top portion */}
           <div className={styles.cardImage}>
-            <div className={styles.avatarCircle}>{character.avatar}</div>
+            <div className={styles.avatarCircle} role="img" aria-label={`Hình đại diện của ${character.name}`}>{character.avatar}</div>
             {!isAvailable && (
-              <div className={styles.comingSoonBadge}>Sắp ra mắt</div>
+              <div className={styles.comingSoonBadge} aria-label="Câu chuyện này sắp ra mắt">Sắp ra mắt</div>
             )}
           </div>
 
           {/* Character Info - Main body */}
           <div className={styles.cardBody}>
-            <h3 className={styles.characterName}>{character.name}</h3>
+            <h3 className={styles.characterName} id={`character-${character.id}-name`}>{character.name}</h3>
             <p className={styles.occupation}>{character.occupation}</p>
 
-            <div className={styles.statsBar}>
+            <dl className={styles.statsBar} aria-label="Thông tin cơ bản">
               <div className={styles.stat}>
-                <span className={styles.statLabel}>Tuổi</span>
-                <span className={styles.statValue}>{character.age}</span>
+                <dt className={styles.statLabel}>Tuổi</dt>
+                <dd className={styles.statValue}>{character.age}</dd>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statLabel}>Vị trí</span>
-                <span className={styles.statValue}>{character.background.location}</span>
+                <dt className={styles.statLabel}>Vị trí</dt>
+                <dd className={styles.statValue}>{character.background.location}</dd>
               </div>
-            </div>
+            </dl>
 
             <p className={styles.description}>{character.description}</p>
 
             {/* Key challenge preview */}
             {character.challenges.tax.length > 0 && (
-              <div className={styles.challenge}>
-                <span className={styles.challengeIcon}>⚡</span>
+              <div className={styles.challenge} aria-label="Thách thức chính">
+                <span className={styles.challengeIcon} aria-hidden="true">⚡</span>
                 <span className={styles.challengeText}>{character.challenges.tax[0]}</span>
               </div>
             )}
           </div>
 
           {/* Card Footer - Action buttons */}
-          <div className={styles.cardFooter}>
-            <Link
-              className={`${styles.actionButton} ${styles.primaryAction} ${!isAvailable ? styles.disabled : ''}`}
-              to={isAvailable ? taxStoryline.episodes[0].path : '#'}
-            >
-              {isAvailable ? 'Bắt đầu hành trình →' : 'Sắp ra mắt'}
-            </Link>
+          <div className={styles.cardFooter} role="group" aria-label={`Các hành động cho ${character.name}`}>
+            {isAvailable ? (
+              <Link
+                className={`${styles.actionButton} ${styles.primaryAction}`}
+                to={taxStoryline.episodes[0].path}
+                aria-label={`Bắt đầu hành trình với ${character.name}`}
+              >
+                Bắt đầu hành trình <span aria-hidden="true">→</span>
+              </Link>
+            ) : (
+              <span
+                className={`${styles.actionButton} ${styles.primaryAction} ${styles.disabled}`}
+                aria-disabled="true"
+                role="button"
+              >
+                Sắp ra mắt
+              </span>
+            )}
             <Link
               className={`${styles.actionButton} ${styles.secondaryAction}`}
               to={`/course-tax/characters/${character.id}`}
+              aria-label={`Xem hồ sơ chi tiết của ${character.name}`}
             >
               Xem hồ sơ
             </Link>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -80,18 +92,22 @@ export default function TaxStorylines() {
       <Head>
         <title>Câu chuyện về Thuế | MassEdu</title>
       </Head>
-      <main className="container margin-vert--lg">
-        <div className={styles.hero}>
-          <h1 className="hero__title text--center">Câu chuyện về Thuế</h1>
+      <main id="main-content" className="container margin-vert--lg">
+        <section className={styles.hero} aria-labelledby="tax-stories-title">
+          <h1 id="tax-stories-title" className="hero__title text--center">Câu chuyện về Thuế</h1>
           <p className="hero__subtitle text--center margin-bottom--lg">
             Chọn một nhân vật để bắt đầu hành trình tìm hiểu về thuế và ngân sách nhà nước.
           </p>
-        </div>
-        <div className={styles.cardsGrid}>
-          {characters.map((char) => (
-            <CharacterCard key={char.id} character={char} />
-          ))}
-        </div>
+        </section>
+        <section aria-label="Danh sách nhân vật">
+          <ul className={styles.cardsGrid} style={{ listStyle: 'none', padding: 0 }}>
+            {characters.map((char) => (
+              <li key={char.id}>
+                <CharacterCard character={char} />
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
     </Layout>
   );

@@ -5,7 +5,7 @@
 
 /* ==================== HERO SECTION ==================== */
 .hero {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-md);
   text-align: center;
 }
 
