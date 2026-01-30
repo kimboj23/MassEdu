@@ -102,14 +102,16 @@
   --font-body-secondary: 'Lora', serif;
 
   /* Font Sizes - Minimalist Scale */
-  --text-display: clamp(48px, 8vw, 96px);
-  --text-h1: clamp(36px, 5vw, 64px);
-  --text-h2: clamp(28px, 4vw, 48px);
-  --text-h3: clamp(20px, 3vw, 32px);
-  --text-body-large: 20px;
-  --text-body: 18px;
-  --text-body-small: 16px;
-  --text-small: 14px;
+  --text-display: clamp(40px, 6vw, 72px);
+  --text-h1: clamp(32px, 4.5vw, 52px);
+  --text-h2: clamp(24px, 3.5vw, 36px);
+  --text-h3: clamp(20px, 2.5vw, 28px);
+  --text-h4: clamp(18px, 2vw, 22px);
+  --text-h5: 18px;
+  --text-body-large: 18px;
+  --text-body: 16px;
+  --text-body-small: 14px;
+  --text-small: 13px;
 
   /* Font Weights */
   --weight-normal: 400;
@@ -395,17 +397,17 @@ blockquote {
 
 /* ==================== NAVBAR CUSTOMIZATION ==================== */
 .navbar {
-  background: transparent;
-  border-bottom: var(--border-width-default) solid transparent;
-  transition: background var(--transition-base),
-              backdrop-filter var(--transition-base),
-              border-color var(--transition-base);
+  background: var(--bg-primary);
+  border-bottom: var(--border-width-default) solid var(--border-default);
 }
 
 .navbar--fixed-top {
-  background: rgba(255, 254, 241, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom-color: var(--border-emphasis);
+  position: sticky;
+  top: 0;
+  background: var(--bg-primary);
+  backdrop-filter: blur(8px);
+  border-bottom-color: var(--border-default);
+  z-index: var(--ifm-z-index-fixed);
 }
 
 [data-theme='dark'] .navbar--fixed-top {
@@ -587,7 +589,7 @@ blockquote {
 }
 
 .button--lg {
-  padding: var(--space-lg) calc(var(--space-xl) * 1.5);
+  padding: 30px 60px;
   font-size: 20px;
 }
 

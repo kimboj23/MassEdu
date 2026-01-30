@@ -1,3 +1,4 @@
+import React, { useState, useRef, useCallback } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -7,6 +8,79 @@ import WaveAnimation from '@site/src/components/WaveAnimation';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+
+// Draggable floating logo component
+function DraggableLogo({ id, initialClass }) {
+  const [isDragging, setIsDragging] = useState(false);
+  const [position, setPosition] = useState(null);
+  const dragRef = useRef(null);
+  const offsetRef = useRef({ x: 0, y: 0 });
+
+  const handleMouseDown = useCallback((e) => {
+    e.preventDefault();
+    const rect = dragRef.current.getBoundingClientRect();
+    const containerRect = dragRef.current.parentElement.getBoundingClientRect();
+
+    offsetRef.current = {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    };
+
+    // Set initial position if not already set
+    if (!position) {
+      setPosition({
+        x: rect.left - containerRect.left,
+        y: rect.top - containerRect.top
+      });
+    }
+
+    setIsDragging(true);
+  }, [position]);
+
+  const handleMouseMove = useCallback((e) => {
+    if (!isDragging) return;
+
+    const containerRect = dragRef.current.parentElement.getBoundingClientRect();
+    const newX = e.clientX - containerRect.left - offsetRef.current.x;
+    const newY = e.clientY - containerRect.top - offsetRef.current.y;
+
+    setPosition({ x: newX, y: newY });
+  }, [isDragging]);
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  // Add global mouse listeners when dragging
+  React.useEffect(() => {
+    if (isDragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('mouseup', handleMouseUp);
+      };
+    }
+  }, [isDragging, handleMouseMove, handleMouseUp]);
+
+  const wrapperStyle = position ? {
+    left: position.x,
+    top: position.y,
+    animation: 'none',
+    transform: 'none'
+  } : {};
+
+  return (
+    <span
+      ref={dragRef}
+      className={`${styles.floatingLogoWrapper} ${!position ? initialClass : ''} ${isDragging ? styles.dragging : ''}`}
+      style={wrapperStyle}
+      onMouseDown={handleMouseDown}
+    >
+      <img src="/img/Tepup-BnW-Color-Logo-0.png" alt="" className={styles.floatingLogo} draggable={false} />
+    </span>
+  );
+}
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -24,6 +98,13 @@ function HomepageHeader() {
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)} aria-labelledby="hero-title">
+      {/* Floating Logo Animation - Draggable */}
+      <div className={styles.floatingLogoContainer} aria-hidden="true">
+        <DraggableLogo id={1} initialClass={styles.floatingLogo1} />
+        <DraggableLogo id={2} initialClass={styles.floatingLogo2} />
+        <DraggableLogo id={3} initialClass={styles.floatingLogo3} />
+        <DraggableLogo id={4} initialClass={styles.floatingLogo4} />
+      </div>
       <div className="container">
         <Heading as="h1" id="hero-title" className="hero__title display">
           Tép riu<br aria-hidden="true" />

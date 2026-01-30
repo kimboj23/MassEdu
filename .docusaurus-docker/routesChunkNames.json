@@ -233,13 +233,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---course-tax-modules-module-b-tax-id-obligationsf-8-d-3c8"
   },
-  "/knowledge-base-893": {
+  "/knowledge-base-6cf": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---knowledge-baseaba-9ae"
     }
   },
-  "/knowledge-base-00a": {
+  "/knowledge-base-7c5": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---knowledge-base-069-f4a"
   },
@@ -247,109 +247,29 @@
     "__comp": "__comp---theme-doc-tags-list-page-372-89e",
     "__props": "__props---knowledge-base-tags-0-f-6-c16"
   },
-  "/knowledge-base/tags/bai-dọc-them-853": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-bai-dọc-themb-37-bfa"
-  },
-  "/knowledge-base/tags/binh-dẳng-634": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-binh-dẳngdc-7-ede"
-  },
-  "/knowledge-base/tags/chinh-quyền-eaf": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-chinh-quyền-494-b18"
-  },
   "/knowledge-base/tags/chinh-trị-d5e": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-chinh-trị-1-b-9-8d0"
-  },
-  "/knowledge-base/tags/chương-2-446": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-chương-254-a-c48"
-  },
-  "/knowledge-base/tags/cong-ước-ef8": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-cong-ước-9-c-2-8d0"
-  },
-  "/knowledge-base/tags/diễn-giải-7ac": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-diễn-giải-963-a65"
   },
   "/knowledge-base/tags/dịnh-nghia-ae6": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-dịnh-nghia-36-d-467"
   },
-  "/knowledge-base/tags/giao-dục-a2f": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-giao-dụcbba-a8c"
-  },
-  "/knowledge-base/tags/giới-hạn-quyền-5fb": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-giới-hạn-quyềnf-5-d-8a8"
-  },
-  "/knowledge-base/tags/giới-thiệu-d05": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-giới-thiệuf-91-2d8"
-  },
   "/knowledge-base/tags/hiến-phap-885": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-hiến-phapc-97-e19"
-  },
-  "/knowledge-base/tags/hỏi-dap-240": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-hỏi-dapde-4-916"
-  },
-  "/knowledge-base/tags/iccpr-3fa": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-iccpr-8-f-5-737"
-  },
-  "/knowledge-base/tags/khẩn-cấp-e31": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-khẩn-cấp-785-e64"
-  },
-  "/knowledge-base/tags/khong-phan-biệt-dối-xử-368": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-khong-phan-biệt-dối-xử-918-8c1"
   },
   "/knowledge-base/tags/lịch-sử-9eb": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-lịch-sửe-9-f-83a"
   },
-  "/knowledge-base/tags/luật-nhan-quyền-613": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-luật-nhan-quyềncf-8-8c1"
-  },
-  "/knowledge-base/tags/luật-phap-804": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-luật-phap-335-dae"
-  },
-  "/knowledge-base/tags/luật-quốc-tế-f2e": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-luật-quốc-tế-401-57e"
-  },
-  "/knowledge-base/tags/nghia-vụ-e5b": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-nghia-vụbaf-8b1"
-  },
   "/knowledge-base/tags/nguyen-tắc-d89": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-nguyen-tắc-83-b-5f9"
   },
-  "/knowledge-base/tags/nha-nước-b6d": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-nha-nướcacc-1ed"
-  },
   "/knowledge-base/tags/nhan-quyền-ecd": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-nhan-quyềnab-1-461"
-  },
-  "/knowledge-base/tags/phan-tich-26e": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-phan-ticha-50-3e6"
-  },
-  "/knowledge-base/tags/phap-luật-b8f": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-phap-luật-7-ba-7c1"
   },
   "/knowledge-base/tags/quiz-ac6": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
@@ -359,140 +279,64 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-quyền-chinh-trị-7-b-8-3a7"
   },
-  "/knowledge-base/tags/quyền-cơ-bản-ba6": {
+  "/knowledge-base/tags/quyền-cong-dan-b65": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-quyền-cơ-bản-627-5b1"
+    "__props": "__props---knowledge-base-tags-quyền-cong-dancf-2-f91"
   },
   "/knowledge-base/tags/quyền-dan-sự-f43": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-quyền-dan-sự-919-2bb"
   },
-  "/knowledge-base/tags/quyền-esc-658": {
+  "/knowledge-base/tags/quyền-kinh-tế-6b3": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-quyền-esc-034-6c0"
+    "__props": "__props---knowledge-base-tags-quyền-kinh-tế-583-38a"
   },
-  "/knowledge-base/tags/quyền-trẻ-em-540": {
+  "/knowledge-base/tags/quyền-van-hoa-3e9": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-quyền-trẻ-em-2-e-5-61e"
+    "__props": "__props---knowledge-base-tags-quyền-van-hoa-5-d-8-524"
+  },
+  "/knowledge-base/tags/quyền-xa-hội-a8a": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---knowledge-base-tags-quyền-xa-hội-206-f11"
   },
   "/knowledge-base/tags/triết-học-868": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---knowledge-base-tags-triết-họcc-41-00c"
   },
-  "/knowledge-base/tags/tuyen-ngon-nhan-quyền-c84": {
+  "/knowledge-base/tags/việt-nam-8b2": {
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-tuyen-ngon-nhan-quyền-4-e-2-1e3"
+    "__props": "__props---knowledge-base-tags-việt-namc-55-fd3"
   },
-  "/knowledge-base/tags/vi-phạm-703": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__props": "__props---knowledge-base-tags-vi-phạmfcb-9ab"
-  },
-  "/knowledge-base-ab4": {
+  "/knowledge-base-dd4": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung-860": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-1-7-docthem-tuyenngon-nguyentac-longkhoandung-280-93e"
+  "/knowledge-base/category/nhân-quyền-54f": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "__props": "__props---knowledge-base-category-nhan-quyềna-7-a-422"
   },
-  "/knowledge-base/2.1a-luat-nhanquyen-quocte-c43": {
+  "/knowledge-base/nhan-quyen/hien-phap-vn-c9a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-2-1-a-luat-nhanquyen-quocte-420-e90"
+    "content": "content---knowledge-base-nhan-quyen-hien-phap-vn-277-76a"
   },
-  "/knowledge-base/chinh-quyen-dinh-nghia-7a6": {
+  "/knowledge-base/nhan-quyen/nhan-quyen-la-gi-711": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-chinh-quyen-dinh-nghiaaba-06e"
+    "content": "content---knowledge-base-nhan-quyen-nhan-quyen-la-gieb-5-b02"
   },
-  "/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri-a59": {
+  "/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri-c5b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-cong-uoc-quoc-te-quyen-dansu-chinhtri-9-ce-b80"
+    "content": "content---knowledge-base-nhan-quyen-quyen-dan-su-chinh-triae-8-759"
   },
-  "/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh-777": {
+  "/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa-24d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-cong-uoc-quocte-quyen-kinhte-xh-vh-809-1dc"
+    "content": "content---knowledge-base-nhan-quyen-quyen-kinh-te-xa-hoi-van-hoa-7-b-1-cf4"
   },
-  "/knowledge-base/docthem-quyen-giaoduc-f84": {
+  "/knowledge-base/nhan-quyen/triet-hoc-lich-su-a9e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-docthem-quyen-giaoduc-8-c-8-225"
-  },
-  "/knowledge-base/giay-phep-kinh-doanh-2c3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-giay-phep-kinh-doanhe-33-369"
-  },
-  "/knowledge-base/giay-phep-kinh-doanh-vn-b8a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-giay-phep-kinh-doanh-vn-568-c54"
-  },
-  "/knowledge-base/gioi-han-quyen-aa5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-gioi-han-quyen-606-281"
-  },
-  "/knowledge-base/gioi-thieu-chuong-2-1b4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-gioi-thieu-chuong-2-b-02-c11"
-  },
-  "/knowledge-base/hien-phap-55e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-hien-phap-7-a-3-847"
-  },
-  "/knowledge-base/hieu-ve-vi-pham-nhanquyen-81f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-hieu-ve-vi-pham-nhanquyen-3-ac-a2f"
-  },
-  "/knowledge-base/nghia-vu-nhanuoc-nhan-quyen-0b6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-nghia-vu-nhanuoc-nhan-quyen-4-c-9-f72"
-  },
-  "/knowledge-base/nhan-quyen-dinh-nghia-50e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-nhan-quyen-dinh-nghia-6-ff-7bc"
-  },
-  "/knowledge-base/quyen-kinhte-xahoi-vanhoa-7ab": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-quyen-kinhte-xahoi-vanhoa-33-a-2b7"
-  },
-  "/knowledge-base/thue-dinh-nghia-f8d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-thue-dinh-nghia-970-624"
-  },
-  "/knowledge-base/tuan1/binh-dang-609": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-binh-dang-2-b-6-22f"
-  },
-  "/knowledge-base/tuan1/dien-giai-tuyen-ngon-889": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-dien-giai-tuyen-ngonf-43-9a2"
-  },
-  "/knowledge-base/tuan1/dinh-nghia-2bf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-dinh-nghiaf-31-27f"
-  },
-  "/knowledge-base/tuan1/gioi-thieu-1f0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-gioi-thieubdd-959"
-  },
-  "/knowledge-base/tuan1/hoi-dap-nhan-quyen-113": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-hoi-dap-nhan-quyen-90-f-1f6"
-  },
-  "/knowledge-base/tuan1/luoc-su-6df": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-luoc-sude-8-167"
-  },
-  "/knowledge-base/tuan1/quiz-hr-a83": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-quiz-hra-87-8be"
+    "content": "content---knowledge-base-nhan-quyen-triet-hoc-lich-sud-5-e-e95"
   },
   "/knowledge-base/tuan1/quiz-pol-615": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---knowledge-base-tuan-1-quiz-polba-7-791"
-  },
-  "/knowledge-base/tuan1/quyen-dan-su-chinh-tri-7fa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuan-1-quyen-dan-su-chinh-tri-9-a-2-869"
-  },
-  "/knowledge-base/tuyen-ngon-nhan-quyen-651": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---knowledge-base-tuyen-ngon-nhan-quyen-57-b-5c4"
   },
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",

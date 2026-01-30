@@ -4,12 +4,12 @@
  */
 
 .heroBanner {
-  min-height: 85vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-xl) var(--section-padding-x) var(--space-3xl);
+  padding: var(--space-lg) var(--section-padding-x) var(--space-xl);
   border-bottom: var(--border-width-thick) solid var(--border-emphasis);
   background: var(--bg-primary);
   position: relative;
@@ -17,12 +17,12 @@
 }
 
 .heroBanner h1 {
-  font-size: var(--text-display);
+  font-size: var(--text-h1);
   font-weight: var(--weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
   color: var(--text-primary);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-sm);
   text-shadow: none;
 }
 
@@ -31,8 +31,8 @@
   font-weight: var(--weight-normal);
   line-height: var(--line-height-relaxed);
   color: var(--text-secondary);
-  max-width: 48ch;
-  margin: 0 auto var(--space-2xl);
+  max-width: 50ch;
+  margin: 0 auto var(--space-md);
   text-shadow: none;
 }
 
@@ -40,13 +40,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   flex-wrap: wrap;
 }
 
 .buttons .button {
-  padding: var(--space-lg) calc(var(--space-xl) * 1.5);
-  font-size: 20px;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 15px;
   font-family: var(--font-body-primary);
   font-weight: var(--weight-semibold);
   border-radius: 0;
@@ -58,20 +58,198 @@
   transform: translateY(-2px);
 }
 
+/* Floating Logo Animation */
+.floatingLogoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Wrapper handles the floating animation */
+.floatingLogoWrapper {
+  position: absolute;
+  display: inline-block;
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+}
+
+/* The actual logo image */
+.floatingLogo {
+  width: 70px;
+  height: auto;
+  opacity: 0.5;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  filter: grayscale(0%);
+  pointer-events: none;
+}
+
+/* Dragging state */
+.dragging {
+  cursor: grabbing;
+  z-index: 10;
+}
+
+.dragging .floatingLogo {
+  opacity: 1;
+  filter: brightness(1.3) drop-shadow(0 0 12px rgba(235, 55, 36, 0.7));
+  transform: scale(1.1);
+}
+
+/* Hover effects on wrapper - pause float and trigger spin */
+.floatingLogoWrapper:hover {
+  animation-play-state: paused;
+}
+
+.floatingLogoWrapper:hover .floatingLogo {
+  opacity: 1;
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(235, 55, 36, 0.5));
+  animation: logoSpin 0.8s ease-in-out;
+}
+
+/* Active state */
+.floatingLogoWrapper:active .floatingLogo {
+  filter: brightness(1.3) drop-shadow(0 0 12px rgba(235, 55, 36, 0.7));
+}
+
+/* Spin animation matching navbar logo */
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Logo 1 - Top path */
+.floatingLogo1 {
+  animation: floatAcross1 40s ease-in-out infinite;
+}
+
+/* Logo 2 - Middle-top path, delayed */
+.floatingLogo2 {
+  animation: floatAcross2 40s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+/* Logo 3 - Middle-bottom path, delayed */
+.floatingLogo3 {
+  animation: floatAcross3 40s ease-in-out infinite;
+  animation-delay: -20s;
+}
+
+/* Logo 4 - Bottom path, delayed */
+.floatingLogo4 {
+  animation: floatAcross4 40s ease-in-out infinite;
+  animation-delay: -30s;
+}
+
+@keyframes floatAcross1 {
+  0% {
+    left: -80px;
+    top: 20%;
+    transform: translateY(-50%);
+  }
+  50% {
+    left: calc(100% + 80px);
+    top: 35%;
+    transform: translateY(-50%);
+  }
+  100% {
+    left: -80px;
+    top: 20%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes floatAcross2 {
+  0% {
+    left: -80px;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  50% {
+    left: calc(100% + 80px);
+    top: 25%;
+    transform: translateY(-50%);
+  }
+  100% {
+    left: -80px;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes floatAcross3 {
+  0% {
+    left: -80px;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+  50% {
+    left: calc(100% + 80px);
+    top: 75%;
+    transform: translateY(-50%);
+  }
+  100% {
+    left: -80px;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes floatAcross4 {
+  0% {
+    left: -80px;
+    top: 80%;
+    transform: translateY(-50%);
+  }
+  50% {
+    left: calc(100% + 80px);
+    top: 65%;
+    transform: translateY(-50%);
+  }
+  100% {
+    left: -80px;
+    top: 80%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Ensure content is above floating logo */
+.heroBanner .container {
+  position: relative;
+  z-index: 1;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
-    min-height: 70vh;
-    padding: var(--space-2xl) var(--space-md);
+    min-height: 40vh;
+    padding: var(--space-xl) var(--space-md);
   }
 
   .heroBanner h1 {
-    font-size: clamp(36px, 8vw, 64px);
-    margin-bottom: var(--space-lg);
+    font-size: clamp(28px, 6vw, 40px);
+    margin-bottom: var(--space-md);
   }
 
   .heroBanner p {
-    font-size: var(--text-body);
-    margin-bottom: var(--space-xl);
+    font-size: var(--text-body-small);
+    margin-bottom: var(--space-lg);
+  }
+
+  .floatingLogo {
+    width: 40px;
+    opacity: 0.06;
   }
 
   .buttons {
@@ -81,17 +259,22 @@
 
   .buttons .button {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .heroBanner {
     min-height: auto;
-    padding: var(--space-xl) var(--space-sm);
+    padding: var(--space-lg) var(--space-sm);
   }
 
   .heroBanner h1 {
-    font-size: clamp(32px, 10vw, 48px);
+    font-size: clamp(24px, 8vw, 36px);
+  }
+
+  .floatingLogoContainer {
+    display: none;
   }
 }

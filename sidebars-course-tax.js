@@ -17,7 +17,7 @@ const sidebars = {
   courseTax: [
     {
       type: 'html',
-      value: '<div style="padding: 1rem 0; border-bottom: 1px solid var(--ifm-color-emphasis-300); margin-bottom: 1rem;"><h3 style="margin: 0; color: var(--ifm-color-primary);">Thuế và Ngân sách</h3><p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--ifm-color-emphasis-700);">Học qua câu chuyện và bài học</p></div>',
+      value: '<div style="padding: 1rem 0; border-bottom: 1px solid var(--ifm-color-emphasis-300); margin-bottom: 1rem;"><h3 style="margin: 0; color: var(--ifm-color-primary);">Thuế</h3></div>',
     },
 
     // CHARACTERS/STORIES SECTION

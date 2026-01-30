@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Icon from '@site/src/components/Icon';
 import styles from './interactive.module.css';
 
 function formatNum(num) {
@@ -231,7 +232,7 @@ export function NumberSliderWithCalculation({
         </div>
       )}
       <div className={styles.sliderHint}>
-        💡 Di chuột vào số để kéo thay đổi giá trị.
+        <Icon name="lightbulb" decorative size="small" /> Di chuột vào số để kéo thay đổi giá trị.
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Icon from '@site/src/components/Icon';
 import './slides.css';
 
 export default function Slides({ children }) {
@@ -40,7 +41,7 @@ export default function Slides({ children }) {
             aria-selected={index === currentSlide}
             tabIndex={index === currentSlide ? 0 : -1}
           >
-            <span aria-hidden="true">{index < currentSlide ? '✓' : index + 1}</span>
+            <span aria-hidden="true">{index < currentSlide ? <Icon name="check" decorative size="small" /> : index + 1}</span>
           </button>
         ))}
       </div>
@@ -83,7 +84,7 @@ export default function Slides({ children }) {
           className="nav-button prev"
           aria-label={`Slide trước${currentSlide === 0 ? ', không khả dụng' : ''}`}
         >
-          <span aria-hidden="true">←</span> Trước
+          <Icon name="arrow_back" decorative size="small" /> Trước
         </button>
 
         <span className="slide-counter" aria-live="polite" aria-atomic="true">
@@ -97,7 +98,7 @@ export default function Slides({ children }) {
           className="nav-button next"
           aria-label={`Slide tiếp theo${currentSlide === totalSlides - 1 ? ', không khả dụng' : ''}`}
         >
-          Tiếp theo <span aria-hidden="true">→</span>
+          Tiếp theo <Icon name="arrow_forward" decorative size="small" />
         </button>
       </nav>
     </section>

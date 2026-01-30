@@ -332,7 +332,7 @@ export const contentGraph = {
       title: 'Hành trình khám phá thuế',
       description: 'Theo dõi sinh viên khám phá thuế qua cuộc sống hàng ngày',
       path: '/course-tax/characters/sinh-vien',
-      avatar: '🎓',
+      avatar: 'school',
       scenes: [
         {
           id: 'story',

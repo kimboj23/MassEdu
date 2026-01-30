@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MultipleChoice from './MultipleChoice';
+import Icon from '@site/src/components/Icon';
 import styles from './Quiz.module.css';
 
 /**
@@ -105,7 +106,7 @@ export default function SequentialQuiz({
         <div className={styles.completionContainer}>
           <div className={styles.completionHeader}>
             <div className={styles.completionIcon} aria-hidden="true">
-              {accuracy >= 80 ? '🏆' : accuracy >= 60 ? '🎉' : '💪'}
+              <Icon name={accuracy >= 80 ? 'trophy' : accuracy >= 60 ? 'celebration' : 'fitness_center'} decorative size="xlarge" />
             </div>
             <h2 className={styles.completionTitle} aria-live="polite">
               {resultMessage}
@@ -136,7 +137,7 @@ export default function SequentialQuiz({
               >
                 <span className={styles.resultNumber} aria-hidden="true">Q{index + 1}</span>
                 <span className={styles.resultStatus} aria-hidden="true">
-                  {answers[index]?.isCorrect ? '✓' : '✗'}
+                  <Icon name={answers[index]?.isCorrect ? 'check' : 'close'} decorative size="small" />
                 </span>
                 <span className={styles.resultText}>
                   {question.question.length > 50
@@ -153,7 +154,7 @@ export default function SequentialQuiz({
             aria-label="Làm lại bài quiz từ đầu"
           >
             Làm lại
-            <span className={styles.arrow} aria-hidden="true">🔄</span>
+            <span className={styles.arrow} aria-hidden="true"><Icon name="refresh" decorative size="small" /></span>
           </button>
         </div>
       </section>

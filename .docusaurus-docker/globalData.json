@@ -8,121 +8,31 @@
           "label": "Next",
           "isLast": true,
           "path": "/knowledge-base",
-          "mainDocId": "1.0-gioi-thieu",
+          "mainDocId": "QuizPOL",
           "docs": [
             {
-              "id": "1.0-gioi-thieu",
-              "path": "/knowledge-base/tuan1/gioi-thieu",
+              "id": "nhan-quyen/hien-phap-vn",
+              "path": "/knowledge-base/nhan-quyen/hien-phap-vn",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "1.1-nhan-quyen-la-gi",
-              "path": "/knowledge-base/tuan1/dinh-nghia",
+              "id": "nhan-quyen/nhan-quyen-la-gi",
+              "path": "/knowledge-base/nhan-quyen/nhan-quyen-la-gi",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "1.2-luoc-su-nhan-quyen",
-              "path": "/knowledge-base/tuan1/luoc-su",
+              "id": "nhan-quyen/quyen-dan-su-chinh-tri",
+              "path": "/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "1.3-binh-dang",
-              "path": "/knowledge-base/tuan1/binh-dang",
+              "id": "nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa",
+              "path": "/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "1.4b-doc-them-dien-giai-ve-tuyen-ngon",
-              "path": "/knowledge-base/tuan1/dien-giai-tuyen-ngon",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.5a-quyen-dan-su-chinh-tri",
-              "path": "/knowledge-base/tuan1/quyen-dan-su-chinh-tri",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.5b-cong-uoc-quoc-te-quyen-dansu-chinhtri",
-              "path": "/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.6a-quyen-kinhte-xahoi-vanhoa",
-              "path": "/knowledge-base/quyen-kinhte-xahoi-vanhoa",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.6b-cong-uoc-quocte-quyen-kinhte-xh-vh",
-              "path": "/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.6c-docthem-quyen-giaoduc",
-              "path": "/knowledge-base/docthem-quyen-giaoduc",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.7-docthem-tuyenngon-nguyentac-longkhoandung",
-              "path": "/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "1.8-hoi-dap-don-gian-nhan-quyen",
-              "path": "/knowledge-base/tuan1/hoi-dap-nhan-quyen",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "2.0-gioi-thieu",
-              "path": "/knowledge-base/gioi-thieu-chuong-2",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "2.1a-luat-nhanquyen-quocte",
-              "path": "/knowledge-base/2.1a-luat-nhanquyen-quocte",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "2.1b-nghia-vu-nhanuoc-nhan-quyen",
-              "path": "/knowledge-base/nghia-vu-nhanuoc-nhan-quyen",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "2.2a-hieu-ve-vi-pham-nhanquyen",
-              "path": "/knowledge-base/hieu-ve-vi-pham-nhanquyen",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "2.2b-gioi-han-quyen",
-              "path": "/knowledge-base/gioi-han-quyen",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "chinh-quyen-dinh-nghia",
-              "path": "/knowledge-base/chinh-quyen-dinh-nghia",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "giay-phep-kinh-doanh",
-              "path": "/knowledge-base/giay-phep-kinh-doanh",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "giay-phep-kinh-doanh-vn",
-              "path": "/knowledge-base/giay-phep-kinh-doanh-vn",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "hien-phap",
-              "path": "/knowledge-base/hien-phap",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "nhan-quyen-dinh-nghia",
-              "path": "/knowledge-base/nhan-quyen-dinh-nghia",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "QuizHR",
-              "path": "/knowledge-base/tuan1/quiz-hr",
+              "id": "nhan-quyen/triet-hoc-lich-su",
+              "path": "/knowledge-base/nhan-quyen/triet-hoc-lich-su",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -131,13 +41,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "thue-dinh-nghia",
-              "path": "/knowledge-base/thue-dinh-nghia",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tuyen-ngon-nhan-quyen",
-              "path": "/knowledge-base/tuyen-ngon-nhan-quyen",
+              "id": "/category/nhân-quyền",
+              "path": "/knowledge-base/category/nhân-quyền",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -145,8 +50,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/knowledge-base/tuan1/gioi-thieu",
-                "label": "1.0-gioi-thieu"
+                "path": "/knowledge-base/tuan1/quiz-pol",
+                "label": "QuizPOL"
               }
             }
           }

@@ -9,14 +9,15 @@ import Link from '@docusaurus/Link';
 import styles from '@site/src/components/Interactive/interactive.module.css';
 import { LearnMore } from '@site/src/components/Learning';
 import { Scene, NumberSlider, NumberSliderWithCalculation, ComparisonSlider, ThoughtBubble, ThoughtBubbleSequence, RevealBubble, ChoiceButtons, Choice, ProgressIndicator, ChoiceReview, StoryProgressProvider, ConditionalContent } from '@site/src/components/Interactive';
+import Icon from '@site/src/components/Icon';
 
 <StoryProgressProvider>
 
 <Scene id="intro" start={true}>
-  <h1>🎓 Sinh viên</h1>
+  <h1><Icon name="school" decorative size="large" /> Sinh viên</h1>
   <div className={styles.storyCharacterIntro}>
     <div className={styles.storyCharacterIntroHeader}>
-      <div className={styles.storyCharacterIntroIcon}>🎓</div>
+      <div className={styles.storyCharacterIntroIcon}><Icon name="school" decorative size="xlarge" /></div>
       <div className={styles.storyCharacterIntroContent}>
         <h2>Bạn là ai?</h2>
         <p>
@@ -76,12 +77,8 @@ Căn phòng trọ 20m² quen thuộc: bàn học chất đầy sách vở và la
 
 
 <Scene id="canh-2a">
-<div className={`${styles.storyContextBox} ${styles.storyContextBoxCreative}`}>
-  <p>
-    Bạn khoác áo khoác mỏng, nhét ví vào túi và đi xuống quán bánh mì ở ngõ.
-    Mùi bánh nướng thơm nồng, cô chủ quán đang lật trứng ốp la xèo xèo trên chảo.
-  </p>
-</div>
+
+<strong>Bạn khoác áo khoác mỏng, nhét ví vào túi và đi xuống quán bánh mì ở ngõ.</strong> Mùi bánh nướng thơm nồng, cô chủ quán đang lật trứng ốp la xèo xèo trên chảo.
 
 "Cô ơi, cho một bánh mì trứng!"
 
@@ -89,7 +86,7 @@ Cô chủ mỉm cười: "**25.000 đồng** nhe con."
 
 Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nóng, vỏ giòn rụm, trứng chảy vàng ươm. Hoàn hảo.
 
-<RevealBubble buttonText="💡 Khoan đã...">
+<RevealBubble buttonText={<><Icon name="lightbulb" decorative size="small" /> Khoan đã...</>}>
   <strong>"Bạn vừa đóng thuế đấy."</strong>
 
   HẢ? Cái bánh mì 25.000 đồng này?
@@ -130,7 +127,7 @@ Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nó
 
 <Scene id="canh-2a-1">
 <ThoughtBubbleSequence title="Thuế VAT là gì?" baseDelay={300}>
-  <ThoughtBubble icon="💡" variant="insight">
+  <ThoughtBubble icon="lightbulb" variant="insight">
     <strong>Thuế VAT = Thuế Giá Trị Gia Tăng</strong>
 
     Đây là loại thuế "ẩn" trong hầu hết mọi thứ bạn mua.
@@ -139,11 +136,11 @@ Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nó
   <ThoughtBubble variant="question">
     <strong>Những gì có thuế VAT:</strong>
     <ul>
-      <li>✓ Đồ ăn (bánh mì, cơm, phở...)</li>
-      <li>✓ Quần áo, giày dép</li>
-      <li>✓ Thẻ cào điện thoại</li>
-      <li>✓ Trà sữa (RIP ví tiền)</li>
-      <li>✓ Mỹ phẩm</li>
+      <li><Icon name="check" decorative size="small" /> Đồ ăn (bánh mì, cơm, phở...)</li>
+      <li><Icon name="check" decorative size="small" /> Quần áo, giày dép</li>
+      <li><Icon name="check" decorative size="small" /> Thẻ cào điện thoại</li>
+      <li><Icon name="check" decorative size="small" /> Trà sữa (RIP ví tiền)</li>
+      <li><Icon name="check" decorative size="small" /> Mỹ phẩm</li>
     </ul>
   </ThoughtBubble>
 
@@ -176,11 +173,8 @@ Bạn đưa tờ 50k, nhận lại 25k tiền thối. Chiếc bánh mì ấm nó
 
 
 <Scene id="canh-2b">
-<div className={`${styles.storyContextBox} ${styles.storyContextBoxPrimary}`}>
-  <p>
-    Bạn bước vào quán café gần trường - kiểu quán có đèn dây vintage, tường gạch mộc, góc nào cũng "sống ảo" được.
-  </p>
-</div>
+
+<strong>Bạn bước vào quán café gần trường - kiểu quán có đèn dây vintage, tường gạch mộc, góc nào cũng "sống ảo" được.</strong>
 
 "Cho mình một ly cà phê sữa đá ạ!"
 
@@ -212,7 +206,7 @@ Bạn nhấp một ngụm cà phê, lướt TikTok. Mắt vô tình liếc sang 
 
 <Scene id="canh-2b-1">
 <ThoughtBubbleSequence title="Hóa đơn cho thấy gì?" baseDelay={300}>
-  <ThoughtBubble icon="💡" variant="insight">
+  <ThoughtBubble icon="lightbulb" variant="insight">
     <strong>Thuế VAT = Thuế Giá Trị Gia Tăng</strong>
 
     10% trên hầu hết mọi thứ bạn mua. Có nghĩa là 4.091 đồng từ ly cà phê của bạn bay vào:
@@ -248,12 +242,8 @@ Bạn nhấp một ngụm cà phê, lướt TikTok. Mắt vô tình liếc sang 
 
 
 <Scene id="canh-3">
-<div className={`${styles.storyContextBox} ${styles.storyContextBoxGrowth}`}>
-  <p>
-    Bạn nhảy lên chiếc Honda Wave cũ kỹ và chạy về phía trường.
-    Giao thông Sài Gòn buổi sáng - ừm, như mọi khi thôi: đông, ồn, và hơi nguy hiểm nếu không tập trung.
-  </p>
-</div>
+
+<strong>Bạn nhảy lên chiếc Honda Wave cũ kỹ và chạy về phía trường. Giao thông Sài Gòn buổi sáng - ừm, như mọi khi thôi: đông, ồn, và hơi nguy hiểm nếu không tập trung. </strong>
 
 Xe bạn len lỏi qua đám đông xe máy, xe ô tô. Con đường nhựa khá phẳng - không ổ gà hay sụt lún. Đèn giao thông hoạt động bình thường.
 
@@ -264,7 +254,7 @@ Bạn chợt nghĩ: *"May mà đường này sửa rồi, năm ngoái đi kinh k
     Nhớ không, 2-3 nghìn đồng thuế VAT từ bánh mì/cà phê sáng nay?
 
     Một phần nhỏ trong đó đã góp vào việc sửa con đường này đấy.
-    Cùng với hàng triệu người khác cũng đóng thuế VAT mỗi ngày
+    Cùng với hàng triệu người khác, bằng việc đóng thuế GTGT mỗi ngày,
     → góp lại thành ngân sách công
     → xây đường, đèn, bệnh viện...
   </ThoughtBubble>
@@ -283,7 +273,7 @@ Bạn chợt nghĩ: *"May mà đường này sửa rồi, năm ngoái đi kinh k
 
 <Scene id="canh-3-1">
 <div className={styles.storyModuleHeader}>
-  <h3>💡 Câu hỏi hay đấy!</h3>
+  <h3><Icon name="lightbulb" decorative size="medium" /> Câu hỏi hay đấy!</h3>
   <p>
     Hãy tưởng tượng hai người cùng mua bánh mì...
   </p>
@@ -378,11 +368,7 @@ Bạn đọc xong, nhíu mày.
 <Scene id="canh-4-1">
 <h3>Cảnh 4-1: Phản Ứng Lo Lắng</h3>
 
-<div className={styles.storyContextBox}>
-  <p>
-    Bạn lập tức mở Google gõ: <code>"mã số thuế cá nhân là gì"</code>
-  </p>
-</div>
+<strong>Bạn lập tức mở Google gõ:</strong> <code>"mã số thuế cá nhân là gì"</code>
 
 Kết quả tràn ra:
 
@@ -415,7 +401,7 @@ Bạn nhấn vào một bài viết.
   </ThoughtBubble>
 </ThoughtBubbleSequence>
 
-<RevealBubble buttonText="💡 Đừng lo! Mình sẽ giải thích cho bạn ngay sau đây.">
+<RevealBubble buttonText={<><Icon name="lightbulb" decorative size="small" /> Đừng lo! Mình sẽ giải thích cho bạn ngay sau đây.</>}>
   Văn bản pháp luật thường khó hiểu, nhưng ý nghĩa thực tế lại đơn giản hơn nhiều!
 
   Hãy đọc **Module B** bên dưới để hiểu rõ.
@@ -433,14 +419,8 @@ Bạn nhấn vào một bài viết.
 
 <Scene id="canh-4-2">
 <h3>Cảnh 4-2: Trì Hoãn</h3>
-<div className={styles.storyContextBox}>
-  <p>
-    Bạn khóa điện thoại lại, cắn một miếng bánh mì que.
-  </p>
-  <p>
-    "Thôi để chiều về nghĩ sau. Giờ đói quá rồi."
-  </p>
-</div>
+
+<strong>Bạn khóa điện thoại lại, cắn một miếng bánh mì que.</strong> "Thôi để chiều về nghĩ sau. Giờ đói quá rồi."
 
 Chuyện mã số thuế cứ lơ lửng trong đầu, nhưng bạn quyết định... xử lý sau vậy.
 
@@ -665,7 +645,7 @@ Hai tiếng sau, buổi học Suy-nghiệm. Mẹ hai em đưa cho bạn vài t�
 Bạn nhận phong bì, cảm ơn và chào về...
 
 <div className={styles.storySummary}>
-  <h3>Suy-nghiệm Phần 2</h3>
+  <h3>Suy-nghiệm</h3>
   <p>
     Bạn đã học được:
   </p>
@@ -740,14 +720,8 @@ Trên đường về nhà, bạn nghĩ:
 
 <Scene id="canh-6-1">
 <h3>Cảnh 6-1: Suy Ngẫm Về Việc Làm Đúng Luật</h3>
-<div className={styles.storyContextBox}>
-  <p>
-    Bạn lái xe máy về nhà, tiền trong túi khiến lòng hân hoan.
-  </p>
-  <p>
-    "Mình có nên xin xác nhận từ phụ huynh không nhỉ?"
-  </p>
-</div>
+
+<strong>Bạn lái xe máy về nhà, tiền trong túi khiến lòng hân hoan.</strong> "Mình có nên xin xác nhận từ phụ huynh không nhỉ?"
 
 Bạn tưởng tượng:
 
@@ -773,14 +747,14 @@ Bạn tưởng tượng:
   </div>
 </div>
 
-<ThoughtBubble sequence={1} icon="💡" variant="success">
+<ThoughtBubble sequence={1} icon="lightbulb" variant="success">
   Bạn quyết định:
 
   "Okay, mình sẽ tự lập một file Excel ghi chép thu nhập. Giữ lại tin nhắn với phụ huynh. Nếu cần thì còn có bằng chứng."
 </ThoughtBubble>
 
 <div className={`${styles.storyContextBox} ${styles.storyContextBoxGrowth}`}>
-  <h4>💡 Bài học:</h4>
+  <h4><Icon name="lightbulb" decorative size="small" /> Bài học:</h4>
   <p>Dù luật không bắt buộc (vì dưới ngưỡng), nhưng tự quản lý thu nhập tốt sẽ:</p>
   <ul>
     <li>Giúp bạn theo dõi tài chính cá nhân</li>
@@ -799,14 +773,8 @@ Bạn tưởng tượng:
 
 <Scene id="canh-6-2">
 <h3>Cảnh 6-2: "Mọi Người Cũng Vậy Mà"</h3>
-<div className={styles.storyContextBox}>
-  <p>
-    "Haizz... mọi người làm gia sư đều nhận tiền mặt cả. Không ai kê khai gì đâu."
-  </p>
-  <p>
-    "Mình cũng vậy thôi, không sao đâu."
-  </p>
-</div>
+
+<strong>"Haizz... mọi người làm gia sư đều nhận tiền mặt cả. Không ai kê khai gì đâu."</strong> "Mình cũng vậy thôi, không sao đâu."
 
 Bạn về đến nhà, thả người lên giường. Mở điện thoại, lướt TikTok.
 
@@ -838,11 +806,8 @@ Thay đổi bắt đầu từ mỗi người chúng ta.
 
 <Scene id="canh-6-3">
 <h3>Cảnh 6-3: Tự Quản Lý Thu Nhập</h3>
-<div className={styles.storyContextBox}>
-  <p>
-    Về đến nhà, bạn mở laptop, tạo một file Excel mới:
-  </p>
-</div>
+
+<strong>Về đến nhà, bạn mở laptop, tạo một file Excel mới:</strong>
 
 <div style={{
   padding: '1.5rem',
@@ -1056,11 +1021,8 @@ Rồi bạn nghĩ lại:
 
 <Scene id="canh-7-2">
 <h3>Cảnh 7-2: Suy Ngẫm Cá Nhân</h3>
-<div className={styles.storyContextBox}>
-  <p>
-    Bạn đặt điện thoại xuống, nhìn ra ngoài cửa sổ.
-  </p>
-</div>
+
+<strong>Bạn đặt điện thoại xuống, nhìn ra ngoài cửa sổ.</strong>
 
 Đèn đường sáng rực. Con đường phẳng phiu. Ở góc phố có trạm y tế, sáng đèn xanh lè.
 
@@ -1075,7 +1037,7 @@ Rồi bạn nghĩ lại:
     Nhưng cộng dồn từ hàng triệu người mỗi ngày...
   </ThoughtBubble>
 
-  <ThoughtBubble icon="💡" variant="success">
+  <ThoughtBubble icon="lightbulb" variant="success">
     Rồi bạn nghĩ về mình:
 
     "Mình kiếm 54 triệu/năm. Không phải đóng thuế thu nhập.
@@ -1181,7 +1143,7 @@ Rồi bạn nghĩ lại:
   borderRadius: '8px',
   marginTop: '2rem'
 }}>
-  <h4>💡 BÀI HỌC:</h4>
+  <h4><Icon name="lightbulb" decorative size="small" /> BÀI HỌC:</h4>
   <p>Không có ngân sách "hoàn hảo". Mọi quyết định đều có đánh đổi.</p>
   <p><strong>Đó là lý do tại sao:</strong></p>
   <ul>
@@ -1228,7 +1190,7 @@ Rồi bạn nghĩ lại:
 Bạn mở app ngân hàng. Đúng là có 1.5 triệu.
 
 <ThoughtBubbleSequence baseDelay={300}>
-  <ThoughtBubble icon="💡" variant="success">
+  <ThoughtBubble icon="lightbulb" variant="success">
     "À đúng rồi, từ tháng 7 rồi mà, số CCCD chính là mã số thuế luôn. Đơn giản thật!"
   </ThoughtBubble>
 
@@ -1372,7 +1334,7 @@ Rồi bạn suy nghĩ:
 
 <Scene id="ending">
 <div className={styles.storyEndingHeader}>
-  <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎓</div>
+  <div style={{ fontSize: '4rem', marginBottom: '1rem' }}><Icon name="school" decorative size="xlarge" /></div>
   <h2>Hành trình hoàn thành!</h2>
   <p style={{ fontSize: '1.25rem', lineHeight: 1.8 }}>
     Bạn uống hết ly cà phê, đứng dậy.<br/>

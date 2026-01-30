@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './interactive.module.css';
 import { useStoryProgress } from './ChoiceButtons';
+import Icon from '@site/src/components/Icon';
 
 /**
  * ThoughtBubble Component - Sequential animated thought revelations
@@ -59,7 +60,11 @@ export default function ThoughtBubble({
       role="note"
       aria-label={variantLabels[variant] || 'Thông tin bổ sung'}
     >
-      {icon && <div className={styles.bubbleIcon} aria-hidden="true">{icon}</div>}
+      {icon && (
+        <div className={styles.bubbleIcon} aria-hidden="true">
+          <Icon name={icon} decorative size="medium" />
+        </div>
+      )}
       <div className={styles.bubbleContent}>{children}</div>
       {dismissible && (
         <button

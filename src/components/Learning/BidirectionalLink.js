@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import { getLesson, getStory, getModule, getConceptContent } from '@site/src/data/contentGraph';
+import Icon from '@site/src/components/Icon';
 import styles from './learning.module.css';
 
 /**
@@ -59,8 +60,8 @@ export default function BidirectionalLink({
 
   // Icon based on link type
   const getIcon = () => {
-    if (to === 'concept') return '💡';
-    return '→';
+    if (to === 'concept') return <Icon name="lightbulb" decorative size="small" />;
+    return <Icon name="arrow_forward" decorative size="small" />;
   };
 
   // Preview content for hover
@@ -117,7 +118,7 @@ export default function BidirectionalLink({
         <span className={styles.linkText}>
           {children || targetTitle}
         </span>
-        <span className={styles.linkArrow} aria-hidden="true">→</span>
+        <span className={styles.linkArrow} aria-hidden="true"><Icon name="arrow_forward" decorative size="small" /></span>
       </Link>
 
       {showHover && showPreview && (
@@ -186,7 +187,7 @@ export function StoryExample({ character, scene, context, children }) {
 export function BacklinkHint({ lesson, module: moduleProp }) {
   return (
     <span className={styles.backlinkHint}>
-      {(lesson || moduleProp) && <span className={styles.hintIcon}>→</span>}
+      {(lesson || moduleProp) && <span className={styles.hintIcon}><Icon name="arrow_forward" decorative size="small" /></span>}
     </span>
   );
 }

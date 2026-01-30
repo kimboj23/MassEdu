@@ -1,41 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
-import { getArticlesByTag } from '../../utils/knowledgeBase';
 import TriThucHero from '@site/src/components/TriThucHero';
 import Icon from '@site/src/components/Icon';
 import { IntroSection } from '@site/src/components/Layout';
 
-// Article card component
-function ArticleCard({ article }) {
+const humanRightsPages = [
+  {
+    title: 'Triết học - Lịch sử Nhân quyền',
+    description: 'Lịch sử hình thành và phát triển của tư tưởng nhân quyền từ cổ đại đến hiện đại',
+    path: '/knowledge-base/nhan-quyen/triet-hoc-lich-su',
+    icon: 'history_edu'
+  },
+  {
+    title: 'Nhân quyền là gì và gồm những gì?',
+    description: 'Định nghĩa nhân quyền, các nguyên tắc cơ bản và phân loại các nhóm quyền',
+    path: '/knowledge-base/nhan-quyen/nhan-quyen-la-gi',
+    icon: 'help_outline'
+  },
+  {
+    title: 'Các quyền dân sự và chính trị',
+    description: 'Tìm hiểu về các quyền dân sự và chính trị - nhóm quyền bảo vệ tự do cá nhân',
+    path: '/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri',
+    icon: 'how_to_vote'
+  },
+  {
+    title: 'Các quyền kinh tế, xã hội và văn hóa',
+    description: 'Tìm hiểu về các quyền kinh tế, xã hội và văn hóa - nhóm quyền bảo đảm điều kiện sống xứng đáng',
+    path: '/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa',
+    icon: 'diversity_3'
+  },
+  {
+    title: 'Nhân quyền trong Hiến pháp Việt Nam',
+    description: 'Tìm hiểu về các quyền cơ bản được quy định trong Hiến pháp Việt Nam 2013',
+    path: '/knowledge-base/nhan-quyen/hien-phap-vn',
+    icon: 'menu_book'
+  }
+];
+
+function PageCard({ page }) {
   return (
-    <article className="knowledge-article-card" aria-labelledby={`article-${article.slug}`}>
+    <article className="knowledge-article-card">
       <div className="card margin-bottom--md">
-        <div className="card__header">
-          <ul className="article-tags" aria-label="Thẻ bài viết" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            {article.tags.map(tag => (
-              <li
-                key={tag}
-                className="badge badge--secondary"
-                style={{ display: 'inline-block', marginRight: '8px', fontSize: '0.75rem' }}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
         <div className="card__body">
-          <Heading as="h3" id={`article-${article.slug}`} className="card__title">
-            <Link to={article.path}>{article.title}</Link>
-          </Heading>
-          <p className="card__description">{article.description}</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+            <Icon name={page.icon} decorative size="medium" />
+            <Heading as="h3" className="card__title" style={{ margin: 0 }}>
+              <Link to={page.path}>{page.title}</Link>
+            </Heading>
+          </div>
+          <p className="card__description">{page.description}</p>
         </div>
         <div className="card__footer">
           <Link
-            to={article.path}
+            to={page.path}
             className="button button--primary button--sm"
-            aria-label={`Đọc bài viết: ${article.title}`}
+            aria-label={`Đọc bài viết: ${page.title}`}
           >
             <Icon name="article" decorative size="small" /> Đọc bài viết
           </Link>
@@ -45,47 +66,7 @@ function ArticleCard({ article }) {
   );
 }
 
-// Loading component
-function LoadingState() {
-  return (
-    <div className="text--center margin-vert--lg" role="status" aria-live="polite">
-      <Icon name="hourglass_empty" label="Đang tải" size="large" />
-      <div>Đang tải bài viết...</div>
-    </div>
-  );
-}
-
-// Empty state component
-function EmptyState() {
-  return (
-    <div className="text--center margin-vert--lg" role="status">
-      <Icon name="inbox" label="Không có bài viết" size="large" />
-      <Heading as="h3">Chưa có bài viết nào</Heading>
-      <p>Các bài viết về nhân quyền sẽ được cập nhật sớm.</p>
-    </div>
-  );
-}
-
 export default function NhanQuyenPage() {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadArticles() {
-      try {
-        const tagArticles = await getArticlesByTag('nhân quyền');
-        setArticles(tagArticles);
-      } catch (error) {
-        console.error('Error loading articles:', error);
-        setArticles([]);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadArticles();
-  }, []);
-
   return (
     <Layout
       title="Nhân quyền - Tri thức"
@@ -114,19 +95,13 @@ export default function NhanQuyenPage() {
                   <Icon name="library_books" decorative size="medium" /> Bài viết về Nhân quyền
                 </Heading>
 
-                {loading ? (
-                  <LoadingState />
-                ) : articles.length > 0 ? (
-                  <div className="row" role="list" aria-label="Danh sách bài viết">
-                    {articles.map(article => (
-                      <div key={article.slug} className="col col--6 col--lg-4" role="listitem">
-                        <ArticleCard article={article} />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <EmptyState />
-                )}
+                <div className="row" role="list" aria-label="Danh sách bài viết">
+                  {humanRightsPages.map((page, index) => (
+                    <div key={index} className="col col--6 col--lg-4" role="listitem">
+                      <PageCard page={page} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

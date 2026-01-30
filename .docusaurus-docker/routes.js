@@ -257,30 +257,15 @@ export default [
   },
   {
     path: '/knowledge-base',
-    component: ComponentCreator('/knowledge-base', '893'),
+    component: ComponentCreator('/knowledge-base', '6cf'),
     routes: [
       {
         path: '/knowledge-base',
-        component: ComponentCreator('/knowledge-base', '00a'),
+        component: ComponentCreator('/knowledge-base', '7c5'),
         routes: [
           {
             path: '/knowledge-base/tags',
             component: ComponentCreator('/knowledge-base/tags', '1b6'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/bai-dọc-them',
-            component: ComponentCreator('/knowledge-base/tags/bai-dọc-them', '853'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/binh-dẳng',
-            component: ComponentCreator('/knowledge-base/tags/binh-dẳng', '634'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/chinh-quyền',
-            component: ComponentCreator('/knowledge-base/tags/chinh-quyền', 'eaf'),
             exact: true
           },
           {
@@ -289,38 +274,8 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/chương-2',
-            component: ComponentCreator('/knowledge-base/tags/chương-2', '446'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/cong-ước',
-            component: ComponentCreator('/knowledge-base/tags/cong-ước', 'ef8'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/diễn-giải',
-            component: ComponentCreator('/knowledge-base/tags/diễn-giải', '7ac'),
-            exact: true
-          },
-          {
             path: '/knowledge-base/tags/dịnh-nghia',
             component: ComponentCreator('/knowledge-base/tags/dịnh-nghia', 'ae6'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/giao-dục',
-            component: ComponentCreator('/knowledge-base/tags/giao-dục', 'a2f'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/giới-hạn-quyền',
-            component: ComponentCreator('/knowledge-base/tags/giới-hạn-quyền', '5fb'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/giới-thiệu',
-            component: ComponentCreator('/knowledge-base/tags/giới-thiệu', 'd05'),
             exact: true
           },
           {
@@ -329,48 +284,8 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/hỏi-dap',
-            component: ComponentCreator('/knowledge-base/tags/hỏi-dap', '240'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/iccpr',
-            component: ComponentCreator('/knowledge-base/tags/iccpr', '3fa'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/khẩn-cấp',
-            component: ComponentCreator('/knowledge-base/tags/khẩn-cấp', 'e31'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/khong-phan-biệt-dối-xử',
-            component: ComponentCreator('/knowledge-base/tags/khong-phan-biệt-dối-xử', '368'),
-            exact: true
-          },
-          {
             path: '/knowledge-base/tags/lịch-sử',
             component: ComponentCreator('/knowledge-base/tags/lịch-sử', '9eb'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/luật-nhan-quyền',
-            component: ComponentCreator('/knowledge-base/tags/luật-nhan-quyền', '613'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/luật-phap',
-            component: ComponentCreator('/knowledge-base/tags/luật-phap', '804'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/luật-quốc-tế',
-            component: ComponentCreator('/knowledge-base/tags/luật-quốc-tế', 'f2e'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/nghia-vụ',
-            component: ComponentCreator('/knowledge-base/tags/nghia-vụ', 'e5b'),
             exact: true
           },
           {
@@ -379,23 +294,8 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/nha-nước',
-            component: ComponentCreator('/knowledge-base/tags/nha-nước', 'b6d'),
-            exact: true
-          },
-          {
             path: '/knowledge-base/tags/nhan-quyền',
             component: ComponentCreator('/knowledge-base/tags/nhan-quyền', 'ecd'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/phan-tich',
-            component: ComponentCreator('/knowledge-base/tags/phan-tich', '26e'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/phap-luật',
-            component: ComponentCreator('/knowledge-base/tags/phap-luật', 'b8f'),
             exact: true
           },
           {
@@ -409,8 +309,8 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/quyền-cơ-bản',
-            component: ComponentCreator('/knowledge-base/tags/quyền-cơ-bản', 'ba6'),
+            path: '/knowledge-base/tags/quyền-cong-dan',
+            component: ComponentCreator('/knowledge-base/tags/quyền-cong-dan', 'b65'),
             exact: true
           },
           {
@@ -419,13 +319,18 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/quyền-esc',
-            component: ComponentCreator('/knowledge-base/tags/quyền-esc', '658'),
+            path: '/knowledge-base/tags/quyền-kinh-tế',
+            component: ComponentCreator('/knowledge-base/tags/quyền-kinh-tế', '6b3'),
             exact: true
           },
           {
-            path: '/knowledge-base/tags/quyền-trẻ-em',
-            component: ComponentCreator('/knowledge-base/tags/quyền-trẻ-em', '540'),
+            path: '/knowledge-base/tags/quyền-van-hoa',
+            component: ComponentCreator('/knowledge-base/tags/quyền-van-hoa', '3e9'),
+            exact: true
+          },
+          {
+            path: '/knowledge-base/tags/quyền-xa-hội',
+            component: ComponentCreator('/knowledge-base/tags/quyền-xa-hội', 'a8a'),
             exact: true
           },
           {
@@ -434,172 +339,53 @@ export default [
             exact: true
           },
           {
-            path: '/knowledge-base/tags/tuyen-ngon-nhan-quyền',
-            component: ComponentCreator('/knowledge-base/tags/tuyen-ngon-nhan-quyền', 'c84'),
-            exact: true
-          },
-          {
-            path: '/knowledge-base/tags/vi-phạm',
-            component: ComponentCreator('/knowledge-base/tags/vi-phạm', '703'),
+            path: '/knowledge-base/tags/việt-nam',
+            component: ComponentCreator('/knowledge-base/tags/việt-nam', '8b2'),
             exact: true
           },
           {
             path: '/knowledge-base',
-            component: ComponentCreator('/knowledge-base', 'ab4'),
+            component: ComponentCreator('/knowledge-base', 'dd4'),
             routes: [
               {
-                path: '/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung',
-                component: ComponentCreator('/knowledge-base/1.7-docthem-tuyenngon-nguyentac-longkhoandung', '860'),
+                path: '/knowledge-base/category/nhân-quyền',
+                component: ComponentCreator('/knowledge-base/category/nhân-quyền', '54f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/knowledge-base/2.1a-luat-nhanquyen-quocte',
-                component: ComponentCreator('/knowledge-base/2.1a-luat-nhanquyen-quocte', 'c43'),
+                path: '/knowledge-base/nhan-quyen/hien-phap-vn',
+                component: ComponentCreator('/knowledge-base/nhan-quyen/hien-phap-vn', 'c9a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/knowledge-base/chinh-quyen-dinh-nghia',
-                component: ComponentCreator('/knowledge-base/chinh-quyen-dinh-nghia', '7a6'),
+                path: '/knowledge-base/nhan-quyen/nhan-quyen-la-gi',
+                component: ComponentCreator('/knowledge-base/nhan-quyen/nhan-quyen-la-gi', '711'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri',
-                component: ComponentCreator('/knowledge-base/cong-uoc-quoc-te-quyen-dansu-chinhtri', 'a59'),
+                path: '/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri',
+                component: ComponentCreator('/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri', 'c5b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh',
-                component: ComponentCreator('/knowledge-base/cong-uoc-quocte-quyen-kinhte-xh-vh', '777'),
+                path: '/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa',
+                component: ComponentCreator('/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa', '24d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/knowledge-base/docthem-quyen-giaoduc',
-                component: ComponentCreator('/knowledge-base/docthem-quyen-giaoduc', 'f84'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/giay-phep-kinh-doanh',
-                component: ComponentCreator('/knowledge-base/giay-phep-kinh-doanh', '2c3'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/giay-phep-kinh-doanh-vn',
-                component: ComponentCreator('/knowledge-base/giay-phep-kinh-doanh-vn', 'b8a'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/gioi-han-quyen',
-                component: ComponentCreator('/knowledge-base/gioi-han-quyen', 'aa5'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/gioi-thieu-chuong-2',
-                component: ComponentCreator('/knowledge-base/gioi-thieu-chuong-2', '1b4'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/hien-phap',
-                component: ComponentCreator('/knowledge-base/hien-phap', '55e'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/hieu-ve-vi-pham-nhanquyen',
-                component: ComponentCreator('/knowledge-base/hieu-ve-vi-pham-nhanquyen', '81f'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/nghia-vu-nhanuoc-nhan-quyen',
-                component: ComponentCreator('/knowledge-base/nghia-vu-nhanuoc-nhan-quyen', '0b6'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/nhan-quyen-dinh-nghia',
-                component: ComponentCreator('/knowledge-base/nhan-quyen-dinh-nghia', '50e'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/quyen-kinhte-xahoi-vanhoa',
-                component: ComponentCreator('/knowledge-base/quyen-kinhte-xahoi-vanhoa', '7ab'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/thue-dinh-nghia',
-                component: ComponentCreator('/knowledge-base/thue-dinh-nghia', 'f8d'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/binh-dang',
-                component: ComponentCreator('/knowledge-base/tuan1/binh-dang', '609'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/dien-giai-tuyen-ngon',
-                component: ComponentCreator('/knowledge-base/tuan1/dien-giai-tuyen-ngon', '889'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/dinh-nghia',
-                component: ComponentCreator('/knowledge-base/tuan1/dinh-nghia', '2bf'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/gioi-thieu',
-                component: ComponentCreator('/knowledge-base/tuan1/gioi-thieu', '1f0'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/hoi-dap-nhan-quyen',
-                component: ComponentCreator('/knowledge-base/tuan1/hoi-dap-nhan-quyen', '113'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/luoc-su',
-                component: ComponentCreator('/knowledge-base/tuan1/luoc-su', '6df'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/quiz-hr',
-                component: ComponentCreator('/knowledge-base/tuan1/quiz-hr', 'a83'),
+                path: '/knowledge-base/nhan-quyen/triet-hoc-lich-su',
+                component: ComponentCreator('/knowledge-base/nhan-quyen/triet-hoc-lich-su', 'a9e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
                 path: '/knowledge-base/tuan1/quiz-pol',
                 component: ComponentCreator('/knowledge-base/tuan1/quiz-pol', '615'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuan1/quyen-dan-su-chinh-tri',
-                component: ComponentCreator('/knowledge-base/tuan1/quyen-dan-su-chinh-tri', '7fa'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/knowledge-base/tuyen-ngon-nhan-quyen',
-                component: ComponentCreator('/knowledge-base/tuyen-ngon-nhan-quyen', '651'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

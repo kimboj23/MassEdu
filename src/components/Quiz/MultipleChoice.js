@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Icon from '@site/src/components/Icon';
 import styles from './Quiz.module.css';
 
 /**
@@ -240,22 +241,6 @@ export default function MultipleChoice({
       className={`${styles.quizContainer} ${showCelebration ? styles.celebrating : ''}`}
       aria-label={questionLabel}
     >
-      {/* Progress Bar */}
-      <div className={styles.progressContainer}>
-        <div
-          className={styles.progressBar}
-          style={{ width: `${progress}%` }}
-          role="progressbar"
-          aria-valuenow={progress}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-label={`Tiến độ trả lời: ${progress}%`}
-        />
-        <div className={styles.streakBadge} aria-label={`Chuỗi đúng: ${streak} câu`}>
-          <span aria-hidden="true">🔥</span> {streak}
-        </div>
-      </div>
-
       {/* Question */}
       <div className={styles.questionContainer} ref={questionRef}>
         <h3 className={styles.question} id="quiz-question">{question}</h3>
@@ -309,10 +294,10 @@ export default function MultipleChoice({
                 </div>
                 <span className={styles.optionText}>{option}</span>
                 {showResult && isCorrectOption && (
-                  <div className={styles.checkmark} aria-hidden="true">✓</div>
+                  <div className={styles.checkmark} aria-hidden="true"><Icon name="check" decorative size="small" /></div>
                 )}
                 {showResult && isIncorrect && (
-                  <div className={styles.crossmark} aria-hidden="true">✗</div>
+                  <div className={styles.crossmark} aria-hidden="true"><Icon name="close" decorative size="small" /></div>
                 )}
               </div>
             </div>
@@ -342,7 +327,7 @@ export default function MultipleChoice({
         >
           <div className={styles.resultHeader}>
             <div className={styles.resultIcon} aria-hidden="true">
-              {isCorrect ? '🎉' : '💭'}
+              <Icon name={isCorrect ? 'celebration' : 'psychology'} decorative size="large" />
             </div>
             <div className={styles.resultTitle}>
               {isCorrect ? 'Xuất sắc!' : 'Gần đúng rồi!'}
@@ -374,7 +359,7 @@ export default function MultipleChoice({
         <div className={styles.celebration} aria-hidden="true">
           {[...Array(8)].map((_, i) => (
             <div key={i} className={`${styles.confetti} ${styles[`confetti${i + 1}`]}`}>
-              ✨
+              <Icon name="auto_awesome" decorative size="small" />
             </div>
           ))}
         </div>

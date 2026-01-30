@@ -47,12 +47,8 @@
     ]
   },
   "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Giới thiệu Chương 2 - Luật nhân quyền và vi phạm nhân quyền",
-    "permalink": "/knowledge-base/gioi-thieu-chuong-2"
-  },
   "next": {
-    "title": "Giấy phép kinh doanh tại Việt Nam",
-    "permalink": "/knowledge-base/giay-phep-kinh-doanh-vn"
+    "title": "Nhân quyền",
+    "permalink": "/knowledge-base/category/nhân-quyền"
   }
 }

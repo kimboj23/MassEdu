@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import { getAllCharacters } from '@site/src/data/characters';
+import Icon from '@site/src/components/Icon';
 import styles from './tax.module.css';
 
 function CharacterCard({ character }) {
@@ -26,24 +27,12 @@ function CharacterCard({ character }) {
           <div className={styles.cardBody}>
             <h3 className={styles.characterName} id={`character-${character.id}-name`}>{character.name}</h3>
             <p className={styles.occupation}>{character.occupation}</p>
-
-            <dl className={styles.statsBar} aria-label="Thông tin cơ bản">
-              <div className={styles.stat}>
-                <dt className={styles.statLabel}>Tuổi</dt>
-                <dd className={styles.statValue}>{character.age}</dd>
-              </div>
-              <div className={styles.stat}>
-                <dt className={styles.statLabel}>Vị trí</dt>
-                <dd className={styles.statValue}>{character.background.location}</dd>
-              </div>
-            </dl>
-
             <p className={styles.description}>{character.description}</p>
 
             {/* Key challenge preview */}
             {character.challenges.tax.length > 0 && (
               <div className={styles.challenge} aria-label="Thách thức chính">
-                <span className={styles.challengeIcon} aria-hidden="true">⚡</span>
+                <span className={styles.challengeIcon} aria-hidden="true"><Icon name="bolt" decorative size="small" /></span>
                 <span className={styles.challengeText}>{character.challenges.tax[0]}</span>
               </div>
             )}
@@ -57,7 +46,7 @@ function CharacterCard({ character }) {
                 to={taxStoryline.episodes[0].path}
                 aria-label={`Bắt đầu hành trình với ${character.name}`}
               >
-                Bắt đầu hành trình <span aria-hidden="true">→</span>
+                Bắt đầu hành trình <Icon name="arrow_forward" decorative size="small" />
               </Link>
             ) : (
               <span
@@ -68,13 +57,22 @@ function CharacterCard({ character }) {
                 Sắp ra mắt
               </span>
             )}
-            <Link
-              className={`${styles.actionButton} ${styles.secondaryAction}`}
-              to={`/course-tax/characters/${character.id}`}
-              aria-label={`Xem hồ sơ chi tiết của ${character.name}`}
-            >
-              Xem hồ sơ
-            </Link>
+{isAvailable ? (
+              <Link
+                className={`${styles.actionButton} ${styles.secondaryAction}`}
+                to={`/course-tax/characters/${character.id}`}
+                aria-label={`Xem hồ sơ chi tiết của ${character.name}`}
+              >
+                Xem hồ sơ
+              </Link>
+            ) : (
+              <span
+                className={`${styles.actionButton} ${styles.secondaryAction} ${styles.disabled}`}
+                aria-disabled="true"
+              >
+                Xem hồ sơ
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -99,8 +97,8 @@ export default function TaxStorylines() {
             Chọn một nhân vật để bắt đầu hành trình tìm hiểu về thuế và ngân sách nhà nước.
           </p>
         </section>
-        <section aria-label="Danh sách nhân vật">
-          <ul className={styles.cardsGrid} style={{ listStyle: 'none', padding: 0 }}>
+        <section aria-label="Danh sách nhân vật" className={styles.carouselContainer}>
+          <ul className={styles.cardsGrid} style={{ listStyle: 'none', margin: 0 }}>
             {characters.map((char) => (
               <li key={char.id}>
                 <CharacterCard character={char} />

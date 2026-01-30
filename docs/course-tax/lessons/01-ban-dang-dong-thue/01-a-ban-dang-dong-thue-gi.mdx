@@ -10,6 +10,7 @@ import Link from '@docusaurus/Link';
 import { StoryProgressProvider, SimpleSalaryComparison } from '@site/src/components/Interactive';
 import { LessonScene, LessonChunkNavigation, LessonProgress } from '@site/src/components/Interactive';
 import { StoryExample } from '@site/src/components/Learning/BidirectionalLink';
+import Icon from '@site/src/components/Icon';
 
 <StoryProgressProvider>
   <LessonProgress total={2} title="Bạn đang đóng thuế gì?" />
@@ -27,7 +28,7 @@ import { StoryExample } from '@site/src/components/Learning/BidirectionalLink';
           to="/course-tax/concepts/salary-tax-calculation"
           className="button button--primary button--lg"
         >
-          💡 Xem chi tiết cách tính thuế và bảo hiểm
+          <Icon name="lightbulb" decorative size="small" /> Xem chi tiết cách tính thuế và bảo hiểm
         </Link>
       </div>
     </div>
