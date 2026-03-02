@@ -5,7 +5,7 @@
   "source": "@site/docs/knowledge-base/QuizPOL.mdx",
   "sourceDirName": ".",
   "slug": "/tuan1/quiz-pol",
-  "permalink": "/knowledge-base/tuan1/quiz-pol",
+  "permalink": "/MassEdu/knowledge-base/tuan1/quiz-pol",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/kimboj23/MassEdu/tree/main/docs/knowledge-base/QuizPOL.mdx",
@@ -13,17 +13,17 @@
     {
       "inline": true,
       "label": "chính trị",
-      "permalink": "/knowledge-base/tags/chinh-trị"
+      "permalink": "/MassEdu/knowledge-base/tags/chinh-trị"
     },
     {
       "inline": true,
       "label": "hiến pháp",
-      "permalink": "/knowledge-base/tags/hiến-phap"
+      "permalink": "/MassEdu/knowledge-base/tags/hiến-phap"
     },
     {
       "inline": true,
       "label": "quiz",
-      "permalink": "/knowledge-base/tags/quiz"
+      "permalink": "/MassEdu/knowledge-base/tags/quiz"
     }
   ],
   "version": "current",
@@ -49,6 +49,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Nhân quyền",
-    "permalink": "/knowledge-base/category/nhân-quyền"
+    "permalink": "/MassEdu/knowledge-base/category/nhân-quyền"
   }
 }

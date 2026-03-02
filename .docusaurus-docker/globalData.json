@@ -1,48 +1,48 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/knowledge-base",
+      "path": "/MassEdu/knowledge-base",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/knowledge-base",
+          "path": "/MassEdu/knowledge-base",
           "mainDocId": "QuizPOL",
           "docs": [
             {
               "id": "nhan-quyen/hien-phap-vn",
-              "path": "/knowledge-base/nhan-quyen/hien-phap-vn",
+              "path": "/MassEdu/knowledge-base/nhan-quyen/hien-phap-vn",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "nhan-quyen/nhan-quyen-la-gi",
-              "path": "/knowledge-base/nhan-quyen/nhan-quyen-la-gi",
+              "path": "/MassEdu/knowledge-base/nhan-quyen/nhan-quyen-la-gi",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "nhan-quyen/quyen-dan-su-chinh-tri",
-              "path": "/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri",
+              "path": "/MassEdu/knowledge-base/nhan-quyen/quyen-dan-su-chinh-tri",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa",
-              "path": "/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa",
+              "path": "/MassEdu/knowledge-base/nhan-quyen/quyen-kinh-te-xa-hoi-van-hoa",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "nhan-quyen/triet-hoc-lich-su",
-              "path": "/knowledge-base/nhan-quyen/triet-hoc-lich-su",
+              "path": "/MassEdu/knowledge-base/nhan-quyen/triet-hoc-lich-su",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "QuizPOL",
-              "path": "/knowledge-base/tuan1/quiz-pol",
+              "path": "/MassEdu/knowledge-base/tuan1/quiz-pol",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/nhân-quyền",
-              "path": "/knowledge-base/category/nhân-quyền",
+              "path": "/MassEdu/knowledge-base/category/nhân-quyền",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -50,7 +50,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/knowledge-base/tuan1/quiz-pol",
+                "path": "/MassEdu/knowledge-base/tuan1/quiz-pol",
                 "label": "QuizPOL"
               }
             }
@@ -60,100 +60,100 @@
       "breadcrumbs": true
     },
     "course-tax": {
-      "path": "/course-tax",
+      "path": "/MassEdu/course-tax",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/course-tax",
+          "path": "/MassEdu/course-tax",
           "mainDocId": "characters/sinh-vien/story",
           "docs": [
             {
               "id": "cac-loai-thue",
-              "path": "/course-tax/cac-loai-thue"
+              "path": "/MassEdu/course-tax/cac-loai-thue"
             },
             {
               "id": "characters/sinh-vien/story",
-              "path": "/course-tax/characters/sinh-vien/story",
+              "path": "/MassEdu/course-tax/characters/sinh-vien/story",
               "sidebar": "courseTax"
             },
             {
               "id": "characters/tepsinhvien",
-              "path": "/course-tax/characters/tepsinhvien"
+              "path": "/MassEdu/course-tax/characters/tepsinhvien"
             },
             {
               "id": "chinh-quyen-lay-tien-tu-dau",
-              "path": "/course-tax/chinh-quyen-lay-tien-tu-dau"
+              "path": "/MassEdu/course-tax/chinh-quyen-lay-tien-tu-dau"
             },
             {
               "id": "concepts/salary-tax-calculation",
-              "path": "/course-tax/concepts/salary-tax-calculation",
+              "path": "/MassEdu/course-tax/concepts/salary-tax-calculation",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/a-ban-dang-dong-thue-gi",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/b-ai-thuc-su-dong-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/c-ganh-thue",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/c-ganh-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/d-suy-nghi-thue",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/d-suy-nghi-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/e-thue-la-gi",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/e-thue-la-gi",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/f-phan-loai-thue",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/f-phan-loai-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/ban-dang-dong-thue/index",
-              "path": "/course-tax/lessons/ban-dang-dong-thue/",
+              "path": "/MassEdu/course-tax/lessons/ban-dang-dong-thue/",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/nguyen-tac-thu-thue",
-              "path": "/course-tax/lessons/nguyen-tac-thu-thue",
+              "path": "/MassEdu/course-tax/lessons/nguyen-tac-thu-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/tai-sao-dong-thue",
-              "path": "/course-tax/lessons/tai-sao-dong-thue",
+              "path": "/MassEdu/course-tax/lessons/tai-sao-dong-thue",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/thue-va-chinh-tri",
-              "path": "/course-tax/lessons/thue-va-chinh-tri",
+              "path": "/MassEdu/course-tax/lessons/thue-va-chinh-tri",
               "sidebar": "courseTax"
             },
             {
               "id": "lessons/thue-va-minh-bach",
-              "path": "/course-tax/lessons/thue-va-minh-bach",
+              "path": "/MassEdu/course-tax/lessons/thue-va-minh-bach",
               "sidebar": "courseTax"
             },
             {
               "id": "modules/module-a-recognizing-daily-taxes",
-              "path": "/course-tax/modules/module-a-recognizing-daily-taxes",
+              "path": "/MassEdu/course-tax/modules/module-a-recognizing-daily-taxes",
               "sidebar": "courseTax"
             },
             {
               "id": "modules/module-b-tax-id-obligations",
-              "path": "/course-tax/modules/module-b-tax-id-obligations",
+              "path": "/MassEdu/course-tax/modules/module-b-tax-id-obligations",
               "sidebar": "courseTax"
             }
           ],
@@ -161,7 +161,7 @@
           "sidebars": {
             "courseTax": {
               "link": {
-                "path": "/course-tax/characters/sinh-vien/story",
+                "path": "/MassEdu/course-tax/characters/sinh-vien/story",
                 "label": "Sinh viên"
               }
             }

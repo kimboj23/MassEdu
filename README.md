@@ -1,8 +1,5 @@
-# TepUp.space (MassEdu)
-
+# TepUp
 Educational platform built with [Docusaurus](https://docusaurus.io/) for learning about civic rights and responsibilities.
-
-**Live Site**: [www.tepup.space](https://www.tepup.space)
 
 ## Quick Start
 
