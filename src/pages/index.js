@@ -9,21 +9,30 @@ import WaveAnimation from '@site/src/components/WaveAnimation';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-// Draggable floating logo component
+// Draggable floating logo component with touch support
 function DraggableLogo({ id, initialClass }) {
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState(null);
   const dragRef = useRef(null);
   const offsetRef = useRef({ x: 0, y: 0 });
 
-  const handleMouseDown = useCallback((e) => {
+  // Get client coordinates from mouse or touch event
+  const getClientCoords = useCallback((e) => {
+    if (e.touches && e.touches.length > 0) {
+      return { clientX: e.touches[0].clientX, clientY: e.touches[0].clientY };
+    }
+    return { clientX: e.clientX, clientY: e.clientY };
+  }, []);
+
+  const handleDragStart = useCallback((e) => {
     e.preventDefault();
+    const { clientX, clientY } = getClientCoords(e);
     const rect = dragRef.current.getBoundingClientRect();
     const containerRect = dragRef.current.parentElement.getBoundingClientRect();
 
     offsetRef.current = {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
+      x: clientX - rect.left,
+      y: clientY - rect.top
     };
 
     // Set initial position if not already set
@@ -35,33 +44,42 @@ function DraggableLogo({ id, initialClass }) {
     }
 
     setIsDragging(true);
-  }, [position]);
+  }, [position, getClientCoords]);
 
-  const handleMouseMove = useCallback((e) => {
+  const handleDragMove = useCallback((e) => {
     if (!isDragging) return;
 
+    const { clientX, clientY } = getClientCoords(e);
     const containerRect = dragRef.current.parentElement.getBoundingClientRect();
-    const newX = e.clientX - containerRect.left - offsetRef.current.x;
-    const newY = e.clientY - containerRect.top - offsetRef.current.y;
+    const newX = clientX - containerRect.left - offsetRef.current.x;
+    const newY = clientY - containerRect.top - offsetRef.current.y;
 
     setPosition({ x: newX, y: newY });
-  }, [isDragging]);
+  }, [isDragging, getClientCoords]);
 
-  const handleMouseUp = useCallback(() => {
+  const handleDragEnd = useCallback(() => {
     setIsDragging(false);
   }, []);
 
-  // Add global mouse listeners when dragging
+  // Add global mouse and touch listeners when dragging
   React.useEffect(() => {
     if (isDragging) {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
+      // Mouse events
+      window.addEventListener('mousemove', handleDragMove);
+      window.addEventListener('mouseup', handleDragEnd);
+      // Touch events
+      window.addEventListener('touchmove', handleDragMove, { passive: false });
+      window.addEventListener('touchend', handleDragEnd);
+      window.addEventListener('touchcancel', handleDragEnd);
       return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-        window.removeEventListener('mouseup', handleMouseUp);
+        window.removeEventListener('mousemove', handleDragMove);
+        window.removeEventListener('mouseup', handleDragEnd);
+        window.removeEventListener('touchmove', handleDragMove);
+        window.removeEventListener('touchend', handleDragEnd);
+        window.removeEventListener('touchcancel', handleDragEnd);
       };
     }
-  }, [isDragging, handleMouseMove, handleMouseUp]);
+  }, [isDragging, handleDragMove, handleDragEnd]);
 
   const wrapperStyle = position ? {
     left: position.x,
@@ -75,7 +93,8 @@ function DraggableLogo({ id, initialClass }) {
       ref={dragRef}
       className={`${styles.floatingLogoWrapper} ${!position ? initialClass : ''} ${isDragging ? styles.dragging : ''}`}
       style={wrapperStyle}
-      onMouseDown={handleMouseDown}
+      onMouseDown={handleDragStart}
+      onTouchStart={handleDragStart}
     >
       <img src="/img/Tepup-BnW-Color-Logo-0.png" alt="" className={styles.floatingLogo} draggable={false} />
     </span>

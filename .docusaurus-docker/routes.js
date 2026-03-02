@@ -89,11 +89,11 @@ export default [
   },
   {
     path: '/course-tax',
-    component: ComponentCreator('/course-tax', '0e4'),
+    component: ComponentCreator('/course-tax', '522'),
     routes: [
       {
         path: '/course-tax',
-        component: ComponentCreator('/course-tax', 'af2'),
+        component: ComponentCreator('/course-tax', '641'),
         routes: [
           {
             path: '/course-tax/tags',
@@ -137,7 +137,7 @@ export default [
           },
           {
             path: '/course-tax',
-            component: ComponentCreator('/course-tax', '0a2'),
+            component: ComponentCreator('/course-tax', 'bc5'),
             routes: [
               {
                 path: '/course-tax/cac-loai-thue',
@@ -165,11 +165,6 @@ export default [
                 component: ComponentCreator('/course-tax/concepts/salary-tax-calculation', '37e'),
                 exact: true,
                 sidebar: "courseTax"
-              },
-              {
-                path: '/course-tax/LearningContent-Tax',
-                component: ComponentCreator('/course-tax/LearningContent-Tax', '14a'),
-                exact: true
               },
               {
                 path: '/course-tax/lessons/ban-dang-dong-thue',

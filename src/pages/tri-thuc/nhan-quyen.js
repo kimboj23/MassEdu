@@ -70,7 +70,7 @@ export default function NhanQuyenPage() {
   return (
     <Layout
       title="Nhân quyền - Tri thức"
-      description="Tổng hợp kiến thức về nhân quyền, bình đẳng và các quyền cơ bản của con người">
+      description="Tổng hợp kiến thức về các quyền cơ bản của con người">
 
       {/* Hero Section */}
       <TriThucHero

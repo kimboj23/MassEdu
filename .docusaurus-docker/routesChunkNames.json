@@ -112,13 +112,13 @@
     },
     "config": "config---characters-sinhvien-5-e-9-9ef"
   },
-  "/course-tax-0e4": {
+  "/course-tax-522": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---course-tax-253-e81"
     }
   },
-  "/course-tax-af2": {
+  "/course-tax-641": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---course-tax-453-cf8"
   },
@@ -154,7 +154,7 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---course-tax-tags-vat-78-b-dab"
   },
-  "/course-tax-0a2": {
+  "/course-tax-bc5": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/course-tax/cac-loai-thue-e8a": {
@@ -176,10 +176,6 @@
   "/course-tax/concepts/salary-tax-calculation-37e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---course-tax-concepts-salary-tax-calculation-6-db-79a"
-  },
-  "/course-tax/LearningContent-Tax-14a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---course-tax-learning-content-tax-9-ac-4c6"
   },
   "/course-tax/lessons/ban-dang-dong-thue-1ec": {
     "__comp": "__comp---theme-doc-item-178-a40",

@@ -32,10 +32,20 @@
   pointer-events: none;
 }
 
-/* Responsive adjustments - reduce pattern complexity on mobile */
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
+  .waveContainer {
+    /* Ensure proper rendering on mobile browsers */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
   .wavePattern {
-    opacity: 0.5;
+    opacity: 0.6;
+    /* Ensure hardware acceleration on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, opacity;
   }
 }
 

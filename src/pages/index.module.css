@@ -77,6 +77,10 @@
   pointer-events: auto;
   cursor: grab;
   user-select: none;
+  /* Hardware acceleration for smooth mobile animations */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: left, top, transform;
 }
 
 /* The actual logo image */
@@ -248,8 +252,25 @@
   }
 
   .floatingLogo {
-    width: 40px;
-    opacity: 0.06;
+    width: 50px;
+    opacity: 0.35;
+  }
+
+  /* Slower animations on tablet for better performance */
+  .floatingLogo1 {
+    animation-duration: 50s;
+  }
+  .floatingLogo2 {
+    animation-duration: 50s;
+    animation-delay: -12.5s;
+  }
+  .floatingLogo3 {
+    animation-duration: 50s;
+    animation-delay: -25s;
+  }
+  .floatingLogo4 {
+    animation-duration: 50s;
+    animation-delay: -37.5s;
   }
 
   .buttons {
@@ -274,7 +295,28 @@
     font-size: clamp(24px, 8vw, 36px);
   }
 
+  /* Show floating logos on mobile but smaller and more subtle */
   .floatingLogoContainer {
+    display: block;
+  }
+
+  .floatingLogo {
+    width: 35px;
+    opacity: 0.25;
+  }
+
+  /* Show only 2 logos on mobile for better performance */
+  .floatingLogo3,
+  .floatingLogo4 {
     display: none;
+  }
+
+  /* Even slower on mobile */
+  .floatingLogo1 {
+    animation-duration: 60s;
+  }
+  .floatingLogo2 {
+    animation-duration: 60s;
+    animation-delay: -30s;
   }
 }

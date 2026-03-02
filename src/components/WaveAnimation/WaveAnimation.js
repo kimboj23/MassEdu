@@ -10,34 +10,55 @@ export default function WaveAnimation() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+    let lastScrollY = 0;
+
+    const getScrollPosition = () => {
+      // Multiple fallbacks for cross-browser/mobile compatibility
+      return window.scrollY ?? window.pageYOffset ?? document.documentElement.scrollTop ?? 0;
+    };
+
+    const updateScrollY = () => {
+      const newScrollY = getScrollPosition();
+      lastScrollY = newScrollY;
+      setScrollY(newScrollY);
+      ticking = false;
+    };
+
     const handleScroll = () => {
-      setScrollY(window.scrollY || window.pageYOffset || document.documentElement.scrollTop);
+      if (!ticking) {
+        // Use requestAnimationFrame for smooth performance
+        window.requestAnimationFrame(updateScrollY);
+        ticking = true;
+      }
     };
 
     // Initial call to set scrollY on mount
-    handleScroll();
+    updateScrollY();
 
     // Add multiple scroll event listeners for better mobile support
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Also listen for touchmove as a fallback on mobile
-    let ticking = false;
-    const handleTouchScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
+    // Touch events for mobile - touchmove and touchend for momentum scrolling
+    window.addEventListener('touchmove', handleScroll, { passive: true });
+    window.addEventListener('touchend', handleScroll, { passive: true });
+
+    // iOS Safari sometimes needs this for momentum scroll updates
+    const scrollInterval = setInterval(() => {
+      const currentScroll = getScrollPosition();
+      if (currentScroll !== lastScrollY) {
+        lastScrollY = currentScroll;
+        setScrollY(currentScroll);
       }
-    };
-    window.addEventListener('touchmove', handleTouchScroll, { passive: true });
+    }, 100);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('touchmove', handleTouchScroll);
+      window.removeEventListener('touchmove', handleScroll);
+      window.removeEventListener('touchend', handleScroll);
+      clearInterval(scrollInterval);
     };
   }, []);
 
